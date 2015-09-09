@@ -35,6 +35,9 @@
             this.buttonSelectColor = new System.Windows.Forms.Button();
             this.labelColor = new System.Windows.Forms.Label();
             this.checkAutosave = new System.Windows.Forms.CheckBox();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.buttonSelectWallpaper = new System.Windows.Forms.Button();
+            this.buttonResetWallpaper = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // checkDebug
@@ -90,11 +93,37 @@
             this.checkAutosave.UseVisualStyleBackColor = true;
             this.checkAutosave.CheckedChanged += new System.EventHandler(this.checkAutosave_CheckedChanged);
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog_FileOk);
+            // 
+            // buttonSelectWallpaper
+            // 
+            this.buttonSelectWallpaper.Location = new System.Drawing.Point(12, 110);
+            this.buttonSelectWallpaper.Name = "buttonSelectWallpaper";
+            this.buttonSelectWallpaper.Size = new System.Drawing.Size(130, 23);
+            this.buttonSelectWallpaper.TabIndex = 5;
+            this.buttonSelectWallpaper.Text = "Выбрать обои";
+            this.buttonSelectWallpaper.UseVisualStyleBackColor = true;
+            this.buttonSelectWallpaper.Click += new System.EventHandler(this.buttonSelectWallpaper_Click);
+            // 
+            // buttonResetWallpaper
+            // 
+            this.buttonResetWallpaper.Location = new System.Drawing.Point(141, 110);
+            this.buttonResetWallpaper.Name = "buttonResetWallpaper";
+            this.buttonResetWallpaper.Size = new System.Drawing.Size(59, 23);
+            this.buttonResetWallpaper.TabIndex = 6;
+            this.buttonResetWallpaper.Text = "Сброс";
+            this.buttonResetWallpaper.UseVisualStyleBackColor = true;
+            this.buttonResetWallpaper.Click += new System.EventHandler(this.buttonResetWallpaper_Click);
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(246, 262);
+            this.Controls.Add(this.buttonResetWallpaper);
+            this.Controls.Add(this.buttonSelectWallpaper);
             this.Controls.Add(this.checkAutosave);
             this.Controls.Add(this.labelColor);
             this.Controls.Add(this.buttonSelectColor);
@@ -120,5 +149,8 @@
         private System.Windows.Forms.Button buttonSelectColor;
         private System.Windows.Forms.Label labelColor;
         private System.Windows.Forms.CheckBox checkAutosave;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.Button buttonSelectWallpaper;
+        private System.Windows.Forms.Button buttonResetWallpaper;
     }
 }

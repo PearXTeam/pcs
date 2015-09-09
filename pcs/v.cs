@@ -30,6 +30,7 @@ namespace pcs
         public static BigInteger xp = 100;
 
         public static Color backgroundColor = Color.Black;
+        public static string backgroundImage = null;
         
     }
 }

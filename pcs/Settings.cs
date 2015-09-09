@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,6 +59,28 @@ namespace pcs
         private void checkAutosave_CheckedChanged(object sender, EventArgs e)
         {
             v.useAutoSave = checkAutosave.Checked;
+        }
+
+        private void buttonSelectWallpaper_Click(object sender, EventArgs e)
+        {
+            openFileDialog.ShowDialog();
+        }
+
+        private void openFileDialog_FileOk(object sender, CancelEventArgs e)
+        {
+            
+            if (!String.IsNullOrEmpty(openFileDialog.FileName) && File.Exists(openFileDialog.FileName))
+            {
+                v.backgroundImage = openFileDialog.FileName;
+                Program.g.BackgroundImage = Image.FromFile(v.backgroundImage);
+            }
+            
+        }
+
+        private void buttonResetWallpaper_Click(object sender, EventArgs e)
+        {
+            v.backgroundImage = null;
+            Program.g.BackgroundImage = null;
         }
     }
 }

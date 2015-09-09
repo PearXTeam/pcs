@@ -26,6 +26,7 @@ namespace pcs
                 v.money = BigInteger.Parse(str[6]);
                 v.xp = BigInteger.Parse(str[7]);
                 v.backgroundColor = Color.FromArgb(PXL.cTI(str[8]));
+                v.backgroundImage = str[9];
             }
             catch { }
         }
@@ -43,7 +44,8 @@ namespace pcs
                 v.useAutoSave.ToString(),
                 v.money.ToString(),
                 v.xp.ToString(),
-                v.backgroundColor.ToArgb().ToString()
+                v.backgroundColor.ToArgb().ToString(),
+                v.backgroundImage
             });
             }
             catch(Exception ex)

@@ -30,6 +30,10 @@ namespace pcs
             }
             this.Text = "PCS " + v.version + " (in-dev)";
             this.Icon = Resources.pcs;
+            if (v.backgroundImage != null && File.Exists(v.backgroundImage))
+            {
+                this.BackgroundImage = Image.FromFile(v.backgroundImage);
+            }
             a.Setup();
         }
 
@@ -85,6 +89,12 @@ namespace pcs
         {
             SaveManager sm = new SaveManager();
             sm.ShowDialog();
+        }
+
+        private void imageInfo_Click(object sender, EventArgs e)
+        {
+            About a = new About();
+            a.ShowDialog();
         }
     }
 }

@@ -46,8 +46,10 @@
             this.labelMoney = new System.Windows.Forms.Label();
             this.labelXP = new System.Windows.Forms.Label();
             this.imageSaveManager = new System.Windows.Forms.PictureBox();
+            this.imageInfo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // autoSave
@@ -113,6 +115,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(-5, 349);
@@ -164,6 +167,7 @@
             // 
             // imageSettings
             // 
+            this.imageSettings.BackColor = System.Drawing.Color.Transparent;
             this.imageSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imageSettings.Image = global::pcs.Properties.Resources.settings;
             this.imageSettings.Location = new System.Drawing.Point(415, 367);
@@ -199,6 +203,7 @@
             // 
             // imageSaveManager
             // 
+            this.imageSaveManager.BackColor = System.Drawing.Color.Transparent;
             this.imageSaveManager.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imageSaveManager.Image = global::pcs.Properties.Resources.save;
             this.imageSaveManager.Location = new System.Drawing.Point(415, 405);
@@ -208,12 +213,26 @@
             this.imageSaveManager.TabStop = false;
             this.imageSaveManager.Click += new System.EventHandler(this.imageSaveManager_Click);
             // 
+            // imageInfo
+            // 
+            this.imageInfo.BackColor = System.Drawing.Color.Transparent;
+            this.imageInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageInfo.Image = global::pcs.Properties.Resources.info;
+            this.imageInfo.Location = new System.Drawing.Point(377, 367);
+            this.imageInfo.Name = "imageInfo";
+            this.imageInfo.Size = new System.Drawing.Size(32, 32);
+            this.imageInfo.TabIndex = 14;
+            this.imageInfo.TabStop = false;
+            this.imageInfo.Click += new System.EventHandler(this.imageInfo_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(886, 440);
+            this.Controls.Add(this.imageInfo);
             this.Controls.Add(this.imageSaveManager);
             this.Controls.Add(this.labelXP);
             this.Controls.Add(this.labelMoney);
@@ -234,6 +253,7 @@
             this.Load += new System.EventHandler(this.Game_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -258,6 +278,7 @@
         public System.Windows.Forms.Label labelMoney;
         public System.Windows.Forms.Label labelXP;
         private System.Windows.Forms.PictureBox imageSaveManager;
+        private System.Windows.Forms.PictureBox imageInfo;
     }
 }
 
