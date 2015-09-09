@@ -29,7 +29,6 @@ namespace pcs
             }
             this.Text = "PCS " + v.version + " (in-dev)";
             this.Icon = Resources.pcs;
-            a.Load("auto.save");
             labelHealth.Text = "Здоровье: " + v.statHealth;
             barHealth.Value = v.statHealth;
             labelFun.Text = "Настроение: " + v.statFun;
@@ -53,6 +52,8 @@ namespace pcs
                 if (r == DialogResult.Yes)
                 {
                     a.autoSave();
+                    v.forceClose = true;
+                    Application.Exit();
                 }
                 else
                 {
@@ -74,6 +75,12 @@ namespace pcs
         private void timerFun_Tick(object sender, EventArgs e)
         {
             a.mFun(-1, 1);
+        }
+
+        private void imageSettings_Click(object sender, EventArgs e)
+        {
+            Settings s = new Settings();
+            s.ShowDialog();
         }
     }
 }

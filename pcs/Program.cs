@@ -16,8 +16,16 @@ namespace pcs
         static void Main()
         {
             Application.EnableVisualStyles();
+            a.Load("auto.save");
+            if (v.usePlug)
+            {
+                Application.Run(new Plug());
+            }
+            else
+            {
+                Application.Run(g);
+            }
             
-            Application.Run(g);
         }
     }
 }

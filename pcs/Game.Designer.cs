@@ -42,6 +42,8 @@
             this.timerFood = new System.Windows.Forms.Timer(this.components);
             this.timerFun = new System.Windows.Forms.Timer(this.components);
             this.timerSleep = new System.Windows.Forms.Timer(this.components);
+            this.imageSettings = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).BeginInit();
             this.SuspendLayout();
             // 
             // autoSave
@@ -54,7 +56,7 @@
             // 
             this.barHealth.Location = new System.Drawing.Point(456, 385);
             this.barHealth.Name = "barHealth";
-            this.barHealth.Size = new System.Drawing.Size(100, 23);
+            this.barHealth.Size = new System.Drawing.Size(100, 14);
             this.barHealth.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.barHealth.TabIndex = 0;
             // 
@@ -62,7 +64,7 @@
             // 
             this.barFun.Location = new System.Drawing.Point(562, 385);
             this.barFun.Name = "barFun";
-            this.barFun.Size = new System.Drawing.Size(100, 23);
+            this.barFun.Size = new System.Drawing.Size(100, 14);
             this.barFun.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.barFun.TabIndex = 1;
             // 
@@ -70,7 +72,7 @@
             // 
             this.barFood.Location = new System.Drawing.Point(668, 385);
             this.barFood.Name = "barFood";
-            this.barFood.Size = new System.Drawing.Size(100, 23);
+            this.barFood.Size = new System.Drawing.Size(100, 14);
             this.barFood.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.barFood.TabIndex = 2;
             // 
@@ -78,7 +80,7 @@
             // 
             this.barSleep.Location = new System.Drawing.Point(774, 385);
             this.barSleep.Name = "barSleep";
-            this.barSleep.Size = new System.Drawing.Size(100, 23);
+            this.barSleep.Size = new System.Drawing.Size(100, 14);
             this.barSleep.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.barSleep.TabIndex = 3;
             // 
@@ -156,12 +158,24 @@
             this.timerSleep.Interval = 40000;
             this.timerSleep.Tick += new System.EventHandler(this.timerSleep_Tick);
             // 
+            // imageSettings
+            // 
+            this.imageSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageSettings.Image = global::pcs.Properties.Resources.settings;
+            this.imageSettings.Location = new System.Drawing.Point(12, 367);
+            this.imageSettings.Name = "imageSettings";
+            this.imageSettings.Size = new System.Drawing.Size(32, 32);
+            this.imageSettings.TabIndex = 10;
+            this.imageSettings.TabStop = false;
+            this.imageSettings.Click += new System.EventHandler(this.imageSettings_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(886, 420);
+            this.ClientSize = new System.Drawing.Size(886, 440);
+            this.Controls.Add(this.imageSettings);
             this.Controls.Add(this.labelSleep);
             this.Controls.Add(this.labelFood);
             this.Controls.Add(this.label1);
@@ -176,6 +190,7 @@
             this.Text = "PCS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.Load += new System.EventHandler(this.Game_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,6 +211,7 @@
         public System.Windows.Forms.ProgressBar barFun;
         public System.Windows.Forms.ProgressBar barFood;
         public System.Windows.Forms.ProgressBar barSleep;
+        private System.Windows.Forms.PictureBox imageSettings;
     }
 }
 
