@@ -43,7 +43,11 @@
             this.timerFun = new System.Windows.Forms.Timer(this.components);
             this.timerSleep = new System.Windows.Forms.Timer(this.components);
             this.imageSettings = new System.Windows.Forms.PictureBox();
+            this.labelMoney = new System.Windows.Forms.Label();
+            this.labelXP = new System.Windows.Forms.Label();
+            this.imageSaveManager = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).BeginInit();
             this.SuspendLayout();
             // 
             // autoSave
@@ -162,12 +166,47 @@
             // 
             this.imageSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imageSettings.Image = global::pcs.Properties.Resources.settings;
-            this.imageSettings.Location = new System.Drawing.Point(12, 367);
+            this.imageSettings.Location = new System.Drawing.Point(415, 367);
             this.imageSettings.Name = "imageSettings";
             this.imageSettings.Size = new System.Drawing.Size(32, 32);
             this.imageSettings.TabIndex = 10;
             this.imageSettings.TabStop = false;
             this.imageSettings.Click += new System.EventHandler(this.imageSettings_Click);
+            // 
+            // labelMoney
+            // 
+            this.labelMoney.AutoSize = true;
+            this.labelMoney.BackColor = System.Drawing.Color.Transparent;
+            this.labelMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMoney.ForeColor = System.Drawing.Color.Orange;
+            this.labelMoney.Location = new System.Drawing.Point(12, 367);
+            this.labelMoney.Name = "labelMoney";
+            this.labelMoney.Size = new System.Drawing.Size(70, 25);
+            this.labelMoney.TabIndex = 11;
+            this.labelMoney.Text = "label1";
+            // 
+            // labelXP
+            // 
+            this.labelXP.AutoSize = true;
+            this.labelXP.BackColor = System.Drawing.Color.Transparent;
+            this.labelXP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelXP.ForeColor = System.Drawing.Color.Orange;
+            this.labelXP.Location = new System.Drawing.Point(12, 392);
+            this.labelXP.Name = "labelXP";
+            this.labelXP.Size = new System.Drawing.Size(70, 25);
+            this.labelXP.TabIndex = 12;
+            this.labelXP.Text = "label1";
+            // 
+            // imageSaveManager
+            // 
+            this.imageSaveManager.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageSaveManager.Image = global::pcs.Properties.Resources.save;
+            this.imageSaveManager.Location = new System.Drawing.Point(415, 405);
+            this.imageSaveManager.Name = "imageSaveManager";
+            this.imageSaveManager.Size = new System.Drawing.Size(32, 32);
+            this.imageSaveManager.TabIndex = 13;
+            this.imageSaveManager.TabStop = false;
+            this.imageSaveManager.Click += new System.EventHandler(this.imageSaveManager_Click);
             // 
             // Game
             // 
@@ -175,6 +214,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(886, 440);
+            this.Controls.Add(this.imageSaveManager);
+            this.Controls.Add(this.labelXP);
+            this.Controls.Add(this.labelMoney);
             this.Controls.Add(this.imageSettings);
             this.Controls.Add(this.labelSleep);
             this.Controls.Add(this.labelFood);
@@ -191,6 +233,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.Load += new System.EventHandler(this.Game_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,6 +255,9 @@
         public System.Windows.Forms.ProgressBar barFood;
         public System.Windows.Forms.ProgressBar barSleep;
         private System.Windows.Forms.PictureBox imageSettings;
+        public System.Windows.Forms.Label labelMoney;
+        public System.Windows.Forms.Label labelXP;
+        private System.Windows.Forms.PictureBox imageSaveManager;
     }
 }
 

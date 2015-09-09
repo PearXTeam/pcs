@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.checkDebug = new System.Windows.Forms.CheckBox();
             this.checkPlug = new System.Windows.Forms.CheckBox();
+            this.colorDialog = new System.Windows.Forms.ColorDialog();
+            this.buttonSelectColor = new System.Windows.Forms.Button();
+            this.labelColor = new System.Windows.Forms.Label();
+            this.checkAutosave = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // checkDebug
@@ -55,11 +59,45 @@
             this.checkPlug.UseVisualStyleBackColor = true;
             this.checkPlug.CheckedChanged += new System.EventHandler(this.checkPlug_CheckedChanged);
             // 
+            // buttonSelectColor
+            // 
+            this.buttonSelectColor.Location = new System.Drawing.Point(12, 58);
+            this.buttonSelectColor.Name = "buttonSelectColor";
+            this.buttonSelectColor.Size = new System.Drawing.Size(130, 23);
+            this.buttonSelectColor.TabIndex = 2;
+            this.buttonSelectColor.Text = "Выбрать цвет обоев";
+            this.buttonSelectColor.UseVisualStyleBackColor = true;
+            this.buttonSelectColor.Click += new System.EventHandler(this.buttonSelectColor_Click);
+            // 
+            // labelColor
+            // 
+            this.labelColor.AutoSize = true;
+            this.labelColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelColor.Location = new System.Drawing.Point(148, 50);
+            this.labelColor.Name = "labelColor";
+            this.labelColor.Size = new System.Drawing.Size(31, 37);
+            this.labelColor.TabIndex = 3;
+            this.labelColor.Text = "•";
+            // 
+            // checkAutosave
+            // 
+            this.checkAutosave.AutoSize = true;
+            this.checkAutosave.Location = new System.Drawing.Point(12, 87);
+            this.checkAutosave.Name = "checkAutosave";
+            this.checkAutosave.Size = new System.Drawing.Size(109, 17);
+            this.checkAutosave.TabIndex = 4;
+            this.checkAutosave.Text = "Автосохранение";
+            this.checkAutosave.UseVisualStyleBackColor = true;
+            this.checkAutosave.CheckedChanged += new System.EventHandler(this.checkAutosave_CheckedChanged);
+            // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(246, 262);
+            this.Controls.Add(this.checkAutosave);
+            this.Controls.Add(this.labelColor);
+            this.Controls.Add(this.buttonSelectColor);
             this.Controls.Add(this.checkPlug);
             this.Controls.Add(this.checkDebug);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -78,5 +116,9 @@
 
         private System.Windows.Forms.CheckBox checkDebug;
         private System.Windows.Forms.CheckBox checkPlug;
+        private System.Windows.Forms.ColorDialog colorDialog;
+        private System.Windows.Forms.Button buttonSelectColor;
+        private System.Windows.Forms.Label labelColor;
+        private System.Windows.Forms.CheckBox checkAutosave;
     }
 }

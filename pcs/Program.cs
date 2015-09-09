@@ -1,5 +1,7 @@
-﻿using System;
+﻿using PearXLib;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +18,12 @@ namespace pcs
         static void Main()
         {
             Application.EnableVisualStyles();
-            a.Load("auto.save");
+
+            if(File.Exists(PXL.documents + PXL.s + "PearX" + PXL.s + "PCS" + PXL.s + "plug.save"))
+            {
+                v.usePlug = Convert.ToBoolean(File.ReadAllText(PXL.documents + PXL.s + "PearX" + PXL.s + "PCS" + PXL.s + "plug.save"));
+            }
+            
             if (v.usePlug)
             {
                 Application.Run(new Plug());

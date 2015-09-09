@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,6 +11,8 @@ namespace pcs
     class v
     {
         //Системные значения \/
+        public static bool forceClose = false;
+
         //Загружаемые параметры \/
         public static string version = "1.0.0.0";
 
@@ -21,6 +25,11 @@ namespace pcs
         public static bool usePlug = false;
         public static bool useDebug = true;
         public static bool useAutoSave = true;
-        public static bool forceClose = false;
+
+        public static BigInteger money = 500;
+        public static BigInteger xp = 100;
+
+        public static Color backgroundColor = Color.Black;
+        
     }
 }

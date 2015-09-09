@@ -42,7 +42,22 @@ namespace pcs
         {
             checkPlug.Checked = v.usePlug;
             checkDebug.Checked = v.useDebug;
+            labelColor.ForeColor = v.backgroundColor;
+            checkAutosave.Checked = v.useAutoSave;
             b = true;
+        }
+
+        private void buttonSelectColor_Click(object sender, EventArgs e)
+        {
+            colorDialog.ShowDialog();
+            v.backgroundColor = colorDialog.Color;
+            Program.g.BackColor = v.backgroundColor;
+            labelColor.ForeColor = v.backgroundColor;
+        }
+
+        private void checkAutosave_CheckedChanged(object sender, EventArgs e)
+        {
+            v.useAutoSave = checkAutosave.Checked;
         }
     }
 }

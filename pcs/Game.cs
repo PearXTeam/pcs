@@ -18,6 +18,7 @@ namespace pcs
     {
         public Game()
         {
+            a.Load("auto.save");
             InitializeComponent();
         }
 
@@ -29,19 +30,15 @@ namespace pcs
             }
             this.Text = "PCS " + v.version + " (in-dev)";
             this.Icon = Resources.pcs;
-            labelHealth.Text = "Здоровье: " + v.statHealth;
-            barHealth.Value = v.statHealth;
-            labelFun.Text = "Настроение: " + v.statFun;
-            barFun.Value = v.statFun;
-            labelFood.Text = "Еда: " + v.statFood;
-            barFood.Value = v.statFood;
-            labelSleep.Text = "Сон: " + v.statSleep;
-            barSleep.Value = v.statSleep;
+            a.Setup();
         }
 
         private void autoSave_Tick(object sender, EventArgs e)
         {
-            a.autoSave();
+            if (v.useAutoSave)
+            {
+                a.Save("auto.save");
+            }
         }
 
         private void Game_FormClosing(object sender, FormClosingEventArgs e)
@@ -51,7 +48,8 @@ namespace pcs
                 DialogResult r = MessageBox.Show("Вы действительно хотите выйти", "PCSimulator", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (r == DialogResult.Yes)
                 {
-                    a.autoSave();
+                    a.Save("auto.save");
+                    File.WriteAllText(PXL.documents + PXL.s + "PearX" + PXL.s + "PCS" + PXL.s + "plug.save", v.usePlug.ToString());
                     v.forceClose = true;
                     Application.Exit();
                 }
@@ -81,6 +79,12 @@ namespace pcs
         {
             Settings s = new Settings();
             s.ShowDialog();
+        }
+
+        private void imageSaveManager_Click(object sender, EventArgs e)
+        {
+            SaveManager sm = new SaveManager();
+            sm.ShowDialog();
         }
     }
 }

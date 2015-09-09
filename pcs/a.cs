@@ -2,6 +2,8 @@
 using System.IO;
 using PearXLib;
 using System.Windows.Forms;
+using System.Numerics;
+using System.Drawing;
 namespace pcs
 {
     class a
@@ -19,9 +21,11 @@ namespace pcs
                 v.statFun = Convert.ToInt16(str[1]);
                 v.statFood = Convert.ToInt16(str[2]);
                 v.statSleep = Convert.ToInt16(str[3]);
-                v.usePlug = Convert.ToBoolean(str[4]);
-                v.useDebug = Convert.ToBoolean(str[5]);
-                v.useAutoSave = Convert.ToBoolean(str[6]);
+                v.useDebug = Convert.ToBoolean(str[4]);
+                v.useAutoSave = Convert.ToBoolean(str[5]);
+                v.money = BigInteger.Parse(str[6]);
+                v.xp = BigInteger.Parse(str[7]);
+                v.backgroundColor = Color.FromArgb(PXL.cTI(str[8]));
             }
             catch { }
         }
@@ -35,9 +39,11 @@ namespace pcs
                 v.statFun.ToString(),
                 v.statFood.ToString(),
                 v.statSleep.ToString(),
-                v.usePlug.ToString(),
                 v.useDebug.ToString(),
-                v.useAutoSave.ToString()
+                v.useAutoSave.ToString(),
+                v.money.ToString(),
+                v.xp.ToString(),
+                v.backgroundColor.ToArgb().ToString()
             });
             }
             catch(Exception ex)
@@ -51,14 +57,6 @@ namespace pcs
                     MessageBox.Show(ex.Message);
                 }
                 
-            }
-        }
-
-        public static void autoSave()
-        {
-            if (v.useAutoSave)
-            {
-                a.Save("auto.save");
             }
         }
 
@@ -187,5 +185,55 @@ namespace pcs
             Application.Exit();
         }
 
+        public static void mMoney(short plus_or_minus, BigInteger value)
+        {
+            if (plus_or_minus == -1)
+            {
+                v.money -= value;
+            }
+            else if (plus_or_minus == 1)
+            {
+                v.money += value;
+            }
+            Program.g.labelMoney.Text = "Деньги: " + v.money + "Р";
+        }
+
+        public static void mXP(short plus_or_minus, BigInteger value)
+        {
+            if (plus_or_minus == -1)
+            {
+                v.xp -= value;
+            }
+            else if (plus_or_minus == 1)
+            {
+                v.xp += value;
+            }
+            Program.g.labelXP.Text = "Опыт: " + v.money + "XP";
+        }
+        public static void Setup()
+        {
+            Program.g.labelHealth.Text = "Здоровье: " + v.statHealth;
+            Program.g.barHealth.Value = v.statHealth;
+            Program.g.labelFun.Text = "Настроение: " + v.statFun;
+            Program.g.barFun.Value = v.statFun;
+            Program.g.labelFood.Text = "Еда: " + v.statFood;
+            Program.g.barFood.Value = v.statFood;
+            Program.g.labelSleep.Text = "Сон: " + v.statSleep;
+            Program.g.barSleep.Value = v.statSleep;
+            Program.g.labelMoney.Text = "Деньги: " + v.money + "Р";
+            Program.g.labelXP.Text = "Опыт: " + v.xp + "XP";
+            Program.g.BackColor = v.backgroundColor;
+        }
+
+        public static void Reset()
+        {
+            v.statHealth = 100;
+            v.statFun = 100;
+            v.statFood = 100;
+            v.statSleep = 100;
+            v.money = 500;
+            v.xp = 100;
+            Setup();
+        }
     }
 }
