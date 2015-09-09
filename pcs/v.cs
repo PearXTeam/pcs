@@ -17,10 +17,10 @@ namespace pcs
         public static short statFun = 100;
         public static short statFood = 100;
         public static short statSleep = 100;
-        public static short statPurity = 100;
 
         public static bool usePlug = false;
         public static bool useDebug = true;
         public static bool useAutoSave = true;
+        public static bool forceClose = false;
     }
 }

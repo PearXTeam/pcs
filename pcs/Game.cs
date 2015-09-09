@@ -31,11 +31,13 @@ namespace pcs
             this.Icon = Resources.pcs;
             a.Load("auto.save");
             labelHealth.Text = "Здоровье: " + v.statHealth;
+            barHealth.Value = v.statHealth;
             labelFun.Text = "Настроение: " + v.statFun;
+            barFun.Value = v.statFun;
             labelFood.Text = "Еда: " + v.statFood;
+            barFood.Value = v.statFood;
             labelSleep.Text = "Сон: " + v.statSleep;
-            labelPurity.Text = "Чистота: " + v.statPurity;
-
+            barSleep.Value = v.statSleep;
         }
 
         private void autoSave_Tick(object sender, EventArgs e)
@@ -45,16 +47,33 @@ namespace pcs
 
         private void Game_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult r = MessageBox.Show("Вы действительно хотите выйти", "PCSimulator", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (r == DialogResult.Yes)
+            if (v.forceClose == false)
             {
-                a.autoSave();
+                DialogResult r = MessageBox.Show("Вы действительно хотите выйти", "PCSimulator", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (r == DialogResult.Yes)
+                {
+                    a.autoSave();
+                }
+                else
+                {
+                    e.Cancel = true;
+                }
             }
-            else
-            {
-                e.Cancel = true;
-            }
-            
+        }
+
+        private void timerFood_Tick(object sender, EventArgs e)
+        {
+            a.mFood(-1, 1);
+        }
+
+        private void timerSleep_Tick(object sender, EventArgs e)
+        {
+            a.mSleep(-1, 1);
+        }
+
+        private void timerFun_Tick(object sender, EventArgs e)
+        {
+            a.mFun(-1, 1);
         }
     }
 }

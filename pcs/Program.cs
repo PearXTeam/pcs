@@ -8,6 +8,7 @@ namespace pcs
 {
     static class Program
     {
+        public static Game g = new Game();
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -15,8 +16,8 @@ namespace pcs
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Game());
+            
+            Application.Run(g);
         }
     }
 }

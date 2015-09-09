@@ -19,9 +19,9 @@ namespace pcs
                 v.statFun = Convert.ToInt16(str[1]);
                 v.statFood = Convert.ToInt16(str[2]);
                 v.statSleep = Convert.ToInt16(str[3]);
-                v.statPurity = Convert.ToInt16(str[4]);
-                v.usePlug = Convert.ToBoolean(str[5]);
-                v.useDebug = Convert.ToBoolean(str[6]);
+                v.usePlug = Convert.ToBoolean(str[4]);
+                v.useDebug = Convert.ToBoolean(str[5]);
+                v.useAutoSave = Convert.ToBoolean(str[6]);
             }
             catch { }
         }
@@ -35,9 +35,9 @@ namespace pcs
                 v.statFun.ToString(),
                 v.statFood.ToString(),
                 v.statSleep.ToString(),
-                v.statPurity.ToString(),
                 v.usePlug.ToString(),
-                v.useDebug.ToString()
+                v.useDebug.ToString(),
+                v.useAutoSave.ToString()
             });
             }
             catch(Exception ex)
@@ -60,6 +60,131 @@ namespace pcs
             {
                 a.Save("auto.save");
             }
+        }
+
+        /// <summary>
+        /// Изменяет стат еды.
+        /// </summary>
+        /// <param name="plus_or_minus">-1 = убавить, 1 = прибавить</param>
+        /// <param name="value">значение</param>
+        public static void mFood(short plus_or_minus, short value)
+        {
+            if (plus_or_minus == -1)
+            {
+                v.statFood -= value;
+                if (v.statFood <= 0)
+                {
+                    a.Kill();
+                }
+            }
+            else if (plus_or_minus == 1)
+            {
+                v.statFood += value;
+                if (v.statFood > 100)
+                {
+                    v.statFood = 100;
+                }
+            }
+            Program.g.labelFood.Text = "Еда: " + v.statFood;
+            Program.g.barFood.Value = v.statFood;
+        }
+
+        /// <summary>
+        /// Изменяет стат настроения.
+        /// </summary>
+        /// <param name="plus_or_minus">-1 = убавить, 1 = прибавить</param>
+        /// <param name="value">значение</param>
+        public static void mFun(short plus_or_minus, short value)
+        {
+            if (plus_or_minus == -1)
+            {
+                v.statFun -= value;
+                if (v.statFun <= 0)
+                {
+                    a.Kill();
+                }
+            }
+            else if (plus_or_minus == 1)
+            {
+                v.statFun += value;
+                if (v.statFun > 100)
+                {
+                    v.statFun = 100;
+                }
+            }
+            Program.g.labelFun.Text = "Настроение: " + v.statFun;
+            Program.g.barFun.Value = v.statFun;
+
+        }
+
+        /// <summary>
+        /// Изменяет стат сна.
+        /// </summary>
+        /// <param name="plus_or_minus">-1 = убавить, 1 = прибавить</param>
+        /// <param name="value">значение</param>
+        public static void mSleep(short plus_or_minus, short value)
+        {
+            if (plus_or_minus == -1)
+            {
+                v.statSleep -= value;
+                if (v.statSleep <= 0)
+                {
+                    a.Kill();
+                }
+            }
+            else if (plus_or_minus == 1)
+            {
+                v.statSleep += value;
+                if (v.statSleep > 100)
+                {
+                    v.statSleep = 100;
+                }
+            }
+            Program.g.labelSleep.Text = "Сон: " + v.statSleep;
+            Program.g.barSleep.Value = v.statSleep;
+
+        }
+
+        /// <summary>
+        /// Изменяет стат здоровья.
+        /// </summary>
+        /// <param name="plus_or_minus">-1 = убавить, 1 = прибавить</param>
+        /// <param name="value">значение</param>
+        public static void mHealth(short plus_or_minus, short value)
+        {
+            if (plus_or_minus == -1)
+            {
+                v.statHealth -= value;
+                if (v.statHealth <= 0)
+                {
+                    a.Kill();
+                }
+            }
+            else if (plus_or_minus == 1)
+            {
+                v.statHealth += value;
+                if (v.statHealth > 100)
+                {
+                    v.statHealth = 100;
+                }
+            }
+            Program.g.labelHealth.Text = "Здоровье: " + v.statHealth;
+            Program.g.barHealth.Value = v.statHealth;
+
+        }
+
+        /// <summary>
+        /// Убить игрока.
+        /// </summary>
+        public static void Kill()
+        {
+            Program.g.timerFood.Stop();
+            Program.g.timerFun.Stop();
+            Program.g.timerSleep.Stop();
+            Death d = new Death();
+            d.ShowDialog();
+            v.forceClose = true;
+            Application.Exit();
         }
 
     }
