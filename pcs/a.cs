@@ -27,6 +27,8 @@ namespace pcs
                 v.xp = BigInteger.Parse(str[7]);
                 v.backgroundColor = Color.FromArgb(PXL.cTI(str[8]));
                 v.backgroundImage = str[9];
+                v.catchcat_record = BigInteger.Parse(str[10]);
+                
             }
             catch { }
         }
@@ -45,7 +47,8 @@ namespace pcs
                 v.money.ToString(),
                 v.xp.ToString(),
                 v.backgroundColor.ToArgb().ToString(),
-                v.backgroundImage
+                v.backgroundImage,
+                v.catchcat_record.ToString()
             });
             }
             catch(Exception ex)
@@ -229,13 +232,22 @@ namespace pcs
 
         public static void Reset()
         {
-            v.statHealth = 100;
-            v.statFun = 100;
-            v.statFood = 100;
-            v.statSleep = 100;
-            v.money = 500;
-            v.xp = 100;
-            Setup();
+            DialogResult r = MessageBox.Show("Все Ваши достижения будут удалены!", "Вы уверены?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(r == DialogResult.Yes)
+            {
+                MessageBox.Show("Перезагрузите игру.");
+                Program.g.autoSave.Stop();
+                v.statHealth = 100;
+                v.statFun = 100;
+                v.statFood = 100;
+                v.statSleep = 100;
+                v.money = 500;
+                v.xp = 100;
+                v.catchcat_record = 0;
+                v.forceClose = true;
+                File.Create(PXL.documents + PXL.s + "PearX" + PXL.s + "PCS" + PXL.s + "reset");
+                Application.Exit();
+            }
         }
     }
 }

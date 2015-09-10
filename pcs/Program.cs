@@ -18,10 +18,17 @@ namespace pcs
         static void Main()
         {
             Application.EnableVisualStyles();
-
             if(File.Exists(PXL.documents + PXL.s + "PearX" + PXL.s + "PCS" + PXL.s + "plug.save"))
             {
                 v.usePlug = Convert.ToBoolean(File.ReadAllText(PXL.documents + PXL.s + "PearX" + PXL.s + "PCS" + PXL.s + "plug.save"));
+            }
+            if (File.Exists(PXL.documents + PXL.s + "PearX" + PXL.s + "PCS" + PXL.s + "reset"))
+            {
+                File.Delete(PXL.documents + PXL.s + "PearX" + PXL.s + "PCS" + PXL.s + "reset");
+            }
+            else
+            {
+                a.Load("auto.save");
             }
             
             if (v.usePlug)

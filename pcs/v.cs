@@ -31,6 +31,8 @@ namespace pcs
 
         public static Color backgroundColor = Color.Black;
         public static string backgroundImage = null;
-        
+
+        public static BigInteger catchcat_record = 0;
+        //TODO: Ачивки
     }
 }

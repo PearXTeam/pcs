@@ -47,9 +47,14 @@
             this.labelXP = new System.Windows.Forms.Label();
             this.imageSaveManager = new System.Windows.Forms.PictureBox();
             this.imageInfo = new System.Windows.Forms.PictureBox();
+            this.imageVK = new System.Windows.Forms.PictureBox();
+            this.imageCatchCat = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageVK)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCatchCat)).BeginInit();
             this.SuspendLayout();
             // 
             // autoSave
@@ -183,7 +188,7 @@
             this.labelMoney.BackColor = System.Drawing.Color.Transparent;
             this.labelMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMoney.ForeColor = System.Drawing.Color.Orange;
-            this.labelMoney.Location = new System.Drawing.Point(12, 367);
+            this.labelMoney.Location = new System.Drawing.Point(66, 374);
             this.labelMoney.Name = "labelMoney";
             this.labelMoney.Size = new System.Drawing.Size(70, 25);
             this.labelMoney.TabIndex = 11;
@@ -195,7 +200,7 @@
             this.labelXP.BackColor = System.Drawing.Color.Transparent;
             this.labelXP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelXP.ForeColor = System.Drawing.Color.Orange;
-            this.labelXP.Location = new System.Drawing.Point(12, 392);
+            this.labelXP.Location = new System.Drawing.Point(66, 403);
             this.labelXP.Name = "labelXP";
             this.labelXP.Size = new System.Drawing.Size(70, 25);
             this.labelXP.TabIndex = 12;
@@ -225,6 +230,41 @@
             this.imageInfo.TabStop = false;
             this.imageInfo.Click += new System.EventHandler(this.imageInfo_Click);
             // 
+            // imageVK
+            // 
+            this.imageVK.BackColor = System.Drawing.Color.Transparent;
+            this.imageVK.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageVK.Image = global::pcs.Properties.Resources.vkontakte;
+            this.imageVK.Location = new System.Drawing.Point(12, 380);
+            this.imageVK.Name = "imageVK";
+            this.imageVK.Size = new System.Drawing.Size(48, 48);
+            this.imageVK.TabIndex = 15;
+            this.imageVK.TabStop = false;
+            this.imageVK.Click += new System.EventHandler(this.imageVK_Click);
+            // 
+            // imageCatchCat
+            // 
+            this.imageCatchCat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageCatchCat.Image = global::pcs.Properties.Resources.game;
+            this.imageCatchCat.Location = new System.Drawing.Point(774, 12);
+            this.imageCatchCat.Name = "imageCatchCat";
+            this.imageCatchCat.Size = new System.Drawing.Size(90, 90);
+            this.imageCatchCat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageCatchCat.TabIndex = 16;
+            this.imageCatchCat.TabStop = false;
+            this.imageCatchCat.Click += new System.EventHandler(this.imageCatchCat_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.Orange;
+            this.label2.Location = new System.Drawing.Point(782, 105);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 16);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Мини-игры";
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,6 +272,9 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(886, 440);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.imageCatchCat);
+            this.Controls.Add(this.imageVK);
             this.Controls.Add(this.imageInfo);
             this.Controls.Add(this.imageSaveManager);
             this.Controls.Add(this.labelXP);
@@ -254,6 +297,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageVK)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageCatchCat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,7 +306,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Timer autoSave;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Label labelHealth;
         public System.Windows.Forms.Label labelFun;
@@ -279,6 +323,10 @@
         public System.Windows.Forms.Label labelXP;
         private System.Windows.Forms.PictureBox imageSaveManager;
         private System.Windows.Forms.PictureBox imageInfo;
+        private System.Windows.Forms.PictureBox imageVK;
+        private System.Windows.Forms.PictureBox imageCatchCat;
+        private System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Timer autoSave;
     }
 }
 

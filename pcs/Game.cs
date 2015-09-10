@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Threading;
 using System.IO;
 using PearXLib;
+using System.Diagnostics;
 
 namespace pcs
 {
@@ -18,7 +19,6 @@ namespace pcs
     {
         public Game()
         {
-            a.Load("auto.save");
             InitializeComponent();
         }
 
@@ -95,6 +95,25 @@ namespace pcs
         {
             About a = new About();
             a.ShowDialog();
+        }
+
+        private void imageVK_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://vk.com/share.php?url=http://pearx.ru/pcs&title=PCSimulator - симулятор жизни." + "&description=У меня в PCSimulator уже " + v.money + " рублей и " + v.xp + " опыта! Сможешь ли ты накопить больше? Присоединяйся!&image=http://files.pearx.ru/images/pcs.png");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CatchCat cat = new CatchCat();
+            cat.Owner = this;
+            cat.Show();
+        }
+
+        private void imageCatchCat_Click(object sender, EventArgs e)
+        {
+            MiniGames mg = new MiniGames();
+            mg.Owner = this;
+            mg.Show();
         }
     }
 }
