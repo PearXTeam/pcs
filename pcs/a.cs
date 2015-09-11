@@ -238,7 +238,7 @@ namespace pcs
         {
             if (plus_or_minus == -1)
             {
-                if (v.money <= 0)
+                if (v.money < value)
                 {
                     MessageBox.Show("Недостаточно денег!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;

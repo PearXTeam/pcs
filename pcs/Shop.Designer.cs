@@ -260,9 +260,9 @@
             this.labelFoodHamburgerCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodHamburgerCount.Location = new System.Drawing.Point(218, 1543);
             this.labelFoodHamburgerCount.Name = "labelFoodHamburgerCount";
-            this.labelFoodHamburgerCount.Size = new System.Drawing.Size(30, 24);
+            this.labelFoodHamburgerCount.Size = new System.Drawing.Size(42, 24);
             this.labelFoodHamburgerCount.TabIndex = 128;
-            this.labelFoodHamburgerCount.Text = "72";
+            this.labelFoodHamburgerCount.Text = "72Р";
             // 
             // labelFoodStrawberryCount
             // 
@@ -271,9 +271,9 @@
             this.labelFoodStrawberryCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodStrawberryCount.Location = new System.Drawing.Point(205, 1438);
             this.labelFoodStrawberryCount.Name = "labelFoodStrawberryCount";
-            this.labelFoodStrawberryCount.Size = new System.Drawing.Size(30, 24);
+            this.labelFoodStrawberryCount.Size = new System.Drawing.Size(42, 24);
             this.labelFoodStrawberryCount.TabIndex = 127;
-            this.labelFoodStrawberryCount.Text = "26";
+            this.labelFoodStrawberryCount.Text = "26Р";
             // 
             // labelFoodTomatoCount
             // 
@@ -282,9 +282,9 @@
             this.labelFoodTomatoCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodTomatoCount.Location = new System.Drawing.Point(204, 1351);
             this.labelFoodTomatoCount.Name = "labelFoodTomatoCount";
-            this.labelFoodTomatoCount.Size = new System.Drawing.Size(30, 24);
+            this.labelFoodTomatoCount.Size = new System.Drawing.Size(42, 24);
             this.labelFoodTomatoCount.TabIndex = 126;
-            this.labelFoodTomatoCount.Text = "25";
+            this.labelFoodTomatoCount.Text = "25Р";
             // 
             // labelFoodIceCreamCount
             // 
@@ -293,9 +293,9 @@
             this.labelFoodIceCreamCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodIceCreamCount.Location = new System.Drawing.Point(228, 966);
             this.labelFoodIceCreamCount.Name = "labelFoodIceCreamCount";
-            this.labelFoodIceCreamCount.Size = new System.Drawing.Size(30, 24);
+            this.labelFoodIceCreamCount.Size = new System.Drawing.Size(42, 24);
             this.labelFoodIceCreamCount.TabIndex = 125;
-            this.labelFoodIceCreamCount.Text = "29";
+            this.labelFoodIceCreamCount.Text = "29Р";
             // 
             // labelFoodPepperCount
             // 
@@ -304,9 +304,9 @@
             this.labelFoodPepperCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodPepperCount.Location = new System.Drawing.Point(251, 775);
             this.labelFoodPepperCount.Name = "labelFoodPepperCount";
-            this.labelFoodPepperCount.Size = new System.Drawing.Size(30, 24);
+            this.labelFoodPepperCount.Size = new System.Drawing.Size(42, 24);
             this.labelFoodPepperCount.TabIndex = 124;
-            this.labelFoodPepperCount.Text = "14";
+            this.labelFoodPepperCount.Text = "14Р";
             // 
             // labelFoodEggPlantCount
             // 
@@ -315,9 +315,9 @@
             this.labelFoodEggPlantCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodEggPlantCount.Location = new System.Drawing.Point(206, 679);
             this.labelFoodEggPlantCount.Name = "labelFoodEggPlantCount";
-            this.labelFoodEggPlantCount.Size = new System.Drawing.Size(30, 24);
+            this.labelFoodEggPlantCount.Size = new System.Drawing.Size(42, 24);
             this.labelFoodEggPlantCount.TabIndex = 123;
-            this.labelFoodEggPlantCount.Text = "25";
+            this.labelFoodEggPlantCount.Text = "25Р";
             // 
             // labelFoodCockteilCount
             // 
@@ -326,9 +326,9 @@
             this.labelFoodCockteilCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodCockteilCount.Location = new System.Drawing.Point(201, 2023);
             this.labelFoodCockteilCount.Name = "labelFoodCockteilCount";
-            this.labelFoodCockteilCount.Size = new System.Drawing.Size(30, 24);
+            this.labelFoodCockteilCount.Size = new System.Drawing.Size(42, 24);
             this.labelFoodCockteilCount.TabIndex = 122;
-            this.labelFoodCockteilCount.Text = "24";
+            this.labelFoodCockteilCount.Text = "24Р";
             // 
             // labelFoodCockteilDesc
             // 
@@ -359,9 +359,9 @@
             this.labelFoodCakeCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodCakeCount.Location = new System.Drawing.Point(166, 1927);
             this.labelFoodCakeCount.Name = "labelFoodCakeCount";
-            this.labelFoodCakeCount.Size = new System.Drawing.Size(30, 24);
+            this.labelFoodCakeCount.Size = new System.Drawing.Size(42, 24);
             this.labelFoodCakeCount.TabIndex = 119;
-            this.labelFoodCakeCount.Text = "71";
+            this.labelFoodCakeCount.Text = "71Р";
             // 
             // labelFoodCakeDesc
             // 
@@ -392,9 +392,9 @@
             this.labelFoodCornCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodCornCount.Location = new System.Drawing.Point(201, 1831);
             this.labelFoodCornCount.Name = "labelFoodCornCount";
-            this.labelFoodCornCount.Size = new System.Drawing.Size(30, 24);
+            this.labelFoodCornCount.Size = new System.Drawing.Size(42, 24);
             this.labelFoodCornCount.TabIndex = 116;
-            this.labelFoodCornCount.Text = "30";
+            this.labelFoodCornCount.Text = "30Р";
             // 
             // labelFoodCornDesc
             // 
@@ -425,9 +425,9 @@
             this.labelFoodCucumberCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodCucumberCount.Location = new System.Drawing.Point(188, 1735);
             this.labelFoodCucumberCount.Name = "labelFoodCucumberCount";
-            this.labelFoodCucumberCount.Size = new System.Drawing.Size(30, 24);
+            this.labelFoodCucumberCount.Size = new System.Drawing.Size(42, 24);
             this.labelFoodCucumberCount.TabIndex = 113;
-            this.labelFoodCucumberCount.Text = "20";
+            this.labelFoodCucumberCount.Text = "20Р";
             // 
             // labelFoodCucumberDesc
             // 
@@ -458,9 +458,9 @@
             this.labelFoodMeatCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodMeatCount.Location = new System.Drawing.Point(169, 1639);
             this.labelFoodMeatCount.Name = "labelFoodMeatCount";
-            this.labelFoodMeatCount.Size = new System.Drawing.Size(40, 24);
+            this.labelFoodMeatCount.Size = new System.Drawing.Size(52, 24);
             this.labelFoodMeatCount.TabIndex = 110;
-            this.labelFoodMeatCount.Text = "107";
+            this.labelFoodMeatCount.Text = "107Р";
             // 
             // labelFoodMeatDesc
             // 
@@ -557,9 +557,9 @@
             this.labelFoodEggCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodEggCount.Location = new System.Drawing.Point(170, 1255);
             this.labelFoodEggCount.Name = "labelFoodEggCount";
-            this.labelFoodEggCount.Size = new System.Drawing.Size(30, 24);
+            this.labelFoodEggCount.Size = new System.Drawing.Size(42, 24);
             this.labelFoodEggCount.TabIndex = 101;
-            this.labelFoodEggCount.Text = "28";
+            this.labelFoodEggCount.Text = "28Р";
             // 
             // labelFoodEggDesc
             // 
@@ -590,9 +590,9 @@
             this.labelFoodCheeseCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodCheeseCount.Location = new System.Drawing.Point(158, 1158);
             this.labelFoodCheeseCount.Name = "labelFoodCheeseCount";
-            this.labelFoodCheeseCount.Size = new System.Drawing.Size(30, 24);
+            this.labelFoodCheeseCount.Size = new System.Drawing.Size(42, 24);
             this.labelFoodCheeseCount.TabIndex = 98;
-            this.labelFoodCheeseCount.Text = "20";
+            this.labelFoodCheeseCount.Text = "20Р";
             // 
             // labelFoodCheeseDesc
             // 
@@ -623,9 +623,9 @@
             this.labelFoodKiwiCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodKiwiCount.Location = new System.Drawing.Point(166, 1062);
             this.labelFoodKiwiCount.Name = "labelFoodKiwiCount";
-            this.labelFoodKiwiCount.Size = new System.Drawing.Size(30, 24);
+            this.labelFoodKiwiCount.Size = new System.Drawing.Size(42, 24);
             this.labelFoodKiwiCount.TabIndex = 95;
-            this.labelFoodKiwiCount.Text = "15";
+            this.labelFoodKiwiCount.Text = "15Р";
             // 
             // labelFoodKiwiDesc
             // 
@@ -678,9 +678,9 @@
             this.labelFoodBreadCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodBreadCount.Location = new System.Drawing.Point(165, 866);
             this.labelFoodBreadCount.Name = "labelFoodBreadCount";
-            this.labelFoodBreadCount.Size = new System.Drawing.Size(30, 24);
+            this.labelFoodBreadCount.Size = new System.Drawing.Size(42, 24);
             this.labelFoodBreadCount.TabIndex = 90;
-            this.labelFoodBreadCount.Text = "10";
+            this.labelFoodBreadCount.Text = "10Р";
             // 
             // labelFoodBreadDesc
             // 
@@ -755,9 +755,9 @@
             this.labelFoodMushroomCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodMushroomCount.Location = new System.Drawing.Point(164, 582);
             this.labelFoodMushroomCount.Name = "labelFoodMushroomCount";
-            this.labelFoodMushroomCount.Size = new System.Drawing.Size(20, 24);
+            this.labelFoodMushroomCount.Size = new System.Drawing.Size(32, 24);
             this.labelFoodMushroomCount.TabIndex = 83;
-            this.labelFoodMushroomCount.Text = "6";
+            this.labelFoodMushroomCount.Text = "6Р";
             // 
             // labelFoodMushroomDesc
             // 
@@ -788,9 +788,9 @@
             this.labelFoodCherryCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodCherryCount.Location = new System.Drawing.Point(179, 488);
             this.labelFoodCherryCount.Name = "labelFoodCherryCount";
-            this.labelFoodCherryCount.Size = new System.Drawing.Size(20, 24);
+            this.labelFoodCherryCount.Size = new System.Drawing.Size(32, 24);
             this.labelFoodCherryCount.TabIndex = 75;
-            this.labelFoodCherryCount.Text = "5";
+            this.labelFoodCherryCount.Text = "5Р";
             // 
             // labelFoodCherryDesc
             // 
@@ -821,9 +821,9 @@
             this.labelFoodCupcakeCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodCupcakeCount.Location = new System.Drawing.Point(183, 392);
             this.labelFoodCupcakeCount.Name = "labelFoodCupcakeCount";
-            this.labelFoodCupcakeCount.Size = new System.Drawing.Size(30, 24);
+            this.labelFoodCupcakeCount.Size = new System.Drawing.Size(42, 24);
             this.labelFoodCupcakeCount.TabIndex = 72;
-            this.labelFoodCupcakeCount.Text = "26";
+            this.labelFoodCupcakeCount.Text = "26Р";
             // 
             // labelFoodCupcakeDesc
             // 
@@ -854,9 +854,9 @@
             this.labelFoodCookiesCount.ForeColor = System.Drawing.Color.Green;
             this.labelFoodCookiesCount.Location = new System.Drawing.Point(199, 296);
             this.labelFoodCookiesCount.Name = "labelFoodCookiesCount";
-            this.labelFoodCookiesCount.Size = new System.Drawing.Size(30, 24);
+            this.labelFoodCookiesCount.Size = new System.Drawing.Size(42, 24);
             this.labelFoodCookiesCount.TabIndex = 69;
-            this.labelFoodCookiesCount.Text = "26";
+            this.labelFoodCookiesCount.Text = "26Р";
             // 
             // labelFoodCookiesDesc
             // 
@@ -991,6 +991,7 @@
             this.imageFoodCockteil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodCockteil.TabIndex = 57;
             this.imageFoodCockteil.TabStop = false;
+            this.imageFoodCockteil.Click += new System.EventHandler(this.imageFoodCockteil_Click);
             // 
             // imageFoodPie
             // 
@@ -1003,6 +1004,7 @@
             this.imageFoodPie.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodPie.TabIndex = 56;
             this.imageFoodPie.TabStop = false;
+            this.imageFoodPie.Click += new System.EventHandler(this.imageFoodPie_Click);
             // 
             // imageFoodCorn
             // 
@@ -1015,6 +1017,7 @@
             this.imageFoodCorn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodCorn.TabIndex = 55;
             this.imageFoodCorn.TabStop = false;
+            this.imageFoodCorn.Click += new System.EventHandler(this.imageFoodCorn_Click);
             // 
             // imageFoodCucumber
             // 
@@ -1027,6 +1030,7 @@
             this.imageFoodCucumber.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodCucumber.TabIndex = 54;
             this.imageFoodCucumber.TabStop = false;
+            this.imageFoodCucumber.Click += new System.EventHandler(this.imageFoodCucumber_Click);
             // 
             // imageFoodMeat
             // 
@@ -1039,6 +1043,7 @@
             this.imageFoodMeat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodMeat.TabIndex = 53;
             this.imageFoodMeat.TabStop = false;
+            this.imageFoodMeat.Click += new System.EventHandler(this.imageFoodMeat_Click);
             // 
             // imageFoodHamburger
             // 
@@ -1051,6 +1056,7 @@
             this.imageFoodHamburger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodHamburger.TabIndex = 52;
             this.imageFoodHamburger.TabStop = false;
+            this.imageFoodHamburger.Click += new System.EventHandler(this.imageFoodHamburger_Click);
             // 
             // imageFoodStrawberry
             // 
@@ -1063,6 +1069,7 @@
             this.imageFoodStrawberry.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodStrawberry.TabIndex = 51;
             this.imageFoodStrawberry.TabStop = false;
+            this.imageFoodStrawberry.Click += new System.EventHandler(this.imageFoodStrawberry_Click);
             // 
             // imageFoodTomato
             // 
@@ -1075,6 +1082,7 @@
             this.imageFoodTomato.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodTomato.TabIndex = 50;
             this.imageFoodTomato.TabStop = false;
+            this.imageFoodTomato.Click += new System.EventHandler(this.imageFoodTomato_Click);
             // 
             // imageFoodEgg
             // 
@@ -1087,6 +1095,7 @@
             this.imageFoodEgg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodEgg.TabIndex = 49;
             this.imageFoodEgg.TabStop = false;
+            this.imageFoodEgg.Click += new System.EventHandler(this.imageFoodEgg_Click);
             // 
             // imageFoodCheese
             // 
@@ -1099,6 +1108,7 @@
             this.imageFoodCheese.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodCheese.TabIndex = 48;
             this.imageFoodCheese.TabStop = false;
+            this.imageFoodCheese.Click += new System.EventHandler(this.imageFoodCheese_Click);
             // 
             // imageFoodKiwi
             // 
@@ -1111,6 +1121,7 @@
             this.imageFoodKiwi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodKiwi.TabIndex = 47;
             this.imageFoodKiwi.TabStop = false;
+            this.imageFoodKiwi.Click += new System.EventHandler(this.imageFoodKiwi_Click);
             // 
             // imageFoodIceCream
             // 
@@ -1123,6 +1134,7 @@
             this.imageFoodIceCream.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodIceCream.TabIndex = 46;
             this.imageFoodIceCream.TabStop = false;
+            this.imageFoodIceCream.Click += new System.EventHandler(this.imageFoodIceCream_Click);
             // 
             // imageFoodBread
             // 
@@ -1135,6 +1147,7 @@
             this.imageFoodBread.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodBread.TabIndex = 45;
             this.imageFoodBread.TabStop = false;
+            this.imageFoodBread.Click += new System.EventHandler(this.imageFoodBread_Click);
             // 
             // imageFoodPepper
             // 
@@ -1147,6 +1160,7 @@
             this.imageFoodPepper.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodPepper.TabIndex = 44;
             this.imageFoodPepper.TabStop = false;
+            this.imageFoodPepper.Click += new System.EventHandler(this.imageFoodPepper_Click);
             // 
             // imageFoodEggPlant
             // 
@@ -1159,6 +1173,7 @@
             this.imageFoodEggPlant.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodEggPlant.TabIndex = 43;
             this.imageFoodEggPlant.TabStop = false;
+            this.imageFoodEggPlant.Click += new System.EventHandler(this.imageFoodEggPlant_Click);
             // 
             // imageFoodMushroom
             // 
@@ -1184,6 +1199,7 @@
             this.imageFoodCherry.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodCherry.TabIndex = 41;
             this.imageFoodCherry.TabStop = false;
+            this.imageFoodCherry.Click += new System.EventHandler(this.imageFoodCherry_Click);
             // 
             // imageFoodCupcake
             // 
@@ -1196,6 +1212,7 @@
             this.imageFoodCupcake.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodCupcake.TabIndex = 40;
             this.imageFoodCupcake.TabStop = false;
+            this.imageFoodCupcake.Click += new System.EventHandler(this.imageFoodCupcake_Click);
             // 
             // imageFoodCookies
             // 
@@ -1208,6 +1225,7 @@
             this.imageFoodCookies.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodCookies.TabIndex = 39;
             this.imageFoodCookies.TabStop = false;
+            this.imageFoodCookies.Click += new System.EventHandler(this.imageFoodCookies_Click);
             // 
             // imageFoodSushi
             // 
@@ -1220,6 +1238,7 @@
             this.imageFoodSushi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodSushi.TabIndex = 38;
             this.imageFoodSushi.TabStop = false;
+            this.imageFoodSushi.Click += new System.EventHandler(this.imageFoodSushi_Click);
             // 
             // imageFoodSoup
             // 
@@ -1232,6 +1251,7 @@
             this.imageFoodSoup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imageFoodSoup.TabIndex = 37;
             this.imageFoodSoup.TabStop = false;
+            this.imageFoodSoup.Click += new System.EventHandler(this.imageFoodSoup_Click);
             // 
             // imageFoodBanana
             // 
