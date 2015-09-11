@@ -10,17 +10,21 @@ using System.Windows.Forms;
 
 namespace pcs
 {
-    public partial class MiniGames : Form
+    public partial class Shop : Form
     {
-        public MiniGames()
+        public Shop()
         {
             InitializeComponent();
         }
 
-        private void imageCatchCat_Click(object sender, EventArgs e)
+        private void imageFoodMushroom_Click(object sender, EventArgs e)
         {
-            CatchCat cc = new CatchCat();
-            cc.ShowDialog();
+
+        }
+
+        private void imageFoodBanana_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

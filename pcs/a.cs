@@ -8,6 +8,7 @@ namespace pcs
 {
     class a
     {
+        public enum Message { NoItem }
         /// <summary>
         /// Загружает сохранение.
         /// </summary>
@@ -28,6 +29,27 @@ namespace pcs
                 v.backgroundColor = Color.FromArgb(PXL.cTI(str[8]));
                 v.backgroundImage = str[9];
                 v.catchcat_record = BigInteger.Parse(str[10]);
+                inv.foodBanana = Convert.ToInt64(str[11]);
+                inv.foodSoup = Convert.ToInt64(str[12]);
+                inv.foodSushi = Convert.ToInt64(str[13]);
+                inv.foodCookies = Convert.ToInt64(str[14]);
+                inv.foodCupcake = Convert.ToInt64(str[15]);
+                inv.foodCherry = Convert.ToInt64(str[16]);
+                inv.foodMushroom = Convert.ToInt64(str[17]);
+                inv.foodEggPlant = Convert.ToInt64(str[18]);
+                inv.foodPepper = Convert.ToInt64(str[19]);
+                inv.foodBread = Convert.ToInt64(str[20]);
+                inv.foodIceCream = Convert.ToInt64(str[21]);
+                inv.foodKiwi = Convert.ToInt64(str[22]);
+                inv.foodCheese = Convert.ToInt64(str[23]);
+                inv.foodEgg = Convert.ToInt64(str[24]);
+                inv.foodTomato = Convert.ToInt64(str[25]);
+                inv.foodStrawberry = Convert.ToInt64(str[26]);
+                inv.foodHamburger = Convert.ToInt64(str[27]);
+                inv.foodCucumber = Convert.ToInt64(str[28]);
+                inv.foodCorn = Convert.ToInt64(str[29]);
+                inv.foodPie = Convert.ToInt64(str[30]);
+                inv.foodCupcake = Convert.ToInt64(str[31]);
                 
             }
             catch { }
@@ -48,7 +70,29 @@ namespace pcs
                 v.xp.ToString(),
                 v.backgroundColor.ToArgb().ToString(),
                 v.backgroundImage,
-                v.catchcat_record.ToString()
+                v.catchcat_record.ToString(),
+                inv.foodBanana.ToString(),
+                inv.foodSoup.ToString(),
+                inv.foodSushi.ToString(),
+                inv.foodCookies.ToString(),
+                inv.foodCupcake.ToString(),
+                inv.foodCherry.ToString(),
+                inv.foodMushroom.ToString(),
+                inv.foodEggPlant.ToString(),
+                inv.foodPepper.ToString(),
+                inv.foodBread.ToString(),
+                inv.foodIceCream.ToString(),
+                inv.foodKiwi.ToString(),
+                inv.foodCheese.ToString(),
+                inv.foodEgg.ToString(),
+                inv.foodTomato.ToString(),
+                inv.foodStrawberry.ToString(),
+                inv.foodHamburger.ToString(),
+                inv.foodCucumber.ToString(),
+                inv.foodCorn.ToString(),
+                inv.foodPie.ToString(),
+                inv.foodCupcake.ToString()
+
             });
             }
             catch(Exception ex)
@@ -190,17 +234,33 @@ namespace pcs
             Application.Exit();
         }
 
-        public static void mMoney(short plus_or_minus, BigInteger value)
+        public static bool mMoney(short plus_or_minus, BigInteger value)
         {
             if (plus_or_minus == -1)
             {
-                v.money -= value;
+                if (v.money <= 0)
+                {
+                    MessageBox.Show("Недостаточно денег!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                else
+                {
+                    v.money -= value;
+                    Program.g.labelMoney.Text = "Деньги: " + v.money + "Р";
+                    return true;
+                }
             }
             else if (plus_or_minus == 1)
             {
                 v.money += value;
+                Program.g.labelMoney.Text = "Деньги: " + v.money + "Р";
+                return true;
             }
-            Program.g.labelMoney.Text = "Деньги: " + v.money + "Р";
+            else
+            {
+                return false;
+            }
+            
         }
 
         public static void mXP(short plus_or_minus, BigInteger value)
@@ -244,9 +304,40 @@ namespace pcs
                 v.money = 500;
                 v.xp = 100;
                 v.catchcat_record = 0;
+                inv.foodBanana = 0;
+                inv.foodSoup = 0;
+                inv.foodSushi = 0;
+                inv.foodCookies = 0;
+                inv.foodCupcake = 0;
+                inv.foodCherry = 0;
+                inv.foodMushroom = 0;
+                inv.foodEggPlant = 0;
+                inv.foodPepper = 0;
+                inv.foodBread = 0;
+                inv.foodIceCream = 0;
+                inv.foodKiwi = 0;
+                inv.foodCheese = 0;
+                inv.foodEgg = 0;
+                inv.foodTomato = 0;
+                inv.foodStrawberry = 0;
+                inv.foodHamburger = 0;
+                inv.foodMeat = 0;
+                inv.foodCucumber = 0;
+                inv.foodCorn = 0;
+                inv.foodPie = 0;
+                inv.foodCockteil = 0;
+
                 v.forceClose = true;
                 File.Create(PXL.documents + PXL.s + "PearX" + PXL.s + "PCS" + PXL.s + "reset");
                 Application.Exit();
+            }
+        }
+
+        public static void SM(Message m)
+        {
+            if (m == Message.NoItem)
+            {
+                MessageBox.Show("У Вас нет этого предмета!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

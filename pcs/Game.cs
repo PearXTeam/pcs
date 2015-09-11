@@ -102,18 +102,22 @@ namespace pcs
             Process.Start("http://vk.com/share.php?url=http://pearx.ru/pcs&title=PCSimulator - симулятор жизни." + "&description=У меня в PCSimulator уже " + v.money + " рублей и " + v.xp + " опыта! Сможешь ли ты накопить больше? Присоединяйся!&image=http://files.pearx.ru/images/pcs.png");
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CatchCat cat = new CatchCat();
-            cat.Owner = this;
-            cat.Show();
-        }
-
-        private void imageCatchCat_Click(object sender, EventArgs e)
+        private void imageMiniGames_Click(object sender, EventArgs e)
         {
             MiniGames mg = new MiniGames();
-            mg.Owner = this;
-            mg.Show();
+            mg.ShowDialog();
+        }
+
+        private void imageInv_Click(object sender, EventArgs e)
+        {
+            InvGui ig = new InvGui();
+            ig.ShowDialog();
+        }
+
+        private void imageShop_Click(object sender, EventArgs e)
+        {
+            Shop s = new Shop();
+            s.ShowDialog();
         }
     }
 }

@@ -50,7 +50,7 @@
             // timerMove
             // 
             this.timerMove.Enabled = true;
-            this.timerMove.Interval = 200;
+            this.timerMove.Interval = 450;
             this.timerMove.Tick += new System.EventHandler(this.timerMove_Tick);
             // 
             // labelScore

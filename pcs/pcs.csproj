@@ -96,6 +96,13 @@
     <Compile Include="Game.Designer.cs">
       <DependentUpon>Game.cs</DependentUpon>
     </Compile>
+    <Compile Include="inv.cs" />
+    <Compile Include="InvGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvGui.Designer.cs">
+      <DependentUpon>InvGui.cs</DependentUpon>
+    </Compile>
     <Compile Include="MiniGames.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +129,12 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Shop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shop.Designer.cs">
+      <DependentUpon>Shop.cs</DependentUpon>
+    </Compile>
     <Compile Include="v.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
@@ -134,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvGui.resx">
+      <DependentUpon>InvGui.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MiniGames.resx">
       <DependentUpon>MiniGames.cs</DependentUpon>
@@ -156,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop.resx">
+      <DependentUpon>Shop.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -216,6 +235,81 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\game.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\packaging.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sushi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cookies.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cupcake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cherry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mushroom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eggplant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pepper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bread.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icecream.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kiwi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cheese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\egg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tomato.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strawberry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\meat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cucumber.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cockteil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OmNomNom.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -48,13 +48,19 @@
             this.imageSaveManager = new System.Windows.Forms.PictureBox();
             this.imageInfo = new System.Windows.Forms.PictureBox();
             this.imageVK = new System.Windows.Forms.PictureBox();
-            this.imageCatchCat = new System.Windows.Forms.PictureBox();
+            this.imageMiniGames = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.imageInv = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.imageShop = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageVK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageCatchCat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageMiniGames)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageInv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageShop)).BeginInit();
             this.SuspendLayout();
             // 
             // autoSave
@@ -242,21 +248,23 @@
             this.imageVK.TabStop = false;
             this.imageVK.Click += new System.EventHandler(this.imageVK_Click);
             // 
-            // imageCatchCat
+            // imageMiniGames
             // 
-            this.imageCatchCat.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageCatchCat.Image = global::pcs.Properties.Resources.game;
-            this.imageCatchCat.Location = new System.Drawing.Point(774, 12);
-            this.imageCatchCat.Name = "imageCatchCat";
-            this.imageCatchCat.Size = new System.Drawing.Size(90, 90);
-            this.imageCatchCat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imageCatchCat.TabIndex = 16;
-            this.imageCatchCat.TabStop = false;
-            this.imageCatchCat.Click += new System.EventHandler(this.imageCatchCat_Click);
+            this.imageMiniGames.BackColor = System.Drawing.Color.Transparent;
+            this.imageMiniGames.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageMiniGames.Image = global::pcs.Properties.Resources.game;
+            this.imageMiniGames.Location = new System.Drawing.Point(774, 12);
+            this.imageMiniGames.Name = "imageMiniGames";
+            this.imageMiniGames.Size = new System.Drawing.Size(90, 90);
+            this.imageMiniGames.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageMiniGames.TabIndex = 16;
+            this.imageMiniGames.TabStop = false;
+            this.imageMiniGames.Click += new System.EventHandler(this.imageMiniGames_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.Orange;
             this.label2.Location = new System.Drawing.Point(782, 105);
@@ -265,6 +273,56 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "Мини-игры";
             // 
+            // imageInv
+            // 
+            this.imageInv.BackColor = System.Drawing.Color.Transparent;
+            this.imageInv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageInv.Image = global::pcs.Properties.Resources.packaging;
+            this.imageInv.Location = new System.Drawing.Point(668, 12);
+            this.imageInv.Name = "imageInv";
+            this.imageInv.Size = new System.Drawing.Size(90, 90);
+            this.imageInv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageInv.TabIndex = 18;
+            this.imageInv.TabStop = false;
+            this.imageInv.Click += new System.EventHandler(this.imageInv_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.Orange;
+            this.label3.Location = new System.Drawing.Point(675, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 16);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Инвентарь";
+            // 
+            // imageShop
+            // 
+            this.imageShop.BackColor = System.Drawing.Color.Transparent;
+            this.imageShop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageShop.Image = global::pcs.Properties.Resources.shop;
+            this.imageShop.Location = new System.Drawing.Point(572, 12);
+            this.imageShop.Name = "imageShop";
+            this.imageShop.Size = new System.Drawing.Size(90, 90);
+            this.imageShop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageShop.TabIndex = 20;
+            this.imageShop.TabStop = false;
+            this.imageShop.Click += new System.EventHandler(this.imageShop_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.Orange;
+            this.label4.Location = new System.Drawing.Point(584, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 16);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Магазин";
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,8 +330,12 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(886, 440);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.imageShop);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.imageInv);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.imageCatchCat);
+            this.Controls.Add(this.imageMiniGames);
             this.Controls.Add(this.imageVK);
             this.Controls.Add(this.imageInfo);
             this.Controls.Add(this.imageSaveManager);
@@ -298,7 +360,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageVK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageCatchCat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageMiniGames)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageInv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageShop)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,9 +388,13 @@
         private System.Windows.Forms.PictureBox imageSaveManager;
         private System.Windows.Forms.PictureBox imageInfo;
         private System.Windows.Forms.PictureBox imageVK;
-        private System.Windows.Forms.PictureBox imageCatchCat;
+        private System.Windows.Forms.PictureBox imageMiniGames;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.Timer autoSave;
+        private System.Windows.Forms.PictureBox imageInv;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox imageShop;
+        private System.Windows.Forms.Label label4;
     }
 }
 
