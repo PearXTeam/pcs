@@ -33,6 +33,7 @@ namespace pcs
         public static string backgroundImage = null;
 
         public static BigInteger catchcat_record = 0;
+        public static BigInteger catordog_record = 0;
         //TODO: Ачивки
     }
 }

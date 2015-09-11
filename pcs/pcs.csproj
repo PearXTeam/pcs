@@ -84,6 +84,12 @@
     <Compile Include="CatchCat.Designer.cs">
       <DependentUpon>CatchCat.cs</DependentUpon>
     </Compile>
+    <Compile Include="CatOrDog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CatOrDog.Designer.cs">
+      <DependentUpon>CatOrDog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Death.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CatchCat.resx">
       <DependentUpon>CatchCat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CatOrDog.resx">
+      <DependentUpon>CatOrDog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Death.resx">
       <DependentUpon>Death.cs</DependentUpon>
@@ -313,6 +322,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Money.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_cat1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_cat2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_cat3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_cat4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_cat5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_cat6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_cat7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_cat8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_cat9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_cat10.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_cat11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_dog1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_dog2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_dog3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_dog4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_dog5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_dog6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_dog7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_dog8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_dog9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_dog10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cod_dog11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dog.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

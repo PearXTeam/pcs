@@ -22,5 +22,11 @@ namespace pcs
             CatchCat cc = new CatchCat();
             cc.ShowDialog();
         }
+
+        private void imageCatOrDog_Click(object sender, EventArgs e)
+        {
+            CatOrDog cod = new CatOrDog();
+            cod.ShowDialog();
+        }
     }
 }

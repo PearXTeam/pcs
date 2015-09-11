@@ -50,6 +50,7 @@ namespace pcs
                 inv.foodCorn = Convert.ToInt64(str[29]);
                 inv.foodPie = Convert.ToInt64(str[30]);
                 inv.foodCupcake = Convert.ToInt64(str[31]);
+                v.catordog_record = BigInteger.Parse(str[32]);
                 
             }
             catch { }
@@ -91,7 +92,8 @@ namespace pcs
                 inv.foodCucumber.ToString(),
                 inv.foodCorn.ToString(),
                 inv.foodPie.ToString(),
-                inv.foodCupcake.ToString()
+                inv.foodCupcake.ToString(),
+                v.catordog_record.ToString()
 
             });
             }
