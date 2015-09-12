@@ -125,6 +125,11 @@ namespace pcs
                 {
                     a.Kill();
                 }
+                else
+                {
+                    Program.g.labelFood.Text = "Еда: " + v.statFood;
+                    Program.g.barFood.Value = v.statFood;
+                }
             }
             else if (plus_or_minus == 1)
             {
@@ -133,9 +138,9 @@ namespace pcs
                 {
                     v.statFood = 100;
                 }
+                Program.g.labelFood.Text = "Еда: " + v.statFood;
+                Program.g.barFood.Value = v.statFood;
             }
-            Program.g.labelFood.Text = "Еда: " + v.statFood;
-            Program.g.barFood.Value = v.statFood;
         }
 
         /// <summary>
@@ -152,6 +157,11 @@ namespace pcs
                 {
                     a.Kill();
                 }
+                else
+                {
+                    Program.g.labelFun.Text = "Настроение: " + v.statFun;
+                    Program.g.barFun.Value = v.statFun;
+                }
             }
             else if (plus_or_minus == 1)
             {
@@ -160,9 +170,9 @@ namespace pcs
                 {
                     v.statFun = 100;
                 }
+                Program.g.labelFun.Text = "Настроение: " + v.statFun;
+                Program.g.barFun.Value = v.statFun;
             }
-            Program.g.labelFun.Text = "Настроение: " + v.statFun;
-            Program.g.barFun.Value = v.statFun;
 
         }
 
@@ -180,6 +190,11 @@ namespace pcs
                 {
                     a.Kill();
                 }
+                else
+                {
+                    Program.g.labelSleep.Text = "Сон: " + v.statSleep;
+                    Program.g.barSleep.Value = v.statSleep;
+                }
             }
             else if (plus_or_minus == 1)
             {
@@ -188,9 +203,9 @@ namespace pcs
                 {
                     v.statSleep = 100;
                 }
+                Program.g.labelSleep.Text = "Сон: " + v.statSleep;
+                Program.g.barSleep.Value = v.statSleep;
             }
-            Program.g.labelSleep.Text = "Сон: " + v.statSleep;
-            Program.g.barSleep.Value = v.statSleep;
 
         }
 
@@ -208,6 +223,11 @@ namespace pcs
                 {
                     a.Kill();
                 }
+                else
+                {
+                    Program.g.labelHealth.Text = "Здоровье: " + v.statHealth;
+                    Program.g.barHealth.Value = v.statHealth;
+                }
             }
             else if (plus_or_minus == 1)
             {
@@ -216,9 +236,9 @@ namespace pcs
                 {
                     v.statHealth = 100;
                 }
+                Program.g.labelHealth.Text = "Здоровье: " + v.statHealth;
+                Program.g.barHealth.Value = v.statHealth;
             }
-            Program.g.labelHealth.Text = "Здоровье: " + v.statHealth;
-            Program.g.barHealth.Value = v.statHealth;
 
         }
 

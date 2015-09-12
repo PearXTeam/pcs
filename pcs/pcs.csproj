@@ -141,6 +141,12 @@
     <Compile Include="Shop.Designer.cs">
       <DependentUpon>Shop.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sleep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sleep.Designer.cs">
+      <DependentUpon>Sleep.cs</DependentUpon>
+    </Compile>
     <Compile Include="v.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Shop.resx">
       <DependentUpon>Shop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sleep.resx">
+      <DependentUpon>Sleep.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -391,6 +400,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sleep2h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sleep4h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sleep6h.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sleeping.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sleep.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

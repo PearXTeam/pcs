@@ -54,6 +54,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.imageShop = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.imageSleep = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageInfo)).BeginInit();
@@ -61,6 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageMiniGames)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageInv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageShop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageSleep)).BeginInit();
             this.SuspendLayout();
             // 
             // autoSave
@@ -323,6 +326,31 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "Магазин";
             // 
+            // imageSleep
+            // 
+            this.imageSleep.BackColor = System.Drawing.Color.Transparent;
+            this.imageSleep.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageSleep.Image = global::pcs.Properties.Resources.sleep;
+            this.imageSleep.Location = new System.Drawing.Point(476, 12);
+            this.imageSleep.Name = "imageSleep";
+            this.imageSleep.Size = new System.Drawing.Size(90, 90);
+            this.imageSleep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageSleep.TabIndex = 22;
+            this.imageSleep.TabStop = false;
+            this.imageSleep.Click += new System.EventHandler(this.imageSleep_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.Orange;
+            this.label5.Location = new System.Drawing.Point(505, 105);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(33, 16);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Сон";
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,6 +358,8 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(886, 440);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.imageSleep);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.imageShop);
             this.Controls.Add(this.label3);
@@ -352,6 +382,7 @@
             this.Controls.Add(this.barFun);
             this.Controls.Add(this.barHealth);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.MaximizeBox = false;
             this.Name = "Game";
             this.Text = "PCS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
@@ -363,6 +394,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageMiniGames)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageInv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageShop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageSleep)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -395,6 +427,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox imageShop;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox imageSleep;
+        private System.Windows.Forms.Label label5;
     }
 }
 

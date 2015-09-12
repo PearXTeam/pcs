@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CatOrDog));
             this.imageCatOrDog = new System.Windows.Forms.PictureBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.labelScore = new System.Windows.Forms.Label();
             this.labelRecord = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imageCatOrDog)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,15 +65,27 @@
             this.labelRecord.TabIndex = 2;
             this.labelRecord.Text = "Рекорд: ";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(11, 275);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(241, 48);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Стрелка влево = кот.\r\nСтрелка вправо = собака.";
+            // 
             // CatOrDog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 275);
+            this.ClientSize = new System.Drawing.Size(326, 328);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.labelRecord);
             this.Controls.Add(this.labelScore);
             this.Controls.Add(this.imageCatOrDog);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "CatOrDog";
             this.Text = "Кот или собака?";
@@ -90,5 +104,6 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label labelScore;
         private System.Windows.Forms.Label labelRecord;
+        private System.Windows.Forms.Label label1;
     }
 }

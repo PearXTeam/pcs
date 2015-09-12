@@ -119,5 +119,11 @@ namespace pcs
             Shop s = new Shop();
             s.ShowDialog();
         }
+
+        private void imageSleep_Click(object sender, EventArgs e)
+        {
+            Sleep s = new Sleep();
+            s.ShowDialog();
+        }
     }
 }
