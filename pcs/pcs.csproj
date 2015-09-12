@@ -416,6 +416,30 @@
   <ItemGroup>
     <None Include="Resources\sleep.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\russian_language.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ASPushkin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pcforkids.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1001math.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\naturestories.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\siteswithvanya.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cpp21day.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\english_language.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

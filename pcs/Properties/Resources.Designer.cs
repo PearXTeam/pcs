@@ -63,6 +63,26 @@ namespace pcs.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1001math {
+            get {
+                object obj = ResourceManager.GetObject("1001math", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ASPushkin {
+            get {
+                object obj = ResourceManager.GetObject("ASPushkin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap banana {
             get {
                 object obj = ResourceManager.GetObject("banana", resourceCulture);
@@ -363,6 +383,16 @@ namespace pcs.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cpp21day {
+            get {
+                object obj = ResourceManager.GetObject("cpp21day", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cucumber {
             get {
                 object obj = ResourceManager.GetObject("cucumber", resourceCulture);
@@ -406,6 +436,16 @@ namespace pcs.Properties {
         internal static System.Drawing.Bitmap eggplant {
             get {
                 object obj = ResourceManager.GetObject("eggplant", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap english_language {
+            get {
+                object obj = ResourceManager.GetObject("english_language", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -500,6 +540,16 @@ namespace pcs.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap naturestories {
+            get {
+                object obj = ResourceManager.GetObject("naturestories", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.IO.UnmanagedMemoryStream, аналогичного System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream OmNomNom {
@@ -514,6 +564,16 @@ namespace pcs.Properties {
         internal static System.Drawing.Bitmap packaging {
             get {
                 object obj = ResourceManager.GetObject("packaging", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pcforkids {
+            get {
+                object obj = ResourceManager.GetObject("pcforkids", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -551,6 +611,16 @@ namespace pcs.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap russian_language {
+            get {
+                object obj = ResourceManager.GetObject("russian_language", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap save {
             get {
                 object obj = ResourceManager.GetObject("save", resourceCulture);
@@ -574,6 +644,16 @@ namespace pcs.Properties {
         internal static System.Drawing.Bitmap shop {
             get {
                 object obj = ResourceManager.GetObject("shop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap siteswithvanya {
+            get {
+                object obj = ResourceManager.GetObject("siteswithvanya", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

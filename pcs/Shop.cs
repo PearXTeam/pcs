@@ -238,5 +238,85 @@ namespace pcs
                 sp.Play();
             }
         }
+
+        private void imageBook1_Click(object sender, EventArgs e)
+        {
+            if (a.mMoney(-1, 200))
+            {
+                inv.book1++;
+                SoundPlayer sp = new SoundPlayer(Resources.Money);
+                sp.Play();
+            }
+        }
+
+        private void imageBook2_Click(object sender, EventArgs e)
+        {
+            if (a.mMoney(-1, 220))
+            {
+                inv.book2++;
+                SoundPlayer sp = new SoundPlayer(Resources.Money);
+                sp.Play();
+            }
+        }
+
+        private void imageBook3_Click(object sender, EventArgs e)
+        {
+            if (a.mMoney(-1, 300))
+            {
+                inv.book3++;
+                SoundPlayer sp = new SoundPlayer(Resources.Money);
+                sp.Play();
+            }
+        }
+
+        private void imageBook4_Click(object sender, EventArgs e)
+        {
+            if (a.mMoney(-1, 450))
+            {
+                inv.book4++;
+                SoundPlayer sp = new SoundPlayer(Resources.Money);
+                sp.Play();
+            }
+        }
+
+        private void imageBook5_Click(object sender, EventArgs e)
+        {
+            if (a.mMoney(-1, 250))
+            {
+                inv.book5++;
+                SoundPlayer sp = new SoundPlayer(Resources.Money);
+                sp.Play();
+            }
+        }
+
+        private void imageBook6_Click(object sender, EventArgs e)
+        {
+            if (a.mMoney(-1, 50))
+            {
+                inv.book6++;
+                SoundPlayer sp = new SoundPlayer(Resources.Money);
+                sp.Play();
+            }
+        }
+
+        private void imageBook7_Click(object sender, EventArgs e)
+        {
+            if (a.mMoney(-1, 350))
+            {
+                inv.book7++;
+                SoundPlayer sp = new SoundPlayer(Resources.Money);
+                sp.Play();
+            }
+        }
+
+        private void imageBook8_Click(object sender, EventArgs e)
+        {
+            if (a.mMoney(-1, 400))
+            {
+                inv.book8++;
+                SoundPlayer sp = new SoundPlayer(Resources.Money);
+                sp.Play();
+            }
+        }
     }
 }

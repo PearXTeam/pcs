@@ -8,6 +8,7 @@ namespace pcs
 {
     class inv
     {
+        #region Еда 
         public static long foodBanana = 0;
         public static long foodSoup = 0;
         public static long foodSushi = 0;
@@ -30,5 +31,16 @@ namespace pcs
         public static long foodCorn = 0;
         public static long foodPie = 0;
         public static long foodCockteil = 0;
+        #endregion
+        #region Книги
+        public static long book1; //Русский язык. Начальная школа
+        public static long book2; //Сборник стихов  А. С. Пушкина
+        public static long book3; //Компьютер для самых маленьких
+        public static long book4; //1001 задача по математике
+        public static long book5; //Рассказы о природе
+        public static long book6; //Создание сайтов от Дяди Вани
+        public static long book7; //C++ за 21 день
+        public static long book8; //Английский язык
+        #endregion
     }
 }

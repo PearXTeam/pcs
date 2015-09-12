@@ -118,190 +118,214 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cod_cat11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_cat11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mushroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mushroom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="eggplant" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\eggplant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="meat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\meat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_dog5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_dog5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hamburger" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hamburger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_dog2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_dog2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_cat10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_cat10.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cherry" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cherry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_dog10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_dog10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cucumber" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cucumber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cod_cat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_cat1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="game" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\game.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_cat4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_cat4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_cat6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_cat6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="strawberry" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\strawberry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pcs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pcs.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="vkontakte" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\vkontakte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="grim" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\grim.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_cat9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_cat9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sleep6h" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sleep6h.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sushi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sushi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Money" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Money.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cod_dog4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_dog4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="soup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\soup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pepper" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pepper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cupcake" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cupcake.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cookies" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cookies.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="corn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\corn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_cat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_cat1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="OmNomNom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OmNomNom.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="banana" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\banana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="packaging" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\packaging.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sleep2h" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sleep2h.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pie" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_cat7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_cat7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_dog1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_dog1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="dog" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cheese" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cheese.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="egg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\egg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_cat2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_cat2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bread" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bread.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_dog6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_dog6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_dog9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_dog9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="kiwi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\kiwi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\save.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cod_dog3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_dog3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tomato" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tomato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_cat8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_cat8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sleep4h" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sleep4h.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_cat3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_cat3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icecream" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icecream.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_cat5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_cat5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cod_dog11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cod_dog11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cockteil" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cockteil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="banana" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\banana.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cod_dog8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cod_dog8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sleeping" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sleeping.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cheese" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cheese.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="naturestories" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\naturestories.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cod_dog10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_dog10.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sleep4h" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sleep4h.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cod_dog11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_dog11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cupcake" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cupcake.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cookies" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cookies.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cod_dog6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_dog6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Money" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Money.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cod_dog1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_dog1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cod_dog7" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cod_dog7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cpp21day" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cpp21day.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cod_cat3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_cat3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cod_cat5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_cat5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="sleep" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sleep.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cod_cat8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_cat8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ASPushkin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ASPushkin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cod_cat9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_cat9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pcs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pcs.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sleep6h" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sleep6h.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cucumber" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cucumber.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hamburger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hamburger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cod_dog9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_dog9.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="russian_language" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\russian_language.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sleeping" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sleeping.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cod_cat10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_cat10.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eggplant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eggplant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mushroom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mushroom.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cod_cat2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_cat2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cod_cat4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_cat4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="siteswithvanya" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\siteswithvanya.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="meat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\meat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="strawberry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strawberry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kiwi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\kiwi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cod_dog5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_dog5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vkontakte" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vkontakte.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pcforkids" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pcforkids.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="packaging" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\packaging.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sushi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sushi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cod_cat11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_cat11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cod_dog4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_dog4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icecream" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icecream.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OmNomNom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OmNomNom.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cod_cat6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_cat6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pepper" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pepper.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cod_cat7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_cat7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1001math" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1001math.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bread" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bread.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grim" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grim.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cockteil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cockteil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="egg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\egg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soup" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sleep2h" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sleep2h.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cod_dog2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_dog2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tomato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tomato.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cod_dog3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cod_dog3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cherry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cherry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="english_language" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\english_language.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
