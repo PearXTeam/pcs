@@ -28,7 +28,8 @@ namespace pcs
             {
                 Directory.CreateDirectory(PXL.documents + PXL.s + "PearX" + PXL.s + "PCS");
             }
-            this.Text = "PCS " + v.version + " (in-dev)";
+            Random rand = new Random();
+            this.Text = "PCS " + v.version + " (in-dev) with " + words.wrds[rand.Next(0, (int)words.wrds.GetLongLength(0))];
             this.Icon = Resources.pcs;
             if (v.backgroundImage != null && File.Exists(v.backgroundImage))
             {

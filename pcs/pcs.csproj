@@ -148,6 +148,7 @@
       <DependentUpon>Sleep.cs</DependentUpon>
     </Compile>
     <Compile Include="v.cs" />
+    <Compile Include="words.cs" />
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
