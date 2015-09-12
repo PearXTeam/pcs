@@ -147,6 +147,12 @@
     <Compile Include="Sleep.Designer.cs">
       <DependentUpon>Sleep.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdaterGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdaterGUI.Designer.cs">
+      <DependentUpon>UpdaterGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="v.cs" />
     <Compile Include="words.cs" />
     <EmbeddedResource Include="About.resx">
@@ -195,6 +201,9 @@
     <EmbeddedResource Include="Sleep.resx">
       <DependentUpon>Sleep.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdaterGUI.resx">
+      <DependentUpon>UpdaterGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -215,6 +224,10 @@
     <ProjectReference Include="..\..\PearXLib\PearXLib\PearXLib.csproj">
       <Project>{327be810-0846-4d27-8f56-b90fea81e842}</Project>
       <Name>PearXLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\updater.pcs\updater.pcs\updater.pcs.csproj">
+      <Project>{be4b29c6-d11e-4328-bc41-f294044edd11}</Project>
+      <Name>updater.pcs</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -441,6 +454,9 @@
   <ItemGroup>
     <None Include="Resources\english_language.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upd.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
@@ -448,7 +464,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEvent>copy pcs.exe ..\..\..\builded\
-copy PearXLib.dll ..\..\..\builded\</PostBuildEvent>
+copy PearXLib.dll ..\..\..\builded\
+copy updater.pcs.exe ..\..\..\builded\</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

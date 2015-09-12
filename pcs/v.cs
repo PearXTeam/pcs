@@ -14,7 +14,7 @@ namespace pcs
         public static bool forceClose = false;
 
         //Загружаемые параметры \/
-        public static string version = "1.0.0.0";
+        public static string version = "1.12.9.5";
 
         
         public static short statHealth = 100;

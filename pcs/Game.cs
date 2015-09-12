@@ -126,5 +126,11 @@ namespace pcs
             Sleep s = new Sleep();
             s.ShowDialog();
         }
+
+        private void imageUpdaterGUI_Click(object sender, EventArgs e)
+        {
+            UpdaterGUI ugui = new UpdaterGUI();
+            ugui.ShowDialog();
+        }
     }
 }

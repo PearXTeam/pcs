@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.autoSave = new System.Windows.Forms.Timer(this.components);
             this.barHealth = new System.Windows.Forms.ProgressBar();
             this.barFun = new System.Windows.Forms.ProgressBar();
@@ -56,6 +57,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.imageSleep = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.imageUpdaterGUI = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageInfo)).BeginInit();
@@ -64,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageInv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageShop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSleep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageUpdaterGUI)).BeginInit();
             this.SuspendLayout();
             // 
             // autoSave
@@ -351,6 +354,18 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "Сон";
             // 
+            // imageUpdaterGUI
+            // 
+            this.imageUpdaterGUI.BackColor = System.Drawing.Color.Transparent;
+            this.imageUpdaterGUI.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageUpdaterGUI.Image = ((System.Drawing.Image)(resources.GetObject("imageUpdaterGUI.Image")));
+            this.imageUpdaterGUI.Location = new System.Drawing.Point(377, 405);
+            this.imageUpdaterGUI.Name = "imageUpdaterGUI";
+            this.imageUpdaterGUI.Size = new System.Drawing.Size(32, 32);
+            this.imageUpdaterGUI.TabIndex = 24;
+            this.imageUpdaterGUI.TabStop = false;
+            this.imageUpdaterGUI.Click += new System.EventHandler(this.imageUpdaterGUI_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,6 +373,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(886, 440);
+            this.Controls.Add(this.imageUpdaterGUI);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.imageSleep);
             this.Controls.Add(this.label4);
@@ -395,6 +411,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageInv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageShop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSleep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageUpdaterGUI)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -429,6 +446,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox imageSleep;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox imageUpdaterGUI;
     }
 }
 
