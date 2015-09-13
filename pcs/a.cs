@@ -51,6 +51,19 @@ namespace pcs
                 inv.foodPie = Convert.ToInt64(str[30]);
                 inv.foodCupcake = Convert.ToInt64(str[31]);
                 v.catordog_record = BigInteger.Parse(str[32]);
+                inv.book1 = Convert.ToInt64(str[33]);
+                inv.book2 = Convert.ToInt64(str[34]);
+                inv.book3 = Convert.ToInt64(str[35]);
+                inv.book4 = Convert.ToInt64(str[36]);
+                inv.book5 = Convert.ToInt64(str[37]);
+                inv.book6 = Convert.ToInt64(str[38]);
+                inv.book7 = Convert.ToInt64(str[39]);
+                inv.book8 = Convert.ToInt64(str[40]);
+                skills.skillEnglish = Convert.ToBoolean(str[41]);
+                skills.skillLiteracy = Convert.ToBoolean(str[42]);
+                skills.skillComputer = Convert.ToBoolean(str[43]);
+                skills.skillAdvancedMath = Convert.ToBoolean(str[44]);
+                skills.skillCpp = Convert.ToBoolean(str[45]);
                 
             }
             catch { }
@@ -93,8 +106,20 @@ namespace pcs
                 inv.foodCorn.ToString(),
                 inv.foodPie.ToString(),
                 inv.foodCupcake.ToString(),
-                v.catordog_record.ToString()
-
+                v.catordog_record.ToString(),
+                inv.book1.ToString(),
+                inv.book2.ToString(),
+                inv.book3.ToString(),
+                inv.book4.ToString(),
+                inv.book5.ToString(),
+                inv.book6.ToString(),
+                inv.book7.ToString(),
+                inv.book8.ToString(),
+                skills.skillEnglish.ToString(),
+                skills.skillLiteracy.ToString(),
+                skills.skillComputer.ToString(),
+                skills.skillAdvancedMath.ToString(),
+                skills.skillCpp.ToString(),
             });
             }
             catch(Exception ex)
@@ -348,7 +373,14 @@ namespace pcs
                 inv.foodCorn = 0;
                 inv.foodPie = 0;
                 inv.foodCockteil = 0;
-
+                inv.book1 = 0;
+                inv.book2 = 0;
+                inv.book3 = 0;
+                inv.book4 = 0;
+                inv.book5 = 0;
+                inv.book6 = 0;
+                inv.book7 = 0;
+                inv.book8 = 0;
                 v.forceClose = true;
                 File.Create(PXL.documents + PXL.s + "PearX" + PXL.s + "PCS" + PXL.s + "reset");
                 Application.Exit();

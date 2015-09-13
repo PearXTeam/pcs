@@ -147,6 +147,13 @@
     <Compile Include="Shop.Designer.cs">
       <DependentUpon>Shop.cs</DependentUpon>
     </Compile>
+    <Compile Include="skills.cs" />
+    <Compile Include="SkillsGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkillsGUI.Designer.cs">
+      <DependentUpon>SkillsGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sleep.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Shop.resx">
       <DependentUpon>Shop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkillsGUI.resx">
+      <DependentUpon>SkillsGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sleep.resx">
       <DependentUpon>Sleep.cs</DependentUpon>
@@ -465,6 +475,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\upd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

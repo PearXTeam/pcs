@@ -39,7 +39,7 @@ namespace pcs
         public static long book4; //1001 задача по математике
         public static long book5; //Рассказы о природе
         public static long book6; //Создание сайтов от Дяди Вани
-        public static long book7; //C++ за 21 день
+        public static long book7; //C++ за 21 неделю
         public static long book8; //Английский язык
         #endregion
     }

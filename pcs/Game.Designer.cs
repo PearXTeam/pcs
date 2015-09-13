@@ -58,6 +58,8 @@
             this.imageSleep = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.imageUpdaterGUI = new System.Windows.Forms.PictureBox();
+            this.imageSkills = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageInfo)).BeginInit();
@@ -67,6 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageShop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSleep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageUpdaterGUI)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageSkills)).BeginInit();
             this.SuspendLayout();
             // 
             // autoSave
@@ -366,6 +369,31 @@
             this.imageUpdaterGUI.TabStop = false;
             this.imageUpdaterGUI.Click += new System.EventHandler(this.imageUpdaterGUI_Click);
             // 
+            // imageSkills
+            // 
+            this.imageSkills.BackColor = System.Drawing.Color.Transparent;
+            this.imageSkills.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageSkills.Image = global::pcs.Properties.Resources.check;
+            this.imageSkills.Location = new System.Drawing.Point(380, 12);
+            this.imageSkills.Name = "imageSkills";
+            this.imageSkills.Size = new System.Drawing.Size(90, 90);
+            this.imageSkills.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageSkills.TabIndex = 25;
+            this.imageSkills.TabStop = false;
+            this.imageSkills.Click += new System.EventHandler(this.imageSkills_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.Orange;
+            this.label6.Location = new System.Drawing.Point(399, 105);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 16);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Умения";
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -373,6 +401,8 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(886, 440);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.imageSkills);
             this.Controls.Add(this.imageUpdaterGUI);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.imageSleep);
@@ -413,6 +443,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageShop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSleep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageUpdaterGUI)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageSkills)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -448,6 +479,8 @@
         private System.Windows.Forms.PictureBox imageSleep;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox imageUpdaterGUI;
+        private System.Windows.Forms.PictureBox imageSkills;
+        private System.Windows.Forms.Label label6;
     }
 }
 

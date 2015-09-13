@@ -120,10 +120,6 @@
             this.imageFoodSoup = new System.Windows.Forms.PictureBox();
             this.imageFoodBanana = new System.Windows.Forms.PictureBox();
             this.tabPageBooks = new System.Windows.Forms.TabPage();
-            this.labelBook8Desc = new System.Windows.Forms.Label();
-            this.labelBook8Count = new System.Windows.Forms.Label();
-            this.labelBook8 = new System.Windows.Forms.Label();
-            this.imageBook8 = new System.Windows.Forms.PictureBox();
             this.labelBook7Desc = new System.Windows.Forms.Label();
             this.labelBook7Count = new System.Windows.Forms.Label();
             this.labelBook7 = new System.Windows.Forms.Label();
@@ -152,6 +148,10 @@
             this.labelBook1Count = new System.Windows.Forms.Label();
             this.labelBook1 = new System.Windows.Forms.Label();
             this.imageBook1 = new System.Windows.Forms.PictureBox();
+            this.imageBook8 = new System.Windows.Forms.PictureBox();
+            this.labelBook8 = new System.Windows.Forms.Label();
+            this.labelBook8Count = new System.Windows.Forms.Label();
+            this.labelBook8Desc = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPageFood.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageFoodCockteil)).BeginInit();
@@ -177,7 +177,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageFoodSoup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageFoodBanana)).BeginInit();
             this.tabPageBooks.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBook8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook5)).BeginInit();
@@ -185,6 +184,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageBook3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBook8)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -1352,52 +1352,6 @@
             this.tabPageBooks.Text = "Книги";
             this.tabPageBooks.UseVisualStyleBackColor = true;
             // 
-            // labelBook8Desc
-            // 
-            this.labelBook8Desc.AutoSize = true;
-            this.labelBook8Desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBook8Desc.ForeColor = System.Drawing.Color.Blue;
-            this.labelBook8Desc.Location = new System.Drawing.Point(103, 702);
-            this.labelBook8Desc.Name = "labelBook8Desc";
-            this.labelBook8Desc.Size = new System.Drawing.Size(120, 16);
-            this.labelBook8Desc.TabIndex = 92;
-            this.labelBook8Desc.Text = "Международный.";
-            // 
-            // labelBook8Count
-            // 
-            this.labelBook8Count.AutoSize = true;
-            this.labelBook8Count.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBook8Count.ForeColor = System.Drawing.Color.Green;
-            this.labelBook8Count.Location = new System.Drawing.Point(273, 678);
-            this.labelBook8Count.Name = "labelBook8Count";
-            this.labelBook8Count.Size = new System.Drawing.Size(52, 24);
-            this.labelBook8Count.TabIndex = 91;
-            this.labelBook8Count.Text = "400Р";
-            // 
-            // labelBook8
-            // 
-            this.labelBook8.AutoSize = true;
-            this.labelBook8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBook8.ForeColor = System.Drawing.Color.Red;
-            this.labelBook8.Location = new System.Drawing.Point(104, 678);
-            this.labelBook8.Name = "labelBook8";
-            this.labelBook8.Size = new System.Drawing.Size(163, 24);
-            this.labelBook8.TabIndex = 90;
-            this.labelBook8.Text = "Английский язык";
-            // 
-            // imageBook8
-            // 
-            this.imageBook8.BackColor = System.Drawing.Color.Transparent;
-            this.imageBook8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageBook8.Image = global::pcs.Properties.Resources.english_language;
-            this.imageBook8.Location = new System.Drawing.Point(8, 678);
-            this.imageBook8.Name = "imageBook8";
-            this.imageBook8.Size = new System.Drawing.Size(90, 90);
-            this.imageBook8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imageBook8.TabIndex = 89;
-            this.imageBook8.TabStop = false;
-            this.imageBook8.Click += new System.EventHandler(this.imageBook8_Click);
-            // 
             // labelBook7Desc
             // 
             this.labelBook7Desc.AutoSize = true;
@@ -1405,16 +1359,16 @@
             this.labelBook7Desc.ForeColor = System.Drawing.Color.Blue;
             this.labelBook7Desc.Location = new System.Drawing.Point(103, 606);
             this.labelBook7Desc.Name = "labelBook7Desc";
-            this.labelBook7Desc.Size = new System.Drawing.Size(127, 16);
+            this.labelBook7Desc.Size = new System.Drawing.Size(105, 48);
             this.labelBook7Desc.TabIndex = 88;
-            this.labelBook7Desc.Text = "Это невозможно...";
+            this.labelBook7Desc.Text = "Это возможно!\r\n+Знание C++\r\n+125XP";
             // 
             // labelBook7Count
             // 
             this.labelBook7Count.AutoSize = true;
             this.labelBook7Count.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelBook7Count.ForeColor = System.Drawing.Color.Green;
-            this.labelBook7Count.Location = new System.Drawing.Point(255, 582);
+            this.labelBook7Count.Location = new System.Drawing.Point(279, 582);
             this.labelBook7Count.Name = "labelBook7Count";
             this.labelBook7Count.Size = new System.Drawing.Size(52, 24);
             this.labelBook7Count.TabIndex = 87;
@@ -1427,9 +1381,9 @@
             this.labelBook7.ForeColor = System.Drawing.Color.Red;
             this.labelBook7.Location = new System.Drawing.Point(104, 582);
             this.labelBook7.Name = "labelBook7";
-            this.labelBook7.Size = new System.Drawing.Size(145, 24);
+            this.labelBook7.Size = new System.Drawing.Size(169, 24);
             this.labelBook7.TabIndex = 86;
-            this.labelBook7.Text = "C++ за 21 день";
+            this.labelBook7.Text = "C++ за 21 неделю";
             // 
             // imageBook7
             // 
@@ -1451,9 +1405,9 @@
             this.labelBook6Desc.ForeColor = System.Drawing.Color.Blue;
             this.labelBook6Desc.Location = new System.Drawing.Point(105, 534);
             this.labelBook6Desc.Name = "labelBook6Desc";
-            this.labelBook6Desc.Size = new System.Drawing.Size(146, 16);
+            this.labelBook6Desc.Size = new System.Drawing.Size(146, 32);
             this.labelBook6Desc.TabIndex = 84;
-            this.labelBook6Desc.Text = "Очень глупая книга...";
+            this.labelBook6Desc.Text = "Очень глупая книга...\r\n-10XP";
             // 
             // labelBook6Count
             // 
@@ -1497,9 +1451,9 @@
             this.labelBook5Desc.ForeColor = System.Drawing.Color.Blue;
             this.labelBook5Desc.Location = new System.Drawing.Point(103, 422);
             this.labelBook5Desc.Name = "labelBook5Desc";
-            this.labelBook5Desc.Size = new System.Drawing.Size(251, 16);
+            this.labelBook5Desc.Size = new System.Drawing.Size(251, 32);
             this.labelBook5Desc.TabIndex = 80;
-            this.labelBook5Desc.Text = "Те, что идут по школьной программе.";
+            this.labelBook5Desc.Text = "Те, что идут по школьной программе.\r\n+125XP";
             // 
             // labelBook5Count
             // 
@@ -1543,9 +1497,9 @@
             this.labelBook4Desc.ForeColor = System.Drawing.Color.Blue;
             this.labelBook4Desc.Location = new System.Drawing.Point(105, 326);
             this.labelBook4Desc.Name = "labelBook4Desc";
-            this.labelBook4Desc.Size = new System.Drawing.Size(103, 16);
+            this.labelBook4Desc.Size = new System.Drawing.Size(237, 48);
             this.labelBook4Desc.TabIndex = 76;
-            this.labelBook4Desc.Text = "Не для глупых.";
+            this.labelBook4Desc.Text = "Не для глупых.\r\n+Продвинутое знание математики\r\n+175XP";
             // 
             // labelBook4Count
             // 
@@ -1589,9 +1543,9 @@
             this.labelBook3Desc.ForeColor = System.Drawing.Color.Blue;
             this.labelBook3Desc.Location = new System.Drawing.Point(105, 246);
             this.labelBook3Desc.Name = "labelBook3Desc";
-            this.labelBook3Desc.Size = new System.Drawing.Size(298, 16);
+            this.labelBook3Desc.Size = new System.Drawing.Size(307, 48);
             this.labelBook3Desc.TabIndex = 72;
-            this.labelBook3Desc.Text = "Научит Ваше чадо работать с компьютером!";
+            this.labelBook3Desc.Text = "Научит Ваше чадо работать за компьютером!\r\n+Владение компьютером\r\n+100XP";
             // 
             // labelBook3Count
             // 
@@ -1635,9 +1589,9 @@
             this.labelBook2Desc.ForeColor = System.Drawing.Color.Blue;
             this.labelBook2Desc.Location = new System.Drawing.Point(100, 150);
             this.labelBook2Desc.Name = "labelBook2Desc";
-            this.labelBook2Desc.Size = new System.Drawing.Size(116, 16);
+            this.labelBook2Desc.Size = new System.Drawing.Size(116, 32);
             this.labelBook2Desc.TabIndex = 68;
-            this.labelBook2Desc.Text = "Отличные стихи!";
+            this.labelBook2Desc.Text = "Отличные стихи!\r\n+110XP";
             // 
             // labelBook2Count
             // 
@@ -1681,9 +1635,9 @@
             this.labelBook1Desc.ForeColor = System.Drawing.Color.Blue;
             this.labelBook1Desc.Location = new System.Drawing.Point(99, 30);
             this.labelBook1Desc.Name = "labelBook1Desc";
-            this.labelBook1Desc.Size = new System.Drawing.Size(342, 32);
+            this.labelBook1Desc.Size = new System.Drawing.Size(342, 64);
             this.labelBook1Desc.TabIndex = 64;
-            this.labelBook1Desc.Text = "Это должен знать каждый, хотя много людей этого \r\nне знают.";
+            this.labelBook1Desc.Text = "Это должен знать каждый, хотя много людей этого \r\nне знают.\r\n+Грамотность\r\n+50XP";
             // 
             // labelBook1Count
             // 
@@ -1719,6 +1673,52 @@
             this.imageBook1.TabIndex = 61;
             this.imageBook1.TabStop = false;
             this.imageBook1.Click += new System.EventHandler(this.imageBook1_Click);
+            // 
+            // imageBook8
+            // 
+            this.imageBook8.BackColor = System.Drawing.Color.Transparent;
+            this.imageBook8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageBook8.Image = global::pcs.Properties.Resources.english_language;
+            this.imageBook8.Location = new System.Drawing.Point(8, 678);
+            this.imageBook8.Name = "imageBook8";
+            this.imageBook8.Size = new System.Drawing.Size(90, 90);
+            this.imageBook8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageBook8.TabIndex = 89;
+            this.imageBook8.TabStop = false;
+            this.imageBook8.Click += new System.EventHandler(this.imageBook8_Click);
+            // 
+            // labelBook8
+            // 
+            this.labelBook8.AutoSize = true;
+            this.labelBook8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBook8.ForeColor = System.Drawing.Color.Red;
+            this.labelBook8.Location = new System.Drawing.Point(104, 678);
+            this.labelBook8.Name = "labelBook8";
+            this.labelBook8.Size = new System.Drawing.Size(163, 24);
+            this.labelBook8.TabIndex = 90;
+            this.labelBook8.Text = "Английский язык";
+            // 
+            // labelBook8Count
+            // 
+            this.labelBook8Count.AutoSize = true;
+            this.labelBook8Count.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBook8Count.ForeColor = System.Drawing.Color.Green;
+            this.labelBook8Count.Location = new System.Drawing.Point(273, 678);
+            this.labelBook8Count.Name = "labelBook8Count";
+            this.labelBook8Count.Size = new System.Drawing.Size(52, 24);
+            this.labelBook8Count.TabIndex = 91;
+            this.labelBook8Count.Text = "400Р";
+            // 
+            // labelBook8Desc
+            // 
+            this.labelBook8Desc.AutoSize = true;
+            this.labelBook8Desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBook8Desc.ForeColor = System.Drawing.Color.Blue;
+            this.labelBook8Desc.Location = new System.Drawing.Point(103, 702);
+            this.labelBook8Desc.Name = "labelBook8Desc";
+            this.labelBook8Desc.Size = new System.Drawing.Size(191, 48);
+            this.labelBook8Desc.TabIndex = 92;
+            this.labelBook8Desc.Text = "Международный.\r\n+Знание английского языка\r\n+150XP";
             // 
             // Shop
             // 
@@ -1758,7 +1758,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageFoodBanana)).EndInit();
             this.tabPageBooks.ResumeLayout(false);
             this.tabPageBooks.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBook8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook5)).EndInit();
@@ -1766,6 +1765,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageBook3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBook8)).EndInit();
             this.ResumeLayout(false);
 
         }

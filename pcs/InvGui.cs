@@ -42,6 +42,14 @@ namespace pcs
             labelFoodCornCount.Text = inv.foodCorn.ToString();
             labelFoodCakeCount.Text = inv.foodPie.ToString();
             labelFoodCockteilCount.Text = inv.foodCockteil.ToString();
+            labelBook1Count.Text = inv.book1.ToString();
+            labelBook2Count.Text = inv.book2.ToString();
+            labelBook3Count.Text = inv.book3.ToString();
+            labelBook4Count.Text = inv.book4.ToString();
+            labelBook5Count.Text = inv.book5.ToString();
+            labelBook6Count.Text = inv.book6.ToString();
+            labelBook7Count.Text = inv.book7.ToString();
+            labelBook8Count.Text = inv.book8.ToString();
         }
         private void imageFoodBanana_Click(object sender, EventArgs e)
         {
@@ -422,6 +430,139 @@ namespace pcs
                 SoundPlayer sp = new SoundPlayer(Resources.OmNomNom);
                 sp.Play();
                 inv.foodCockteil--;
+                upd();
+            }
+            else
+            {
+                a.SM(a.Message.NoItem);
+            }
+        }
+
+        private void imageBook1_Click(object sender, EventArgs e)
+        {
+            if (inv.book1 > 0)
+            {
+                skills.skillLiteracy = true;
+                a.mXP(1, 50);
+                SoundPlayer sp = new SoundPlayer(Resources.Book);
+                sp.Play();
+                inv.book1--;
+                upd();
+            }
+            else
+            {
+                a.SM(a.Message.NoItem);
+            }
+        }
+
+        private void imageBook2_Click(object sender, EventArgs e)
+        {
+            if (inv.book2 > 0)
+            {
+                a.mXP(1, 110);
+                SoundPlayer sp = new SoundPlayer(Resources.Book);
+                sp.Play();
+                inv.book2--;
+                upd();
+            }
+            else
+            {
+                a.SM(a.Message.NoItem);
+            }
+        }
+
+        private void imageBook3_Click(object sender, EventArgs e)
+        {
+            if (inv.book3 > 0)
+            {
+                skills.skillComputer = true;
+                a.mXP(1, 100);
+                SoundPlayer sp = new SoundPlayer(Resources.Book);
+                sp.Play();
+                inv.book3--;
+                upd();
+            }
+            else
+            {
+                a.SM(a.Message.NoItem);
+            }
+        }
+
+        private void imageBook4_Click(object sender, EventArgs e)
+        {
+            if (inv.book4 > 0)
+            {
+                skills.skillAdvancedMath = true;
+                a.mXP(1, 175);
+                SoundPlayer sp = new SoundPlayer(Resources.Book);
+                sp.Play();
+                inv.book4--;
+                upd();
+            }
+            else
+            {
+                a.SM(a.Message.NoItem);
+            }
+        }
+
+        private void imageBook5_Click(object sender, EventArgs e)
+        {
+            if (inv.book5 > 0)
+            {
+                a.mXP(1, 125);
+                SoundPlayer sp = new SoundPlayer(Resources.Book);
+                sp.Play();
+                inv.book5--;
+                upd();
+            }
+            else
+            {
+                a.SM(a.Message.NoItem);
+            }
+        }
+
+        private void imageBook6_Click(object sender, EventArgs e)
+        {
+            if (inv.book6 > 0)
+            {
+                a.mXP(-1, 10);
+                SoundPlayer sp = new SoundPlayer(Resources.Book);
+                sp.Play();
+                inv.book6--;
+                upd();
+            }
+            else
+            {
+                a.SM(a.Message.NoItem);
+            }
+        }
+
+        private void imageBook7_Click(object sender, EventArgs e)
+        {
+            if (inv.book7 > 0)
+            {
+                skills.skillCpp = true;
+                a.mXP(1, 125);
+                SoundPlayer sp = new SoundPlayer(Resources.Book);
+                sp.Play();
+                inv.book7--;
+                upd();
+            }
+            else
+            {
+                a.SM(a.Message.NoItem);
+            }
+        }
+
+        private void imageBook8_Click(object sender, EventArgs e)
+        {
+            if (inv.book8 > 0)
+            {
+                skills.skillEnglish = true;
+                a.mXP(1, 150);
+                SoundPlayer sp = new SoundPlayer(Resources.Book);
+                sp.Play();
+                inv.book8--;
                 upd();
             }
             else

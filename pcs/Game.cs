@@ -141,5 +141,11 @@ namespace pcs
                 dm.ShowDialog();
             }
         }
+
+        private void imageSkills_Click(object sender, EventArgs e)
+        {
+            SkillsGUI sgui = new SkillsGUI();
+            sgui.ShowDialog();
+        }
     }
 }
