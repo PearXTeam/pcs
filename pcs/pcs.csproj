@@ -96,6 +96,12 @@
     <Compile Include="Death.Designer.cs">
       <DependentUpon>Death.cs</DependentUpon>
     </Compile>
+    <Compile Include="DebugMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebugMenu.Designer.cs">
+      <DependentUpon>DebugMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Game.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Death.resx">
       <DependentUpon>Death.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebugMenu.resx">
+      <DependentUpon>DebugMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Game.resx">
       <DependentUpon>Game.cs</DependentUpon>

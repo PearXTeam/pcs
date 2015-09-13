@@ -403,6 +403,7 @@
             this.Text = "PCS";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.Load += new System.EventHandler(this.Game_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageInfo)).EndInit();

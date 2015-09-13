@@ -132,5 +132,14 @@ namespace pcs
             UpdaterGUI ugui = new UpdaterGUI();
             ugui.ShowDialog();
         }
+
+        private void Game_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.C && v.useDebug)
+            {
+                DebugMenu dm = new DebugMenu();
+                dm.ShowDialog();
+            }
+        }
     }
 }

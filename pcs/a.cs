@@ -295,7 +295,7 @@ namespace pcs
             {
                 v.xp += value;
             }
-            Program.g.labelXP.Text = "Опыт: " + v.money + "XP";
+            Program.g.labelXP.Text = "Опыт: " + v.xp + "XP";
         }
         public static void Setup()
         {

@@ -63,16 +63,6 @@ namespace pcs.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _1001math {
-            get {
-                object obj = ResourceManager.GetObject("1001math", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ASPushkin {
             get {
                 object obj = ResourceManager.GetObject("ASPushkin", resourceCulture);
@@ -506,6 +496,16 @@ namespace pcs.Properties {
         internal static System.Drawing.Bitmap kiwi {
             get {
                 object obj = ResourceManager.GetObject("kiwi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap math {
+            get {
+                object obj = ResourceManager.GetObject("math", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

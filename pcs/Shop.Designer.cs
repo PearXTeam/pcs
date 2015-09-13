@@ -1573,7 +1573,7 @@
             // 
             this.imageBook4.BackColor = System.Drawing.Color.Transparent;
             this.imageBook4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageBook4.Image = global::pcs.Properties.Resources._1001math;
+            this.imageBook4.Image = global::pcs.Properties.Resources.math;
             this.imageBook4.Location = new System.Drawing.Point(8, 294);
             this.imageBook4.Name = "imageBook4";
             this.imageBook4.Size = new System.Drawing.Size(90, 90);
