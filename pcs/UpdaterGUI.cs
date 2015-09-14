@@ -22,12 +22,13 @@ namespace pcs
         private void UpdaterGUI_Load(object sender, EventArgs e)
         {
             WebClient c = new WebClient();
-            labelActual.Text = "Актуальная: " + c.DownloadString("http://pcs.pearx.ru/v.txt");
+            labelActual.Text = "Актуальная: " + v.actual;
             labelVersion.Text = "Установленная: " + v.version;
         }
 
         private void runUpd_Click(object sender, EventArgs e)
         {
+            a.Save("auto.save");
             v.forceClose = true;
             Process.Start("updater.pcs.exe");
             Application.Exit();

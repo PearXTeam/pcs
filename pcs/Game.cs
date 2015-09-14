@@ -37,6 +37,7 @@ namespace pcs
                 this.BackgroundImage = Image.FromFile(v.backgroundImage);
             }
             a.Setup();
+            backgroundWorkerUpdateCheck.RunWorkerAsync();
         }
 
         private void autoSave_Tick(object sender, EventArgs e)
@@ -147,6 +148,41 @@ namespace pcs
         {
             SkillsGUI sgui = new SkillsGUI();
             sgui.ShowDialog();
+        }
+        bool updbool = false;
+        bool errbool = false;
+        private void backgroundWorkerUpdateCheck_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                WebClient c = new WebClient();
+                v.actual = c.DownloadString("http://pcs.pearx.ru/v.txt");
+                if (v.version != v.actual)
+                {
+                    updbool = true;
+                }
+            }
+            catch
+            {
+                errbool = true;
+            }
+        }
+
+        private void backgroundWorkerUpdateCheck_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (updbool)
+            {
+                DialogResult r = MessageBox.Show("Обновить?", "Доступно обновление", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (r == DialogResult.Yes)
+                {
+                    UpdaterGUI ugui = new UpdaterGUI();
+                    ugui.ShowDialog();
+                }
+            }
+            else if (errbool)
+            {
+                MessageBox.Show("Невозможно проверить обновление!", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Question);
+            }
         }
     }
 }

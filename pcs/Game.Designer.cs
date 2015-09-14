@@ -60,6 +60,7 @@
             this.imageUpdaterGUI = new System.Windows.Forms.PictureBox();
             this.imageSkills = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.backgroundWorkerUpdateCheck = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageInfo)).BeginInit();
@@ -394,6 +395,11 @@
             this.label6.TabIndex = 26;
             this.label6.Text = "Умения";
             // 
+            // backgroundWorkerUpdateCheck
+            // 
+            this.backgroundWorkerUpdateCheck.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerUpdateCheck_DoWork);
+            this.backgroundWorkerUpdateCheck.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerUpdateCheck_RunWorkerCompleted);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,6 +487,7 @@
         private System.Windows.Forms.PictureBox imageUpdaterGUI;
         private System.Windows.Forms.PictureBox imageSkills;
         private System.Windows.Forms.Label label6;
+        private System.ComponentModel.BackgroundWorker backgroundWorkerUpdateCheck;
     }
 }
 
