@@ -12,6 +12,7 @@ using System.Threading;
 using System.IO;
 using PearXLib;
 using System.Diagnostics;
+using System.Net;
 
 namespace pcs
 {

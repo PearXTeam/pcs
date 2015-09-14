@@ -9,28 +9,28 @@ namespace pcs
     class inv
     {
         #region Еда 
-        public static long foodBanana = 0;
-        public static long foodSoup = 0;
-        public static long foodSushi = 0;
-        public static long foodCookies = 0;
-        public static long foodCupcake = 0;
-        public static long foodCherry = 0;
-        public static long foodMushroom = 0;
-        public static long foodEggPlant = 0;
-        public static long foodPepper = 0;
-        public static long foodBread = 0;
-        public static long foodIceCream = 0;
-        public static long foodKiwi = 0;
-        public static long foodCheese = 0;
-        public static long foodEgg = 0;
-        public static long foodTomato = 0;
-        public static long foodStrawberry = 0;
-        public static long foodHamburger = 0;
-        public static long foodMeat = 0;
-        public static long foodCucumber = 0;
-        public static long foodCorn = 0;
-        public static long foodPie = 0;
-        public static long foodCockteil = 0;
+        public static long foodBanana;
+        public static long foodSoup;
+        public static long foodSushi;
+        public static long foodCookies;
+        public static long foodCupcake;
+        public static long foodCherry;
+        public static long foodMushroom;
+        public static long foodEggPlant;
+        public static long foodPepper;
+        public static long foodBread;
+        public static long foodIceCream;
+        public static long foodKiwi;
+        public static long foodCheese;
+        public static long foodEgg;
+        public static long foodTomato;
+        public static long foodStrawberry;
+        public static long foodHamburger;
+        public static long foodMeat;
+        public static long foodCucumber;
+        public static long foodCorn;
+        public static long foodPie;
+        public static long foodCockteil;
         #endregion
         #region Книги
         public static long book1; //Русский язык. Начальная школа
@@ -41,6 +41,11 @@ namespace pcs
         public static long book6; //Создание сайтов от Дяди Вани
         public static long book7; //C++ за 21 неделю
         public static long book8; //Английский язык
+        #endregion
+        #region Медицина
+        public static long medicineChestSmall;
+        public static long medicineChestBig;
+        public static long pill;
         #endregion
     }
 }

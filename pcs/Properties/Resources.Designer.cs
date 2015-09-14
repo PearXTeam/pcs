@@ -540,6 +540,26 @@ namespace pcs.Properties {
         }
         
         /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap medicinechestbig {
+            get {
+                object obj = ResourceManager.GetObject("medicinechestbig", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap medicinechestsmall {
+            get {
+                object obj = ResourceManager.GetObject("medicinechestsmall", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.IO.UnmanagedMemoryStream, аналогичного System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream Money {
@@ -623,6 +643,16 @@ namespace pcs.Properties {
         internal static System.Drawing.Bitmap pie {
             get {
                 object obj = ResourceManager.GetObject("pie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pill {
+            get {
+                object obj = ResourceManager.GetObject("pill", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -783,6 +813,15 @@ namespace pcs.Properties {
             get {
                 object obj = ResourceManager.GetObject("vkontakte", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.IO.UnmanagedMemoryStream, аналогичного System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Zip {
+            get {
+                return ResourceManager.GetStream("Zip", resourceCulture);
             }
         }
     }

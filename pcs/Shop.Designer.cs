@@ -120,6 +120,10 @@
             this.imageFoodSoup = new System.Windows.Forms.PictureBox();
             this.imageFoodBanana = new System.Windows.Forms.PictureBox();
             this.tabPageBooks = new System.Windows.Forms.TabPage();
+            this.labelBook8Desc = new System.Windows.Forms.Label();
+            this.labelBook8Count = new System.Windows.Forms.Label();
+            this.labelBook8 = new System.Windows.Forms.Label();
+            this.imageBook8 = new System.Windows.Forms.PictureBox();
             this.labelBook7Desc = new System.Windows.Forms.Label();
             this.labelBook7Count = new System.Windows.Forms.Label();
             this.labelBook7 = new System.Windows.Forms.Label();
@@ -148,10 +152,19 @@
             this.labelBook1Count = new System.Windows.Forms.Label();
             this.labelBook1 = new System.Windows.Forms.Label();
             this.imageBook1 = new System.Windows.Forms.PictureBox();
-            this.imageBook8 = new System.Windows.Forms.PictureBox();
-            this.labelBook8 = new System.Windows.Forms.Label();
-            this.labelBook8Count = new System.Windows.Forms.Label();
-            this.labelBook8Desc = new System.Windows.Forms.Label();
+            this.tabPageMedicine = new System.Windows.Forms.TabPage();
+            this.labelPillDesc = new System.Windows.Forms.Label();
+            this.labelPillCount = new System.Windows.Forms.Label();
+            this.labelPill = new System.Windows.Forms.Label();
+            this.imagePill = new System.Windows.Forms.PictureBox();
+            this.labelMedicineChestBigDesc = new System.Windows.Forms.Label();
+            this.labelMedicineChestBigCount = new System.Windows.Forms.Label();
+            this.labelMedicineChestBig = new System.Windows.Forms.Label();
+            this.imageMedicineChestBig = new System.Windows.Forms.PictureBox();
+            this.labelMedicineChestSmallDesc = new System.Windows.Forms.Label();
+            this.labelMedicineChestSmallCount = new System.Windows.Forms.Label();
+            this.labelMedicineChestSmall = new System.Windows.Forms.Label();
+            this.imageMedicineChestSmall = new System.Windows.Forms.PictureBox();
             this.tabControl.SuspendLayout();
             this.tabPageFood.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageFoodCockteil)).BeginInit();
@@ -177,6 +190,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageFoodSoup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageFoodBanana)).BeginInit();
             this.tabPageBooks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBook8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook5)).BeginInit();
@@ -184,13 +198,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageBook3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBook8)).BeginInit();
+            this.tabPageMedicine.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagePill)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageMedicineChestBig)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageMedicineChestSmall)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
             // 
             this.tabControl.Controls.Add(this.tabPageFood);
             this.tabControl.Controls.Add(this.tabPageBooks);
+            this.tabControl.Controls.Add(this.tabPageMedicine);
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -1352,6 +1370,52 @@
             this.tabPageBooks.Text = "Книги";
             this.tabPageBooks.UseVisualStyleBackColor = true;
             // 
+            // labelBook8Desc
+            // 
+            this.labelBook8Desc.AutoSize = true;
+            this.labelBook8Desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBook8Desc.ForeColor = System.Drawing.Color.Blue;
+            this.labelBook8Desc.Location = new System.Drawing.Point(103, 702);
+            this.labelBook8Desc.Name = "labelBook8Desc";
+            this.labelBook8Desc.Size = new System.Drawing.Size(191, 48);
+            this.labelBook8Desc.TabIndex = 92;
+            this.labelBook8Desc.Text = "Международный.\r\n+Знание английского языка\r\n+150XP";
+            // 
+            // labelBook8Count
+            // 
+            this.labelBook8Count.AutoSize = true;
+            this.labelBook8Count.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBook8Count.ForeColor = System.Drawing.Color.Green;
+            this.labelBook8Count.Location = new System.Drawing.Point(273, 678);
+            this.labelBook8Count.Name = "labelBook8Count";
+            this.labelBook8Count.Size = new System.Drawing.Size(52, 24);
+            this.labelBook8Count.TabIndex = 91;
+            this.labelBook8Count.Text = "400Р";
+            // 
+            // labelBook8
+            // 
+            this.labelBook8.AutoSize = true;
+            this.labelBook8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelBook8.ForeColor = System.Drawing.Color.Red;
+            this.labelBook8.Location = new System.Drawing.Point(104, 678);
+            this.labelBook8.Name = "labelBook8";
+            this.labelBook8.Size = new System.Drawing.Size(163, 24);
+            this.labelBook8.TabIndex = 90;
+            this.labelBook8.Text = "Английский язык";
+            // 
+            // imageBook8
+            // 
+            this.imageBook8.BackColor = System.Drawing.Color.Transparent;
+            this.imageBook8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageBook8.Image = global::pcs.Properties.Resources.english_language;
+            this.imageBook8.Location = new System.Drawing.Point(8, 678);
+            this.imageBook8.Name = "imageBook8";
+            this.imageBook8.Size = new System.Drawing.Size(90, 90);
+            this.imageBook8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageBook8.TabIndex = 89;
+            this.imageBook8.TabStop = false;
+            this.imageBook8.Click += new System.EventHandler(this.imageBook8_Click);
+            // 
             // labelBook7Desc
             // 
             this.labelBook7Desc.AutoSize = true;
@@ -1674,51 +1738,166 @@
             this.imageBook1.TabStop = false;
             this.imageBook1.Click += new System.EventHandler(this.imageBook1_Click);
             // 
-            // imageBook8
+            // tabPageMedicine
             // 
-            this.imageBook8.BackColor = System.Drawing.Color.Transparent;
-            this.imageBook8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageBook8.Image = global::pcs.Properties.Resources.english_language;
-            this.imageBook8.Location = new System.Drawing.Point(8, 678);
-            this.imageBook8.Name = "imageBook8";
-            this.imageBook8.Size = new System.Drawing.Size(90, 90);
-            this.imageBook8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imageBook8.TabIndex = 89;
-            this.imageBook8.TabStop = false;
-            this.imageBook8.Click += new System.EventHandler(this.imageBook8_Click);
+            this.tabPageMedicine.AutoScroll = true;
+            this.tabPageMedicine.Controls.Add(this.labelPillDesc);
+            this.tabPageMedicine.Controls.Add(this.labelPillCount);
+            this.tabPageMedicine.Controls.Add(this.labelPill);
+            this.tabPageMedicine.Controls.Add(this.imagePill);
+            this.tabPageMedicine.Controls.Add(this.labelMedicineChestBigDesc);
+            this.tabPageMedicine.Controls.Add(this.labelMedicineChestBigCount);
+            this.tabPageMedicine.Controls.Add(this.labelMedicineChestBig);
+            this.tabPageMedicine.Controls.Add(this.imageMedicineChestBig);
+            this.tabPageMedicine.Controls.Add(this.labelMedicineChestSmallDesc);
+            this.tabPageMedicine.Controls.Add(this.labelMedicineChestSmallCount);
+            this.tabPageMedicine.Controls.Add(this.labelMedicineChestSmall);
+            this.tabPageMedicine.Controls.Add(this.imageMedicineChestSmall);
+            this.tabPageMedicine.Location = new System.Drawing.Point(4, 22);
+            this.tabPageMedicine.Name = "tabPageMedicine";
+            this.tabPageMedicine.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageMedicine.Size = new System.Drawing.Size(465, 322);
+            this.tabPageMedicine.TabIndex = 2;
+            this.tabPageMedicine.Text = "Медицина";
+            this.tabPageMedicine.UseVisualStyleBackColor = true;
             // 
-            // labelBook8
+            // labelPillDesc
             // 
-            this.labelBook8.AutoSize = true;
-            this.labelBook8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBook8.ForeColor = System.Drawing.Color.Red;
-            this.labelBook8.Location = new System.Drawing.Point(104, 678);
-            this.labelBook8.Name = "labelBook8";
-            this.labelBook8.Size = new System.Drawing.Size(163, 24);
-            this.labelBook8.TabIndex = 90;
-            this.labelBook8.Text = "Английский язык";
+            this.labelPillDesc.AutoSize = true;
+            this.labelPillDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPillDesc.ForeColor = System.Drawing.Color.Blue;
+            this.labelPillDesc.Location = new System.Drawing.Point(99, 222);
+            this.labelPillDesc.Name = "labelPillDesc";
+            this.labelPillDesc.Size = new System.Drawing.Size(324, 48);
+            this.labelPillDesc.TabIndex = 76;
+            this.labelPillDesc.Text = "Маленькая таблетка. Восстановит совсем мало \r\nздоровья.\r\n+1 здоровье";
             // 
-            // labelBook8Count
+            // labelPillCount
             // 
-            this.labelBook8Count.AutoSize = true;
-            this.labelBook8Count.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBook8Count.ForeColor = System.Drawing.Color.Green;
-            this.labelBook8Count.Location = new System.Drawing.Point(273, 678);
-            this.labelBook8Count.Name = "labelBook8Count";
-            this.labelBook8Count.Size = new System.Drawing.Size(52, 24);
-            this.labelBook8Count.TabIndex = 91;
-            this.labelBook8Count.Text = "400Р";
+            this.labelPillCount.AutoSize = true;
+            this.labelPillCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPillCount.ForeColor = System.Drawing.Color.Green;
+            this.labelPillCount.Location = new System.Drawing.Point(198, 198);
+            this.labelPillCount.Name = "labelPillCount";
+            this.labelPillCount.Size = new System.Drawing.Size(42, 24);
+            this.labelPillCount.TabIndex = 75;
+            this.labelPillCount.Text = "15Р";
             // 
-            // labelBook8Desc
+            // labelPill
             // 
-            this.labelBook8Desc.AutoSize = true;
-            this.labelBook8Desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelBook8Desc.ForeColor = System.Drawing.Color.Blue;
-            this.labelBook8Desc.Location = new System.Drawing.Point(103, 702);
-            this.labelBook8Desc.Name = "labelBook8Desc";
-            this.labelBook8Desc.Size = new System.Drawing.Size(191, 48);
-            this.labelBook8Desc.TabIndex = 92;
-            this.labelBook8Desc.Text = "Международный.\r\n+Знание английского языка\r\n+150XP";
+            this.labelPill.AutoSize = true;
+            this.labelPill.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPill.ForeColor = System.Drawing.Color.Red;
+            this.labelPill.Location = new System.Drawing.Point(99, 198);
+            this.labelPill.Name = "labelPill";
+            this.labelPill.Size = new System.Drawing.Size(93, 24);
+            this.labelPill.TabIndex = 74;
+            this.labelPill.Text = "Таблетка";
+            // 
+            // imagePill
+            // 
+            this.imagePill.BackColor = System.Drawing.Color.Transparent;
+            this.imagePill.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imagePill.Image = global::pcs.Properties.Resources.pill;
+            this.imagePill.Location = new System.Drawing.Point(3, 198);
+            this.imagePill.Name = "imagePill";
+            this.imagePill.Size = new System.Drawing.Size(90, 90);
+            this.imagePill.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imagePill.TabIndex = 73;
+            this.imagePill.TabStop = false;
+            this.imagePill.Click += new System.EventHandler(this.imagePill_Click);
+            // 
+            // labelMedicineChestBigDesc
+            // 
+            this.labelMedicineChestBigDesc.AutoSize = true;
+            this.labelMedicineChestBigDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMedicineChestBigDesc.ForeColor = System.Drawing.Color.Blue;
+            this.labelMedicineChestBigDesc.Location = new System.Drawing.Point(99, 126);
+            this.labelMedicineChestBigDesc.Name = "labelMedicineChestBigDesc";
+            this.labelMedicineChestBigDesc.Size = new System.Drawing.Size(350, 32);
+            this.labelMedicineChestBigDesc.TabIndex = 72;
+            this.labelMedicineChestBigDesc.Text = "Большая аптечка восстанавливает много здоровья.\r\n+30 здоровье";
+            // 
+            // labelMedicineChestBigCount
+            // 
+            this.labelMedicineChestBigCount.AutoSize = true;
+            this.labelMedicineChestBigCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMedicineChestBigCount.ForeColor = System.Drawing.Color.Green;
+            this.labelMedicineChestBigCount.Location = new System.Drawing.Point(270, 102);
+            this.labelMedicineChestBigCount.Name = "labelMedicineChestBigCount";
+            this.labelMedicineChestBigCount.Size = new System.Drawing.Size(52, 24);
+            this.labelMedicineChestBigCount.TabIndex = 71;
+            this.labelMedicineChestBigCount.Text = "450Р";
+            // 
+            // labelMedicineChestBig
+            // 
+            this.labelMedicineChestBig.AutoSize = true;
+            this.labelMedicineChestBig.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMedicineChestBig.ForeColor = System.Drawing.Color.Red;
+            this.labelMedicineChestBig.Location = new System.Drawing.Point(99, 102);
+            this.labelMedicineChestBig.Name = "labelMedicineChestBig";
+            this.labelMedicineChestBig.Size = new System.Drawing.Size(165, 24);
+            this.labelMedicineChestBig.TabIndex = 70;
+            this.labelMedicineChestBig.Text = "Большая аптечка";
+            // 
+            // imageMedicineChestBig
+            // 
+            this.imageMedicineChestBig.BackColor = System.Drawing.Color.Transparent;
+            this.imageMedicineChestBig.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageMedicineChestBig.Image = global::pcs.Properties.Resources.medicinechestbig;
+            this.imageMedicineChestBig.Location = new System.Drawing.Point(3, 102);
+            this.imageMedicineChestBig.Name = "imageMedicineChestBig";
+            this.imageMedicineChestBig.Size = new System.Drawing.Size(90, 90);
+            this.imageMedicineChestBig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageMedicineChestBig.TabIndex = 69;
+            this.imageMedicineChestBig.TabStop = false;
+            this.imageMedicineChestBig.Click += new System.EventHandler(this.imageMedicineChestBig_Click);
+            // 
+            // labelMedicineChestSmallDesc
+            // 
+            this.labelMedicineChestSmallDesc.AutoSize = true;
+            this.labelMedicineChestSmallDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMedicineChestSmallDesc.ForeColor = System.Drawing.Color.Blue;
+            this.labelMedicineChestSmallDesc.Location = new System.Drawing.Point(99, 30);
+            this.labelMedicineChestSmallDesc.Name = "labelMedicineChestSmallDesc";
+            this.labelMedicineChestSmallDesc.Size = new System.Drawing.Size(261, 32);
+            this.labelMedicineChestSmallDesc.TabIndex = 68;
+            this.labelMedicineChestSmallDesc.Text = "Маленькая аптечка. Дешево и сердито\r\n+10 здоровье";
+            // 
+            // labelMedicineChestSmallCount
+            // 
+            this.labelMedicineChestSmallCount.AutoSize = true;
+            this.labelMedicineChestSmallCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMedicineChestSmallCount.ForeColor = System.Drawing.Color.Green;
+            this.labelMedicineChestSmallCount.Location = new System.Drawing.Point(289, 6);
+            this.labelMedicineChestSmallCount.Name = "labelMedicineChestSmallCount";
+            this.labelMedicineChestSmallCount.Size = new System.Drawing.Size(52, 24);
+            this.labelMedicineChestSmallCount.TabIndex = 67;
+            this.labelMedicineChestSmallCount.Text = "150Р";
+            // 
+            // labelMedicineChestSmall
+            // 
+            this.labelMedicineChestSmall.AutoSize = true;
+            this.labelMedicineChestSmall.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMedicineChestSmall.ForeColor = System.Drawing.Color.Red;
+            this.labelMedicineChestSmall.Location = new System.Drawing.Point(99, 6);
+            this.labelMedicineChestSmall.Name = "labelMedicineChestSmall";
+            this.labelMedicineChestSmall.Size = new System.Drawing.Size(184, 24);
+            this.labelMedicineChestSmall.TabIndex = 66;
+            this.labelMedicineChestSmall.Text = "Маленькая аптечка";
+            // 
+            // imageMedicineChestSmall
+            // 
+            this.imageMedicineChestSmall.BackColor = System.Drawing.Color.Transparent;
+            this.imageMedicineChestSmall.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageMedicineChestSmall.Image = global::pcs.Properties.Resources.medicinechestsmall;
+            this.imageMedicineChestSmall.Location = new System.Drawing.Point(3, 6);
+            this.imageMedicineChestSmall.Name = "imageMedicineChestSmall";
+            this.imageMedicineChestSmall.Size = new System.Drawing.Size(90, 90);
+            this.imageMedicineChestSmall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageMedicineChestSmall.TabIndex = 65;
+            this.imageMedicineChestSmall.TabStop = false;
+            this.imageMedicineChestSmall.Click += new System.EventHandler(this.imageMedicineChestSmall_Click);
             // 
             // Shop
             // 
@@ -1758,6 +1937,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageFoodBanana)).EndInit();
             this.tabPageBooks.ResumeLayout(false);
             this.tabPageBooks.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imageBook8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook5)).EndInit();
@@ -1765,7 +1945,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageBook3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBook1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageBook8)).EndInit();
+            this.tabPageMedicine.ResumeLayout(false);
+            this.tabPageMedicine.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagePill)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageMedicineChestBig)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageMedicineChestSmall)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1895,5 +2079,18 @@
         private System.Windows.Forms.Label labelBook8Count;
         private System.Windows.Forms.Label labelBook8;
         private System.Windows.Forms.PictureBox imageBook8;
+        private System.Windows.Forms.TabPage tabPageMedicine;
+        private System.Windows.Forms.Label labelMedicineChestSmallDesc;
+        private System.Windows.Forms.Label labelMedicineChestSmallCount;
+        private System.Windows.Forms.Label labelMedicineChestSmall;
+        private System.Windows.Forms.PictureBox imageMedicineChestSmall;
+        private System.Windows.Forms.Label labelMedicineChestBigDesc;
+        private System.Windows.Forms.Label labelMedicineChestBigCount;
+        private System.Windows.Forms.Label labelMedicineChestBig;
+        private System.Windows.Forms.PictureBox imageMedicineChestBig;
+        private System.Windows.Forms.Label labelPillDesc;
+        private System.Windows.Forms.Label labelPillCount;
+        private System.Windows.Forms.Label labelPill;
+        private System.Windows.Forms.PictureBox imagePill;
     }
 }

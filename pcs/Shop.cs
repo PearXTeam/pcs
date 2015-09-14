@@ -18,14 +18,17 @@ namespace pcs
         {
             InitializeComponent();
         }
-
+        void playSound()
+        {
+            SoundPlayer sp = new SoundPlayer(Resources.Money);
+            sp.Play();
+        }
         private void imageFoodMushroom_Click(object sender, EventArgs e)
         {
             if (a.mMoney(-1, 6))
             {
                 inv.foodMushroom++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -34,8 +37,8 @@ namespace pcs
             if (a.mMoney(-1, 22))
             {
                 inv.foodBanana++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
+
             }
         }
 
@@ -44,8 +47,8 @@ namespace pcs
             if (a.mMoney(-1, 115))
             {
                 inv.foodSoup++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
+
             }
         }
 
@@ -54,8 +57,7 @@ namespace pcs
             if (a.mMoney(-1, 23))
             {
                 inv.foodSushi++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -64,8 +66,7 @@ namespace pcs
             if (a.mMoney(-1, 26))
             {
                 inv.foodCookies++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -74,8 +75,7 @@ namespace pcs
             if (a.mMoney(-1, 26))
             {
                 inv.foodCupcake++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -84,8 +84,7 @@ namespace pcs
             if (a.mMoney(-1, 5))
             {
                 inv.foodCherry++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -94,8 +93,7 @@ namespace pcs
             if (a.mMoney(-1, 25))
             {
                 inv.foodEggPlant++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -104,8 +102,7 @@ namespace pcs
             if (a.mMoney(-1, 14))
             {
                 inv.foodPepper++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -114,8 +111,7 @@ namespace pcs
             if (a.mMoney(-1, 10))
             {
                 inv.foodBread++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -124,8 +120,7 @@ namespace pcs
             if (a.mMoney(-1, 29))
             {
                 inv.foodIceCream++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -134,8 +129,7 @@ namespace pcs
             if (a.mMoney(-1, 15))
             {
                 inv.foodKiwi++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -144,8 +138,7 @@ namespace pcs
             if (a.mMoney(-1, 20))
             {
                 inv.foodCheese++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -154,8 +147,7 @@ namespace pcs
             if (a.mMoney(-1, 28))
             {
                 inv.foodEgg++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -164,8 +156,7 @@ namespace pcs
             if (a.mMoney(-1, 25))
             {
                 inv.foodTomato++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -174,8 +165,7 @@ namespace pcs
             if (a.mMoney(-1, 26))
             {
                 inv.foodStrawberry++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -184,8 +174,7 @@ namespace pcs
             if (a.mMoney(-1, 72))
             {
                 inv.foodHamburger++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -194,8 +183,7 @@ namespace pcs
             if (a.mMoney(-1, 107))
             {
                 inv.foodMeat++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -204,8 +192,7 @@ namespace pcs
             if (a.mMoney(-1, 20))
             {
                 inv.foodCucumber++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -214,8 +201,7 @@ namespace pcs
             if (a.mMoney(-1, 30))
             {
                 inv.foodCorn++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -224,8 +210,7 @@ namespace pcs
             if (a.mMoney(-1, 71))
             {
                 inv.foodPie++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -234,8 +219,7 @@ namespace pcs
             if (a.mMoney(-1, 24))
             {
                 inv.foodCockteil++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -244,8 +228,7 @@ namespace pcs
             if (a.mMoney(-1, 200))
             {
                 inv.book1++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -254,8 +237,7 @@ namespace pcs
             if (a.mMoney(-1, 220))
             {
                 inv.book2++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -264,8 +246,7 @@ namespace pcs
             if (a.mMoney(-1, 300))
             {
                 inv.book3++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -274,8 +255,7 @@ namespace pcs
             if (a.mMoney(-1, 450))
             {
                 inv.book4++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -284,8 +264,7 @@ namespace pcs
             if (a.mMoney(-1, 250))
             {
                 inv.book5++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -294,8 +273,7 @@ namespace pcs
             if (a.mMoney(-1, 50))
             {
                 inv.book6++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -304,8 +282,7 @@ namespace pcs
             if (a.mMoney(-1, 350))
             {
                 inv.book7++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
             }
         }
 
@@ -314,8 +291,34 @@ namespace pcs
             if (a.mMoney(-1, 400))
             {
                 inv.book8++;
-                SoundPlayer sp = new SoundPlayer(Resources.Money);
-                sp.Play();
+                playSound();
+            }
+        }
+
+        private void imageMedicineChestSmall_Click(object sender, EventArgs e)
+        {
+            if (a.mMoney(-1, 150))
+            {
+                inv.medicineChestSmall++;
+                playSound();
+            }
+        }
+
+        private void imageMedicineChestBig_Click(object sender, EventArgs e)
+        {
+            if (a.mMoney(-1, 450))
+            {
+                inv.medicineChestBig++;
+                playSound();
+            }
+        }
+
+        private void imagePill_Click(object sender, EventArgs e)
+        {
+            if (a.mMoney(-1, 15))
+            {
+                inv.pill++;
+                playSound();
             }
         }
     }

@@ -464,6 +464,18 @@
   <ItemGroup>
     <None Include="Resources\Book.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicinechestsmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicinechestbig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zip.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
