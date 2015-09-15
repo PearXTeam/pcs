@@ -77,6 +77,13 @@
     <Compile Include="About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
     </Compile>
+    <Compile Include="achievements.cs" />
+    <Compile Include="AchievementsGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AchievementsGUI.Designer.cs">
+      <DependentUpon>AchievementsGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="CatchCat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +126,12 @@
     </Compile>
     <Compile Include="InvGui.Designer.cs">
       <DependentUpon>InvGui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
     </Compile>
     <Compile Include="MiniGames.cs">
       <SubType>Form</SubType>
@@ -176,6 +189,9 @@
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AchievementsGUI.resx">
+      <DependentUpon>AchievementsGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CatchCat.resx">
       <DependentUpon>CatchCat.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InvGui.resx">
       <DependentUpon>InvGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MiniGames.resx">
       <DependentUpon>MiniGames.cs</DependentUpon>
@@ -496,6 +515,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

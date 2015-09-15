@@ -190,5 +190,11 @@ namespace pcs
             Donate d = new Donate();
             d.ShowDialog();
         }
+
+        private void imageAchievements_Click(object sender, EventArgs e)
+        {
+            AchievementsGUI agui = new AchievementsGUI();
+            agui.ShowDialog();
+        }
     }
 }

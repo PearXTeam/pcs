@@ -552,6 +552,16 @@ namespace pcs.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap list {
+            get {
+                object obj = ResourceManager.GetObject("list", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap math {
             get {
                 object obj = ResourceManager.GetObject("math", resourceCulture);
@@ -614,6 +624,16 @@ namespace pcs.Properties {
         internal static System.Drawing.Bitmap naturestories {
             get {
                 object obj = ResourceManager.GetObject("naturestories", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap no {
+            get {
+                object obj = ResourceManager.GetObject("no", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -852,6 +872,16 @@ namespace pcs.Properties {
         internal static System.Drawing.Bitmap vkontakte {
             get {
                 object obj = ResourceManager.GetObject("vkontakte", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yes {
+            get {
+                object obj = ResourceManager.GetObject("yes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

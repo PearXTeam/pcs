@@ -8,7 +8,7 @@ namespace pcs
 {
     class a
     {
-        public enum Message { NoItem }
+        public enum MessageType { NoItem }
         /// <summary>
         /// Загружает сохранение.
         /// </summary>
@@ -64,6 +64,7 @@ namespace pcs
                 skills.skillComputer = Convert.ToBoolean(str[43]);
                 skills.skillAdvancedMath = Convert.ToBoolean(str[44]);
                 skills.skillCpp = Convert.ToBoolean(str[45]);
+                achievements.achLie = Convert.ToBoolean(str[46]);
                 
             }
             catch { }
@@ -120,6 +121,7 @@ namespace pcs
                 skills.skillComputer.ToString(),
                 skills.skillAdvancedMath.ToString(),
                 skills.skillCpp.ToString(),
+                achievements.achLie.ToString()
             });
             }
             catch(Exception ex)
@@ -350,9 +352,9 @@ namespace pcs
             }
         }
 
-        public static void SM(Message m)
+        public static void SM(MessageType m)
         {
-            if (m == Message.NoItem)
+            if (m == MessageType.NoItem)
             {
                 MessageBox.Show("У Вас нет этого предмета!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

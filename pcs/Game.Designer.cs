@@ -62,6 +62,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.backgroundWorkerUpdateCheck = new System.ComponentModel.BackgroundWorker();
             this.imageDonate = new System.Windows.Forms.PictureBox();
+            this.imageAchievements = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageInfo)).BeginInit();
@@ -73,6 +75,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageUpdaterGUI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSkills)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageDonate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageAchievements)).BeginInit();
             this.SuspendLayout();
             // 
             // autoSave
@@ -414,6 +417,31 @@
             this.imageDonate.TabStop = false;
             this.imageDonate.Click += new System.EventHandler(this.imageDonate_Click);
             // 
+            // imageAchievements
+            // 
+            this.imageAchievements.BackColor = System.Drawing.Color.Transparent;
+            this.imageAchievements.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageAchievements.Image = global::pcs.Properties.Resources.list;
+            this.imageAchievements.Location = new System.Drawing.Point(284, 12);
+            this.imageAchievements.Name = "imageAchievements";
+            this.imageAchievements.Size = new System.Drawing.Size(90, 90);
+            this.imageAchievements.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imageAchievements.TabIndex = 28;
+            this.imageAchievements.TabStop = false;
+            this.imageAchievements.Click += new System.EventHandler(this.imageAchievements_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.Orange;
+            this.label7.Location = new System.Drawing.Point(286, 105);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 16);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Достижения";
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -421,6 +449,8 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(886, 440);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.imageAchievements);
             this.Controls.Add(this.imageDonate);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.imageSkills);
@@ -466,6 +496,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageUpdaterGUI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSkills)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageDonate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageAchievements)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -505,6 +536,8 @@
         private System.Windows.Forms.Label label6;
         private System.ComponentModel.BackgroundWorker backgroundWorkerUpdateCheck;
         private System.Windows.Forms.PictureBox imageDonate;
+        private System.Windows.Forms.PictureBox imageAchievements;
+        private System.Windows.Forms.Label label7;
     }
 }
 

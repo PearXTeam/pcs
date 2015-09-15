@@ -12,9 +12,11 @@ namespace pcs
     {
         //Системные значения \/
         public static bool forceClose = false;
+        public static string messageTitle;
+        public static string messageText;
 
         //Загружаемые параметры \/
-        public static string version = "1.15.12.8";
+        public static string version = "1.15.13.8";
         public static string actual = "?";
 
         

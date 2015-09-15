@@ -83,7 +83,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -99,7 +99,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -120,7 +120,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -136,7 +136,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -152,7 +152,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -167,7 +167,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -189,7 +189,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -205,7 +205,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -222,7 +222,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -238,7 +238,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -255,7 +255,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -271,7 +271,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -292,7 +292,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -314,7 +314,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -330,7 +330,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -347,7 +347,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -365,7 +365,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -382,7 +382,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -398,7 +398,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -414,7 +414,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -428,10 +428,20 @@ namespace pcs
                 
                 inv.foodPie--;
                 upd();
+                
+
+                if (!achievements.achLie)
+                {
+                    achievements.achLie = true;
+                    v.messageText = "Ложь";
+                    v.messageTitle = "Достижение получено";
+                    Message m = new Message();
+                    m.Show();
+                }
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -448,7 +458,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -465,7 +475,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -481,7 +491,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -498,7 +508,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -515,7 +525,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -531,7 +541,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -547,7 +557,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -564,7 +574,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -581,7 +591,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -596,7 +606,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -611,7 +621,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
 
@@ -626,7 +636,7 @@ namespace pcs
             }
             else
             {
-                a.SM(a.Message.NoItem);
+                a.SM(a.MessageType.NoItem);
             }
         }
     }
