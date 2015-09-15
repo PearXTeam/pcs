@@ -61,6 +61,7 @@
             this.imageSkills = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.backgroundWorkerUpdateCheck = new System.ComponentModel.BackgroundWorker();
+            this.imageDonate = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageInfo)).BeginInit();
@@ -71,6 +72,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageSleep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageUpdaterGUI)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSkills)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageDonate)).BeginInit();
             this.SuspendLayout();
             // 
             // autoSave
@@ -400,6 +402,18 @@
             this.backgroundWorkerUpdateCheck.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerUpdateCheck_DoWork);
             this.backgroundWorkerUpdateCheck.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerUpdateCheck_RunWorkerCompleted);
             // 
+            // imageDonate
+            // 
+            this.imageDonate.BackColor = System.Drawing.Color.Transparent;
+            this.imageDonate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imageDonate.Image = global::pcs.Properties.Resources.coin;
+            this.imageDonate.Location = new System.Drawing.Point(339, 367);
+            this.imageDonate.Name = "imageDonate";
+            this.imageDonate.Size = new System.Drawing.Size(32, 32);
+            this.imageDonate.TabIndex = 27;
+            this.imageDonate.TabStop = false;
+            this.imageDonate.Click += new System.EventHandler(this.imageDonate_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -407,6 +421,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(886, 440);
+            this.Controls.Add(this.imageDonate);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.imageSkills);
             this.Controls.Add(this.imageUpdaterGUI);
@@ -450,6 +465,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageSleep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageUpdaterGUI)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageSkills)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imageDonate)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,6 +504,7 @@
         private System.Windows.Forms.PictureBox imageSkills;
         private System.Windows.Forms.Label label6;
         private System.ComponentModel.BackgroundWorker backgroundWorkerUpdateCheck;
+        private System.Windows.Forms.PictureBox imageDonate;
     }
 }
 

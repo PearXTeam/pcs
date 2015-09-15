@@ -184,5 +184,11 @@ namespace pcs
                 MessageBox.Show("Невозможно проверить обновление!", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
         }
+
+        private void imageDonate_Click(object sender, EventArgs e)
+        {
+            Donate d = new Donate();
+            d.ShowDialog();
+        }
     }
 }
