@@ -1,0 +1,32 @@
+# Killing messages:
+killed.byHunger=Вы умерли от голода.
+killed.byBore=Вы умерли от скуки.
+killed.byLackOfSleep=Вы умерли от недосыпания.
+killed.byMud=Вы погрязли в мусоре.
+killed.byDisease=Вы умерли от болезни.
+
+# Texts on bars:
+bar.food=Еда: 
+bar.mood=Настроение: 
+bar.health=Здоровье: 
+bar.sleep=Сон: 
+bar.purity=Чистота: 
+
+#Titles:
+title.death=Вы умерли.
+
+
+#Other
+other.closeMessage=Вы действительно хотите выйти?
+other.currency=руб.
+other.XPName=оп.
+
+#Icons:
+icon.minigames=Мини-игры
+
+#Buttons:
+button.closeDeath=Я понял.
+
+#Texts on labels:
+label.moneys=Деньги: 
+label.xp=Опыт: 

@@ -3,14 +3,14 @@
     partial class Game
     {
         /// <summary>
-        /// Требуется переменная конструктора.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Освободить все используемые ресурсы.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">истинно, если управляемый ресурс должен быть удален; иначе ложно.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,483 +20,162 @@
             base.Dispose(disposing);
         }
 
-        #region Код, автоматически созданный конструктором форм Windows
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Обязательный метод для поддержки конструктора - не изменяйте
-        /// содержимое данного метода при помощи редактора кода.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
-            this.autoSave = new System.Windows.Forms.Timer(this.components);
-            this.barHealth = new System.Windows.Forms.ProgressBar();
-            this.barFun = new System.Windows.Forms.ProgressBar();
-            this.barFood = new System.Windows.Forms.ProgressBar();
-            this.barSleep = new System.Windows.Forms.ProgressBar();
-            this.labelHealth = new System.Windows.Forms.Label();
-            this.labelFun = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelFood = new System.Windows.Forms.Label();
-            this.labelSleep = new System.Windows.Forms.Label();
+            this.panelIcons = new System.Windows.Forms.Panel();
             this.timerFood = new System.Windows.Forms.Timer(this.components);
-            this.timerFun = new System.Windows.Forms.Timer(this.components);
             this.timerSleep = new System.Windows.Forms.Timer(this.components);
-            this.imageSettings = new System.Windows.Forms.PictureBox();
-            this.labelMoney = new System.Windows.Forms.Label();
+            this.timerMood = new System.Windows.Forms.Timer(this.components);
+            this.timerPurity = new System.Windows.Forms.Timer(this.components);
+            this.barHealth = new PearXLib.Engine.XBar();
+            this.barSleep = new PearXLib.Engine.XBar();
+            this.barPurity = new PearXLib.Engine.XBar();
+            this.barMood = new PearXLib.Engine.XBar();
+            this.barFood = new PearXLib.Engine.XBar();
+            this.labelMoneys = new System.Windows.Forms.Label();
             this.labelXP = new System.Windows.Forms.Label();
-            this.imageSaveManager = new System.Windows.Forms.PictureBox();
-            this.imageInfo = new System.Windows.Forms.PictureBox();
-            this.imageVK = new System.Windows.Forms.PictureBox();
-            this.imageMiniGames = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.imageInv = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.imageShop = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.imageSleep = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.imageUpdaterGUI = new System.Windows.Forms.PictureBox();
-            this.imageSkills = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.backgroundWorkerUpdateCheck = new System.ComponentModel.BackgroundWorker();
-            this.imageDonate = new System.Windows.Forms.PictureBox();
-            this.imageAchievements = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageVK)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageMiniGames)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageInv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageShop)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageSleep)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageUpdaterGUI)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageSkills)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageDonate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageAchievements)).BeginInit();
             this.SuspendLayout();
             // 
-            // autoSave
+            // panelIcons
             // 
-            this.autoSave.Enabled = true;
-            this.autoSave.Interval = 120000;
-            this.autoSave.Tick += new System.EventHandler(this.autoSave_Tick);
-            // 
-            // barHealth
-            // 
-            this.barHealth.Location = new System.Drawing.Point(456, 385);
-            this.barHealth.Name = "barHealth";
-            this.barHealth.Size = new System.Drawing.Size(100, 14);
-            this.barHealth.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.barHealth.TabIndex = 0;
-            // 
-            // barFun
-            // 
-            this.barFun.Location = new System.Drawing.Point(562, 385);
-            this.barFun.Name = "barFun";
-            this.barFun.Size = new System.Drawing.Size(100, 14);
-            this.barFun.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.barFun.TabIndex = 1;
-            // 
-            // barFood
-            // 
-            this.barFood.Location = new System.Drawing.Point(668, 385);
-            this.barFood.Name = "barFood";
-            this.barFood.Size = new System.Drawing.Size(100, 14);
-            this.barFood.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.barFood.TabIndex = 2;
-            // 
-            // barSleep
-            // 
-            this.barSleep.Location = new System.Drawing.Point(774, 385);
-            this.barSleep.Name = "barSleep";
-            this.barSleep.Size = new System.Drawing.Size(100, 14);
-            this.barSleep.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.barSleep.TabIndex = 3;
-            // 
-            // labelHealth
-            // 
-            this.labelHealth.AutoSize = true;
-            this.labelHealth.BackColor = System.Drawing.Color.Transparent;
-            this.labelHealth.ForeColor = System.Drawing.Color.Orange;
-            this.labelHealth.Location = new System.Drawing.Point(453, 367);
-            this.labelHealth.Name = "labelHealth";
-            this.labelHealth.Size = new System.Drawing.Size(35, 13);
-            this.labelHealth.TabIndex = 5;
-            this.labelHealth.Text = "label1";
-            // 
-            // labelFun
-            // 
-            this.labelFun.AutoSize = true;
-            this.labelFun.BackColor = System.Drawing.Color.Transparent;
-            this.labelFun.ForeColor = System.Drawing.Color.Orange;
-            this.labelFun.Location = new System.Drawing.Point(559, 367);
-            this.labelFun.Name = "labelFun";
-            this.labelFun.Size = new System.Drawing.Size(35, 13);
-            this.labelFun.TabIndex = 6;
-            this.labelFun.Text = "label2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(-5, 349);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(895, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "_________________________________________________________________________________" +
-    "___________________________________________________________________";
-            // 
-            // labelFood
-            // 
-            this.labelFood.AutoSize = true;
-            this.labelFood.BackColor = System.Drawing.Color.Transparent;
-            this.labelFood.ForeColor = System.Drawing.Color.Orange;
-            this.labelFood.Location = new System.Drawing.Point(665, 367);
-            this.labelFood.Name = "labelFood";
-            this.labelFood.Size = new System.Drawing.Size(35, 13);
-            this.labelFood.TabIndex = 8;
-            this.labelFood.Text = "label2";
-            // 
-            // labelSleep
-            // 
-            this.labelSleep.AutoSize = true;
-            this.labelSleep.BackColor = System.Drawing.Color.Transparent;
-            this.labelSleep.ForeColor = System.Drawing.Color.Orange;
-            this.labelSleep.Location = new System.Drawing.Point(771, 367);
-            this.labelSleep.Name = "labelSleep";
-            this.labelSleep.Size = new System.Drawing.Size(35, 13);
-            this.labelSleep.TabIndex = 9;
-            this.labelSleep.Text = "label2";
+            this.panelIcons.AutoScroll = true;
+            this.panelIcons.BackColor = System.Drawing.Color.Transparent;
+            this.panelIcons.Location = new System.Drawing.Point(0, 0);
+            this.panelIcons.Name = "panelIcons";
+            this.panelIcons.Size = new System.Drawing.Size(810, 325);
+            this.panelIcons.TabIndex = 4;
+            this.panelIcons.MouseEnter += new System.EventHandler(this.panelIcons_MouseEnter);
+            this.panelIcons.MouseLeave += new System.EventHandler(this.panelIcons_MouseLeave);
             // 
             // timerFood
             // 
             this.timerFood.Enabled = true;
-            this.timerFood.Interval = 35000;
+            this.timerFood.Interval = 9000;
             this.timerFood.Tick += new System.EventHandler(this.timerFood_Tick);
-            // 
-            // timerFun
-            // 
-            this.timerFun.Enabled = true;
-            this.timerFun.Interval = 105000;
-            this.timerFun.Tick += new System.EventHandler(this.timerFun_Tick);
             // 
             // timerSleep
             // 
             this.timerSleep.Enabled = true;
-            this.timerSleep.Interval = 40000;
+            this.timerSleep.Interval = 1500;
             this.timerSleep.Tick += new System.EventHandler(this.timerSleep_Tick);
             // 
-            // imageSettings
+            // timerMood
             // 
-            this.imageSettings.BackColor = System.Drawing.Color.Transparent;
-            this.imageSettings.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageSettings.Image = global::pcs.Properties.Resources.settings;
-            this.imageSettings.Location = new System.Drawing.Point(415, 367);
-            this.imageSettings.Name = "imageSettings";
-            this.imageSettings.Size = new System.Drawing.Size(32, 32);
-            this.imageSettings.TabIndex = 10;
-            this.imageSettings.TabStop = false;
-            this.imageSettings.Click += new System.EventHandler(this.imageSettings_Click);
+            this.timerMood.Enabled = true;
+            this.timerMood.Interval = 18000;
+            this.timerMood.Tick += new System.EventHandler(this.timerMood_Tick);
             // 
-            // labelMoney
+            // timerPurity
             // 
-            this.labelMoney.AutoSize = true;
-            this.labelMoney.BackColor = System.Drawing.Color.Transparent;
-            this.labelMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMoney.ForeColor = System.Drawing.Color.Orange;
-            this.labelMoney.Location = new System.Drawing.Point(66, 374);
-            this.labelMoney.Name = "labelMoney";
-            this.labelMoney.Size = new System.Drawing.Size(70, 25);
-            this.labelMoney.TabIndex = 11;
-            this.labelMoney.Text = "label1";
+            this.timerPurity.Enabled = true;
+            this.timerPurity.Interval = 15000;
+            this.timerPurity.Tick += new System.EventHandler(this.timerPurity_Tick);
+            // 
+            // barHealth
+            // 
+            this.barHealth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.barHealth.GradientColor1 = System.Drawing.Color.Red;
+            this.barHealth.GradientColor2 = System.Drawing.Color.Lime;
+            this.barHealth.Location = new System.Drawing.Point(644, 340);
+            this.barHealth.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.barHealth.Name = "barHealth";
+            this.barHealth.Size = new System.Drawing.Size(150, 32);
+            this.barHealth.TabIndex = 8;
+            // 
+            // barSleep
+            // 
+            this.barSleep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.barSleep.GradientColor1 = System.Drawing.Color.Red;
+            this.barSleep.GradientColor2 = System.Drawing.Color.Lime;
+            this.barSleep.Location = new System.Drawing.Point(486, 340);
+            this.barSleep.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.barSleep.Name = "barSleep";
+            this.barSleep.Size = new System.Drawing.Size(150, 32);
+            this.barSleep.TabIndex = 7;
+            // 
+            // barPurity
+            // 
+            this.barPurity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.barPurity.GradientColor1 = System.Drawing.Color.Red;
+            this.barPurity.GradientColor2 = System.Drawing.Color.Lime;
+            this.barPurity.Location = new System.Drawing.Point(328, 340);
+            this.barPurity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.barPurity.Name = "barPurity";
+            this.barPurity.Size = new System.Drawing.Size(150, 32);
+            this.barPurity.TabIndex = 6;
+            // 
+            // barMood
+            // 
+            this.barMood.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.barMood.GradientColor1 = System.Drawing.Color.Red;
+            this.barMood.GradientColor2 = System.Drawing.Color.Lime;
+            this.barMood.Location = new System.Drawing.Point(170, 340);
+            this.barMood.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.barMood.Name = "barMood";
+            this.barMood.Size = new System.Drawing.Size(150, 32);
+            this.barMood.TabIndex = 5;
+            // 
+            // barFood
+            // 
+            this.barFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.barFood.GradientColor1 = System.Drawing.Color.Red;
+            this.barFood.GradientColor2 = System.Drawing.Color.Lime;
+            this.barFood.Location = new System.Drawing.Point(12, 340);
+            this.barFood.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.barFood.Name = "barFood";
+            this.barFood.Size = new System.Drawing.Size(150, 32);
+            this.barFood.TabIndex = 2;
+            // 
+            // labelMoneys
+            // 
+            this.labelMoneys.AutoSize = true;
+            this.labelMoneys.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMoneys.ForeColor = System.Drawing.Color.DarkOrange;
+            this.labelMoneys.Location = new System.Drawing.Point(45, 377);
+            this.labelMoneys.Name = "labelMoneys";
+            this.labelMoneys.Size = new System.Drawing.Size(87, 24);
+            this.labelMoneys.TabIndex = 9;
+            this.labelMoneys.Text = "Moneys: ";
             // 
             // labelXP
             // 
             this.labelXP.AutoSize = true;
-            this.labelXP.BackColor = System.Drawing.Color.Transparent;
-            this.labelXP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelXP.ForeColor = System.Drawing.Color.Orange;
-            this.labelXP.Location = new System.Drawing.Point(66, 403);
+            this.labelXP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelXP.ForeColor = System.Drawing.Color.DarkOrange;
+            this.labelXP.Location = new System.Drawing.Point(45, 401);
             this.labelXP.Name = "labelXP";
-            this.labelXP.Size = new System.Drawing.Size(70, 25);
-            this.labelXP.TabIndex = 12;
-            this.labelXP.Text = "label1";
-            // 
-            // imageSaveManager
-            // 
-            this.imageSaveManager.BackColor = System.Drawing.Color.Transparent;
-            this.imageSaveManager.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageSaveManager.Image = global::pcs.Properties.Resources.save;
-            this.imageSaveManager.Location = new System.Drawing.Point(415, 405);
-            this.imageSaveManager.Name = "imageSaveManager";
-            this.imageSaveManager.Size = new System.Drawing.Size(32, 32);
-            this.imageSaveManager.TabIndex = 13;
-            this.imageSaveManager.TabStop = false;
-            this.imageSaveManager.Click += new System.EventHandler(this.imageSaveManager_Click);
-            // 
-            // imageInfo
-            // 
-            this.imageInfo.BackColor = System.Drawing.Color.Transparent;
-            this.imageInfo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageInfo.Image = global::pcs.Properties.Resources.info;
-            this.imageInfo.Location = new System.Drawing.Point(377, 367);
-            this.imageInfo.Name = "imageInfo";
-            this.imageInfo.Size = new System.Drawing.Size(32, 32);
-            this.imageInfo.TabIndex = 14;
-            this.imageInfo.TabStop = false;
-            this.imageInfo.Click += new System.EventHandler(this.imageInfo_Click);
-            // 
-            // imageVK
-            // 
-            this.imageVK.BackColor = System.Drawing.Color.Transparent;
-            this.imageVK.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageVK.Image = global::pcs.Properties.Resources.vkontakte;
-            this.imageVK.Location = new System.Drawing.Point(12, 380);
-            this.imageVK.Name = "imageVK";
-            this.imageVK.Size = new System.Drawing.Size(48, 48);
-            this.imageVK.TabIndex = 15;
-            this.imageVK.TabStop = false;
-            this.imageVK.Click += new System.EventHandler(this.imageVK_Click);
-            // 
-            // imageMiniGames
-            // 
-            this.imageMiniGames.BackColor = System.Drawing.Color.Transparent;
-            this.imageMiniGames.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageMiniGames.Image = global::pcs.Properties.Resources.game;
-            this.imageMiniGames.Location = new System.Drawing.Point(774, 12);
-            this.imageMiniGames.Name = "imageMiniGames";
-            this.imageMiniGames.Size = new System.Drawing.Size(90, 90);
-            this.imageMiniGames.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imageMiniGames.TabIndex = 16;
-            this.imageMiniGames.TabStop = false;
-            this.imageMiniGames.Click += new System.EventHandler(this.imageMiniGames_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.Orange;
-            this.label2.Location = new System.Drawing.Point(782, 105);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 16);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Мини-игры";
-            // 
-            // imageInv
-            // 
-            this.imageInv.BackColor = System.Drawing.Color.Transparent;
-            this.imageInv.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageInv.Image = global::pcs.Properties.Resources.packaging;
-            this.imageInv.Location = new System.Drawing.Point(668, 12);
-            this.imageInv.Name = "imageInv";
-            this.imageInv.Size = new System.Drawing.Size(90, 90);
-            this.imageInv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imageInv.TabIndex = 18;
-            this.imageInv.TabStop = false;
-            this.imageInv.Click += new System.EventHandler(this.imageInv_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.Orange;
-            this.label3.Location = new System.Drawing.Point(675, 105);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 16);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Инвентарь";
-            // 
-            // imageShop
-            // 
-            this.imageShop.BackColor = System.Drawing.Color.Transparent;
-            this.imageShop.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageShop.Image = global::pcs.Properties.Resources.shop;
-            this.imageShop.Location = new System.Drawing.Point(572, 12);
-            this.imageShop.Name = "imageShop";
-            this.imageShop.Size = new System.Drawing.Size(90, 90);
-            this.imageShop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imageShop.TabIndex = 20;
-            this.imageShop.TabStop = false;
-            this.imageShop.Click += new System.EventHandler(this.imageShop_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.ForeColor = System.Drawing.Color.Orange;
-            this.label4.Location = new System.Drawing.Point(584, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 16);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Магазин";
-            // 
-            // imageSleep
-            // 
-            this.imageSleep.BackColor = System.Drawing.Color.Transparent;
-            this.imageSleep.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageSleep.Image = global::pcs.Properties.Resources.sleep;
-            this.imageSleep.Location = new System.Drawing.Point(476, 12);
-            this.imageSleep.Name = "imageSleep";
-            this.imageSleep.Size = new System.Drawing.Size(90, 90);
-            this.imageSleep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imageSleep.TabIndex = 22;
-            this.imageSleep.TabStop = false;
-            this.imageSleep.Click += new System.EventHandler(this.imageSleep_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.Orange;
-            this.label5.Location = new System.Drawing.Point(505, 105);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 16);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Сон";
-            // 
-            // imageUpdaterGUI
-            // 
-            this.imageUpdaterGUI.BackColor = System.Drawing.Color.Transparent;
-            this.imageUpdaterGUI.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageUpdaterGUI.Image = ((System.Drawing.Image)(resources.GetObject("imageUpdaterGUI.Image")));
-            this.imageUpdaterGUI.Location = new System.Drawing.Point(377, 405);
-            this.imageUpdaterGUI.Name = "imageUpdaterGUI";
-            this.imageUpdaterGUI.Size = new System.Drawing.Size(32, 32);
-            this.imageUpdaterGUI.TabIndex = 24;
-            this.imageUpdaterGUI.TabStop = false;
-            this.imageUpdaterGUI.Click += new System.EventHandler(this.imageUpdaterGUI_Click);
-            // 
-            // imageSkills
-            // 
-            this.imageSkills.BackColor = System.Drawing.Color.Transparent;
-            this.imageSkills.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageSkills.Image = global::pcs.Properties.Resources.check;
-            this.imageSkills.Location = new System.Drawing.Point(380, 12);
-            this.imageSkills.Name = "imageSkills";
-            this.imageSkills.Size = new System.Drawing.Size(90, 90);
-            this.imageSkills.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imageSkills.TabIndex = 25;
-            this.imageSkills.TabStop = false;
-            this.imageSkills.Click += new System.EventHandler(this.imageSkills_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.Orange;
-            this.label6.Location = new System.Drawing.Point(399, 105);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 16);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Умения";
-            // 
-            // backgroundWorkerUpdateCheck
-            // 
-            this.backgroundWorkerUpdateCheck.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorkerUpdateCheck_DoWork);
-            this.backgroundWorkerUpdateCheck.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorkerUpdateCheck_RunWorkerCompleted);
-            // 
-            // imageDonate
-            // 
-            this.imageDonate.BackColor = System.Drawing.Color.Transparent;
-            this.imageDonate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageDonate.Image = global::pcs.Properties.Resources.coin;
-            this.imageDonate.Location = new System.Drawing.Point(339, 367);
-            this.imageDonate.Name = "imageDonate";
-            this.imageDonate.Size = new System.Drawing.Size(32, 32);
-            this.imageDonate.TabIndex = 27;
-            this.imageDonate.TabStop = false;
-            this.imageDonate.Click += new System.EventHandler(this.imageDonate_Click);
-            // 
-            // imageAchievements
-            // 
-            this.imageAchievements.BackColor = System.Drawing.Color.Transparent;
-            this.imageAchievements.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imageAchievements.Image = global::pcs.Properties.Resources.list;
-            this.imageAchievements.Location = new System.Drawing.Point(284, 12);
-            this.imageAchievements.Name = "imageAchievements";
-            this.imageAchievements.Size = new System.Drawing.Size(90, 90);
-            this.imageAchievements.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imageAchievements.TabIndex = 28;
-            this.imageAchievements.TabStop = false;
-            this.imageAchievements.Click += new System.EventHandler(this.imageAchievements_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.ForeColor = System.Drawing.Color.Orange;
-            this.label7.Location = new System.Drawing.Point(286, 105);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 16);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "Достижения";
+            this.labelXP.Size = new System.Drawing.Size(46, 24);
+            this.labelXP.TabIndex = 10;
+            this.labelXP.Text = "XP: ";
             // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(886, 440);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.imageAchievements);
-            this.Controls.Add(this.imageDonate);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.imageSkills);
-            this.Controls.Add(this.imageUpdaterGUI);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.imageSleep);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.imageShop);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.imageInv);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.imageMiniGames);
-            this.Controls.Add(this.imageVK);
-            this.Controls.Add(this.imageInfo);
-            this.Controls.Add(this.imageSaveManager);
+            this.ClientSize = new System.Drawing.Size(810, 459);
             this.Controls.Add(this.labelXP);
-            this.Controls.Add(this.labelMoney);
-            this.Controls.Add(this.imageSettings);
-            this.Controls.Add(this.labelSleep);
-            this.Controls.Add(this.labelFood);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.labelFun);
-            this.Controls.Add(this.labelHealth);
-            this.Controls.Add(this.barSleep);
-            this.Controls.Add(this.barFood);
-            this.Controls.Add(this.barFun);
+            this.Controls.Add(this.labelMoneys);
             this.Controls.Add(this.barHealth);
+            this.Controls.Add(this.barSleep);
+            this.Controls.Add(this.barPurity);
+            this.Controls.Add(this.barMood);
+            this.Controls.Add(this.panelIcons);
+            this.Controls.Add(this.barFood);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "Game";
-            this.Text = "PCS";
+            this.Text = "Game";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.Load += new System.EventHandler(this.Game_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.imageSettings)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageSaveManager)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageVK)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageMiniGames)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageInv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageShop)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageSleep)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageUpdaterGUI)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageSkills)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageDonate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imageAchievements)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -504,40 +183,28 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Label labelHealth;
-        public System.Windows.Forms.Label labelFun;
-        public System.Windows.Forms.Label labelFood;
-        public System.Windows.Forms.Label labelSleep;
+        private System.Windows.Forms.Panel panelIcons;
+        public PearXLib.Engine.XBar barFood;
+        public PearXLib.Engine.XBar barMood;
+        public PearXLib.Engine.XBar barPurity;
+        public PearXLib.Engine.XBar barSleep;
+        public PearXLib.Engine.XBar barHealth;
+        public System.Windows.Forms.Timer timerMood;
         public System.Windows.Forms.Timer timerFood;
-        public System.Windows.Forms.Timer timerFun;
         public System.Windows.Forms.Timer timerSleep;
-        public System.Windows.Forms.ProgressBar barHealth;
-        public System.Windows.Forms.ProgressBar barFun;
-        public System.Windows.Forms.ProgressBar barFood;
-        public System.Windows.Forms.ProgressBar barSleep;
-        private System.Windows.Forms.PictureBox imageSettings;
-        public System.Windows.Forms.Label labelMoney;
+        public System.Windows.Forms.Timer timerPurity;
+        public System.Windows.Forms.Label labelMoneys;
         public System.Windows.Forms.Label labelXP;
-        private System.Windows.Forms.PictureBox imageSaveManager;
-        private System.Windows.Forms.PictureBox imageInfo;
-        private System.Windows.Forms.PictureBox imageVK;
-        private System.Windows.Forms.PictureBox imageMiniGames;
-        private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Timer autoSave;
-        private System.Windows.Forms.PictureBox imageInv;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox imageShop;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox imageSleep;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox imageUpdaterGUI;
-        private System.Windows.Forms.PictureBox imageSkills;
-        private System.Windows.Forms.Label label6;
-        private System.ComponentModel.BackgroundWorker backgroundWorkerUpdateCheck;
-        private System.Windows.Forms.PictureBox imageDonate;
-        private System.Windows.Forms.PictureBox imageAchievements;
-        private System.Windows.Forms.Label label7;
+
+
+
+
+
+
+
+
+
+
+
     }
 }
-

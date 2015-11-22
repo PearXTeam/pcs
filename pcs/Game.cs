@@ -1,18 +1,18 @@
-﻿using pcs.Properties;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Threading;
-using System.IO;
 using PearXLib;
-using System.Diagnostics;
-using System.Net;
+using PearXLib.Forms;
+using pcs.Modding;
+using System.Reflection;
+using pcs.Types;
+using PearXLib.Engine;
+using pcs.Properties;
 
 namespace pcs
 {
@@ -25,176 +25,87 @@ namespace pcs
 
         private void Game_Load(object sender, EventArgs e)
         {
-            if (!Directory.Exists(PXL.documents + PXL.s + "PearX" + PXL.s + "PCS"))
+            a.AutoLoad();
+            a.prepareGame();
+
+            Icon = Resources.pcs;
+
+            #region Icons init
+            int column = 0;
+            int row = 0;
+            foreach(SIcon i in Registry.RegisteredIcons)
             {
-                Directory.CreateDirectory(PXL.documents + PXL.s + "PearX" + PXL.s + "PCS");
+                XIcon xi = new XIcon();
+                xi.Title = i.Name();
+                xi.Icon = i.Icon();
+                xi.Click += i.OnClick;
+                xi.Size = new Size(90, 103);
+                xi.Location = new Point((100 * row) + 10, (113 * column) + 10);
+                xi.Font = new Font("Microsoft Sans MS", 13F, FontStyle.Regular);
+                xi.ForeColor = Color.DarkOrange;
+                row++;
+                if (row == 8)
+                {
+                    column++;
+                    row = 0;
+                }
+                panelIcons.Controls.Add(xi);
             }
-            Random rand = new Random();
-            this.Text = "PCS " + v.version + " (in-dev) with " + words.wrds[rand.Next(0, (int)words.wrds.GetLongLength(0))];
-            this.Icon = Resources.pcs;
-            if (v.backgroundImage != null && File.Exists(v.backgroundImage))
-            {
-                this.BackgroundImage = Image.FromFile(v.backgroundImage);
-            }
-            a.Setup();
-            backgroundWorkerUpdateCheck.RunWorkerAsync();
+            #endregion
+            throw new Exception();
         }
 
-        private void autoSave_Tick(object sender, EventArgs e)
+        private void panelIcons_MouseEnter(object sender, EventArgs e)
         {
-            if (v.useAutoSave)
-            {
-                a.Save("auto.save");
-            }
+            panelIcons.Focus();
+        }
+
+        private void panelIcons_MouseLeave(object sender, EventArgs e)
+        {
+            this.Focus();
+        }
+
+        private void timerFood_Tick(object sender, EventArgs e)
+        {
+            v.Food--;
+        }
+
+        private void timerSleep_Tick(object sender, EventArgs e)
+        {
+            v.Sleep--;
+        }
+
+        private void timerMood_Tick(object sender, EventArgs e)
+        {
+            v.Mood--;
+        }
+
+        private void timerPurity_Tick(object sender, EventArgs e)
+        {
+            v.Purity--;
         }
 
         private void Game_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (v.forceClose == false)
+            if (!v.forceClose)
             {
-                DialogResult r = MessageBox.Show("Вы действительно хотите выйти", "PCSimulator", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult r = MessageBox.Show(v.l.GetString("other.closeMessage"), "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (r == DialogResult.Yes)
                 {
-                    a.Save("auto.save");
-                    File.WriteAllText(PXL.documents + PXL.s + "PearX" + PXL.s + "PCS" + PXL.s + "plug.save", v.usePlug.ToString());
-                    v.forceClose = true;
-                    Application.Exit();
+                    a.AutoSave();
                 }
                 else
                 {
                     e.Cancel = true;
                 }
             }
-        }
-
-        private void timerFood_Tick(object sender, EventArgs e)
-        {
-            a.mFood(-1, 1);
-        }
-
-        private void timerSleep_Tick(object sender, EventArgs e)
-        {
-            a.mSleep(-1, 1);
-        }
-
-        private void timerFun_Tick(object sender, EventArgs e)
-        {
-            a.mFun(-1, 1);
-        }
-
-        private void imageSettings_Click(object sender, EventArgs e)
-        {
-            Settings s = new Settings();
-            s.ShowDialog();
-        }
-
-        private void imageSaveManager_Click(object sender, EventArgs e)
-        {
-            SaveManager sm = new SaveManager();
-            sm.ShowDialog();
-        }
-
-        private void imageInfo_Click(object sender, EventArgs e)
-        {
-            About a = new About();
-            a.ShowDialog();
-        }
-
-        private void imageVK_Click(object sender, EventArgs e)
-        {
-            Process.Start("http://vk.com/share.php?url=http://pearx.ru/pcs&title=PCSimulator - симулятор жизни." + "&description=У меня в PCSimulator уже " + v.money + " рублей и " + v.xp + " опыта! Сможешь ли ты накопить больше? Присоединяйся!&image=http://files.pearx.ru/images/pcs.png");
-        }
-
-        private void imageMiniGames_Click(object sender, EventArgs e)
-        {
-            MiniGames mg = new MiniGames();
-            mg.ShowDialog();
-        }
-
-        private void imageInv_Click(object sender, EventArgs e)
-        {
-            InvGui ig = new InvGui();
-            ig.ShowDialog();
-        }
-
-        private void imageShop_Click(object sender, EventArgs e)
-        {
-            Shop s = new Shop();
-            s.ShowDialog();
-        }
-
-        private void imageSleep_Click(object sender, EventArgs e)
-        {
-            Sleep s = new Sleep();
-            s.ShowDialog();
-        }
-
-        private void imageUpdaterGUI_Click(object sender, EventArgs e)
-        {
-            UpdaterGUI ugui = new UpdaterGUI();
-            ugui.ShowDialog();
-        }
-
-        private void Game_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Control && e.KeyCode == Keys.C && v.useDebug)
+            else
             {
-                DebugMenu dm = new DebugMenu();
-                dm.ShowDialog();
-            }
-        }
-
-        private void imageSkills_Click(object sender, EventArgs e)
-        {
-            SkillsGUI sgui = new SkillsGUI();
-            sgui.ShowDialog();
-        }
-        bool updbool = false;
-        bool errbool = false;
-        private void backgroundWorkerUpdateCheck_DoWork(object sender, DoWorkEventArgs e)
-        {
-            try
-            {
-                WebClient c = new WebClient();
-                v.actual = c.DownloadString("http://pcs.pearx.ru/v.txt");
-                if (v.version != v.actual)
+                if (v.forceCloseUseSave)
                 {
-                    updbool = true;
+                    a.AutoSave();
                 }
             }
-            catch
-            {
-                errbool = true;
-            }
-        }
-
-        private void backgroundWorkerUpdateCheck_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            if (updbool)
-            {
-                DialogResult r = MessageBox.Show("Обновить?", "Доступно обновление", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (r == DialogResult.Yes)
-                {
-                    UpdaterGUI ugui = new UpdaterGUI();
-                    ugui.ShowDialog();
-                }
-            }
-            else if (errbool)
-            {
-                MessageBox.Show("Невозможно проверить обновление!", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Question);
-            }
-        }
-
-        private void imageDonate_Click(object sender, EventArgs e)
-        {
-            Donate d = new Donate();
-            d.ShowDialog();
-        }
-
-        private void imageAchievements_Click(object sender, EventArgs e)
-        {
-            AchievementsGUI agui = new AchievementsGUI();
-            agui.ShowDialog();
         }
     }
 }

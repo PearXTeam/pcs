@@ -28,50 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Death));
-            this.buttonOk = new System.Windows.Forms.Button();
-            this.imageDeath = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.imageDeath)).BeginInit();
+            this.imageKilledBy = new System.Windows.Forms.PictureBox();
+            this.buttonClose = new PearXLib.Engine.XButton();
+            ((System.ComponentModel.ISupportInitialize)(this.imageKilledBy)).BeginInit();
             this.SuspendLayout();
             // 
-            // buttonOk
+            // imageKilledBy
             // 
-            this.buttonOk.Location = new System.Drawing.Point(76, 139);
-            this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(75, 23);
-            this.buttonOk.TabIndex = 0;
-            this.buttonOk.Text = "Я понял.";
-            this.buttonOk.UseVisualStyleBackColor = true;
-            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
+            this.imageKilledBy.Location = new System.Drawing.Point(54, 12);
+            this.imageKilledBy.Name = "imageKilledBy";
+            this.imageKilledBy.Size = new System.Drawing.Size(128, 128);
+            this.imageKilledBy.TabIndex = 0;
+            this.imageKilledBy.TabStop = false;
             // 
-            // imageDeath
+            // buttonClose
             // 
-            this.imageDeath.Image = global::pcs.Properties.Resources.grim;
-            this.imageDeath.Location = new System.Drawing.Point(32, 5);
-            this.imageDeath.Name = "imageDeath";
-            this.imageDeath.Size = new System.Drawing.Size(128, 128);
-            this.imageDeath.TabIndex = 1;
-            this.imageDeath.TabStop = false;
+            this.buttonClose.BackColor = System.Drawing.Color.Transparent;
+            this.buttonClose.Location = new System.Drawing.Point(54, 182);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(128, 64);
+            this.buttonClose.TabIndex = 1;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // Death
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(212, 170);
-            this.Controls.Add(this.imageDeath);
-            this.Controls.Add(this.buttonOk);
+            this.ClientSize = new System.Drawing.Size(236, 258);
+            this.Controls.Add(this.buttonClose);
+            this.Controls.Add(this.imageKilledBy);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Death";
-            this.Text = "Вы умерли.";
-            ((System.ComponentModel.ISupportInitialize)(this.imageDeath)).EndInit();
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Death";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Death_FormClosing);
+            this.Load += new System.EventHandler(this.Death_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.imageKilledBy)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button buttonOk;
-        private System.Windows.Forms.PictureBox imageDeath;
+        private System.Windows.Forms.PictureBox imageKilledBy;
+        private PearXLib.Engine.XButton buttonClose;
     }
 }

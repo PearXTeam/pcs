@@ -117,58 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="autoSave.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="timerFood.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <metadata name="timerFood.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>105, 20</value>
-  </metadata>
-  <metadata name="timerFun.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>205, 17</value>
-  </metadata>
   <metadata name="timerSleep.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>292, 17</value>
+    <value>111, 14</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="imageUpdaterGUI.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-        hMEy1A8pwAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <metadata name="backgroundWorkerUpdateCheck.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>402, 17</value>
+  <metadata name="timerMood.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>201, 15</value>
+  </metadata>
+  <metadata name="timerPurity.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>299, 17</value>
   </metadata>
 </root>

@@ -1,0 +1,9 @@
+food=Food
+sleep=Sleep
+purity=Purity
+health=Health
+killed.byHunger=You have been died by hunger.
+bar.food=Food: 
+bar.health=Health: 
+bar.sleep=Sleep: 
+bar.purity=Purity: 

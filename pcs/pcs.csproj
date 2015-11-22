@@ -4,27 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EC6C5C34-8C5A-460C-A7E3-BEFE791A785A}</ProjectGuid>
+    <ProjectGuid>{B0B5C549-C841-40B6-BF96-75CBBED1EAD9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>pcs</RootNamespace>
     <AssemblyName>pcs</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -35,10 +21,9 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -49,13 +34,6 @@
   <PropertyGroup>
     <ApplicationIcon>Resources\pcs.ico</ApplicationIcon>
   </PropertyGroup>
-  <PropertyGroup>
-    <TargetZone>LocalIntranet</TargetZone>
-  </PropertyGroup>
-  <PropertyGroup>
-    <GenerateManifests>false</GenerateManifests>
-  </PropertyGroup>
-  <PropertyGroup />
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -71,48 +49,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="a.cs" />
-    <Compile Include="About.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="About.Designer.cs">
-      <DependentUpon>About.cs</DependentUpon>
-    </Compile>
-    <Compile Include="achievements.cs" />
-    <Compile Include="AchievementsGUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AchievementsGUI.Designer.cs">
-      <DependentUpon>AchievementsGUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CatchCat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CatchCat.Designer.cs">
-      <DependentUpon>CatchCat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CatOrDog.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CatOrDog.Designer.cs">
-      <DependentUpon>CatOrDog.cs</DependentUpon>
-    </Compile>
     <Compile Include="Death.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Death.Designer.cs">
       <DependentUpon>Death.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DebugMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DebugMenu.Designer.cs">
-      <DependentUpon>DebugMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Donate.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Donate.Designer.cs">
-      <DependentUpon>Donate.cs</DependentUpon>
     </Compile>
     <Compile Include="Game.cs">
       <SubType>Form</SubType>
@@ -120,107 +61,20 @@
     <Compile Include="Game.Designer.cs">
       <DependentUpon>Game.cs</DependentUpon>
     </Compile>
-    <Compile Include="inv.cs" />
-    <Compile Include="InvGui.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InvGui.Designer.cs">
-      <DependentUpon>InvGui.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Message.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Message.Designer.cs">
-      <DependentUpon>Message.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MiniGames.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MiniGames.Designer.cs">
-      <DependentUpon>MiniGames.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Plug.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Plug.Designer.cs">
-      <DependentUpon>Plug.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Getting.cs" />
+    <Compile Include="Icons\IconMiniGames.cs" />
+    <Compile Include="Modding\PCSMod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SaveManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SaveManager.Designer.cs">
-      <DependentUpon>SaveManager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Settings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Settings.Designer.cs">
-      <DependentUpon>Settings.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Shop.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Shop.Designer.cs">
-      <DependentUpon>Shop.cs</DependentUpon>
-    </Compile>
-    <Compile Include="skills.cs" />
-    <Compile Include="SkillsGUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SkillsGUI.Designer.cs">
-      <DependentUpon>SkillsGUI.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Sleep.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Sleep.Designer.cs">
-      <DependentUpon>Sleep.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UpdaterGUI.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdaterGUI.Designer.cs">
-      <DependentUpon>UpdaterGUI.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Registry.cs" />
+    <Compile Include="Setuping.cs" />
+    <Compile Include="Types\SIcon.cs" />
     <Compile Include="v.cs" />
-    <Compile Include="words.cs" />
-    <EmbeddedResource Include="About.resx">
-      <DependentUpon>About.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AchievementsGUI.resx">
-      <DependentUpon>AchievementsGUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CatchCat.resx">
-      <DependentUpon>CatchCat.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CatOrDog.resx">
-      <DependentUpon>CatOrDog.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Death.resx">
       <DependentUpon>Death.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DebugMenu.resx">
-      <DependentUpon>DebugMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Donate.resx">
-      <DependentUpon>Donate.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InvGui.resx">
-      <DependentUpon>InvGui.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Message.resx">
-      <DependentUpon>Message.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MiniGames.resx">
-      <DependentUpon>MiniGames.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Plug.resx">
-      <DependentUpon>Plug.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -232,24 +86,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SaveManager.resx">
-      <DependentUpon>SaveManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Settings.resx">
-      <DependentUpon>Settings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Shop.resx">
-      <DependentUpon>Shop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SkillsGUI.resx">
-      <DependentUpon>SkillsGUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sleep.resx">
-      <DependentUpon>Sleep.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdaterGUI.resx">
-      <DependentUpon>UpdaterGUI.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -259,271 +95,32 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pcs.ico" />
+    <None Include="Resources\en_US.lang" />
+    <None Include="Resources\en_US.langinfo" />
+    <None Include="Resources\ru_RU.lang" />
+    <None Include="Resources\ru_RU.langinfo" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\PearXLib\PearXLib\PearXLib.csproj">
       <Project>{327be810-0846-4d27-8f56-b90fea81e842}</Project>
       <Name>PearXLib</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\updater.pcs\updater.pcs\updater.pcs.csproj">
-      <Project>{be4b29c6-d11e-4328-bc41-f294044edd11}</Project>
-      <Name>updater.pcs</Name>
+    <ProjectReference Include="..\..\upd\upd\upd.csproj">
+      <Project>{06ce997c-8693-4984-87d3-41224350f04f}</Project>
+      <Name>upd</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\grim.png" />
+    <None Include="Resources\Trash.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\settings.png" />
+    <None Include="Resources\Bones.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\save.png" />
+    <None Include="Resources\Dice.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\info.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vkontakte.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\game.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\packaging.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\banana.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\soup.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sushi.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cookies.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cupcake.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cherry.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\mushroom.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\eggplant.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pepper.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bread.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icecream.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\kiwi.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cheese.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\egg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\tomato.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\strawberry.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hamburger.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\meat.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cucumber.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\corn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pie.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cockteil.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\OmNomNom.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\shop.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Money.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_cat1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_cat2.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_cat3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_cat4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_cat5.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_cat6.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_cat7.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_cat8.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_cat9.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_cat10.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_cat11.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_dog1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_dog2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_dog3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_dog4.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_dog5.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_dog6.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_dog7.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_dog8.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_dog9.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_dog10.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cod_dog11.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dog.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sleep2h.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sleep4h.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sleep6h.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Sleeping.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\sleep.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\russian_language.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ASPushkin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pcforkids.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\1001math.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\naturestories.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\siteswithvanya.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\cpp21day.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\english_language.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\upd.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\check.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Book.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\medicinechestsmall.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\medicinechestbig.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pill.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Zip.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\coin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\google_plus.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\facebook.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\twitter.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\no.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\yes.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\list.png" />
+    <None Include="Resources\pcs.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
@@ -531,9 +128,9 @@
     </PreBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PostBuildEvent>copy pcs.exe ..\..\..\builded\
-copy PearXLib.dll ..\..\..\builded\
-copy updater.pcs.exe ..\..\..\builded\</PostBuildEvent>
+    <PostBuildEvent>copy upd.exe "../../../builded/upd.exe"
+copy PearXLib.dll "../../../builded/PearXLib.dll"
+copy pcs.exe "../../../builded/pcs.exe"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
