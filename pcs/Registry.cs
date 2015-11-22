@@ -10,6 +10,7 @@ namespace pcs
     {
         public static List<SIcon> RegisteredIcons = new List<SIcon>();
         public static List<SMiniIcon> RegisteredMiniIcons = new List<SMiniIcon>();
+        public static List<SCommand> RegisteredCommands = new List<SCommand>();
 
         public static void RegisterIcon(SIcon si)
         {
@@ -19,6 +20,11 @@ namespace pcs
         public static void RegisterMiniIcon(SMiniIcon si)
         {
             RegisteredMiniIcons.Add(si);
+        }
+
+        public static void RegisterCommand(SCommand sc)
+        {
+            RegisteredCommands.Add(sc);
         }
     }
 }

@@ -72,6 +72,7 @@ namespace pcs
             v.g.labelXP.Text = v.l.GetString("label.xp") + v.XP + " " + v.l.GetString("other.XPName");
 
             Setuping.SetupIcons();
+            Setuping.SetupCommands();
         }
 
         public static void AutoSave()

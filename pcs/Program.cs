@@ -21,7 +21,7 @@ namespace pcs
         static void Main()
         {
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
-           // Application.ThreadException += Application_ThreadException;
+            Application.ThreadException += Application_ThreadException;
             Application.EnableVisualStyles();
 
             v.Log.Add("Starting application...", LogType.Info);
@@ -91,9 +91,9 @@ namespace pcs
             Application.Run(v.g);
         }
 
-        static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        private static void Crush(string str)
         {
-            v.Log.Add(e.ExceptionObject.ToString(), LogType.Error);
+            v.Log.Add(str, LogType.Error);
 
 
             StringBuilder sb = new StringBuilder();
@@ -102,17 +102,27 @@ namespace pcs
             sb.AppendLine("");
             sb.AppendLine("Time of crash: " + DateTime.Now);
             sb.AppendLine("");
-            sb.AppendLine(e.ExceptionObject.ToString());
+            sb.AppendLine(str);
             sb.AppendLine("");
             sb.AppendLine("_______________");
             sb.AppendLine("Game version: " + v.Version);
             sb.AppendLine("OS version: " + Environment.OSVersion);
             sb.AppendLine("Is 64-bit OS: " + Environment.Is64BitOperatingSystem);
 
-            File.WriteAllText(v.PathToDir + "crashes" + PXL.s + "_crash.txt", sb.ToString());
+            File.WriteAllText(v.PathToDir + "crashes" + PXL.s + PXL.GetDateTimeNow() + "_crash.txt", sb.ToString());
             v.forceClose = true;
             v.forceCloseUseSave = true;
             Application.Exit();
+        }
+
+        static void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
+        {
+            Crush(e.Exception.ToString());
+        }
+
+        static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            Crush(e.ExceptionObject.ToString());
         }
     }
 }

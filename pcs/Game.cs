@@ -89,16 +89,10 @@ namespace pcs
                 panelMiniIcons.Controls.Add(xi);
             }
             #endregion
-
             foreach (PCSMod pcsm in Getting.GetMods())
             {
                 pcsm.OnGamePostLoad();
             }
-        }
-
-        private void panelIcons_MouseEnter(object sender, EventArgs e)
-        {
-            panelIcons.Focus();
         }
 
         private void timerFood_Tick(object sender, EventArgs e)
@@ -144,9 +138,14 @@ namespace pcs
             }
         }
 
-        private void panelMiniIcons_MouseEnter(object sender, EventArgs e)
+        private void Game_KeyDown(object sender, KeyEventArgs e)
         {
-            panelMiniIcons.Focus();
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                EnterCommand ec = new EnterCommand();
+                ec.Owner = this;
+                ec.Show();
+            }
         }
     }
 }

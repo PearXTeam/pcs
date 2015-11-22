@@ -34,14 +34,14 @@
             this.timerSleep = new System.Windows.Forms.Timer(this.components);
             this.timerMood = new System.Windows.Forms.Timer(this.components);
             this.timerPurity = new System.Windows.Forms.Timer(this.components);
+            this.labelMoneys = new System.Windows.Forms.Label();
+            this.labelXP = new System.Windows.Forms.Label();
+            this.panelMiniIcons = new System.Windows.Forms.Panel();
             this.barHealth = new PearXLib.Engine.XBar();
             this.barSleep = new PearXLib.Engine.XBar();
             this.barPurity = new PearXLib.Engine.XBar();
             this.barMood = new PearXLib.Engine.XBar();
             this.barFood = new PearXLib.Engine.XBar();
-            this.labelMoneys = new System.Windows.Forms.Label();
-            this.labelXP = new System.Windows.Forms.Label();
-            this.panelMiniIcons = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // panelIcons
@@ -52,7 +52,6 @@
             this.panelIcons.Name = "panelIcons";
             this.panelIcons.Size = new System.Drawing.Size(810, 325);
             this.panelIcons.TabIndex = 4;
-            this.panelIcons.MouseEnter += new System.EventHandler(this.panelIcons_MouseEnter);
             // 
             // timerFood
             // 
@@ -73,6 +72,36 @@
             // 
             this.timerPurity.Interval = 15000;
             this.timerPurity.Tick += new System.EventHandler(this.timerPurity_Tick);
+            // 
+            // labelMoneys
+            // 
+            this.labelMoneys.AutoSize = true;
+            this.labelMoneys.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelMoneys.ForeColor = System.Drawing.Color.DarkOrange;
+            this.labelMoneys.Location = new System.Drawing.Point(45, 377);
+            this.labelMoneys.Name = "labelMoneys";
+            this.labelMoneys.Size = new System.Drawing.Size(87, 24);
+            this.labelMoneys.TabIndex = 9;
+            this.labelMoneys.Text = "Moneys: ";
+            // 
+            // labelXP
+            // 
+            this.labelXP.AutoSize = true;
+            this.labelXP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelXP.ForeColor = System.Drawing.Color.DarkOrange;
+            this.labelXP.Location = new System.Drawing.Point(45, 401);
+            this.labelXP.Name = "labelXP";
+            this.labelXP.Size = new System.Drawing.Size(46, 24);
+            this.labelXP.TabIndex = 10;
+            this.labelXP.Text = "XP: ";
+            // 
+            // panelMiniIcons
+            // 
+            this.panelMiniIcons.AutoScroll = true;
+            this.panelMiniIcons.Location = new System.Drawing.Point(634, 387);
+            this.panelMiniIcons.Name = "panelMiniIcons";
+            this.panelMiniIcons.Size = new System.Drawing.Size(158, 74);
+            this.panelMiniIcons.TabIndex = 11;
             // 
             // barHealth
             // 
@@ -129,37 +158,6 @@
             this.barFood.Size = new System.Drawing.Size(150, 32);
             this.barFood.TabIndex = 2;
             // 
-            // labelMoneys
-            // 
-            this.labelMoneys.AutoSize = true;
-            this.labelMoneys.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelMoneys.ForeColor = System.Drawing.Color.DarkOrange;
-            this.labelMoneys.Location = new System.Drawing.Point(45, 377);
-            this.labelMoneys.Name = "labelMoneys";
-            this.labelMoneys.Size = new System.Drawing.Size(87, 24);
-            this.labelMoneys.TabIndex = 9;
-            this.labelMoneys.Text = "Moneys: ";
-            // 
-            // labelXP
-            // 
-            this.labelXP.AutoSize = true;
-            this.labelXP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelXP.ForeColor = System.Drawing.Color.DarkOrange;
-            this.labelXP.Location = new System.Drawing.Point(45, 401);
-            this.labelXP.Name = "labelXP";
-            this.labelXP.Size = new System.Drawing.Size(46, 24);
-            this.labelXP.TabIndex = 10;
-            this.labelXP.Text = "XP: ";
-            // 
-            // panelMiniIcons
-            // 
-            this.panelMiniIcons.AutoScroll = true;
-            this.panelMiniIcons.Location = new System.Drawing.Point(634, 387);
-            this.panelMiniIcons.Name = "panelMiniIcons";
-            this.panelMiniIcons.Size = new System.Drawing.Size(158, 74);
-            this.panelMiniIcons.TabIndex = 11;
-            this.panelMiniIcons.MouseEnter += new System.EventHandler(this.panelMiniIcons_MouseEnter);
-            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,6 +181,7 @@
             this.Text = "Game";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.Load += new System.EventHandler(this.Game_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
