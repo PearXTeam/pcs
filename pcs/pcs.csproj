@@ -62,12 +62,14 @@
       <DependentUpon>Game.cs</DependentUpon>
     </Compile>
     <Compile Include="Getting.cs" />
+    <Compile Include="Icons\MiniIconMods.cs" />
     <Compile Include="Icons\IconMiniGames.cs" />
     <Compile Include="Modding\PCSMod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registry.cs" />
     <Compile Include="Setuping.cs" />
+    <Compile Include="Types\SMiniIcon.cs" />
     <Compile Include="Types\SIcon.cs" />
     <Compile Include="v.cs" />
     <EmbeddedResource Include="Death.resx">
@@ -121,6 +123,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pcs.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Puzzle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -12,6 +12,7 @@ namespace pcs
     {
         //Not changeable values:
         public static readonly string PathToDir = d.pxDir + PXL.s + "PCSimulator" + PXL.s;
+        public static readonly string Version = "1.0_alpha";
         //
         public static Localization l;
         public static Game g = new Game();

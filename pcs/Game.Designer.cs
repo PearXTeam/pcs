@@ -41,6 +41,7 @@
             this.barFood = new PearXLib.Engine.XBar();
             this.labelMoneys = new System.Windows.Forms.Label();
             this.labelXP = new System.Windows.Forms.Label();
+            this.panelMiniIcons = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // panelIcons
@@ -52,29 +53,24 @@
             this.panelIcons.Size = new System.Drawing.Size(810, 325);
             this.panelIcons.TabIndex = 4;
             this.panelIcons.MouseEnter += new System.EventHandler(this.panelIcons_MouseEnter);
-            this.panelIcons.MouseLeave += new System.EventHandler(this.panelIcons_MouseLeave);
             // 
             // timerFood
             // 
-            this.timerFood.Enabled = true;
             this.timerFood.Interval = 9000;
             this.timerFood.Tick += new System.EventHandler(this.timerFood_Tick);
             // 
             // timerSleep
             // 
-            this.timerSleep.Enabled = true;
             this.timerSleep.Interval = 1500;
             this.timerSleep.Tick += new System.EventHandler(this.timerSleep_Tick);
             // 
             // timerMood
             // 
-            this.timerMood.Enabled = true;
             this.timerMood.Interval = 18000;
             this.timerMood.Tick += new System.EventHandler(this.timerMood_Tick);
             // 
             // timerPurity
             // 
-            this.timerPurity.Enabled = true;
             this.timerPurity.Interval = 15000;
             this.timerPurity.Tick += new System.EventHandler(this.timerPurity_Tick);
             // 
@@ -155,12 +151,22 @@
             this.labelXP.TabIndex = 10;
             this.labelXP.Text = "XP: ";
             // 
+            // panelMiniIcons
+            // 
+            this.panelMiniIcons.AutoScroll = true;
+            this.panelMiniIcons.Location = new System.Drawing.Point(634, 387);
+            this.panelMiniIcons.Name = "panelMiniIcons";
+            this.panelMiniIcons.Size = new System.Drawing.Size(158, 74);
+            this.panelMiniIcons.TabIndex = 11;
+            this.panelMiniIcons.MouseEnter += new System.EventHandler(this.panelMiniIcons_MouseEnter);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(810, 459);
+            this.ClientSize = new System.Drawing.Size(810, 473);
+            this.Controls.Add(this.panelMiniIcons);
             this.Controls.Add(this.labelXP);
             this.Controls.Add(this.labelMoneys);
             this.Controls.Add(this.barHealth);
@@ -173,6 +179,7 @@
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "Game";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.Load += new System.EventHandler(this.Game_Load);
@@ -195,6 +202,7 @@
         public System.Windows.Forms.Timer timerPurity;
         public System.Windows.Forms.Label labelMoneys;
         public System.Windows.Forms.Label labelXP;
+        private System.Windows.Forms.Panel panelMiniIcons;
 
 
 

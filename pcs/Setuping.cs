@@ -11,6 +11,7 @@ namespace pcs
         public static void SetupIcons()
         {
             Registry.RegisterIcon(new IconMiniGames());
+            Registry.RegisterMiniIcon(new MiniIconMods());
         }
     }
 }

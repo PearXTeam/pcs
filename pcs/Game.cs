@@ -25,8 +25,22 @@ namespace pcs
 
         private void Game_Load(object sender, EventArgs e)
         {
+            foreach(PCSMod pcsm in Getting.GetMods())
+            {
+                pcsm.OnGamePreLoad();
+            }
             a.AutoLoad();
+            foreach (PCSMod pcsm in Getting.GetMods())
+            {
+                pcsm.OnGameLoad();
+            }
             a.prepareGame();
+
+
+            timerSleep.Start();
+            timerFood.Start();
+            timerMood.Start();
+            timerPurity.Start();
 
             Icon = Resources.pcs;
 
@@ -43,6 +57,7 @@ namespace pcs
                 xi.Location = new Point((100 * row) + 10, (113 * column) + 10);
                 xi.Font = new Font("Microsoft Sans MS", 13F, FontStyle.Regular);
                 xi.ForeColor = Color.DarkOrange;
+                xi.Cursor = Cursors.Hand;
                 row++;
                 if (row == 8)
                 {
@@ -52,17 +67,38 @@ namespace pcs
                 panelIcons.Controls.Add(xi);
             }
             #endregion
-            throw new Exception();
+
+            #region MiniIcons init
+            int column2 = 0;
+            int row2 = 0;
+            foreach (SMiniIcon mi in Registry.RegisteredMiniIcons)
+            {
+                XIcon xi = new XIcon();
+                xi.Icon = mi.Icon();
+                xi.Click += mi.OnClick;
+                xi.Size = new Size(32, 32);
+                xi.Location = new Point((42 * row2) + 10, (42 * column2) + 10);
+                xi.Cursor = Cursors.Hand;
+                xi.Expand = 3;
+                row++;
+                if (row == 4)
+                {
+                    column++;
+                    row = 0;
+                }
+                panelMiniIcons.Controls.Add(xi);
+            }
+            #endregion
+
+            foreach (PCSMod pcsm in Getting.GetMods())
+            {
+                pcsm.OnGamePostLoad();
+            }
         }
 
         private void panelIcons_MouseEnter(object sender, EventArgs e)
         {
             panelIcons.Focus();
-        }
-
-        private void panelIcons_MouseLeave(object sender, EventArgs e)
-        {
-            this.Focus();
         }
 
         private void timerFood_Tick(object sender, EventArgs e)
@@ -106,6 +142,11 @@ namespace pcs
                     a.AutoSave();
                 }
             }
+        }
+
+        private void panelMiniIcons_MouseEnter(object sender, EventArgs e)
+        {
+            panelMiniIcons.Focus();
         }
     }
 }

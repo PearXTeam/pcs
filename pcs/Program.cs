@@ -8,6 +8,7 @@ using PearXLib;
 using pcs.Properties;
 using System.Reflection;
 using pcs.Modding;
+using System.Text;
 
 namespace pcs
 {
@@ -20,6 +21,7 @@ namespace pcs
         static void Main()
         {
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+           // Application.ThreadException += Application_ThreadException;
             Application.EnableVisualStyles();
 
             v.Log.Add("Starting application...", LogType.Info);
@@ -29,6 +31,7 @@ namespace pcs
             
             FileUtils.createDir(pathToLangs);
             FileUtils.createDir(pathToPlugins);
+            FileUtils.createDir(v.PathToDir + "crashes");
 
             #region Language init.
 
@@ -85,13 +88,31 @@ namespace pcs
                 }
             }
             #endregion
-
             Application.Run(v.g);
         }
 
         static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            
+            v.Log.Add(e.ExceptionObject.ToString(), LogType.Error);
+
+
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine("-- PCSimulator Crash Report. --");
+            sb.AppendLine("// I'm sorry!");
+            sb.AppendLine("");
+            sb.AppendLine("Time of crash: " + DateTime.Now);
+            sb.AppendLine("");
+            sb.AppendLine(e.ExceptionObject.ToString());
+            sb.AppendLine("");
+            sb.AppendLine("_______________");
+            sb.AppendLine("Game version: " + v.Version);
+            sb.AppendLine("OS version: " + Environment.OSVersion);
+            sb.AppendLine("Is 64-bit OS: " + Environment.Is64BitOperatingSystem);
+
+            File.WriteAllText(v.PathToDir + "crashes" + PXL.s + "_crash.txt", sb.ToString());
+            v.forceClose = true;
+            v.forceCloseUseSave = true;
+            Application.Exit();
         }
     }
 }

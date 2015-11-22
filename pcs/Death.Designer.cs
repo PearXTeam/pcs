@@ -44,6 +44,9 @@
             // buttonClose
             // 
             this.buttonClose.BackColor = System.Drawing.Color.Transparent;
+            this.buttonClose.ColorPressed = System.Drawing.Color.Gold;
+            this.buttonClose.GradientColor1 = System.Drawing.Color.DarkOrange;
+            this.buttonClose.GradientColorFocused1 = System.Drawing.Color.Orange;
             this.buttonClose.Location = new System.Drawing.Point(54, 182);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(128, 64);
