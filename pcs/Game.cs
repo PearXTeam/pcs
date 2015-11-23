@@ -123,6 +123,8 @@ namespace pcs
                 if (r == DialogResult.Yes)
                 {
                     a.AutoSave();
+                    v.forceClose = true;
+                    Application.Exit();
                 }
                 else
                 {
@@ -135,6 +137,7 @@ namespace pcs
                 {
                     a.AutoSave();
                 }
+                Application.Exit();
             }
         }
 
@@ -142,9 +145,7 @@ namespace pcs
         {
             if (e.Control && e.KeyCode == Keys.C)
             {
-                EnterCommand ec = new EnterCommand();
-                ec.Owner = this;
-                ec.Show();
+                new EnterCommand().ShowDialog();
             }
         }
     }

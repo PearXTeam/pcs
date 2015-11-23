@@ -14,6 +14,7 @@ bar.purity=Чистота:
 
 #Titles:
 title.death=Вы умерли.
+title.modlist=Список модов
 
 
 #Other
@@ -30,3 +31,8 @@ button.closeDeath=Я понял.
 #Texts on labels:
 label.moneys=Деньги: 
 label.xp=Опыт: 
+
+#Modlist names:
+modlist.author=Автор
+modlist.name=Название
+modlist.version=Версия

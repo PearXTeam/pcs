@@ -17,7 +17,8 @@ namespace pcs
 
         public static void SetupCommands()
         {
-            Registry.RegisterCommand(new CommandMaxStats());
+            Registry.RegisterCommand(new CommandMaxState());
+            Registry.RegisterCommand(new CommandSet());
         }
     }
 }

@@ -60,7 +60,7 @@
             // 
             // timerSleep
             // 
-            this.timerSleep.Interval = 1500;
+            this.timerSleep.Interval = 3000;
             this.timerSleep.Tick += new System.EventHandler(this.timerSleep_Tick);
             // 
             // timerMood

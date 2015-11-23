@@ -49,7 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="a.cs" />
-    <Compile Include="Commands\CommandMaxStats.cs" />
+    <Compile Include="Commands\CommandMaxState.cs" />
+    <Compile Include="Commands\CommandSet.cs" />
     <Compile Include="Death.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +73,12 @@
     <Compile Include="Icons\MiniIconMods.cs" />
     <Compile Include="Icons\IconMiniGames.cs" />
     <Compile Include="Modding\PCSMod.cs" />
+    <Compile Include="ModList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModList.Designer.cs">
+      <DependentUpon>ModList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registry.cs" />
@@ -88,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModList.resx">
+      <DependentUpon>ModList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

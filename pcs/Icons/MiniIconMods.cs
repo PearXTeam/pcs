@@ -13,7 +13,7 @@ namespace pcs.Icons
         public Image Icon() { return Resources.Puzzle; }
         public void OnClick(object sender, EventArgs e)
         {
-            
+            new ModList().ShowDialog();
         }
     }
 }

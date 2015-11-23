@@ -63,7 +63,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.Name = "Death";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Death";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Death_FormClosing);
             this.Load += new System.EventHandler(this.Death_Load);
