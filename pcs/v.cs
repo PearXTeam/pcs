@@ -17,7 +17,8 @@ namespace pcs
         public static Localization l;
         public static Game g = new Game();
         public static List<Assembly> asms = new List<Assembly>();
-        public static Logging Log = new Logging(PathToDir + "PCS.log");
+        public static Logging Log = new Logging(PathToDir + "logs" + PXL.s + "PCS_" + PXL.GetDateTimeNow() + ".log");
+        public static Chat c = new Chat();
 
 
         #region Private vars
@@ -169,6 +170,7 @@ namespace pcs
                 _XP = value;
             }
         }
+        public static string UserName = "Player";
 
         //System values:
         public static string SelectedLang;

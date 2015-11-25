@@ -143,9 +143,19 @@ namespace pcs
 
         private void Game_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Control && e.KeyCode == Keys.C)
+            if (e.KeyCode == Keys.C && !Application.OpenForms.OfType<Chat>().Any())
             {
-                new EnterCommand().ShowDialog();
+                v.c = new Chat();
+                v.c.Owner = this;
+                v.c.Show();
+            }
+        }
+
+        private void Game_LocationChanged(object sender, EventArgs e)
+        {
+            if (v.c != null)
+            {
+                v.c.Location = new Point((Location.X + Size.Width) - v.c.Size.Width, (Location.Y + Size.Height) - v.c.Size.Height);
             }
         }
     }

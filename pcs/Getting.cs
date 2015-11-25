@@ -21,7 +21,7 @@ namespace pcs
             return list;
         }
 
-        public static string[] GetModsNames()
+        public static string[] GetModNames()
         {
             string[] result = new string[v.asms.Count];
             int count = 0;

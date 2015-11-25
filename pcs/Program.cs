@@ -25,7 +25,6 @@ namespace pcs
             Application.EnableVisualStyles();
 
             v.Log.Add("Starting application...", LogType.Info);
-
             string pathToLangs = v.PathToDir + "langs" + PXL.s;
             string pathToPlugins = v.PathToDir + "plugins" + PXL.s;
             
@@ -93,7 +92,7 @@ namespace pcs
 
         private static void Crush(string str)
         {
-            v.Log.Add(str, LogType.Error);
+            v.Log.Add("Game crushed! Please report a crush information!", LogType.Error);
 
 
             StringBuilder sb = new StringBuilder();
@@ -108,6 +107,16 @@ namespace pcs
             sb.AppendLine("Game version: " + v.Version);
             sb.AppendLine("OS version: " + Environment.OSVersion);
             sb.AppendLine("Is 64-bit OS: " + Environment.Is64BitOperatingSystem);
+            sb.AppendLine("Framework: " + Environment.Version);
+            if (Getting.GetMods() != null)
+            {
+                sb.AppendLine("_______________");
+                sb.AppendLine("Installed mods:");
+                foreach(PCSMod pcsm in Getting.GetMods())
+                {
+                    sb.AppendLine(pcsm.Name() + " | " + pcsm.Version());
+                }
+            }
 
             File.WriteAllText(v.PathToDir + "crashes" + PXL.s + PXL.GetDateTimeNow() + "_crash.txt", sb.ToString());
             v.forceClose = true;

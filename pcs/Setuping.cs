@@ -19,6 +19,8 @@ namespace pcs
         {
             Registry.RegisterCommand(new CommandMaxState());
             Registry.RegisterCommand(new CommandSet());
+            Registry.RegisterCommand(new CommandDisableStats());
+            Registry.RegisterCommand(new CommandHelp());
         }
     }
 }

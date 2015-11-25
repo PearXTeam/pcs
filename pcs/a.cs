@@ -73,6 +73,8 @@ namespace pcs
 
             Setuping.SetupIcons();
             Setuping.SetupCommands();
+
+            v.Log.LogChanged += Log_LogChanged;
         }
 
         public static void AutoSave()
@@ -83,6 +85,19 @@ namespace pcs
         public static void AutoLoad()
         {
             Load("auto");
+        }
+
+
+
+
+
+        private static void Log_LogChanged(object sender, EventArgs e)
+        {
+            if (v.c != null)
+            {
+                v.c.labelChat.Text = v.Log.Log;
+                v.c.Upd();
+            }
         }
     }
 }

@@ -49,6 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="a.cs" />
+    <Compile Include="Commands\CommandDisableStats.cs" />
+    <Compile Include="Commands\CommandHelp.cs" />
     <Compile Include="Commands\CommandMaxState.cs" />
     <Compile Include="Commands\CommandSet.cs" />
     <Compile Include="Death.cs">
@@ -57,11 +59,11 @@
     <Compile Include="Death.Designer.cs">
       <DependentUpon>Death.cs</DependentUpon>
     </Compile>
-    <Compile Include="EnterCommand.cs">
+    <Compile Include="Chat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EnterCommand.Designer.cs">
-      <DependentUpon>EnterCommand.cs</DependentUpon>
+    <Compile Include="Chat.Designer.cs">
+      <DependentUpon>Chat.cs</DependentUpon>
     </Compile>
     <Compile Include="Game.cs">
       <SubType>Form</SubType>
@@ -87,11 +89,17 @@
     <Compile Include="Types\SMiniIcon.cs" />
     <Compile Include="Types\SIcon.cs" />
     <Compile Include="v.cs" />
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Death.resx">
       <DependentUpon>Death.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EnterCommand.resx">
-      <DependentUpon>EnterCommand.cs</DependentUpon>
+    <EmbeddedResource Include="Chat.resx">
+      <DependentUpon>Chat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
