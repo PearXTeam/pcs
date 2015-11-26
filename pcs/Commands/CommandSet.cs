@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
 using System.Text;
+using PearXLib;
 
 namespace pcs.Commands
 {
@@ -19,17 +20,34 @@ namespace pcs.Commands
                    BigInteger i;
                    if(BigInteger.TryParse(args[2], out i))
                    {
-                       switch(args[1])
+                       if (args[1] == "money" || args[1] == "xp")
                        {
-                           case "money":
-                               v.Money = BigInteger.Parse(args[2]);
-                               break;
-                           case "xp":
-                               v.XP = BigInteger.Parse(args[2]);
-                               break;
+                           switch (args[1])
+                           {
+                               case "money":
+                                   v.Money = BigInteger.Parse(args[2]);
+                                   v.Log.Add(v.l.GetString("command.set.money") + args[2] + " " + v.l.GetString("other.currency"), LogType.Info);
+                                   break;
+                               case "xp":
+                                   v.XP = BigInteger.Parse(args[2]);
+                                   v.Log.Add(v.l.GetString("command.set.xp") + args[2] + " " + v.l.GetString("other.XPName"), LogType.Info);
+                                   break;
+                           }
+                       }
+                       else
+                       {
+                           v.Log.Add(v.l.GetString("command.set.error"), LogType.Warning);
                        }
                    }
+                   else
+                   {
+                       v.Log.Add(v.l.GetString("command.set.amountError"), LogType.Warning);
+                   }
                 }
+            }
+            else
+            {
+                v.Log.Add(v.l.GetString("command.set.argumentError"), LogType.Warning);
             }
         }
     }

@@ -55,7 +55,7 @@ namespace pcs
                             }
                             if (err)
                             {
-                                v.Log.Add("Command \"" + textBoxChat.Text.Substring(1, i - 1).Split(' ')[0] + "\" not found!", LogType.Info);
+                                v.Log.Add(v.l.GetString("other.chat.commandNotFound1") + textBoxChat.Text.Substring(1, i - 1).Split(' ')[0] + v.l.GetString("other.chat.commandNotFound2"), LogType.Info);
                             }
                         }
                     }

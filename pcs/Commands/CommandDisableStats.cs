@@ -15,6 +15,7 @@ namespace pcs.Commands
             v.g.timerMood.Stop();
             v.g.timerPurity.Stop();
             v.g.timerSleep.Stop();
+            v.Log.Add(v.l.GetString("command.disableStats.msg"), PearXLib.LogType.Info);
         }
     }
 }

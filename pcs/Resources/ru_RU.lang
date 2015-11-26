@@ -21,6 +21,8 @@ title.modlist=Список модов
 other.closeMessage=Вы действительно хотите выйти?
 other.currency=руб.
 other.XPName=оп.
+other.chat.commandNotFound1=Комманда "
+other.chat.commandNotFound2=" не найдена!
 
 #Icons:
 icon.minigames=Мини-игры
@@ -36,3 +38,16 @@ label.xp=Опыт:
 modlist.author=Автор
 modlist.name=Название
 modlist.version=Версия
+
+#Commands:
+command.disableStats.msg=Статы выключены.
+command.help.msg=Доступные команды: 
+command.maxState.msg1=Стат "
+command.maxState.msg2=" был восстановлен.
+command.maxState.error=Вы ввели не правильный стат для восстановления. Доступно: all, food, mood, purity, health, sleep.
+command.maxState.argumentError=Комманда используется не так! Использование: /maxState <state>. Доступные статы: all, food, mood, purity, health, sleep.
+command.set.money=Деньги были установлены в 
+command.set.xp=Опыт был установлен в 
+command.set.error=Вы ввели не правильное название того, что нужно изменить. Доступно: money, xp.
+command.set.argumentError=Комманда используется не так! Использование: /set <name> <amount>. Доступные названия: money, xp.
+command.set.amountError=2 аргумент не является числом!
