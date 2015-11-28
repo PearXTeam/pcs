@@ -15,8 +15,9 @@ bar.purity=Чистота:
 #Titles:
 title.death=Вы умерли.
 title.modlist=Список модов
-title.catOrDog=Кот или &\n собака
+title.catOrDog=Кот или&\n собака
 title.miniGames=Мини-игры
+title.saveManager=Менеджер сохранений
 
 
 #Other
@@ -24,7 +25,7 @@ other.closeMessage=Вы действительно хотите выйти?
 other.currency=руб.
 other.XPName=оп.
 other.chat.commandNotFound1=Комманда "
-other.chat.commandNotFound2=" не найдена!
+other.chat.commandNotFound2=" не найдена! Список комманд: /help.
 other.score=Счет: 
 other.highscore=Высший счет: 
 
@@ -52,3 +53,11 @@ command.set.xp=Опыт был установлен в
 command.set.error=Вы ввели не правильное название того, что нужно изменить. Доступно: money, xp.
 command.set.argumentError=Комманда используется не так! Использование: /set <name> <amount>. Доступные названия: money, xp.
 command.set.amountError=2 аргумент не является числом!
+
+#Cat or Dog:
+catordog.start=Нажмите любую клавишу.&\nИспользуйте для игры стрелки.
+
+#Save Manager:
+savemanager.save=Сохранить
+savemanager.cannotSave.title=Невозможно сохранить игру!
+savemanager.cannotSave.text=Имя файла сохранения не должно содержать знаки &\n "\", "/", "?", ":", "*", """, ">", "<", "|".

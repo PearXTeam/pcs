@@ -83,6 +83,7 @@
     <Compile Include="Icons\IconMGCatOrDog.cs" />
     <Compile Include="Icons\MiniIconMods.cs" />
     <Compile Include="Icons\IconMiniGames.cs" />
+    <Compile Include="Icons\MiniIconSaveManager.cs" />
     <Compile Include="MiniGamesGui.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +107,12 @@
     <Compile Include="MiniGames\CatOrDogElements\CODE_3.cs" />
     <Compile Include="MiniGames\CatOrDogElements\CODE_2.cs" />
     <Compile Include="MiniGames\CatOrDogElements\CODE_1.cs" />
+    <Compile Include="SaveManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveManager.Designer.cs">
+      <DependentUpon>SaveManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Types\PCSMod.cs" />
     <Compile Include="ModList.cs">
       <SubType>Form</SubType>
@@ -153,6 +160,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SaveManager.resx">
+      <DependentUpon>SaveManager.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -233,6 +243,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CatOrDogLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floppy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

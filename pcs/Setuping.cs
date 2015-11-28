@@ -11,6 +11,7 @@ namespace pcs
             Registry.RegisterIcon(new IconMiniGames());
             Registry.RegisterMiniIcon(new MiniIconMods());
             Registry.RegisterMiniGameIcon(new IconMGCatOrDog());
+            Registry.RegisterMiniIcon(new MiniIconSaveManager());
         }
 
         public static void SetupCommands()

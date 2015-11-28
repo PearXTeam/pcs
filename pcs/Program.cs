@@ -30,6 +30,7 @@ namespace pcs
             FileUtils.createDir(pathToLangs);
             FileUtils.createDir(pathToPlugins);
             FileUtils.createDir(v.PathToDir + "crashes");
+            FileUtils.createDir(v.PathToDir + "saves");
 
             #region Language init.
 

@@ -13,7 +13,7 @@ namespace pcs.Icons
         public Image Icon() { return Resources.Dice; }
         public void OnClick(object sender, EventArgs e)
         {
-            new MiniGamesGui().Show(((UserControl)sender).ParentForm);
+            new MiniGamesGui().Show((UserControl)sender);
         }
     }
 }

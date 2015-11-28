@@ -72,11 +72,11 @@ namespace pcs
                 xi.Location = new Point((42 * row2) + 10, (42 * column2) + 10);
                 xi.Cursor = Cursors.Hand;
                 xi.Expand = 3;
-                row++;
-                if (row == 4)
+                row2++;
+                if (row2 == 4)
                 {
-                    column++;
-                    row = 0;
+                    column2++;
+                    row2 = 0;
                 }
                 panelMiniIcons.Controls.Add(xi);
             }

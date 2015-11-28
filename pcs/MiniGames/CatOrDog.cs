@@ -43,14 +43,20 @@ namespace pcs.MiniGames
                     {
                         v.CatOrDogHighScore = score;
                     }
-                    new SoundPlayer(PearXLib.Properties.Resources.bd).Play();
+                    using (SoundPlayer sp = new SoundPlayer(PearXLib.Properties.Resources.bd))
+                    {
+                        sp.Play();
+                    }
                     Gen();
                 }
                 else
                 {
-                    v.Money += score / 3;
+                    v.Money += score / 5;
                     score = 0;
-                    new SoundPlayer(PearXLib.Properties.Resources.Error).Play();
+                    using (SoundPlayer sp = new SoundPlayer(PearXLib.Properties.Resources.Error))
+                    {
+                        sp.Play();
+                    }
                     Gen();
                 }
             }
@@ -63,13 +69,16 @@ namespace pcs.MiniGames
 
         private void image_Paint(object sender, PaintEventArgs e)
         {
+            if (!isGameStarted)
+                e.Graphics.DrawString(v.l.GetString("catordog.start"), new Font("Microsoft Sans MS", 18F), Brushes.Black, new PointF(0F, image.Size.Height - 52F));
+
             e.Graphics.DrawString(v.l.GetString("other.score") + score.ToString(), new Font("Microsoft Sans MS", 16F), Brushes.Black, new PointF(0F, 0F));
             e.Graphics.DrawString(v.l.GetString("other.highscore") + v.CatOrDogHighScore, new Font("Microsoft Sans MS", 16F), Brushes.Black, new PointF(0F, 16F));
         }
 
         private void CatOrDog_FormClosing(object sender, FormClosingEventArgs e)
         {
-            v.Money += score / 3;
+            v.Money += score / 5;
         }
     }
 }

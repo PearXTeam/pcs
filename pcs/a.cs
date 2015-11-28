@@ -1,6 +1,7 @@
 ﻿using System;
 using PearXLib;
 using System.Numerics;
+using System.Windows.Forms;
 
 namespace pcs
 {
@@ -10,7 +11,7 @@ namespace pcs
         {
             try
             {
-                string[] s = FileUtils.LoadEnc("PCSimulator", savename, 12, false);
+                string[] s = FileUtils.LoadEnc("PCSimulator", "saves" + PXL.s + savename, 12, false);
                 v.Food = Convert.ToInt16(s[0]);
                 v.Mood = Convert.ToInt16(s[1]);
                 v.Sleep = Convert.ToInt16(s[2]);
@@ -25,8 +26,10 @@ namespace pcs
 
         public static void Save(string savename)
         {
-            FileUtils.SaveEnc("PCSimulator", savename, new string[]
-                {
+            if (FileUtils.CanCreate(savename))
+            {
+                FileUtils.SaveEnc("PCSimulator", "saves" + PXL.s + savename, new string[]
+                    {
                     v.Food.ToString(),
                     v.Mood.ToString(),
                     v.Sleep.ToString(),
@@ -35,7 +38,12 @@ namespace pcs
                     v.Money.ToString(),
                     v.XP.ToString(),
                     v.CatOrDogHighScore.ToString()
-                }, 12, false);
+                    }, 12, false);
+            }
+            else
+            {
+                MessageBox.Show(v.l.GetString("savemanager.cannotSave.text"), v.l.GetString("savemanager.cannotSave.title"));
+            }
         }
 
         public static void Kill(KilledBy kb)
@@ -50,24 +58,6 @@ namespace pcs
 
         public static void prepareGame()
         {
-            v.g.barFood.Value = v.Food;
-            v.g.barFood.ProgressText = v.l.GetString("bar.food") + v.Food.ToString() + "%";
-
-            v.g.barMood.Value = v.Mood;
-            v.g.barMood.ProgressText = v.l.GetString("bar.mood") + v.Mood.ToString() + "%";
-
-            v.g.barSleep.Value = v.Sleep;
-            v.g.barSleep.ProgressText = v.l.GetString("bar.sleep") + v.Sleep.ToString() + "%";
-
-            v.g.barPurity.Value = v.Purity;
-            v.g.barPurity.ProgressText = v.l.GetString("bar.purity") + v.Purity.ToString() + "%";
-
-            v.g.barHealth.Value = v.Health;
-            v.g.barHealth.ProgressText = v.l.GetString("bar.health") + v.Health.ToString() + "%";
-
-            v.g.labelMoneys.Text = v.l.GetString("label.moneys") + v.Money + " " + v.l.GetString("other.currency");
-            v.g.labelXP.Text = v.l.GetString("label.xp") + v.XP + " " + v.l.GetString("other.XPName");
-
             Setuping.SetupIcons();
             Setuping.SetupCommands();
             Setuping.SetupCatOrDog();
