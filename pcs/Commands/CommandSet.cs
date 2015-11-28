@@ -1,14 +1,11 @@
 ﻿using pcs.Types;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
-using System.Text;
 using PearXLib;
 
 namespace pcs.Commands
 {
-    class CommandSet : SCommand
+    public class CommandSet : SCommand
     {
         public string Command() { return "set"; }
         public void OnPerform(string[] args)

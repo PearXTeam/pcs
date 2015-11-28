@@ -1,12 +1,10 @@
 ﻿using pcs.Types;
+using PearXLib;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace pcs.Commands
 {
-    class CommandMaxState : SCommand
+    public class CommandMaxState : SCommand
     {
         public string Command() { return "maxState"; }
         public void OnPerform(string[] args)
@@ -42,17 +40,17 @@ namespace pcs.Commands
                                 v.Mood = 100;
                                 break;
                         }
-                        v.Log.Add(v.l.GetString("command.maxState.msg1") + args[1] + v.l.GetString("command.maxState.msg2"), PearXLib.LogType.Info);
+                        v.Log.Add(v.l.GetString("command.maxState.msg1") + args[1] + v.l.GetString("command.maxState.msg2"), LogType.Info);
                     }
                     else
                     {
-                        v.Log.Add(v.l.GetString("command.maxState.error"), PearXLib.LogType.Warning);
+                        v.Log.Add(v.l.GetString("command.maxState.error"), LogType.Warning);
                     }
                 }
             }
             else
             {
-                v.Log.Add(v.l.GetString("command.maxState.argumentError"), PearXLib.LogType.Warning);
+                v.Log.Add(v.l.GetString("command.maxState.argumentError"), LogType.Warning);
             }
         }
     }

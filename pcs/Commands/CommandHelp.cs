@@ -1,14 +1,10 @@
 ﻿using pcs.Types;
 using PearXLib;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
 using System.Text;
 
 namespace pcs.Commands
 {
-    class CommandHelp : SCommand
+    public class CommandHelp : SCommand
     {
         public string Command() { return "help"; }
         public void OnPerform(string[] args)

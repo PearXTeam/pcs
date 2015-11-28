@@ -11,6 +11,7 @@
     <AssemblyName>pcs</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\pcs.ico</ApplicationIcon>
@@ -65,6 +68,11 @@
     <Compile Include="Chat.Designer.cs">
       <DependentUpon>Chat.cs</DependentUpon>
     </Compile>
+    <Compile Include="EmbeddedLangs\EmbLangs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmbLangs.resx</DependentUpon>
+    </Compile>
     <Compile Include="Game.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,9 +80,33 @@
       <DependentUpon>Game.cs</DependentUpon>
     </Compile>
     <Compile Include="Getting.cs" />
+    <Compile Include="Icons\IconMGCatOrDog.cs" />
     <Compile Include="Icons\MiniIconMods.cs" />
     <Compile Include="Icons\IconMiniGames.cs" />
-    <Compile Include="Modding\PCSMod.cs" />
+    <Compile Include="MiniGamesGui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MiniGamesGui.Designer.cs">
+      <DependentUpon>MiniGamesGui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MiniGames\CatOrDog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MiniGames\CatOrDog.Designer.cs">
+      <DependentUpon>CatOrDog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MiniGames\CatOrDogElement.cs" />
+    <Compile Include="MiniGames\CatOrDogElements\CODE_10.cs" />
+    <Compile Include="MiniGames\CatOrDogElements\CODE_9.cs" />
+    <Compile Include="MiniGames\CatOrDogElements\CODE_8.cs" />
+    <Compile Include="MiniGames\CatOrDogElements\CODE_7.cs" />
+    <Compile Include="MiniGames\CatOrDogElements\CODE_6.cs" />
+    <Compile Include="MiniGames\CatOrDogElements\CODE_5.cs" />
+    <Compile Include="MiniGames\CatOrDogElements\CODE_4.cs" />
+    <Compile Include="MiniGames\CatOrDogElements\CODE_3.cs" />
+    <Compile Include="MiniGames\CatOrDogElements\CODE_2.cs" />
+    <Compile Include="MiniGames\CatOrDogElements\CODE_1.cs" />
+    <Compile Include="Types\PCSMod.cs" />
     <Compile Include="ModList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,8 +127,18 @@
     <EmbeddedResource Include="Chat.resx">
       <DependentUpon>Chat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmbeddedLangs\EmbLangs.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmbLangs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MiniGamesGui.resx">
+      <DependentUpon>MiniGamesGui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MiniGames\CatOrDog.resx">
+      <DependentUpon>CatOrDog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModList.resx">
       <DependentUpon>ModList.cs</DependentUpon>
@@ -120,10 +162,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\en_US.lang" />
-    <None Include="Resources\en_US.langinfo" />
-    <None Include="Resources\ru_RU.lang" />
-    <None Include="Resources\ru_RU.langinfo" />
+    <None Include="EmbeddedLangs\en_US.lang" />
+    <None Include="EmbeddedLangs\en_US.langinfo" />
+    <None Include="EmbeddedLangs\ru_RU.lang" />
+    <None Include="EmbeddedLangs\ru_RU.langinfo" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\PearXLib\PearXLib\PearXLib.csproj">
@@ -149,6 +191,48 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Puzzle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CatOrDog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedEyes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pills.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dog_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cat_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dog_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dog_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dog_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dog_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CatOrDogLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

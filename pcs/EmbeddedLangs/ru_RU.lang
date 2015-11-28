@@ -15,6 +15,8 @@ bar.purity=Чистота:
 #Titles:
 title.death=Вы умерли.
 title.modlist=Список модов
+title.catOrDog=Кот или &\n собака
+title.miniGames=Мини-игры
 
 
 #Other
@@ -23,9 +25,8 @@ other.currency=руб.
 other.XPName=оп.
 other.chat.commandNotFound1=Комманда "
 other.chat.commandNotFound2=" не найдена!
-
-#Icons:
-icon.minigames=Мини-игры
+other.score=Счет: 
+other.highscore=Высший счет: 
 
 #Buttons:
 button.closeDeath=Я понял.

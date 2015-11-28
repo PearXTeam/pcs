@@ -1,11 +1,5 @@
 ﻿using pcs.Properties;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace pcs
@@ -37,6 +31,12 @@ namespace pcs
                     break;
                 case KilledBy.Mud:
                     imageKilledBy.Image = Resources.Trash;
+                    break;
+                case KilledBy.LackOfSleep:
+                    imageKilledBy.Image = Resources.RedEyes;
+                    break;
+                case KilledBy.Disease:
+                    imageKilledBy.Image = Resources.Pills;
                     break;
             }
             buttonClose.ButtonText = v.l.GetString("button.closeDeath");

@@ -1,10 +1,8 @@
 ﻿using PearXLib;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Numerics;
 using System.Reflection;
-using System.Text;
 
 namespace pcs
 {
@@ -19,6 +17,7 @@ namespace pcs
         public static List<Assembly> asms = new List<Assembly>();
         public static Logging Log = new Logging(PathToDir + "logs" + PXL.s + "PCS_" + PXL.GetDateTimeNow() + ".log");
         public static Chat c = new Chat();
+        public static Random Rand = new Random();
 
 
         #region Private vars
@@ -171,6 +170,7 @@ namespace pcs
             }
         }
         public static string UserName = "Player";
+        public static BigInteger CatOrDogHighScore = 0;
 
         //System values:
         public static string SelectedLang;

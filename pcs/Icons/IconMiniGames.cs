@@ -1,20 +1,19 @@
 ﻿using pcs.Properties;
 using pcs.Types;
+using PearXLib;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Windows.Forms;
 
 namespace pcs.Icons
 {
     class IconMiniGames : SIcon
     {
-        public string Name() { return v.l.GetString("icon.minigames"); }
+        public string Name() { return v.l.GetString("title.miniGames"); }
         public Image Icon() { return Resources.Dice; }
         public void OnClick(object sender, EventArgs e)
         {
-            
+            new MiniGamesGui().Show(((UserControl)sender).ParentForm);
         }
     }
 }

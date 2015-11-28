@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Death));
             this.imageKilledBy = new System.Windows.Forms.PictureBox();
             this.buttonClose = new PearXLib.Engine.XButton();
             ((System.ComponentModel.ISupportInitialize)(this.imageKilledBy)).BeginInit();
@@ -57,10 +58,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(236, 258);
             this.Controls.Add(this.buttonClose);
             this.Controls.Add(this.imageKilledBy);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Death";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

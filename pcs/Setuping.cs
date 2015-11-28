@@ -1,9 +1,6 @@
 ﻿using pcs.Commands;
 using pcs.Icons;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using pcs.MiniGames.CatOrDogElements;
 
 namespace pcs
 {
@@ -13,6 +10,7 @@ namespace pcs
         {
             Registry.RegisterIcon(new IconMiniGames());
             Registry.RegisterMiniIcon(new MiniIconMods());
+            Registry.RegisterMiniGameIcon(new IconMGCatOrDog());
         }
 
         public static void SetupCommands()
@@ -21,6 +19,20 @@ namespace pcs
             Registry.RegisterCommand(new CommandSet());
             Registry.RegisterCommand(new CommandDisableStats());
             Registry.RegisterCommand(new CommandHelp());
+        }
+
+        public static void SetupCatOrDog()
+        {
+            Registry.RegisterCatOrDogElement(new CODE_1());
+            Registry.RegisterCatOrDogElement(new CODE_2());
+            Registry.RegisterCatOrDogElement(new CODE_3());
+            Registry.RegisterCatOrDogElement(new CODE_4());
+            Registry.RegisterCatOrDogElement(new CODE_5());
+            Registry.RegisterCatOrDogElement(new CODE_6());
+            Registry.RegisterCatOrDogElement(new CODE_7());
+            Registry.RegisterCatOrDogElement(new CODE_8());
+            Registry.RegisterCatOrDogElement(new CODE_9());
+            Registry.RegisterCatOrDogElement(new CODE_10());
         }
     }
 }

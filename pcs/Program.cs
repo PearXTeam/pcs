@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 using PearXLib.Forms;
 using System.IO;
 using PearXLib;
 using pcs.Properties;
 using System.Reflection;
-using pcs.Modding;
 using System.Text;
+using pcs.Types;
+using pcs.EmbeddedLangs;
 
 namespace pcs
 {
@@ -36,10 +35,10 @@ namespace pcs
 
             v.Log.Add("Initializing languages...", LogType.Info);
 
-            File.WriteAllBytes(pathToLangs + "ru_RU.lang", Resources.ru_RU);
-            File.WriteAllBytes(pathToLangs + "en_US.lang", Resources.en_US);
-            File.WriteAllBytes(pathToLangs + "ru_RU.langinfo", Resources.ru_RU_info);
-            File.WriteAllBytes(pathToLangs + "en_US.langinfo", Resources.en_US_info);
+            File.WriteAllBytes(pathToLangs + "ru_RU.lang", EmbLangs.ru_RU);
+            File.WriteAllBytes(pathToLangs + "en_US.lang", EmbLangs.en_US);
+            File.WriteAllBytes(pathToLangs + "ru_RU.langinfo", EmbLangs.ru_RU_info);
+            File.WriteAllBytes(pathToLangs + "en_US.langinfo", EmbLangs.en_US_info);
 
             if (File.Exists(v.PathToDir + "lang.save"))
             {

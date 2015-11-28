@@ -5,3 +5,5 @@ pcs/pcs.csproj.user
 pcs/bin/*
 
 pcs/obj/*
+
+.vs/*

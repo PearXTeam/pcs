@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using PearXLib;
-using System.Reflection;
-using pcs.Modding;
 using System.Numerics;
 
 namespace pcs
@@ -23,6 +18,7 @@ namespace pcs
                 v.Health = Convert.ToInt16(s[4]);
                 v.Money = BigInteger.Parse(s[5]);
                 v.XP = BigInteger.Parse(s[6]);
+                v.CatOrDogHighScore = BigInteger.Parse(s[7]);
             }
             catch { }
         }
@@ -37,7 +33,8 @@ namespace pcs
                     v.Purity.ToString(),
                     v.Health.ToString(),
                     v.Money.ToString(),
-                    v.XP.ToString()
+                    v.XP.ToString(),
+                    v.CatOrDogHighScore.ToString()
                 }, 12, false);
         }
 
@@ -73,6 +70,7 @@ namespace pcs
 
             Setuping.SetupIcons();
             Setuping.SetupCommands();
+            Setuping.SetupCatOrDog();
 
             v.Log.LogChanged += Log_LogChanged;
         }
