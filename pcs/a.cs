@@ -2,6 +2,7 @@
 using PearXLib;
 using System.Numerics;
 using System.Windows.Forms;
+using System.IO;
 
 namespace pcs
 {
@@ -72,6 +73,10 @@ namespace pcs
 
         public static void AutoLoad()
         {
+            if (!File.Exists(v.PathToDir + "saves" + PXL.s + "auto.save"))
+            {
+                Save("auto");
+            }
             Load("auto");
         }
 

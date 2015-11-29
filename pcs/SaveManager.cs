@@ -19,6 +19,7 @@ namespace pcs
             InitializeComponent();
             buttonSave.ButtonText = v.l.GetString("savemanager.save");
             Text = v.l.GetString("title.saveManager");
+            buttonReset.ButtonText = v.l.GetString("savemanager.reset");
         }
 
         private void SaveManager_Load(object sender, EventArgs e)
@@ -59,7 +60,14 @@ namespace pcs
                     xb.Size = new Size(285, 60);
                     xb.Location = new Point(0, (60 * column) + 10);
                     xb.ButtonText = Path.GetFileNameWithoutExtension(s);
-                    xb.Click += (sndr, args) => { a.Load(Path.GetFileNameWithoutExtension(s)); };
+                    xb.Click += (sndr, args) => 
+                    {
+                        DialogResult dr = MessageBox.Show(v.l.GetString("savemanager.confirmLoad") + "\"" + xb.ButtonText + "\"?", v.l.GetString("other.confirm"), MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (dr == DialogResult.Yes)
+                        {
+                            a.Load(Path.GetFileNameWithoutExtension(s));
+                        }
+                    };
                     xb.Font = new Font("Microsoft Sans MS", 16F);
                     panelSaves.Controls.Add(xb);
 
@@ -73,12 +81,34 @@ namespace pcs
                     xb2.ButtonText = "X";
                     xb2.Click += (sndr, args) =>
                     {
-                        File.Delete(s);
-                        Reload();
+                        DialogResult dr = MessageBox.Show(v.l.GetString("savemanager.confirmDelete") + "\"" + xb.ButtonText + "\"?", v.l.GetString("other.confirm"), MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (dr == DialogResult.Yes)
+                        {
+                            File.Delete(s);
+                            Reload();
+                        }
                     };
                     xb2.Font = new Font("Microsoft Sans MS", 16F);
                     panelSaves.Controls.Add(xb2);
                     column++;
+                }
+            }
+        }
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show(v.l.GetString("savemanager.confirmReset1"), v.l.GetString("other.confirm"), MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                DialogResult dr2 = MessageBox.Show(v.l.GetString("savemanager.confirmReset2"), v.l.GetString("other.confirm"), MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dr2 == DialogResult.Yes)
+                {
+                    if (File.Exists(v.PathToDir + "saves" + PXL.s + "auto.save"))
+                    {
+                        v.forceClose = true;
+                        File.Delete(v.PathToDir + "saves" + PXL.s + "auto.save");
+                        Application.Restart();
+                    }
                 }
             }
         }
