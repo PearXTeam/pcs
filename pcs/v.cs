@@ -1,6 +1,8 @@
 ﻿using PearXLib;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Numerics;
 using System.Reflection;
 
@@ -28,6 +30,8 @@ namespace pcs
         private static short _Health = 100;
         private static BigInteger _Money = 500;
         private static BigInteger _XP = 100;
+        private static Color _BGColor = Color.Black;
+        private static string _Wallpaper;
         #endregion
         
 
@@ -171,6 +175,35 @@ namespace pcs
         }
         public static string UserName = "Player";
         public static BigInteger CatOrDogHighScore = 0;
+        public static Color BGColor
+        {
+            get { return _BGColor; }
+            set
+            {
+                g.BackColor = value;
+                _BGColor = value;
+            }
+        }
+        public static string Wallpaper
+        {
+            get { return _Wallpaper; }
+            set
+            {
+                if (value == null)
+                {
+                    g.BackgroundImage = null;
+                    _Wallpaper = value;
+                }
+                else
+                {
+                    if (File.Exists(value))
+                    {
+                        g.BackgroundImage = Image.FromFile(value);
+                        _Wallpaper = value;
+                    }
+                }
+            }
+        }
 
         //System values:
         public static string SelectedLang;

@@ -1,13 +1,8 @@
 ﻿using PearXLib;
 using PearXLib.Engine;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace pcs
@@ -69,6 +64,9 @@ namespace pcs
                         }
                     };
                     xb.Font = new Font("Microsoft Sans MS", 16F);
+                    xb.GradientColor1 = Color.DarkOrange;
+                    xb.GradientColorFocused1 = Color.Orange;
+                    xb.ColorPressed = Color.Gold;
                     panelSaves.Controls.Add(xb);
 
 

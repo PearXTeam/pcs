@@ -18,6 +18,7 @@ title.modlist=Список модов
 title.catOrDog=Кот или&\n собака
 title.miniGames=Мини-игры
 title.saveManager=Менеджер сохранений
+title.settings=Настройки
 
 
 #Other
@@ -67,3 +68,9 @@ savemanager.confirmDelete=Вы действительно хотите удал�
 savemanager.reset=Сброс
 savemanager.confirmReset1=Вы действительно хотите сбросить игру?
 savemanager.confirmReset2=Сброс нельзя будет отменить! Сбросить игру?
+
+#Settings
+settings.selectBGColor=Фон
+settings.selectWallpaper=Выбрать обои...
+settings.filterImages=Изображения
+settings.filterAllFiles=Все файлы

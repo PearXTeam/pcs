@@ -30,8 +30,9 @@
         {
             this.panelSaves = new System.Windows.Forms.Panel();
             this.textBoxSaveName = new System.Windows.Forms.TextBox();
-            this.buttonSave = new PearXLib.Engine.XButton();
             this.buttonReset = new PearXLib.Engine.XButton();
+            this.buttonSave = new PearXLib.Engine.XButton();
+            this.panelSaves.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSaves
@@ -51,18 +52,6 @@
             this.textBoxSaveName.Visible = false;
             this.textBoxSaveName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSaveName_KeyDown);
             // 
-            // buttonSave
-            // 
-            this.buttonSave.BackColor = System.Drawing.Color.Transparent;
-            this.buttonSave.ColorPressed = System.Drawing.Color.MidnightBlue;
-            this.buttonSave.GradientColor1 = System.Drawing.Color.Blue;
-            this.buttonSave.GradientColorFocused1 = System.Drawing.Color.DarkBlue;
-            this.buttonSave.Location = new System.Drawing.Point(12, 220);
-            this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(262, 64);
-            this.buttonSave.TabIndex = 1;
-            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
-            // 
             // buttonReset
             // 
             this.buttonReset.BackColor = System.Drawing.Color.Transparent;
@@ -74,6 +63,18 @@
             this.buttonReset.Size = new System.Drawing.Size(83, 64);
             this.buttonReset.TabIndex = 2;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.BackColor = System.Drawing.Color.Transparent;
+            this.buttonSave.ColorPressed = System.Drawing.Color.MidnightBlue;
+            this.buttonSave.GradientColor1 = System.Drawing.Color.Blue;
+            this.buttonSave.GradientColorFocused1 = System.Drawing.Color.DarkBlue;
+            this.buttonSave.Location = new System.Drawing.Point(12, 220);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(262, 64);
+            this.buttonSave.TabIndex = 1;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // SaveManager
             // 
@@ -89,6 +90,7 @@
             this.Name = "SaveManager";
             this.Text = "SaveManager";
             this.Load += new System.EventHandler(this.SaveManager_Load);
+            this.panelSaves.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

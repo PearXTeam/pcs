@@ -3,6 +3,7 @@ using PearXLib;
 using System.Numerics;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing;
 
 namespace pcs
 {
@@ -21,6 +22,8 @@ namespace pcs
                 v.Money = BigInteger.Parse(s[5]);
                 v.XP = BigInteger.Parse(s[6]);
                 v.CatOrDogHighScore = BigInteger.Parse(s[7]);
+                v.BGColor = Color.FromArgb(Convert.ToInt32(s[8]));
+                v.Wallpaper = s[9];
             }
             catch { }
         }
@@ -38,7 +41,9 @@ namespace pcs
                     v.Health.ToString(),
                     v.Money.ToString(),
                     v.XP.ToString(),
-                    v.CatOrDogHighScore.ToString()
+                    v.CatOrDogHighScore.ToString(),
+                    v.BGColor.ToArgb().ToString(),
+                    v.Wallpaper
                     }, 12, false);
             }
             else

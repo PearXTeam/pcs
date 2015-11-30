@@ -76,6 +76,7 @@
             // labelMoneys
             // 
             this.labelMoneys.AutoSize = true;
+            this.labelMoneys.BackColor = System.Drawing.Color.Transparent;
             this.labelMoneys.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMoneys.ForeColor = System.Drawing.Color.DarkOrange;
             this.labelMoneys.Location = new System.Drawing.Point(45, 377);
@@ -87,6 +88,7 @@
             // labelXP
             // 
             this.labelXP.AutoSize = true;
+            this.labelXP.BackColor = System.Drawing.Color.Transparent;
             this.labelXP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelXP.ForeColor = System.Drawing.Color.DarkOrange;
             this.labelXP.Location = new System.Drawing.Point(45, 401);
@@ -98,6 +100,7 @@
             // panelMiniIcons
             // 
             this.panelMiniIcons.AutoScroll = true;
+            this.panelMiniIcons.BackColor = System.Drawing.Color.Transparent;
             this.panelMiniIcons.Location = new System.Drawing.Point(634, 387);
             this.panelMiniIcons.Name = "panelMiniIcons";
             this.panelMiniIcons.Size = new System.Drawing.Size(158, 74);
@@ -163,6 +166,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(810, 473);
             this.Controls.Add(this.panelMiniIcons);
             this.Controls.Add(this.labelXP);
@@ -173,6 +177,7 @@
             this.Controls.Add(this.barMood);
             this.Controls.Add(this.panelIcons);
             this.Controls.Add(this.barFood);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.KeyPreview = true;
             this.MaximizeBox = false;
