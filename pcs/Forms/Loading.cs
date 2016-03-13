@@ -14,7 +14,7 @@ using System.Windows.Forms;
 
 namespace pcs.Forms
 {
-    public partial class Loading : PCSForm
+    public partial class Loading : PCSForm, IMain
     {
         public static Loading instance = new Loading();
         
@@ -62,7 +62,7 @@ namespace pcs.Forms
                     m.OnStart();
                 }
                 SetText(2, "");
-
+                SetVal(2, 0);
 
 
                 SetText(1, "Done");
@@ -72,49 +72,61 @@ namespace pcs.Forms
 
         public void SetText(short label, string text)
         {
-            Invoke(new MethodInvoker(() =>
+            try
             {
-                if (label == 1)
+                Invoke(new MethodInvoker(() =>
                 {
-                    lbl1.Text = text;
-                    lbl1.Location = new Point((Width - lbl1.Width) / 2, lbl1.Location.Y);
-                }
-                else if (label == 2)
-                {
-                    lbl2.Text = text;
-                    lbl2.Location = new Point((Width - lbl2.Width) / 2, lbl2.Location.Y);
-                }
-            }));
+                    if (label == 1)
+                    {
+                        lbl1.Text = text;
+                        lbl1.Location = new Point((Width - lbl1.Width) / 2, lbl1.Location.Y);
+                    }
+                    else if (label == 2)
+                    {
+                        lbl2.Text = text;
+                        lbl2.Location = new Point((Width - lbl2.Width) / 2, lbl2.Location.Y);
+                    }
+                }));
+            }
+            catch { }
         }
 
         public void SetVal(short bar, int val)
         {
-            Invoke(new MethodInvoker(() =>
+            try
             {
-                if (bar == 1)
+                Invoke(new MethodInvoker(() =>
                 {
-                    bar1.Value = val;
-                }
-                else if (bar == 2)
-                {
-                    bar2.Value = val;
-                }
-            }));
+                    if (bar == 1)
+                    {
+                        bar1.Value = val;
+                    }
+                    else if (bar == 2)
+                    {
+                        bar2.Value = val;
+                    }
+                }));
+            }
+            catch { }
         }
 
         public void SetMax(short bar, int max)
         {
-            Invoke(new MethodInvoker(() =>
+            try
             {
-                if (bar == 1)
+                Invoke(new MethodInvoker(() =>
                 {
-                    bar1.Maximum = max;
-                }
-                else if (bar == 2)
-                {
-                    bar2.Maximum = max;
-                }
-            }));
+                    if (bar == 1)
+                    {
+                        bar1.Maximum = max;
+                    }
+                    else if (bar == 2)
+                    {
+                        bar2.Maximum = max;
+                    }
+                }));
+            }
+            catch { }
         }
     }
 }

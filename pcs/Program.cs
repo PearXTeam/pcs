@@ -33,7 +33,7 @@ namespace pcs
             Directory.CreateDirectory(PCS.PathMods);
             Directory.CreateDirectory(PCS.PathLangs);
 
-            Application.Run(Loading.instance);
+            Application.Run(Background.instance);
         }
     }
 }

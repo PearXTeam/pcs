@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace SimplePCSMod
 {
@@ -26,18 +27,7 @@ namespace SimplePCSMod
 
         public void OnStart()
         {
-            Crash.GetAnotherCrashInfo += Crash_GetAnotherCrashInfo;
-            Crash.GetAnotherCrashInfo += Crash_GetAnotherCrashInfo1;
-        }
-
-        private void Crash_GetAnotherCrashInfo1(object sender, UnhandledExceptionEventArgs e, ref List<string> toReturn)
-        {
-            toReturn.Add("pukan");
-        }
-
-        private void Crash_GetAnotherCrashInfo(object sender, UnhandledExceptionEventArgs e, ref List<string> toReturn)
-        {
-            toReturn.Add("PERDET' - VESELO!!!");
+            Thread.Sleep(228);
         }
 
         public void PostInit()

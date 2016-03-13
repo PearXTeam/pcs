@@ -47,10 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Background.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Components\PCSLabel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Crash.cs" />
+    <Compile Include="Forms\IMain.cs" />
     <Compile Include="Forms\Loading.cs">
       <SubType>Form</SubType>
     </Compile>
