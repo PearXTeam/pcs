@@ -28,8 +28,29 @@ namespace pcs.Forms
         {
             new Thread(() =>
             {
-                PCS.l.Add("Loading mods...", LogType.Info);
+                SetMax(1, 3);
+
+
+                SetText(1, "Initing game...");
+                SetMax(2, 2);
+
+                SetText(2, "Unpacking default langs...");
+                File.WriteAllBytes(PCS.PathLangs + "ru_RU.lang", EmbLangs.EmbLangs.ru_RU);
+                File.WriteAllBytes(PCS.PathLangs + "ru_RU.langinfo", EmbLangs.EmbLangs.ru_RU_inf);
+                SetVal(2, 1);
+                Invoke(new MethodInvoker(() =>
+                {
+                    SelectLang sl = new SelectLang();
+                    sl.ShowDialog(this);
+                }));
+
+                SetVal(2, 0);
+                SetText(2, "");
+                SetVal(1, 1);
+
+
                 SetText(1, "Loading mods...");
+                PCS.l.Add("Loading mods...", LogType.Info);
                 foreach (string s in Directory.GetFiles(PCS.PathMods))
                 {
                     Assembly asm = null;
@@ -48,11 +69,10 @@ namespace pcs.Forms
                         }
                     }
                 }
-
+                SetVal(1, 2);
 
 
                 SetText(1, "Initing mods...");
-                SetVal(1, 1);
                 PCS.l.Add("Performing OnLoad from mods...", LogType.Info);
                 SetMax(2, ModRegistry.Mods.Count);
                 foreach (PCSMod m in ModRegistry.Mods)
@@ -63,10 +83,19 @@ namespace pcs.Forms
                 }
                 SetText(2, "");
                 SetVal(2, 0);
+                SetVal(1, 3);
+
+
+
+                SetVal(1, 3);
 
 
                 SetText(1, "Done");
-                SetVal(1, 2);
+                Thread.Sleep(500);
+                Invoke(new MethodInvoker(() =>
+                {
+                    ShowNew(Game.instance);
+                }));
             }).Start();
         }
 

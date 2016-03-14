@@ -54,6 +54,17 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Crash.cs" />
+    <Compile Include="EmbLangs\EmbLangs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmbLangs.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Game.Designer.cs">
+      <DependentUpon>Game.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\IMain.cs" />
     <Compile Include="Forms\Loading.cs">
       <SubType>Form</SubType>
@@ -64,6 +75,12 @@
     <Compile Include="Forms\PCSForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\SelectLang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectLang.Designer.cs">
+      <DependentUpon>SelectLang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modding\ModRegistry.cs" />
     <Compile Include="Modding\PCSMod.cs" />
     <Compile Include="PCS.cs" />
@@ -71,8 +88,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registry.cs" />
     <Compile Include="Splashes.cs" />
+    <EmbeddedResource Include="EmbLangs\EmbLangs.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>EmbLangs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectLang.resx">
+      <DependentUpon>SelectLang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,6 +120,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="EmbLangs\ru_RU.lang" />
+    <None Include="EmbLangs\ru_RU.langinfo" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\PearXLib\PearXLib\PearXLib.csproj">

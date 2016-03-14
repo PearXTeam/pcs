@@ -18,6 +18,11 @@ namespace pcs.Forms
             Icon = Resources.PCSIcon;
             MaximizeBox = false;
             Size = new Size(768, 512);
+            StartPosition = FormStartPosition.CenterParent;
+            if(!(this is IMain))
+            {
+                ShowInTaskbar = false;
+            }
         }
 
         private Font f = new Font("Yanone Kaffeesatz", 16F);
@@ -48,13 +53,24 @@ namespace pcs.Forms
 
         protected override void OnShown(EventArgs e)
         {
-            Location = PCS.PreviousLocation;
+            if (this is IMain)
+            {
+                Location = PCS.PreviousLocation;
+            }
             base.OnShown(e);
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
+        }
+
+        protected void ShowNew(Form newForm)
+        {
+            CloseMe = true;
+            newForm.Owner = Background.instance;
+            newForm.Show();
+            Close();
         }
 
     }

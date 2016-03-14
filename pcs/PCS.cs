@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace pcs
 {
@@ -14,8 +15,11 @@ namespace pcs
         public static string PathCrashes = Path + "crash-reports/";
         public static string PathMods = Path + "mods/";
         public static string PathLangs = Path + "lang/";
-        public static Logging l = new Logging(Path + "logs/" + PXL.GetDateTimeNow() + ".log");
 
-        public static Point PreviousLocation = new Point(0, 0);
+        public static Logging l = new Logging(Path + "logs/" + PXL.GetDateTimeNow() + ".log");
+        public static Localization Loc;
+        public static string SelectedLang;
+
+        public static Point PreviousLocation = new Point((Screen.PrimaryScreen.WorkingArea.Width - 768) / 2, (Screen.PrimaryScreen.WorkingArea.Height - 512) / 2);
     }
 }
