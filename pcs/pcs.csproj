@@ -82,6 +82,7 @@
       <DependentUpon>SelectLang.cs</DependentUpon>
     </Compile>
     <Compile Include="Modding\ModRegistry.cs" />
+    <Compile Include="Modding\PCSEvents.cs" />
     <Compile Include="Modding\PCSMod.cs" />
     <Compile Include="PCS.cs" />
     <Compile Include="Program.cs" />

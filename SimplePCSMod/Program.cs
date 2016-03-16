@@ -1,7 +1,10 @@
 ﻿using pcs;
+using pcs.Components;
+using pcs.Forms;
 using pcs.Modding;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -10,6 +13,8 @@ namespace SimplePCSMod
 {
     class Program : PCSMod
     {
+        private bool test = false;
+
         public void Init()
         {
             
@@ -25,9 +30,16 @@ namespace SimplePCSMod
             return "A Simple PCS Mod";
         }
 
-        public void OnStart()
+        public void PreInit()
         {
-            Thread.Sleep(228);
+            if (test)
+            {
+                PCSLabel lbl = new PCSLabel();
+                lbl.Text = "test ahahahah";
+                lbl.Location = new Point(30, 30);
+                Game.instance.Controls.Add(lbl);
+            }
+            
         }
 
         public void PostInit()

@@ -30,11 +30,11 @@ namespace pcs.Modding
         /// </summary>
         void Init();
         /// <summary>
-        /// On game start event. Performs after registering crash handler and loading mods.
+        /// Pre init :b.
         /// </summary>
-        void OnStart();
+        void PreInit();
         /// <summary>
-        /// Mod post init event.
+        /// Post init :b.
         /// </summary>
         void PostInit();
     }

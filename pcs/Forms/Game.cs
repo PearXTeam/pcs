@@ -15,7 +15,6 @@ namespace pcs.Forms
         public Game()
         {
             InitializeComponent();
-            Text = PCS.Loc.GetString("title.game");
         }
     }
 }
