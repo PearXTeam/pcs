@@ -3,3 +3,4 @@ pcs/obj/*
 .vs/*
 SimplePCSMod/bin/*
 SimplePCSMod/obj/*
+SimplePCSMod/Test.cs

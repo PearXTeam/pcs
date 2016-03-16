@@ -46,7 +46,7 @@ namespace pcs
             string s = Environment.Is64BitOperatingSystem ? "64-bit" : "32-bit";
             sb.AppendLine("OS Caption: " + PXL.GetFromPC("Caption") + " (" + s + ")");
             sb.AppendLine("Game Path: " + PCS.Path);
-            sb.AppendLine("OS Language: " + CultureInfo.CurrentUICulture.Name);
+            sb.AppendLine("OS Language: " + CultureInfo.InstalledUICulture.EnglishName);
             sb.AppendLine("_______________________");
             List<string> l = new List<string>();
             try
@@ -57,10 +57,8 @@ namespace pcs
                     sb.AppendLine(str);
                 }
             } catch { }
-
             File.WriteAllText(PCS.PathCrashes + "crash_" + PXL.GetDateTimeNow() + ".txt", sb.ToString());
-            Process.Start(PCS.PathCrashes);
-            Application.Exit();
+            Environment.Exit(0);
         }
     }
 }
