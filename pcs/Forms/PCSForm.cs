@@ -17,6 +17,7 @@ namespace pcs.Forms
         {
             Icon = Resources.PCSIcon;
             MaximizeBox = false;
+            ToTrayBox = false;
             Size = new Size(768, 512);
             StartPosition = FormStartPosition.CenterParent;
             if(!(this is IMain))

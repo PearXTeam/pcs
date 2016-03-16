@@ -1,1 +1,7 @@
 title.game=PCSimulator
+
+#Bar texts:
+bar.food=Еда: 
+bar.health=Здоровье:
+bar.mood=Настроение:
+bar.sleep=Сон:
