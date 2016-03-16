@@ -114,12 +114,20 @@ namespace pcs
             }
             set
             {
+                if (value <= 0)
+                {
+                    //Kill
+                }
+                if (value > MaxFood)
+                {
+                    value = MaxFood;
+                }
                 food = value;
-                
+                Game.instance.barFood.Value = value;
+                Game.instance.barFood.ProgressText = PCS.Loc.GetString("bar.food") + value + "/" + MaxFood;
             }
         }
 
-        //Todo: \/
         public static int Health
         {
             get
@@ -128,8 +136,17 @@ namespace pcs
             }
             set
             {
+                if(value <= 0)
+                {
+                    //Kill
+                }
+                if(value > MaxHealth)
+                {
+                    value = MaxHealth;
+                }
                 health = value;
-                
+                Game.instance.barHealth.Value = value;
+                Game.instance.barHealth.ProgressText = PCS.Loc.GetString("bar.health") + value + "/" + MaxHealth;
             }
         }
 
@@ -141,8 +158,17 @@ namespace pcs
             }
             set
             {
+                if (value <= 0)
+                {
+                    //Kill
+                }
+                if (value > MaxMood)
+                {
+                    value = MaxMood;
+                }
                 mood = value;
-                
+                Game.instance.barMood.Value = value;
+                Game.instance.barMood.ProgressText = PCS.Loc.GetString("bar.mood") + value + "/" + MaxMood;
             }
         }
 
@@ -154,8 +180,17 @@ namespace pcs
             }
             set
             {
+                if (value <= 0)
+                {
+                    //Kill
+                }
+                if (value > MaxSleep)
+                {
+                    value = MaxSleep;
+                }
                 sleep = value;
-                
+                Game.instance.barSleep.Value = value;
+                Game.instance.barSleep.ProgressText = PCS.Loc.GetString("bar.sleep") + value + "/" + MaxSleep;
             }
         }
     }

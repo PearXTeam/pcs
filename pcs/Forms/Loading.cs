@@ -72,7 +72,7 @@ namespace pcs.Forms
                 //
                 SetVal(1, 2);
                 SetText(1, "Initing game...");
-                SetMax(2, 3);
+                SetMax(2, 4);
 
                 SetVal(2, 0);
                 SetText(2, "Unpacking default langs...");
@@ -111,6 +111,17 @@ namespace pcs.Forms
                 Game.instance.Text = PCS.Loc.GetString("title.game");
 
                 SetVal(2, 3);
+                SetText(2, "Setting up stats...");
+                Stats.MaxFood = 100;
+                Stats.MaxHealth = 100;
+                Stats.MaxMood = 100;
+                Stats.MaxSleep = 100;
+                Stats.Food = 100;
+                Stats.Health = 100;
+                Stats.Mood = 100;
+                Stats.Sleep = 100;
+
+                SetVal(2, 4);
                 SetVal(2, 0);
                 SetText(2, "");
                 //
