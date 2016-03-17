@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,6 +57,7 @@
     <Compile Include="Components\PCSLabel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Components\SToolIcon.cs" />
     <Compile Include="Crash.cs" />
     <Compile Include="EmbLangs\EmbLangs.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -88,11 +90,14 @@
     <Compile Include="Modding\PCSEvents.cs" />
     <Compile Include="Modding\PCSMod.cs" />
     <Compile Include="PCS.cs" />
+    <Compile Include="Player\PlayerVals.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registry.cs" />
+    <Compile Include="Setup.cs" />
     <Compile Include="Splashes.cs" />
-    <Compile Include="Stats.cs" />
+    <Compile Include="Player\Stats.cs" />
+    <Compile Include="ToolIcons\TISettings.cs" />
     <EmbeddedResource Include="EmbLangs\EmbLangs.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EmbLangs.Designer.cs</LastGenOutput>
@@ -142,6 +147,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PCSIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UndefinedToolIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

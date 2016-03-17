@@ -5,3 +5,11 @@ bar.food=Еда:
 bar.health=Здоровье: 
 bar.mood=Настроение: 
 bar.sleep=Сон: 
+
+#Label texts:
+lbl.money=Деньги: 
+lbl.xp=Опыт: 
+
+#Other
+other.currency=₽
+other.xp=XP

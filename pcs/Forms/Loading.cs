@@ -1,14 +1,9 @@
 ﻿using pcs.Modding;
 using PearXLib;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -29,7 +24,7 @@ namespace pcs.Forms
             new Thread(() =>
             {
                 Thread.Sleep(300);
-                SetMax(1, 5);
+                SetMax(1, 6);
                 //
                 //
                 SetVal(1, 0);
@@ -72,7 +67,7 @@ namespace pcs.Forms
                 //
                 SetVal(1, 2);
                 SetText(1, "Initing game...");
-                SetMax(2, 4);
+                SetMax(2, 6);
 
                 SetVal(2, 0);
                 SetText(2, "Unpacking default langs...");
@@ -107,21 +102,22 @@ namespace pcs.Forms
                 }
 
                 SetVal(2, 2);
-                SetText(2, "Setuping titles...");
-                Game.instance.Text = PCS.Loc.GetString("title.game");
+                SetText(2, "Initing random stuff...");
+                Setup.Init();
 
                 SetVal(2, 3);
-                SetText(2, "Setting up stats...");
-                Stats.MaxFood = 100;
-                Stats.MaxHealth = 100;
-                Stats.MaxMood = 100;
-                Stats.MaxSleep = 100;
-                Stats.Food = 100;
-                Stats.Health = 100;
-                Stats.Mood = 100;
-                Stats.Sleep = 100;
+                SetText(2, "Setuping titles...");
+                Setup.SetupTitles();
 
                 SetVal(2, 4);
+                SetText(2, "Registering...");
+                Setup.Register();
+
+                SetVal(2, 5);
+                SetText(2, "Setting up default values...");
+                Setup.SetupDefaults();
+
+                SetVal(2, 6);
                 SetVal(2, 0);
                 SetText(2, "");
                 //
@@ -142,6 +138,19 @@ namespace pcs.Forms
                 //
                 //
                 SetVal(1, 4);
+                SetText(1, "PostIniting game...");
+                SetMax(2, 1);
+
+                SetVal(2, 0);
+                SetText(2, "Initing icons...");
+                Setup.InitIcons();
+
+                SetVal(2, 1);
+                SetVal(2, 0);
+                SetText(2, "");
+                //
+                //
+                SetVal(1, 5);
                 SetText(1, "PostIniting mods...");
                 PCS.l.Add("Performing PostInit from mods...", LogType.Info);
                 SetMax(2, ModRegistry.Mods.Count);
@@ -156,7 +165,7 @@ namespace pcs.Forms
                 SetVal(2, 0);
                 //
                 //
-                SetVal(1, 5);
+                SetVal(1, 6);
                 SetText(1, "Done");
                 //
                 //

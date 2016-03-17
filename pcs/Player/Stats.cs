@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace pcs
+namespace pcs.Player
 {
     public class Stats
     {
