@@ -48,7 +48,12 @@ namespace pcs.Forms
             {
                 PCS.PreviousLocation = Location;
                 if (!CloseMe)
-                    Application.Exit();
+                    Environment.Exit(0);
+            }
+            else
+            {
+                e.Cancel = true;
+                Hide();
             }
         }
 

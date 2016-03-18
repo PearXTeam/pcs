@@ -16,6 +16,11 @@ namespace pcs.Modding
         /// <returns>Mod name</returns>
         string Name();
         /// <summary>
+        /// Mod author (ex. "SuperModCreator228").
+        /// </summary>
+        /// <returns>Mod author</returns>
+        string Author();
+        /// <summary>
         /// Mod ID. Use only English language symbols, numbers and _ (ex. "simplepcsmod").
         /// </summary>
         /// <returns>Mod ID</returns>

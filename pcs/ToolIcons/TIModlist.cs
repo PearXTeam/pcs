@@ -9,18 +9,18 @@ using pcs.Forms;
 
 namespace pcs.ToolIcons
 {
-    public class TISettings : SToolIcon
+    public class TIModlist : SToolIcon
     {
-        public static TISettings ins = new TISettings();
+        public static TIModlist ins = new TIModlist();
 
         public override Image GetIcon()
         {
-            return Resources.Settings;
+            return Resources.Puzzle;
         }
 
         public override void OnClick(object sender, EventArgs e)
         {
-            Options.instance.ShowDialog(Game.instance);
+            Modlist.instance.ShowDialog(Game.instance);
         }
     }
 }

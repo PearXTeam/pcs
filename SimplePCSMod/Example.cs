@@ -11,6 +11,11 @@ namespace SimplePCSMod
 {
     class Example : PCSMod
     {
+        public string Author()
+        {
+            return "ExampleCreator";
+        }
+
         public void Init()
         {
             PCS.l.Add("Your .NET version is " + Environment.Version, "EXAMPLE");

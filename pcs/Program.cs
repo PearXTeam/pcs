@@ -1,18 +1,15 @@
-﻿using pcs.Forms;
-using pcs.Modding;
-using PearXLib;
+﻿using PearXLib;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Globalization;
 using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
 using System.Windows.Forms;
 
 namespace pcs
 {
+    /*
+    1 minute = 500 ms
+    1 hour = 30 s (30000 ms)
+    1 day = 12 min (720000 ms)
+    */
     static class Program
     {
         /// <summary>

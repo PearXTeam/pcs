@@ -77,6 +77,12 @@
     <Compile Include="Forms\Loading.Designer.cs">
       <DependentUpon>Loading.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Modlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Modlist.Designer.cs">
+      <DependentUpon>Modlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PCSForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,12 @@
     </Compile>
     <Compile Include="Forms\SelectLang.Designer.cs">
       <DependentUpon>SelectLang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
     </Compile>
     <Compile Include="Modding\ModRegistry.cs" />
     <Compile Include="Modding\PCSEvents.cs" />
@@ -97,6 +109,7 @@
     <Compile Include="Setup.cs" />
     <Compile Include="Splashes.cs" />
     <Compile Include="Player\Stats.cs" />
+    <Compile Include="ToolIcons\TIModlist.cs" />
     <Compile Include="ToolIcons\TISettings.cs" />
     <EmbeddedResource Include="EmbLangs\EmbLangs.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,8 +121,14 @@
     <EmbeddedResource Include="Forms\Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Modlist.resx">
+      <DependentUpon>Modlist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SelectLang.resx">
       <DependentUpon>SelectLang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -153,6 +172,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Puzzle.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

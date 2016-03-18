@@ -1,4 +1,6 @@
 title.game=PCSimulator
+title.options=Настройки
+title.modlist=Список модов
 
 #Bar texts:
 bar.food=Еда: 
@@ -13,3 +15,9 @@ lbl.xp=Опыт:
 #Other
 other.currency=₽
 other.xp=XP
+
+#Modlist
+modlist.name=Название
+modlist.author=Автор
+modlist.version=Версия
+modlist.modid=ID
