@@ -63,6 +63,26 @@ namespace pcs.EmbLangs {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Byte[].
         /// </summary>
+        internal static byte[] en_US {
+            get {
+                object obj = ResourceManager.GetObject("en_US", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] en_US_inf {
+            get {
+                object obj = ResourceManager.GetObject("en_US_inf", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
         internal static byte[] ru_RU {
             get {
                 object obj = ResourceManager.GetObject("ru_RU", resourceCulture);

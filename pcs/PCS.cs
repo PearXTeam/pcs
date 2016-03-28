@@ -1,10 +1,13 @@
 ﻿using PearXLib;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using pcs.Forms;
 
 namespace pcs
 {
@@ -22,5 +25,12 @@ namespace pcs
         public static string SelectedLang;
 
         public static Point PreviousLocation = new Point((Screen.PrimaryScreen.WorkingArea.Width - 768) / 2, (Screen.PrimaryScreen.WorkingArea.Height - 512) / 2);
+
+        public static void Restart()
+        {
+            Game.instance.DontSave = true;
+            Process.Start("pcs.exe");
+            Game.instance.Close();
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace pcs.Forms
             InitializeComponent();
         }
 
-        private void Game_Load(object sender, System.EventArgs e)
+        private void Game_Load(object sender, EventArgs e)
         {
             timerFood.Start();
             timerSleep.Start();

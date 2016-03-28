@@ -32,6 +32,7 @@ namespace pcs
             Registry.RegisteredIcons.Add(TISettings.ins);
             Registry.RegisteredIcons.Add(TIModlist.ins);
             Registry.RegisteredIcons.Add(TISaveManager.ins);
+            Registry.RegisteredIcons.Add(TIAbout.ins);
         }
 
         public static void SetupTitles()
@@ -50,8 +51,15 @@ namespace pcs
             Modlist.instance.listViewMods.Columns.Add(PCS.Loc.GetString("modlist.modid"), 131);
 
             SaveManager.instance.buttonSave.Text = PCS.Loc.GetString("savemanager.add");
+            SaveManager.instance.buttonReset.Text = PCS.Loc.GetString("savemanager.reset");
 
             GameOver.instance.lblGameover.Text = PCS.Loc.GetString("gameover.gameover");
+
+            About.instance.Text = PCS.Loc.GetString("title.about");
+            About.instance.lblMsg.Text = PCS.Loc.GetString("about.msg");
+            About.instance.btnGithub.Text = PCS.Loc.GetString("about.github");
+            About.instance.btnWebsite.Text = PCS.Loc.GetString("about.website");
+            About.instance.btnDiscord.Text = PCS.Loc.GetString("about.discord");
         }
 
         public static void InitIcons()
@@ -68,6 +76,11 @@ namespace pcs
                 if (count == 0)
                     shift = 4;
                 xi.Location = new Point(4, (48 * count) + shift);
+
+                ToolTip tip = new ToolTip();
+                tip.SetToolTip(xi, sti.Desc());
+                tip.InitialDelay = 0;
+
                 Game.instance.panelToolIcons.Controls.Add(xi);
                 count++;
             }

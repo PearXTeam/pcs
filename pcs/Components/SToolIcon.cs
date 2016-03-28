@@ -18,5 +18,10 @@ namespace pcs.Components
         {
             
         }
+
+        public virtual string Desc()
+        {
+            return "I'm a ToolIcon ;)";
+        }
     }
 }

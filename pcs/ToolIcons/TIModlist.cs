@@ -22,5 +22,10 @@ namespace pcs.ToolIcons
         {
             Modlist.instance.ShowDialog(Game.instance);
         }
+
+        public override string Desc()
+        {
+            return PCS.Loc.GetString("title.modlist");
+        }
     }
 }

@@ -1,0 +1,39 @@
+title.game=PCSimulator
+title.options=Settings
+title.modlist=Modlist
+title.savemanager=Save Manager
+title.gameover=Game Over
+
+#Bar texts:
+bar.food=Food: 
+bar.health=Health: 
+bar.mood=Mood: 
+bar.sleep=Sleep: 
+
+#Label texts:
+lbl.money=Money: 
+lbl.xp=Exp: 
+
+#Other
+other.currency=$
+other.xp=XP
+
+#Modlist
+modlist.name=Name
+modlist.author=Author
+modlist.version=Version
+modlist.modid=ID
+
+#Options
+options.autosave=Autosave
+
+#Save Manager
+savemanager.add=New save
+savemanager.reset=Reset
+
+#Game Over
+gameover.deadby.hunger=You have been died by hunger.
+gameover.deadby.bore=You have been died by bore.
+gameover.deadby.lackofsleep=You have been died by a lack of sleep.
+gameover.deadby.illness=You have been died by illness.
+gameover.gameover=GAME OVER

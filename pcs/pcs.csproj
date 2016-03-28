@@ -67,6 +67,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EmbLangs.resx</DependentUpon>
     </Compile>
+    <Compile Include="Forms\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Game.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,12 +138,16 @@
     <Compile Include="Setup.cs" />
     <Compile Include="Splashes.cs" />
     <Compile Include="Player\Stats.cs" />
+    <Compile Include="ToolIcons\TIAbout.cs" />
     <Compile Include="ToolIcons\TIModlist.cs" />
     <Compile Include="ToolIcons\TISaveManager.cs" />
     <Compile Include="ToolIcons\TISettings.cs" />
     <EmbeddedResource Include="EmbLangs\EmbLangs.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EmbLangs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
@@ -173,6 +183,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="EmbLangs\en_US.langinfo" />
+    <None Include="EmbLangs\en_US.lang" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -211,6 +223,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Floppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

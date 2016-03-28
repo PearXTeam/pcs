@@ -3,6 +3,7 @@ title.options=Настройки
 title.modlist=Список модов
 title.savemanager=Менеджер сохранений
 title.gameover=Игра окончена
+title.about=Об игре
 
 #Bar texts:
 bar.food=Еда: 
@@ -29,6 +30,7 @@ options.autosave=Автосохранение
 
 #Save Manager
 savemanager.add=Новое сохранение
+savemanager.reset=Сброс
 
 #Game Over
 gameover.deadby.hunger=Вы умерли от голода.
@@ -36,3 +38,9 @@ gameover.deadby.bore=Вы умерли от скуки.
 gameover.deadby.lackofsleep=Вы умерли от недосыпа.
 gameover.deadby.illness=Вы умерли от нездоровья.
 gameover.gameover=ИГРА ОКОНЧЕНА
+
+#About
+about.msg= Мечтали ли вы начать жизнь с чистого листа? Отброс-&\nить груз прожитых лет и сделанных ошибок? Начните&\nсвою жизнь с самого начала и проживите ее так, как&\nхочется вам!&\n Игра написана одним человеком - mrAppleXZ'ом. Спас-&\nибо @Prototik'у за помощь с рефакторингом, спасибо&\n@Fareder'у за пару идей.
+about.github=GitHub
+about.website=Вебсайт
+about.discord=Discord

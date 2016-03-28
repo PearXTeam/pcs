@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
-using PearXLib;
+﻿using PearXLib;
 
 namespace pcs.Forms
 {
@@ -50,8 +48,7 @@ namespace pcs.Forms
 
         private void btnOK_Click(object sender, System.EventArgs e)
         {
-            Game.instance.DontSave = true;
-            Game.instance.Close();
+            PCS.Restart();
         }
     }
 }

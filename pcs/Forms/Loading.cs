@@ -74,6 +74,8 @@ namespace pcs.Forms
                 SetText(2, "Unpacking default langs...");
                 File.WriteAllBytes(PCS.PathLangs + "ru_RU.lang", EmbLangs.EmbLangs.ru_RU);
                 File.WriteAllBytes(PCS.PathLangs + "ru_RU.langinfo", EmbLangs.EmbLangs.ru_RU_inf);
+                File.WriteAllBytes(PCS.PathLangs + "en_US.lang", EmbLangs.EmbLangs.en_US);
+                File.WriteAllBytes(PCS.PathLangs + "en_US.langinfo", EmbLangs.EmbLangs.en_US_inf);
 
                 SetVal(2, 1);
                 SetText(2, "Selecting lang...");
