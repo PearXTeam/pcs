@@ -1,6 +1,8 @@
 title.game=PCSimulator
 title.options=Настройки
 title.modlist=Список модов
+title.savemanager=Менеджер сохранений
+title.gameover=Игра окончена
 
 #Bar texts:
 bar.food=Еда: 
@@ -21,3 +23,16 @@ modlist.name=Название
 modlist.author=Автор
 modlist.version=Версия
 modlist.modid=ID
+
+#Options
+options.autosave=Автосохранение
+
+#Save Manager
+savemanager.add=Новое сохранение
+
+#Game Over
+gameover.deadby.hunger=Вы умерли от голода.
+gameover.deadby.bore=Вы умерли от скуки.
+gameover.deadby.lackofsleep=Вы умерли от недосыпа.
+gameover.deadby.illness=Вы умерли от нездоровья.
+gameover.gameover=ИГРА ОКОНЧЕНА

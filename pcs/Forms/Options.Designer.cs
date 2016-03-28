@@ -28,19 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.checkAutosave = new pcs.Components.PCSCheckbox();
             this.SuspendLayout();
             // 
-            // Settings
+            // checkAutosave
+            // 
+            this.checkAutosave.ColorBGFocused = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.checkAutosave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.checkAutosave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            this.checkAutosave.Location = new System.Drawing.Point(12, 38);
+            this.checkAutosave.Name = "checkAutosave";
+            this.checkAutosave.Size = new System.Drawing.Size(160, 32);
+            this.checkAutosave.TabIndex = 0;
+            this.checkAutosave.Text = "pcsCheckbox1";
+            this.checkAutosave.CheckedChanged += new PearXLib.Engine.XCheckboxBase.CheckboxHandler(this.checkAutosave_CheckedChanged);
+            // 
+            // Options
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(286, 386);
-            this.Name = "Settings";
+            this.Controls.Add(this.checkAutosave);
+            this.Name = "Options";
             this.Text = "Settings";
+            this.Load += new System.EventHandler(this.Options_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        public Components.PCSCheckbox checkAutosave;
     }
 }

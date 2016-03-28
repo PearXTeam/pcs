@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
+﻿using pcs.Player;
 
 namespace pcs.Forms
 {
@@ -16,6 +9,18 @@ namespace pcs.Forms
         public Options()
         {
             InitializeComponent();
+        }
+
+
+
+        private void checkAutosave_CheckedChanged(object sender, bool isChecked)
+        {
+            SettingVals.AutoSave = isChecked;
+        }
+
+        private void Options_Load(object sender, System.EventArgs e)
+        {
+            checkAutosave.Checked = SettingVals.AutoSave;
         }
     }
 }

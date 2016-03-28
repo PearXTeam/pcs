@@ -1,4 +1,5 @@
 ﻿using pcs.Modding;
+using pcs.Player;
 using PearXLib;
 using System;
 using System.Drawing;
@@ -24,7 +25,7 @@ namespace pcs.Forms
             new Thread(() =>
             {
                 Thread.Sleep(300);
-                SetMax(1, 6);
+                SetMax(1, 7);
                 //
                 //
                 SetVal(1, 0);
@@ -166,6 +167,22 @@ namespace pcs.Forms
                 //
                 //
                 SetVal(1, 6);
+                SetText(1, "Loading game...");
+                SetMax(2, 2);
+
+                SetText(2, "Loading settings...");
+                SL.LoadSettings();
+                SetVal(2, 1);
+
+                SetText(2, "Loading savefile...");
+                SL.Load("autosave");
+                SetVal(2, 2);
+
+                SetVal(2, 0);
+                SetText(2, "");
+                //
+                //
+                SetVal(1, 7);
                 SetText(1, "Done");
                 //
                 //

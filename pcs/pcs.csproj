@@ -54,6 +54,9 @@
     <Compile Include="Components\PCSBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Components\PCSCheckbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Components\PCSLabel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -70,6 +73,12 @@
     <Compile Include="Forms\Game.Designer.cs">
       <DependentUpon>Game.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\GameOver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GameOver.Designer.cs">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\IMain.cs" />
     <Compile Include="Forms\Loading.cs">
       <SubType>Form</SubType>
@@ -85,6 +94,18 @@
     </Compile>
     <Compile Include="Forms\PCSForm.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PCSInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PCSInputForm.Designer.cs">
+      <DependentUpon>PCSInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SaveManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SaveManager.Designer.cs">
+      <DependentUpon>SaveManager.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SelectLang.cs">
       <SubType>Form</SubType>
@@ -103,6 +124,8 @@
     <Compile Include="Modding\PCSMod.cs" />
     <Compile Include="PCS.cs" />
     <Compile Include="Player\PlayerVals.cs" />
+    <Compile Include="Player\SettingVals.cs" />
+    <Compile Include="Player\SL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registry.cs" />
@@ -110,6 +133,7 @@
     <Compile Include="Splashes.cs" />
     <Compile Include="Player\Stats.cs" />
     <Compile Include="ToolIcons\TIModlist.cs" />
+    <Compile Include="ToolIcons\TISaveManager.cs" />
     <Compile Include="ToolIcons\TISettings.cs" />
     <EmbeddedResource Include="EmbLangs\EmbLangs.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -118,11 +142,20 @@
     <EmbeddedResource Include="Forms\Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GameOver.resx">
+      <DependentUpon>GameOver.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Modlist.resx">
       <DependentUpon>Modlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PCSInputForm.resx">
+      <DependentUpon>PCSInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SaveManager.resx">
+      <DependentUpon>SaveManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SelectLang.resx">
       <DependentUpon>SelectLang.cs</DependentUpon>
@@ -175,6 +208,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Puzzle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Floppy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

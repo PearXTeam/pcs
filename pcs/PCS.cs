@@ -15,6 +15,7 @@ namespace pcs
         public static string PathCrashes = Path + "crash-reports/";
         public static string PathMods = Path + "mods/";
         public static string PathLangs = Path + "lang/";
+        public static string PathSaves = Path + "saves/";
 
         public static Logging l = new Logging(Path + "logs/" + PXL.GetDateTimeNow() + ".log");
         public static Localization Loc;

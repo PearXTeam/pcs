@@ -116,7 +116,7 @@ namespace pcs.Player
             {
                 if (value <= 0)
                 {
-                    //Kill
+                    GameOver.instance.Kill(DeadBy.Hunger);
                 }
                 if (value > MaxFood)
                 {
@@ -138,7 +138,7 @@ namespace pcs.Player
             {
                 if(value <= 0)
                 {
-                    //Kill
+                    GameOver.instance.Kill(DeadBy.Illness);
                 }
                 if(value > MaxHealth)
                 {
@@ -160,7 +160,7 @@ namespace pcs.Player
             {
                 if (value <= 0)
                 {
-                    //Kill
+                    GameOver.instance.Kill(DeadBy.Bore);
                 }
                 if (value > MaxMood)
                 {
@@ -182,7 +182,7 @@ namespace pcs.Player
             {
                 if (value <= 0)
                 {
-                    //Kill
+                    GameOver.instance.Kill(DeadBy.LackOfSleep);
                 }
                 if (value > MaxSleep)
                 {

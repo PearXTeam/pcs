@@ -6,9 +6,9 @@ using System.Windows.Forms;
 namespace pcs
 {
     /*
-    1 minute = 500 ms
-    1 hour = 30 s (30000 ms)
-    1 day = 12 min (720000 ms)
+    1 minute = 250 ms
+    1 hour = 15 s (15.000 ms)
+    1 day = 6 min (360.000 ms)
     */
     static class Program
     {
@@ -29,6 +29,7 @@ namespace pcs
             Directory.CreateDirectory(PCS.PathCrashes);
             Directory.CreateDirectory(PCS.PathMods);
             Directory.CreateDirectory(PCS.PathLangs);
+            Directory.CreateDirectory(PCS.PathSaves);
 
             Application.Run(Background.instance);
         }

@@ -4,9 +4,9 @@ using pcs.Modding;
 using pcs.Player;
 using pcs.ToolIcons;
 using PearXLib.Engine;
-using System;
 using System.Drawing;
 using System.Windows.Forms;
+using PearXLib;
 
 namespace pcs
 {
@@ -31,6 +31,7 @@ namespace pcs
         {
             Registry.RegisteredIcons.Add(TISettings.ins);
             Registry.RegisteredIcons.Add(TIModlist.ins);
+            Registry.RegisteredIcons.Add(TISaveManager.ins);
         }
 
         public static void SetupTitles()
@@ -38,6 +39,19 @@ namespace pcs
             Game.instance.Text = PCS.Loc.GetString("title.game");
             Options.instance.Text = PCS.Loc.GetString("title.options");
             Modlist.instance.Text = PCS.Loc.GetString("title.modlist");
+            SaveManager.instance.Text = PCS.Loc.GetString("title.savemanager");
+            GameOver.instance.Text = PCS.Loc.GetString("title.gameover");
+
+            Options.instance.checkAutosave.Text = PCS.Loc.GetString("options.autosave");
+
+            Modlist.instance.listViewMods.Columns.Add(PCS.Loc.GetString("modlist.name"), 131);
+            Modlist.instance.listViewMods.Columns.Add(PCS.Loc.GetString("modlist.author"), 131);
+            Modlist.instance.listViewMods.Columns.Add(PCS.Loc.GetString("modlist.version"), 131);
+            Modlist.instance.listViewMods.Columns.Add(PCS.Loc.GetString("modlist.modid"), 131);
+
+            SaveManager.instance.buttonSave.Text = PCS.Loc.GetString("savemanager.add");
+
+            GameOver.instance.lblGameover.Text = PCS.Loc.GetString("gameover.gameover");
         }
 
         public static void InitIcons()
@@ -46,7 +60,6 @@ namespace pcs
             foreach(SToolIcon sti in Registry.RegisteredIcons)
             {
                 XIcon xi = new XIcon();
-                xi.PlaySound = false;
                 xi.Expand = 4;
                 xi.Size = new Size(40, 40);
                 xi.Click += sti.OnClick;
@@ -63,15 +76,18 @@ namespace pcs
         public static void Init()
         {
             Game.instance.panelToolIcons.Size = new Size(48 + SystemInformation.VerticalScrollBarWidth, 344);
-            Modlist.instance.listViewMods.Columns.Add(PCS.Loc.GetString("modlist.name"), 131);
-            Modlist.instance.listViewMods.Columns.Add(PCS.Loc.GetString("modlist.author"), 131);
-            Modlist.instance.listViewMods.Columns.Add(PCS.Loc.GetString("modlist.version"), 131);
-            Modlist.instance.listViewMods.Columns.Add(PCS.Loc.GetString("modlist.modid"), 131);
 
             foreach(PCSMod m in ModRegistry.Mods)
             {
                 Modlist.instance.listViewMods.Items.Add(new ListViewItem(new string[] { m.Name(), m.Author(), m.Version(), m.ModID()}));
             }
+
+            Game.instance.timerFood.Interval = 3600;
+            Game.instance.timerMood.Interval = 22000;
+            Game.instance.timerSleep.Interval = 3300;
+            Game.instance.timerAutosave.Interval = 50000;
+
+           
         }
     }
 }

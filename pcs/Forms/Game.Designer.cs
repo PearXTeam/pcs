@@ -108,7 +108,6 @@
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 512);
             this.Controls.Add(this.panelToolIcons);
             this.Controls.Add(this.lblXP);
@@ -118,6 +117,8 @@
             this.Controls.Add(this.barMood);
             this.Controls.Add(this.barFood);
             this.Name = "Game";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
+            this.Load += new System.EventHandler(this.Game_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
