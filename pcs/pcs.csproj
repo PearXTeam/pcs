@@ -35,6 +35,9 @@
     <ApplicationIcon>Resources\PCSIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>.\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
@@ -51,6 +54,10 @@
     <Compile Include="Background.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Components\Achievement.cs" />
+    <Compile Include="Components\AchievementListElement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Components\PCSBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -60,6 +67,8 @@
     <Compile Include="Components\PCSLabel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Components\SaveElement.cs" />
+    <Compile Include="Components\SaveElementStruct.cs" />
     <Compile Include="Components\SToolIcon.cs" />
     <Compile Include="Crash.cs" />
     <Compile Include="EmbLangs\EmbLangs.Designer.cs">
@@ -72,6 +81,12 @@
     </Compile>
     <Compile Include="Forms\About.Designer.cs">
       <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AchievementList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AchievementList.Designer.cs">
+      <DependentUpon>AchievementList.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Game.cs">
       <SubType>Form</SubType>
@@ -125,10 +140,12 @@
     <Compile Include="Forms\Options.Designer.cs">
       <DependentUpon>Options.cs</DependentUpon>
     </Compile>
+    <Compile Include="Init\PCSAchievements.cs" />
     <Compile Include="Modding\ModRegistry.cs" />
     <Compile Include="Modding\PCSEvents.cs" />
     <Compile Include="Modding\PCSMod.cs" />
     <Compile Include="PCS.cs" />
+    <Compile Include="PCSImages.cs" />
     <Compile Include="Player\PlayerVals.cs" />
     <Compile Include="Player\SettingVals.cs" />
     <Compile Include="Player\SL.cs" />
@@ -139,6 +156,7 @@
     <Compile Include="Splashes.cs" />
     <Compile Include="Player\Stats.cs" />
     <Compile Include="ToolIcons\TIAbout.cs" />
+    <Compile Include="ToolIcons\TIAchievements.cs" />
     <Compile Include="ToolIcons\TIModlist.cs" />
     <Compile Include="ToolIcons\TISaveManager.cs" />
     <Compile Include="ToolIcons\TISettings.cs" />
@@ -148,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\About.resx">
       <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AchievementList.resx">
+      <DependentUpon>AchievementList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
@@ -174,7 +195,7 @@
       <DependentUpon>Options.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -226,6 +247,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\About.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trophy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

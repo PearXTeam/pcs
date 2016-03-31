@@ -1,12 +1,14 @@
-﻿using pcs.Components;
+﻿using System;
+using pcs.Components;
 using pcs.Forms;
 using pcs.Modding;
 using pcs.Player;
 using pcs.ToolIcons;
 using PearXLib.Engine;
 using System.Drawing;
+using System.Numerics;
 using System.Windows.Forms;
-using PearXLib;
+using pcs.Init;
 
 namespace pcs
 {
@@ -33,6 +35,45 @@ namespace pcs
             Registry.RegisteredIcons.Add(TIModlist.ins);
             Registry.RegisteredIcons.Add(TISaveManager.ins);
             Registry.RegisteredIcons.Add(TIAbout.ins);
+            Registry.RegisteredIcons.Add(TIAchievements.ins);
+
+
+            Registry.RegisteredAchievements.Add(PCSAchievements.Lie);
+
+
+            Registry.RegisteredSaves.Add(new SaveElement("PCS_MaxFood", 
+                (name, value) => { Stats.MaxFood = Convert.ToInt32(value); }, 
+                (string name, out string value) => { value = Stats.MaxFood.ToString(); }));
+            Registry.RegisteredSaves.Add(new SaveElement("PCS_MaxHealth",
+                (name, value) => { Stats.MaxHealth = Convert.ToInt32(value); },
+                (string name, out string value) => { value = Stats.MaxHealth.ToString(); }));
+            Registry.RegisteredSaves.Add(new SaveElement("PCS_MaxMood",
+                (name, value) => { Stats.MaxMood = Convert.ToInt32(value); },
+                (string name, out string value) => { value = Stats.MaxMood.ToString(); }));
+            Registry.RegisteredSaves.Add(new SaveElement("PCS_MaxSleep",
+                (name, value) => { Stats.MaxSleep = Convert.ToInt32(value); },
+                (string name, out string value) => { value = Stats.MaxSleep.ToString(); }));
+
+
+            Registry.RegisteredSaves.Add(new SaveElement("PCS_Food",
+                (name, value) => { Stats.Food = Convert.ToInt32(value); },
+                (string name, out string value) => { value = Stats.Food.ToString(); }));
+            Registry.RegisteredSaves.Add(new SaveElement("PCS_Health",
+                (name, value) => { Stats.Health = Convert.ToInt32(value); },
+                (string name, out string value) => { value = Stats.Health.ToString(); }));
+            Registry.RegisteredSaves.Add(new SaveElement("PCS_Mood",
+                (name, value) => { Stats.Mood = Convert.ToInt32(value); },
+                (string name, out string value) => { value = Stats.Mood.ToString(); }));
+            Registry.RegisteredSaves.Add(new SaveElement("PCS_Sleep",
+                (name, value) => { Stats.Sleep = Convert.ToInt32(value); },
+                (string name, out string value) => { value = Stats.Sleep.ToString(); }));
+
+            Registry.RegisteredSaves.Add(new SaveElement("PCS_Money",
+                (name, value) => { PlayerVals.Money = BigInteger.Parse(value); },
+                (string name, out string value) => { value = PlayerVals.Money.ToString(); }));
+            Registry.RegisteredSaves.Add(new SaveElement("PCS_XP",
+                (name, value) => { PlayerVals.XP = BigInteger.Parse(value); },
+                (string name, out string value) => { value = PlayerVals.XP.ToString(); }));
         }
 
         public static void SetupTitles()
@@ -60,6 +101,8 @@ namespace pcs
             About.instance.btnGithub.Text = PCS.Loc.GetString("about.github");
             About.instance.btnWebsite.Text = PCS.Loc.GetString("about.website");
             About.instance.btnDiscord.Text = PCS.Loc.GetString("about.discord");
+
+            AchievementList.instance.Text = PCS.Loc.GetString("title.achievements");
         }
 
         public static void InitIcons()
@@ -101,6 +144,20 @@ namespace pcs
             Game.instance.timerAutosave.Interval = 50000;
 
            
+        }
+
+        public static void InitAchievements()
+        {
+            int i = 0;
+            foreach (Achievement ach in Registry.RegisteredAchievements)
+            {
+                AchievementListElement itm = new AchievementListElement();
+                itm.Location = new Point(0, 137 * i);
+                itm.ItemImage = ach.Icon();
+                itm.ItemName = ach.Name();
+                itm.ItemDesc = ach.Desc();
+                AchievementList.instance.panelAchievements.Controls.Add(itm);
+            }
         }
     }
 }

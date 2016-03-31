@@ -11,7 +11,7 @@ namespace pcs.Components
     {
         public virtual Image GetIcon()
         {
-            return Resources.UndefinedToolIcon;
+            return PCSImages.UndefinedToolIcon;
         }
         
         public virtual void OnClick(object sender, EventArgs e)

@@ -12,7 +12,7 @@ namespace pcs.ToolIcons
 
         public override Image GetIcon()
         {
-            return Resources.About;
+            return PCSImages.About;
         }
 
         public override string Desc()

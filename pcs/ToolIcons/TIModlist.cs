@@ -15,7 +15,7 @@ namespace pcs.ToolIcons
 
         public override Image GetIcon()
         {
-            return Resources.Puzzle;
+            return PCSImages.Puzzle;
         }
 
         public override void OnClick(object sender, EventArgs e)

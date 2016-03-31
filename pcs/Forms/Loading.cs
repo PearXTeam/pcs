@@ -142,13 +142,17 @@ namespace pcs.Forms
                 //
                 SetVal(1, 4);
                 SetText(1, "PostIniting game...");
-                SetMax(2, 1);
+                SetMax(2, 2);
 
                 SetVal(2, 0);
                 SetText(2, "Initing icons...");
                 Setup.InitIcons();
 
                 SetVal(2, 1);
+                SetText(2, "Initing achievements...");
+                Setup.InitAchievements();
+
+                SetVal(2, 2);
                 SetVal(2, 0);
                 SetText(2, "");
                 //
