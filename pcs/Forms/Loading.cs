@@ -87,7 +87,7 @@ namespace pcs.Forms
                     if (File.Exists(PCS.PathLangs + s + ".lang") && File.Exists(PCS.PathLangs + s + ".langinfo"))
                     {
                         PCS.SelectedLang = s;
-                        PCS.Loc = new Localization(PCS.PathLangs, PCS.SelectedLang);
+                        PCS.Loc = new Localization(PCS.PathLangs, PCS.SelectedLang, "ru_RU");
                     }
                     else
                         notex = true;
@@ -157,22 +157,9 @@ namespace pcs.Forms
                 SetText(2, "");
                 //
                 //
+                //
+                //
                 SetVal(1, 5);
-                SetText(1, "PostIniting mods...");
-                PCS.l.Add("Performing PostInit from mods...", LogType.Info);
-                SetMax(2, ModRegistry.Mods.Count);
-                foreach (PCSMod m in ModRegistry.Mods)
-                {
-                    SetVal(2, bar2.Value + 1);
-                    SetText(2, "PostIniting " + m.Name());
-                    PCS.l.Add("PostIniting \"" + m.ModID() + "\"", LogType.Info);
-                    m.PostInit();
-                }
-                SetText(2, "");
-                SetVal(2, 0);
-                //
-                //
-                SetVal(1, 6);
                 SetText(1, "Loading game...");
                 SetMax(2, 2);
 
@@ -186,6 +173,21 @@ namespace pcs.Forms
 
                 SetVal(2, 0);
                 SetText(2, "");
+                //
+                //
+                SetVal(1, 6);
+                SetText(1, "PostIniting mods...");
+                PCS.l.Add("Performing PostInit from mods...", LogType.Info);
+                SetMax(2, ModRegistry.Mods.Count);
+                foreach (PCSMod m in ModRegistry.Mods)
+                {
+                    SetVal(2, bar2.Value + 1);
+                    SetText(2, "PostIniting " + m.Name());
+                    PCS.l.Add("PostIniting \"" + m.ModID() + "\"", LogType.Info);
+                    m.PostInit();
+                }
+                SetText(2, "");
+                SetVal(2, 0);
                 //
                 //
                 SetVal(1, 7);

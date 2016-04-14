@@ -1,5 +1,6 @@
 ﻿
 using System.Drawing;
+using pcs.Player;
 
 namespace pcs.Components
 {
@@ -7,7 +8,7 @@ namespace pcs.Components
     {
         private string _Name = "Simple Achievement";
         private string _Desc = "This is a simple achievement!";
-        private Image _Icon = PCSImages.Trophy;
+        private Image _Icon = PCSImages.TrophyBig;
         private long _GiveXP;
         private string _ID = "PSC_SimpleAchievement";
 
@@ -21,6 +22,8 @@ namespace pcs.Components
             _GiveXP = givexp;
             _ID = id;
         }
+
+        public bool Unlocked { get; set; }
 
         public virtual string Name()
         {
@@ -51,5 +54,35 @@ namespace pcs.Components
         {
             PCS.l.Add("Unlocked" + ID() + "achievement!");
         }
+
+        public static void Unlock(string id)
+        {
+            foreach (Achievement ach in Registry.RegisteredAchievements)
+            {
+                if (ach.ID() == id)
+                {
+                    if (!ach.Unlocked)
+                    {
+                        ach.Unlocked = true;
+                        ach.OnUnlock();
+                        PlayerVals.XP += ach.GiveXP();
+                    }
+                    return;
+                }
+            }
+        }
+
+        public static Achievement GetAchievement(string id)
+        {
+            foreach (Achievement ach in Registry.RegisteredAchievements)
+            {
+                if (ach.ID() == id)
+                {
+                    return ach;
+                }
+            }
+            return null;
+        }
+
     }
 }

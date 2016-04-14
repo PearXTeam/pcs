@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using pcs.Components;
 using pcs.Player;
 using PearXLib.Engine.Flat;
 
@@ -59,7 +60,7 @@ namespace pcs.Forms
         private void buttonSave_Click(object sender, EventArgs e)
         {
             PCSInputForm f = new PCSInputForm();
-            f.ShowDialog(Game.instance);
+            f.ShowDialog(this);
             SL.Save(f.Inputed);
             GetButtons();
         }

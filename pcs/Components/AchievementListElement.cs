@@ -16,5 +16,7 @@ namespace pcs.Components
             ShowAmount = false;
             ColorDesc = Color.FromArgb(52, 152, 219);
         }
+
+        public string AssociatedAchievement { get; set; }
     }
 }

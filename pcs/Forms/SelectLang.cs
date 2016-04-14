@@ -22,7 +22,7 @@ namespace pcs.Forms
         private void lbSelectLang_LanguageSelected(object sender, LangEventArgs e)
         {
             PCS.SelectedLang = e.SelectedLang;
-            PCS.Loc = new Localization(PCS.PathLangs, PCS.SelectedLang);
+            PCS.Loc = new Localization(PCS.PathLangs, PCS.SelectedLang, "ru_RU");
             Close();
         }
     }

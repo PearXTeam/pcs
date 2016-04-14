@@ -43,7 +43,7 @@ namespace pcs.Forms
             }
             lblKilledby.Location = PXL.GetControlCenterPoint(this, lblKilledby);
             lblGameover.Location = PXL.GetControlCenterPoint(this, lblGameover);
-            ShowDialog();
+            ShowDialog(Game.instance);
         }
 
         private void btnOK_Click(object sender, System.EventArgs e)

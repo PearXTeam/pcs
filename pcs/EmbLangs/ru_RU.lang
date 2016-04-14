@@ -17,8 +17,12 @@ lbl.money=Деньги:
 lbl.xp=Опыт: 
 
 #Other
-other.currency=₽
+other.currency=P
 other.xp=XP
+other.info=ИНФО
+other.error=ОШИБКА
+other.warning=ПРЕДУПР
+other.other=ПРОЧ
 
 #Modlist
 modlist.name=Название
@@ -45,3 +49,14 @@ about.msg= Мечтали ли вы начать жизнь с чистого л
 about.github=GitHub
 about.website=Вебсайт
 about.discord=Discord
+
+#Commands
+command.notfound=Команда не найдена! /help - список команд.
+
+command.restore.all=Все статы были успешно восстановлены!
+
+command.help.avaible=Доступны следующие команды: 
+
+command.set.incorrectusage=Использование команды: /set <money|xp|food|sleep|health|mood|mfood|msleep|mhealth|mmood> <значение>
+command.set.nan=Аргумент 2 не является допустимым числом.
+command.set.successfully=Переменная успешно установлена в 

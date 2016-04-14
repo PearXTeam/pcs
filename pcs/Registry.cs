@@ -10,5 +10,7 @@ namespace pcs
         public static List<Achievement> RegisteredAchievements = new List<Achievement>();
 
         public static List<SaveElement> RegisteredSaves = new List<SaveElement>();
+
+        public static List<Command> RegisteredCommands = new List<Command>(); 
     }
 }

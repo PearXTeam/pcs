@@ -8,6 +8,7 @@ using PearXLib.Engine;
 using System.Drawing;
 using System.Numerics;
 using System.Windows.Forms;
+using pcs.Commands;
 using pcs.Init;
 
 namespace pcs
@@ -39,6 +40,11 @@ namespace pcs
 
 
             Registry.RegisteredAchievements.Add(PCSAchievements.Lie);
+
+
+            Registry.RegisteredCommands.Add(PCSCommands.Restore);
+            Registry.RegisteredCommands.Add(PCSCommands.Help);
+            Registry.RegisteredCommands.Add(PCSCommands.Set);
 
 
             Registry.RegisteredSaves.Add(new SaveElement("PCS_MaxFood", 
@@ -151,12 +157,20 @@ namespace pcs
             int i = 0;
             foreach (Achievement ach in Registry.RegisteredAchievements)
             {
+                //Control reg:
                 AchievementListElement itm = new AchievementListElement();
                 itm.Location = new Point(0, 137 * i);
                 itm.ItemImage = ach.Icon();
                 itm.ItemName = ach.Name();
                 itm.ItemDesc = ach.Desc();
+                itm.AssociatedAchievement = ach.ID();
                 AchievementList.instance.panelAchievements.Controls.Add(itm);
+
+                //Saves reg:
+                Registry.RegisteredSaves.Add(new SaveElement("Achievement:" + ach.ID(), 
+                    (name, value) => { ach.Unlocked = Convert.ToBoolean(value); },
+                    (string name, out string value) => { value = ach.Unlocked.ToString(); }
+                    ));
             }
         }
     }

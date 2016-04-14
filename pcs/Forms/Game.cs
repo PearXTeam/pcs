@@ -46,5 +46,18 @@ namespace pcs.Forms
                 SL.Save("autosave");
             }
         }
+
+        private void Game_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.C)
+            {
+                ConsoleForm.instance.Show(this);
+            }
+        }
+
+        private void Game_Move(object sender, EventArgs e)
+        {
+            ConsoleForm.instance.Location = (Location + Size) - ConsoleForm.instance.Size;
+        }
     }
 }

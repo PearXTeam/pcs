@@ -15,5 +15,6 @@ namespace pcs
         public static Image Settings = Resources.Settings;
         public static Image UndefinedToolIcon = Resources.UndefinedToolIcon;
         public static Image Trophy = Resources.Trophy;
+        public static Image TrophyBig = Resources.TrophyBig;
     }
 }

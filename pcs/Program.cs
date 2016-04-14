@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using System.Windows.Forms;
+using pcs.Forms;
 
 namespace pcs
 {
@@ -13,7 +14,7 @@ namespace pcs
     static class Program
     {
         /// <summary>
-        /// Главная точка входа для приложения.
+        /// Enter \/
         /// </summary>
         [STAThread]
         static void Main()

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using PearXLib;
 
 namespace pcs.Forms
 {
@@ -50,11 +51,6 @@ namespace pcs.Forms
                 if (!CloseMe)
                     Environment.Exit(0);
             }
-            else
-            {
-                e.Cancel = true;
-                Hide();
-            }
         }
 
         protected override void OnShown(EventArgs e)
@@ -63,12 +59,8 @@ namespace pcs.Forms
             {
                 Location = PCS.PreviousLocation;
             }
+            PCS.l.Add("Opened " + GetType().FullName + " form.", LogType.Info);
             base.OnShown(e);
-        }
-
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
         }
 
         protected void ShowNew(Form newForm)

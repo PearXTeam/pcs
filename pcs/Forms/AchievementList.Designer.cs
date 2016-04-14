@@ -34,9 +34,9 @@
             // panelAchievements
             // 
             this.panelAchievements.Font = new System.Drawing.Font("Corbel", 8.25F);
-            this.panelAchievements.Location = new System.Drawing.Point(1, 33);
+            this.panelAchievements.Location = new System.Drawing.Point(1, 38);
             this.panelAchievements.Name = "panelAchievements";
-            this.panelAchievements.Size = new System.Drawing.Size(411, 418);
+            this.panelAchievements.Size = new System.Drawing.Size(411, 413);
             this.panelAchievements.TabIndex = 0;
             // 
             // AchievementList
@@ -46,6 +46,7 @@
             this.ClientSize = new System.Drawing.Size(413, 452);
             this.Controls.Add(this.panelAchievements);
             this.Name = "AchievementList";
+            this.Shown += new System.EventHandler(this.AchievementList_Shown);
             this.ResumeLayout(false);
 
         }
