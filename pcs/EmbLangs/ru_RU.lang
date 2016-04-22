@@ -23,6 +23,8 @@ other.info=ИНФО
 other.error=ОШИБКА
 other.warning=ПРЕДУПР
 other.other=ПРОЧ
+other.yes=Да
+other.no=Нет
 
 #Modlist
 modlist.name=Название
@@ -36,6 +38,8 @@ options.autosave=Автосохранение
 #Save Manager
 savemanager.add=Новое сохранение
 savemanager.reset=Сброс
+savemanager.reset.title=Сбросить?
+savemanager.reset.text=Вы собираетесь сбросить&\nигру. Это нельзя будет отме-&\nнить! Продолжить?
 
 #Game Over
 gameover.deadby.hunger=Вы умерли от голода.
@@ -60,3 +64,7 @@ command.help.avaible=Доступны следующие команды:
 command.set.incorrectusage=Использование команды: /set <money|xp|food|sleep|health|mood|mfood|msleep|mhealth|mmood> <значение>
 command.set.nan=Аргумент 2 не является допустимым числом.
 command.set.successfully=Переменная успешно установлена в 
+
+#Achievements
+achievement.coder=Кодер?
+achievement.coder.desc=Вы - кодер?

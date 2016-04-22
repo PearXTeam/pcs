@@ -1,5 +1,6 @@
 ﻿namespace pcs.Forms
 {
+
     partial class SaveManager
     {
         /// <summary>
@@ -29,8 +30,8 @@
         private void InitializeComponent()
         {
             this.panelSaves = new System.Windows.Forms.Panel();
-            this.buttonSave = new PearXLib.Engine.Flat.FlatButton();
-            this.buttonReset = new PearXLib.Engine.Flat.FlatButton();
+            this.buttonSave = new pcs.Components.PCSButton();
+            this.buttonReset = new pcs.Components.PCSButton();
             this.SuspendLayout();
             // 
             // panelSaves
@@ -69,8 +70,6 @@
             // 
             // SaveManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(375, 418);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.buttonSave);
@@ -85,7 +84,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panelSaves;
-        public PearXLib.Engine.Flat.FlatButton buttonSave;
-        public PearXLib.Engine.Flat.FlatButton buttonReset;
+        public pcs.Components.PCSButton buttonSave;
+        public pcs.Components.PCSButton buttonReset;
     }
 }

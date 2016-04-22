@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 using pcs.Components;
 using PearXLib;
@@ -17,7 +18,8 @@ namespace pcs.Forms
 
         private void ConsoleForm_Shown(object sender, EventArgs e)
         {
-            Location = Game.instance.Location + Game.instance.Size - Size;
+            Rectangle rect = Screen.PrimaryScreen.Bounds;
+            Location = new Point(rect.Width - Width, rect.Height - Height);
         }
 
         protected override void OnClosing(CancelEventArgs e)

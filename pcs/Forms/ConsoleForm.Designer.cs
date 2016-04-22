@@ -64,14 +64,11 @@
             // 
             // ConsoleForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CanMove = false;
             this.ClientSize = new System.Drawing.Size(433, 245);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.boxCommand);
             this.Name = "ConsoleForm";
-            this.Opacity = 0.9D;
             this.PanelBG = System.Drawing.Color.Transparent;
             this.Shown += new System.EventHandler(this.ConsoleForm_Shown);
             this.panel.ResumeLayout(false);

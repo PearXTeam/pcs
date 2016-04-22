@@ -66,7 +66,13 @@
     <Compile Include="Components\PCSBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Components\PCSButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Components\PCSCheckbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\PCSInvItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\PCSLabel.cs">
@@ -175,38 +181,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EmbLangs.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\About.resx">
-      <DependentUpon>About.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\AchievementList.resx">
-      <DependentUpon>AchievementList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ConsoleForm.resx">
-      <DependentUpon>ConsoleForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\GameOver.resx">
-      <DependentUpon>GameOver.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Loading.resx">
-      <DependentUpon>Loading.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Modlist.resx">
-      <DependentUpon>Modlist.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PCSInputForm.resx">
-      <DependentUpon>PCSInputForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SaveManager.resx">
-      <DependentUpon>SaveManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SelectLang.resx">
-      <DependentUpon>SelectLang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Options.resx">
-      <DependentUpon>Options.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -267,6 +243,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\TrophyBig.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Code.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

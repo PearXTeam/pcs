@@ -43,6 +43,7 @@ namespace pcs.Components
             }
             ConsoleForm.instance.lblText.Text += s + msg + "\n";
             ConsoleForm.instance.panel.VerticalScroll.Value = ConsoleForm.instance.panel.VerticalScroll.Maximum;
+            ConsoleForm.instance.Refresh();
         }
     }
 }

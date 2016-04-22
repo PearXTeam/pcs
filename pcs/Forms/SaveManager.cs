@@ -10,6 +10,7 @@ using System.Text;
 using System.Windows.Forms;
 using pcs.Components;
 using pcs.Player;
+using PearXLib.Engine;
 using PearXLib.Engine.Flat;
 
 namespace pcs.Forms
@@ -34,14 +35,14 @@ namespace pcs.Forms
             foreach (string s in Directory.GetFiles(PCS.PathSaves))
             {
                 string we = Path.GetFileNameWithoutExtension(s);
-                FlatButton b = new FlatButton();
+                PCSButton b = new PCSButton();
                 b.Text = we;
                 b.Location = new Point(5, 64 * i + 3 * i);
                 b.Size = new Size(256, 64);
                 b.Click += (o, args) => { SL.Load(we); };
                 panelSaves.Controls.Add(b);
 
-                FlatButton bdel = new FlatButton();
+                PCSButton bdel = new PCSButton();
                 bdel.Text = "X";
                 bdel.Color = Color.FromArgb(192, 57, 43);
                 bdel.ColorFocused = Color.FromArgb(231, 76, 60);
@@ -67,8 +68,13 @@ namespace pcs.Forms
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            File.Delete(PCS.PathSaves + "autosave.pcs");
-            PCS.Restart();
+            FlatDialog d = new FlatDialog(XDialogButtons.YesNo, PCS.Loc.GetString("other.yes"), PCS.Loc.GetString("other.no")) { Message = PCS.Loc.GetString("savemanager.reset.text"), Text = PCS.Loc.GetString("savemanager.reset.title"), Icon = XDialogIcon.Question};
+            d.ShowDialog();
+            if (d.Selected == XDialogSelected.Yes)
+            {
+                File.Delete(PCS.PathSaves + "autosave.pcs");
+                PCS.Restart();
+            }
         }
     }
 }

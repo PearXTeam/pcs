@@ -39,7 +39,7 @@ namespace pcs
             Registry.RegisteredIcons.Add(TIAchievements.ins);
 
 
-            Registry.RegisteredAchievements.Add(PCSAchievements.Lie);
+            Registry.RegisteredAchievements.Add(PCSAchievements.Coder);
 
 
             Registry.RegisteredCommands.Add(PCSCommands.Restore);
@@ -118,13 +118,13 @@ namespace pcs
             {
                 XIcon xi = new XIcon();
                 xi.Expand = 4;
-                xi.Size = new Size(40, 40);
+                xi.Size = new Size(48, 48);
                 xi.Click += sti.OnClick;
                 xi.Icon = sti.GetIcon();
                 int shift = 0;
                 if (count == 0)
                     shift = 4;
-                xi.Location = new Point(4, (48 * count) + shift);
+                xi.Location = new Point(0, (48 * count) + shift);
 
                 ToolTip tip = new ToolTip();
                 tip.SetToolTip(xi, sti.Desc());

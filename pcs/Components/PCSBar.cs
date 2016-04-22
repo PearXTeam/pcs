@@ -11,6 +11,7 @@ namespace pcs.Components
     public class PCSBar : FlatBar
     {
         private Color clr = Color.White;
+        private bool shadow = true;
 
         [DefaultValue(typeof(Color), "White")]
         public override Color ProgressTextColor
@@ -25,5 +26,8 @@ namespace pcs.Components
                 clr = value;
             }
         }
+        
+        [DefaultValue(true)]
+        public override bool Shadow { get { return shadow; } set { shadow = value; } }
     }
 }

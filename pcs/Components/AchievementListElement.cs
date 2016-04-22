@@ -7,15 +7,8 @@ using PearXLib.Engine;
 
 namespace pcs.Components
 {
-    public class AchievementListElement : InvItem
+    public class AchievementListElement : PCSInvItem
     {
-        public AchievementListElement()
-        {
-            Font = new Font("Yanone Kaffeesatz", 20F);
-            Size = new Size(411, 137);
-            ShowAmount = false;
-            ColorDesc = Color.FromArgb(52, 152, 219);
-        }
 
         public string AssociatedAchievement { get; set; }
     }

@@ -29,19 +29,23 @@
         private void InitializeComponent()
         {
             this.lblMsg = new pcs.Components.PCSLabel();
-            this.btnGithub = new PearXLib.Engine.Flat.FlatButton();
-            this.btnWebsite = new PearXLib.Engine.Flat.FlatButton();
-            this.btnDiscord = new PearXLib.Engine.Flat.FlatButton();
+            this.btnGithub = new pcs.Components.PCSButton();
+            this.btnWebsite = new pcs.Components.PCSButton();
+            this.btnDiscord = new pcs.Components.PCSButton();
             this.SuspendLayout();
             // 
             // lblMsg
             // 
             this.lblMsg.AutoSize = true;
             this.lblMsg.Location = new System.Drawing.Point(12, 41);
+            this.lblMsg.MaximumSize = new System.Drawing.Size(73, 28);
+            this.lblMsg.MinimumSize = new System.Drawing.Size(73, 28);
             this.lblMsg.Name = "lblMsg";
-            this.lblMsg.Size = new System.Drawing.Size(79, 26);
+            this.lblMsg.ShadowOffset = ((short)(2));
+            this.lblMsg.Size = new System.Drawing.Size(73, 28);
             this.lblMsg.TabIndex = 0;
             this.lblMsg.Text = "pcsLabel1";
+            this.lblMsg.UseInterpolation = false;
             // 
             // btnGithub
             // 
@@ -50,10 +54,12 @@
             this.btnGithub.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGithub.Location = new System.Drawing.Point(12, 331);
             this.btnGithub.Name = "btnGithub";
+            this.btnGithub.ShadowOffset = ((short)(2));
             this.btnGithub.Size = new System.Drawing.Size(128, 34);
             this.btnGithub.TabIndex = 1;
             this.btnGithub.Text = "A button.";
             this.btnGithub.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnGithub.UseInterpolation = false;
             this.btnGithub.Click += new System.EventHandler(this.btnGithub_Click);
             // 
             // btnWebsite
@@ -63,10 +69,12 @@
             this.btnWebsite.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnWebsite.Location = new System.Drawing.Point(146, 331);
             this.btnWebsite.Name = "btnWebsite";
+            this.btnWebsite.ShadowOffset = ((short)(2));
             this.btnWebsite.Size = new System.Drawing.Size(128, 34);
             this.btnWebsite.TabIndex = 2;
             this.btnWebsite.Text = "A button.";
             this.btnWebsite.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnWebsite.UseInterpolation = false;
             this.btnWebsite.Click += new System.EventHandler(this.btnWebsite_Click);
             // 
             // btnDiscord
@@ -76,16 +84,16 @@
             this.btnDiscord.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDiscord.Location = new System.Drawing.Point(280, 331);
             this.btnDiscord.Name = "btnDiscord";
+            this.btnDiscord.ShadowOffset = ((short)(2));
             this.btnDiscord.Size = new System.Drawing.Size(128, 34);
             this.btnDiscord.TabIndex = 3;
             this.btnDiscord.Text = "A button.";
             this.btnDiscord.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDiscord.UseInterpolation = false;
             this.btnDiscord.Click += new System.EventHandler(this.btnDiscord_Click);
             // 
             // About
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(418, 377);
             this.Controls.Add(this.btnDiscord);
             this.Controls.Add(this.btnWebsite);
@@ -101,8 +109,8 @@
         #endregion
 
         public Components.PCSLabel lblMsg;
-        public PearXLib.Engine.Flat.FlatButton btnDiscord;
-        public PearXLib.Engine.Flat.FlatButton btnWebsite;
-        public PearXLib.Engine.Flat.FlatButton btnGithub;
+        public pcs.Components.PCSButton btnDiscord;
+        public pcs.Components.PCSButton btnWebsite;
+        public pcs.Components.PCSButton btnGithub;
     }
 }

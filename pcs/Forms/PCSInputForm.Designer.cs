@@ -1,5 +1,6 @@
 ﻿namespace pcs.Forms
 {
+
     partial class PCSInputForm
     {
         /// <summary>
@@ -29,7 +30,7 @@
         private void InitializeComponent()
         {
             this.tbIn = new System.Windows.Forms.TextBox();
-            this.buttonOK = new PearXLib.Engine.Flat.FlatButton();
+            this.buttonOK = new pcs.Components.PCSButton();
             this.SuspendLayout();
             // 
             // tbIn
@@ -55,8 +56,6 @@
             // 
             // PCSInputForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(386, 168);
             this.Controls.Add(this.buttonOK);
             this.Controls.Add(this.tbIn);
@@ -69,6 +68,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox tbIn;
-        private PearXLib.Engine.Flat.FlatButton buttonOK;
+        private pcs.Components.PCSButton buttonOK;
     }
 }

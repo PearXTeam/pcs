@@ -54,10 +54,5 @@ namespace pcs.Forms
                 ConsoleForm.instance.Show(this);
             }
         }
-
-        private void Game_Move(object sender, EventArgs e)
-        {
-            ConsoleForm.instance.Location = (Location + Size) - ConsoleForm.instance.Size;
-        }
     }
 }

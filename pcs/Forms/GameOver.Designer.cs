@@ -30,7 +30,7 @@
         {
             this.lblKilledby = new pcs.Components.PCSLabel();
             this.lblGameover = new pcs.Components.PCSLabel();
-            this.btnOK = new PearXLib.Engine.Flat.FlatButton();
+            this.btnOK = new pcs.Components.PCSButton();
             this.SuspendLayout();
             // 
             // lblKilledby
@@ -68,8 +68,6 @@
             // 
             // GameOver
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 249);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.lblGameover);
@@ -84,6 +82,6 @@
 
         private Components.PCSLabel lblKilledby;
         public Components.PCSLabel lblGameover;
-        private PearXLib.Engine.Flat.FlatButton btnOK;
+        private pcs.Components.PCSButton btnOK;
     }
 }

@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using pcs.Components;
 
 namespace pcs.Forms
 {
@@ -21,6 +22,7 @@ namespace pcs.Forms
 
         private void btnGithub_Click(object sender, EventArgs e)
         {
+            Achievement.Unlock("PCS_Coder");
             Process.Start("https://github.com/mrAppleXZ/pcs");
         }
 
