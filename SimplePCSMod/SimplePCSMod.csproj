@@ -49,7 +49,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LocalizationSampleRes.resx</DependentUpon>
     </Compile>
-    <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
