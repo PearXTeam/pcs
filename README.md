@@ -1,0 +1,1 @@
+[<img src="https://ci.appveyor.com/api/projects/status/github/mrAppleXZ/pcs">](https://ci.appveyor.com/project/mrAppleXZ/pcs)
