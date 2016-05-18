@@ -68,7 +68,7 @@ namespace pcs.Forms
                 //
                 SetVal(1, 2);
                 SetText(1, "Initing game...");
-                SetMax(2, 6);
+                SetMax(2, 7);
 
                 SetVal(2, 0);
                 SetText(2, "Unpacking default langs...");
@@ -121,6 +121,10 @@ namespace pcs.Forms
                 Setup.SetupDefaults();
 
                 SetVal(2, 6);
+                SetText(2, "Unpacking sounds...");
+                Setup.UnpackSounds();
+                
+                SetVal(2, 7);
                 SetVal(2, 0);
                 SetText(2, "");
                 //
@@ -142,7 +146,7 @@ namespace pcs.Forms
                 //
                 SetVal(1, 4);
                 SetText(1, "PostIniting game...");
-                SetMax(2, 2);
+                SetMax(2, 3);
 
                 SetVal(2, 0);
                 SetText(2, "Initing icons...");
@@ -153,6 +157,10 @@ namespace pcs.Forms
                 Setup.InitAchievements();
 
                 SetVal(2, 2);
+                SetText(2, "Initing images...");
+                Setup.InitImages();
+
+                SetVal(2, 3);
                 SetVal(2, 0);
                 SetText(2, "");
                 //
@@ -201,7 +209,7 @@ namespace pcs.Forms
             }).Start();
         }
 
-        public void SetText(short label, string text)
+        public void SetText(byte label, string text)
         {
             try
             {
@@ -222,7 +230,7 @@ namespace pcs.Forms
             catch { }
         }
 
-        public void SetVal(short bar, int val)
+        public void SetVal(byte bar, int val)
         {
             try
             {
@@ -241,7 +249,7 @@ namespace pcs.Forms
             catch { }
         }
 
-        public void SetMax(short bar, int max)
+        public void SetMax(byte bar, int max)
         {
             try
             {

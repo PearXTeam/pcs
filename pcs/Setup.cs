@@ -6,10 +6,12 @@ using pcs.Player;
 using pcs.ToolIcons;
 using PearXLib.Engine;
 using System.Drawing;
+using System.IO;
 using System.Numerics;
 using System.Windows.Forms;
 using pcs.Commands;
 using pcs.Init;
+using pcs.Properties;
 
 namespace pcs
 {
@@ -37,6 +39,7 @@ namespace pcs
             Registry.RegisteredIcons.Add(TISaveManager.ins);
             Registry.RegisteredIcons.Add(TIAbout.ins);
             Registry.RegisteredIcons.Add(TIAchievements.ins);
+            Registry.RegisteredIcons.Add(TIShare.ins);
 
 
             Registry.RegisteredAchievements.Add(PCSAchievements.Coder);
@@ -84,11 +87,13 @@ namespace pcs
 
         public static void SetupTitles()
         {
-            Game.instance.Text = PCS.Loc.GetString("title.game");
+            Game.instance.Text = PCS.Loc.GetString("title.game") + " Dev " + PCS.Version;
+
             Options.instance.Text = PCS.Loc.GetString("title.options");
             Modlist.instance.Text = PCS.Loc.GetString("title.modlist");
             SaveManager.instance.Text = PCS.Loc.GetString("title.savemanager");
             GameOver.instance.Text = PCS.Loc.GetString("title.gameover");
+            Share.instance.Text = PCS.Loc.GetString("title.share");
 
             Options.instance.checkAutosave.Text = PCS.Loc.GetString("options.autosave");
 
@@ -109,6 +114,9 @@ namespace pcs
             About.instance.btnDiscord.Text = PCS.Loc.GetString("about.discord");
 
             AchievementList.instance.Text = PCS.Loc.GetString("title.achievements");
+
+            Share.instance.btnShareVK.Text = PCS.Loc.GetString("share.vk");
+            Share.instance.btnShareTwitter.Text = PCS.Loc.GetString("share.twitter");
         }
 
         public static void InitIcons()
@@ -148,8 +156,6 @@ namespace pcs
             Game.instance.timerMood.Interval = 22000;
             Game.instance.timerSleep.Interval = 3300;
             Game.instance.timerAutosave.Interval = 50000;
-
-           
         }
 
         public static void InitAchievements()
@@ -171,6 +177,20 @@ namespace pcs
                     (name, value) => { ach.Unlocked = Convert.ToBoolean(value); },
                     (string name, out string value) => { value = ach.Unlocked.ToString(); }
                     ));
+            }
+        }
+
+        public static void InitImages()
+        {
+            Share.instance.btnShareVK.Image = PCSImages.VK;
+            Share.instance.btnShareTwitter.Image = PCSImages.Twitter;
+        }
+
+        public static void UnpackSounds()
+        {
+            if (!File.Exists(PCS.PathSounds + "PopUp.mp3"))
+            {
+                File.WriteAllBytes(PCS.PathSounds + "PopUp.mp3", Resources.PopUp);
             }
         }
     }

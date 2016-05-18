@@ -35,17 +35,16 @@
     <ApplicationIcon>Resources\PCSIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NAudio">
+      <HintPath>..\libs\NAudio.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>.\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -76,7 +75,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\PCSLabel.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\SaveElement.cs" />
     <Compile Include="Components\SaveElementStruct.cs" />
@@ -139,6 +138,12 @@
     <Compile Include="Forms\PCSInputForm.Designer.cs">
       <DependentUpon>PCSInputForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PopUp.Designer.cs">
+      <DependentUpon>PopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SaveManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +161,12 @@
     </Compile>
     <Compile Include="Forms\Options.Designer.cs">
       <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Share.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Share.Designer.cs">
+      <DependentUpon>Share.cs</DependentUpon>
     </Compile>
     <Compile Include="Init\PCSAchievements.cs" />
     <Compile Include="Modding\ModRegistry.cs" />
@@ -176,13 +187,26 @@
     <Compile Include="ToolIcons\TIAchievements.cs" />
     <Compile Include="ToolIcons\TIModlist.cs" />
     <Compile Include="ToolIcons\TISaveManager.cs" />
+    <Compile Include="ToolIcons\TIShare.cs" />
     <Compile Include="ToolIcons\TISettings.cs" />
     <EmbeddedResource Include="EmbLangs\EmbLangs.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EmbLangs.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ConsoleForm.resx">
+      <DependentUpon>ConsoleForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PopUp.resx">
+      <DependentUpon>PopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Share.resx">
+      <DependentUpon>Share.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -246,6 +270,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Share.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Twitter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PopUp.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

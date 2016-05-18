@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using pcs.Components;
 
@@ -21,17 +16,15 @@ namespace pcs.Forms
 
         private void AchievementList_Shown(object sender, EventArgs e)
         {
-            foreach (Control c in panelAchievements.Controls)
+            foreach (AchievementListElement c in panelAchievements.Controls)
             {
-                if (c is AchievementListElement)
+                Achievement ach = Achievement.GetAchievement(c.AssociatedAchievement);
+                if (ach.Unlocked)
                 {
-                    AchievementListElement ale = (AchievementListElement) c;
-                    Achievement ach = Achievement.GetAchievement(ale.AssociatedAchievement);
-                    if (ach.Unlocked)
-                        ((AchievementListElement)c).ColorName = Color.FromArgb(39, 174, 96);
-                    else
-                        ((AchievementListElement)c).ColorName = Color.FromArgb(192, 57, 43);
+                    c.ColorName = Color.FromArgb(39, 174, 96);
                 }
+                else
+                    c.ColorName = Color.FromArgb(192, 57, 43);
             }
         }
     }

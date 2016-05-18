@@ -1,12 +1,9 @@
 ﻿using PearXLib;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using NAudio.Wave;
 using pcs.Forms;
 
 namespace pcs
@@ -19,18 +16,29 @@ namespace pcs
         public static string PathMods = Path + "mods/";
         public static string PathLangs = Path + "lang/";
         public static string PathSaves = Path + "saves/";
+        public static string PathSounds = Path + "sounds/";
+        public const string Version = "0.0.0";
 
         public static Logging l = new Logging(Path + "logs/" + PXL.GetDateTimeNow() + ".log");
         public static Localization Loc;
         public static string SelectedLang;
 
-        public static Point PreviousLocation = new Point((Screen.PrimaryScreen.WorkingArea.Width - 768) / 2, (Screen.PrimaryScreen.WorkingArea.Height - 512) / 2);
+        public static Point PreviousLocation = new Point((Screen.PrimaryScreen.WorkingArea.Width - 768)/2,
+            (Screen.PrimaryScreen.WorkingArea.Height - 512)/2);
 
         public static void Restart()
         {
             Game.instance.DontSave = true;
             Process.Start("pcs.exe");
             Game.instance.Close();
+        }
+
+        public static void PlaySound(string name)
+        {
+            Mp3FileReader reader = new Mp3FileReader(PCS.PathSounds + name + ".mp3");
+            WaveOut wo = new WaveOut();
+            wo.Init(reader);
+            wo.Play();
         }
     }
 }

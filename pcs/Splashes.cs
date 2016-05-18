@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace pcs
+﻿namespace pcs
 {
     class Splashes
     {
         public static string GenCrashSplash()
         {
-            switch (PCS.Rand.Next(6))
+            switch (PCS.Rand.Next(7))
             {
                 case 0:
                     return "We're sorry :(.";
@@ -22,7 +17,9 @@ namespace pcs
                 case 4:
                     return "Developer! Developer! Are you here?";
                 case 5:
-                    return "Bugs! They are everywhere!";
+                    return "Bugs! They're everywhere!";
+                case 6:
+                    return "I'm crashtastic. Sorry...";
                 default:
                     return ".";
             }

@@ -55,12 +55,13 @@
             // lblText
             // 
             this.lblText.AutoSize = true;
+            this.lblText.DrawInRectangle = true;
             this.lblText.Font = new System.Drawing.Font("Yanone Kaffeesatz", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblText.Location = new System.Drawing.Point(0, 0);
-            this.lblText.MaximumSize = new System.Drawing.Size(400, 0);
+            this.lblText.Location = new System.Drawing.Point(3, 3);
             this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(0, 18);
+            this.lblText.Size = new System.Drawing.Size(420, 155);
             this.lblText.TabIndex = 0;
+            this.lblText.Text = null;
             // 
             // ConsoleForm
             // 

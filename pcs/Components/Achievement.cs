@@ -1,5 +1,6 @@
 ﻿
 using System.Drawing;
+using pcs.Forms;
 using pcs.Player;
 
 namespace pcs.Components
@@ -63,6 +64,7 @@ namespace pcs.Components
                 {
                     if (!ach.Unlocked)
                     {
+                        new PopUp().Display(PCS.Loc.GetString("achievement.unlocked"), ach.Name() + " - " + ach.Desc(), 7000);
                         ach.Unlocked = true;
                         ach.OnUnlock();
                         PlayerVals.XP += ach.GiveXP();

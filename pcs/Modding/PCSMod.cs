@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace pcs.Modding
+﻿namespace pcs.Modding
 {
     /// <summary>
     /// A PCSMod interface. Use this for mods.

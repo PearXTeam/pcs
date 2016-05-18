@@ -1,11 +1,7 @@
 ﻿using pcs;
 using pcs.Modding;
-using PearXLib;
 using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 
 namespace SimplePCSMod
 {

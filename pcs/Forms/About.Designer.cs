@@ -37,12 +37,11 @@
             // lblMsg
             // 
             this.lblMsg.AutoSize = true;
+            this.lblMsg.DrawInRectangle = true;
             this.lblMsg.Location = new System.Drawing.Point(12, 41);
-            this.lblMsg.MaximumSize = new System.Drawing.Size(73, 28);
-            this.lblMsg.MinimumSize = new System.Drawing.Size(73, 28);
             this.lblMsg.Name = "lblMsg";
             this.lblMsg.ShadowOffset = ((short)(2));
-            this.lblMsg.Size = new System.Drawing.Size(73, 28);
+            this.lblMsg.Size = new System.Drawing.Size(394, 284);
             this.lblMsg.TabIndex = 0;
             this.lblMsg.Text = "pcsLabel1";
             this.lblMsg.UseInterpolation = false;

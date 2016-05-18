@@ -5,6 +5,7 @@ title.savemanager=Менеджер сохранений
 title.gameover=Игра окончена
 title.about=Об игре
 title.achievements=Достижения
+title.share=Поделиться
 
 #Bar texts:
 bar.food=Еда: 
@@ -49,9 +50,9 @@ gameover.deadby.illness=Вы умерли от нездоровья.
 gameover.gameover=ИГРА ОКОНЧЕНА
 
 #About
-about.msg= Мечтали ли вы начать жизнь с чистого листа? Отброс-&\nить груз прожитых лет и сделанных ошибок? Начните&\nсвою жизнь с самого начала и проживите ее так, как&\nхочется вам!&\n Игра написана одним человеком - mrAppleXZ'ом. Спас-&\nибо @Prototik'у за помощь с рефакторингом, спасибо&\n@Fareder'у за пару идей.
+about.msg= Мечтали ли вы начать жизнь с чистого листа? Отбросить груз прожитых лет и сделанных ошибок? Начните свою жизнь с самого начала и проживите ее так, как хочется вам! Игра написана одним человеком - mrAppleXZ'ом. Спасибо @Prototik'у за помощь с рефакторингом, спасибо @Fareder'у за пару идей.
 about.github=GitHub
-about.website=Вебсайт
+about.website=Веб сайт
 about.discord=Discord
 
 #Commands
@@ -66,5 +67,12 @@ command.set.nan=Аргумент 2 не является допустимым ч
 command.set.successfully=Переменная успешно установлена в 
 
 #Achievements
+achievement.unlocked=Достижение разблокировано!
 achievement.coder=Кодер?
 achievement.coder.desc=Вы - кодер?
+
+#Social Sharer
+share.vk=ВКонтакте
+share.vk.text=PCSimulator - игра-симулятор, где можно все. Она не требовательна к ресурсам компьютера, и имеет поддержку моддинга.
+share.twitter=Twitter
+share.twitter.text=Отличная игра-симулятор с поддержкой моддинга! Скачать: http://pcs.pearx.ru/

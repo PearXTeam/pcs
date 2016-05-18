@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace pcs.Player
+﻿namespace pcs.Player
 {
     public class SettingVals
     {

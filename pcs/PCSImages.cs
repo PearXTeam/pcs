@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using System.Drawing;
 using pcs.Properties;
 
 namespace pcs
@@ -17,5 +13,9 @@ namespace pcs
         public static Image Trophy = Resources.Trophy;
         public static Image TrophyBig = Resources.TrophyBig;
         public static Image Code = Resources.Code;
+        public static Image VK = Resources.VK;
+        public static Image Share = Resources.Share;
+        public static Image Twitter = Resources.Twitter;
+        public static Image Check = Resources.Check;
     }
 }

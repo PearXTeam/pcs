@@ -2,7 +2,6 @@
 using System.Drawing;
 using pcs.Components;
 using pcs.Forms;
-using pcs.Properties;
 
 namespace pcs.ToolIcons
 {

@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 using pcs.Components;
 using pcs.Player;
 using PearXLib.Engine;
@@ -68,13 +61,10 @@ namespace pcs.Forms
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            FlatDialog d = new FlatDialog(XDialogButtons.YesNo, PCS.Loc.GetString("other.yes"), PCS.Loc.GetString("other.no")) { Message = PCS.Loc.GetString("savemanager.reset.text"), Text = PCS.Loc.GetString("savemanager.reset.title"), Icon = XDialogIcon.Question};
-            d.ShowDialog();
-            if (d.Selected == XDialogSelected.Yes)
-            {
+            
                 File.Delete(PCS.PathSaves + "autosave.pcs");
                 PCS.Restart();
-            }
+            
         }
     }
 }

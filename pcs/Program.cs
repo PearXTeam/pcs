@@ -2,7 +2,6 @@
 using System;
 using System.IO;
 using System.Windows.Forms;
-using pcs.Forms;
 
 namespace pcs
 {
@@ -31,6 +30,7 @@ namespace pcs
             Directory.CreateDirectory(PCS.PathMods);
             Directory.CreateDirectory(PCS.PathLangs);
             Directory.CreateDirectory(PCS.PathSaves);
+            Directory.CreateDirectory(PCS.PathSounds);
 
             Application.Run(Background.instance);
         }

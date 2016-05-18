@@ -1,6 +1,5 @@
 ﻿using pcs.Components;
 using pcs.Player;
-using PearXLib;
 
 namespace pcs.Commands
 {

@@ -5,23 +5,23 @@ using pcs.Forms;
 
 namespace pcs.ToolIcons
 {
-    public class TIModlist : SToolIcon
+    public class TIShare : SToolIcon
     {
-        public static TIModlist ins = new TIModlist();
+        public static TIShare ins = new TIShare();
 
         public override Image GetIcon()
         {
-            return PCSImages.Puzzle;
+            return PCSImages.Share;
         }
 
         public override void OnClick(object sender, EventArgs e)
         {
-            Modlist.instance.ShowDialog(Game.instance);
+            Share.instance.ShowDialog(Game.instance);
         }
 
         public override string Desc()
         {
-            return PCS.Loc.GetString("title.modlist");
+            return PCS.Loc.GetString("title.share");
         }
     }
 }
