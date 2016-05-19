@@ -190,15 +190,9 @@
     <Compile Include="ToolIcons\TISaveManager.cs" />
     <Compile Include="ToolIcons\TIShare.cs" />
     <Compile Include="ToolIcons\TISettings.cs" />
-    <EmbeddedResource Include="Components\PopUp.resx">
-      <DependentUpon>PopUp.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EmbLangs\EmbLangs.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EmbLangs.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Options.resx">
-      <DependentUpon>Options.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

@@ -1,6 +1,5 @@
 ﻿
 using System.Drawing;
-using pcs.Forms;
 using pcs.Player;
 
 namespace pcs.Components
