@@ -3,9 +3,10 @@ using PearXLib.Engine.Flat;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using pcs.Forms;
 using PearXLib;
 
-namespace pcs.Forms
+namespace pcs.Components
 {
     public class PCSForm : FlatForm
     {

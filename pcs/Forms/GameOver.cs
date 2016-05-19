@@ -1,4 +1,5 @@
-﻿using PearXLib;
+﻿using pcs.Components;
+using PearXLib;
 
 namespace pcs.Forms
 {
@@ -48,7 +49,7 @@ namespace pcs.Forms
 
         private void btnOK_Click(object sender, System.EventArgs e)
         {
-            PCS.Restart();
+            PCS.Restart(false);
         }
     }
 }

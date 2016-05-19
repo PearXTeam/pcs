@@ -35,12 +35,15 @@ modlist.modid=ID
 
 #Options
 options.autosave=Автосохранение
+options.changeLanguage=Сменить язык
 
 #Save Manager
 savemanager.add=Новое сохранение
 savemanager.reset=Сброс
 savemanager.reset.title=Сбросить?
 savemanager.reset.text=Вы собираетесь сбросить&\nигру. Это нельзя будет отме-&\nнить! Продолжить?
+savemanager.saveError=Ошибка сохранения
+savemanager.saveError.message=Невозможно создать файл "{filename}", так как его название содержит запрещенные символы
 
 #Game Over
 gameover.deadby.hunger=Вы умерли от голода.

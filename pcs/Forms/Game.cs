@@ -1,6 +1,7 @@
 ﻿using pcs.Player;
 using System.Windows.Forms;
 using System;
+using pcs.Components;
 
 namespace pcs.Forms
 {

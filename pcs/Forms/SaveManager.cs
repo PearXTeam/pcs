@@ -3,8 +3,6 @@ using System.Drawing;
 using System.IO;
 using pcs.Components;
 using pcs.Player;
-using PearXLib.Engine;
-using PearXLib.Engine.Flat;
 
 namespace pcs.Forms
 {
@@ -55,16 +53,17 @@ namespace pcs.Forms
         {
             PCSInputForm f = new PCSInputForm();
             f.ShowDialog(this);
-            SL.Save(f.Inputed);
-            GetButtons();
+            if (f.Inputed != null)
+            {
+                SL.Save(f.Inputed);
+                GetButtons();
+            }
         }
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            
-                File.Delete(PCS.PathSaves + "autosave.pcs");
-                PCS.Restart();
-            
+            File.Delete(PCS.PathSaves + "autosave.pcs");
+            PCS.Restart(false);
         }
     }
 }

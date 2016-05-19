@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using pcs.Components;
+using pcs.Forms;
 
 namespace pcs.Player
 {
@@ -47,20 +48,27 @@ namespace pcs.Player
 
         public static void Save(string filename)
         {
-            PCS.l.Add("Saving savefile \"" + filename + "\"...", LogType.Info);
-           
-            List <SaveElementStruct> l = new List<SaveElementStruct>();
-            foreach (SaveElement se in Registry.RegisteredSaves)
+            if (FileUtils.CanCreate(filename))
             {
-                se.OnSave(se.Name, out se.Value);
-                SaveElementStruct str = new SaveElementStruct();
-                str.Value = se.Value;
-                str.Name = se.Name;
-                l.Add(str);
-            }
-            File.WriteAllText(PCS.PathSaves + filename + ".pcs", JsonConvert.SerializeObject(l));
+                PCS.l.Add("Saving savefile \"" + filename + "\"...", LogType.Info);
 
-            PCS.l.Add("Done saving savefile.", LogType.Info);
+                List<SaveElementStruct> l = new List<SaveElementStruct>();
+                foreach (SaveElement se in Registry.RegisteredSaves)
+                {
+                    se.OnSave(se.Name, out se.Value);
+                    SaveElementStruct str = new SaveElementStruct();
+                    str.Value = se.Value;
+                    str.Name = se.Name;
+                    l.Add(str);
+                }
+                File.WriteAllText(PCS.PathSaves + filename + ".pcs", JsonConvert.SerializeObject(l));
+
+                PCS.l.Add("Done saving savefile.", LogType.Info);
+            }
+            else
+            {
+                new PopUp().Display(PCS.Loc.GetString("savemanager.saveError"), PCS.Loc.GetString("savemanager.saveError.message").Replace("{filename}", filename), 5000, PCSImages.BrokenFloppy);
+            }
         }
 
         public static void SaveSettings()

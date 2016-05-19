@@ -1,8 +1,11 @@
 title.game=PCSimulator
-title.options=Settings
+title.options=Options
 title.modlist=Modlist
 title.savemanager=Save Manager
 title.gameover=Game Over
+title.about=About
+title.achievements=Achievements
+title.share=Share
 
 #Bar texts:
 bar.food=Food: 
@@ -12,11 +15,17 @@ bar.sleep=Sleep:
 
 #Label texts:
 lbl.money=Money: 
-lbl.xp=Exp: 
+lbl.xp=XP: 
 
 #Other
-other.currency=$
+other.currency=P
 other.xp=XP
+other.info=INFO
+other.error=ERROR
+other.warning=WARN
+other.other=OTHER
+other.yes=Yes
+other.no=No
 
 #Modlist
 modlist.name=Name
@@ -26,14 +35,47 @@ modlist.modid=ID
 
 #Options
 options.autosave=Autosave
+options.changeLanguage=Change game language
 
 #Save Manager
 savemanager.add=New save
 savemanager.reset=Reset
+savemanager.reset.title=Reset the game?
+savemanager.reset.text=You're going to reset the game. This cannot be undone. Continue?
+savemanager.saveError=Save Error
+savemanager.saveError.message=Cannot create file "{filename}", because it's name contains forbidden characters.
 
 #Game Over
-gameover.deadby.hunger=You have been died by hunger.
-gameover.deadby.bore=You have been died by bore.
-gameover.deadby.lackofsleep=You have been died by a lack of sleep.
-gameover.deadby.illness=You have been died by illness.
+gameover.deadby.hunger=You have died by hunger.
+gameover.deadby.bore=You have died by bore.
+gameover.deadby.lackofsleep=You have died by a lack of sleep.
+gameover.deadby.illness=You have died by illness.
 gameover.gameover=GAME OVER
+
+#About
+about.msg= Мечтали ли вы начать жизнь с чистого листа? Отбросить груз прожитых лет и сделанных ошибок? Начните свою жизнь с самого начала и проживите ее так, как хочется вам! Игра написана одним человеком - mrAppleXZ'ом. Спасибо @Prototik'у за помощь с рефакторингом, спасибо @Fareder'у за пару идей.
+about.github=GitHub
+about.website=Website
+about.discord=Discord
+
+#Commands
+command.notfound=Command not found! /help - command list.
+
+command.restore.all=All stats are successfully restored!
+
+command.help.avaible=Available next commands: 
+
+command.set.incorrectusage=Command usage: /set <money|xp|food|sleep|health|mood|mfood|msleep|mhealth|mmood> <value>
+command.set.nan=Argument 2 is not a valid number.
+command.set.successfully=Variable successfully set to 
+
+#Achievements
+achievement.unlocked=Achievement unlocked!
+achievement.coder=Coder?
+achievement.coder.desc=Are u a coder?
+
+#Social Sharer
+share.vk=VK
+share.vk.text=PCSimulator - simulator game where everything is possible. It's not demanding on your PC resources and it has the modding support.
+share.twitter=Twitter
+share.twitter.text=Great simulator game with modding support! Download: http://pcs.pearx.ru/

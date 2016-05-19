@@ -1,4 +1,6 @@
-﻿using pcs.Player;
+﻿using System.IO;
+using pcs.Components;
+using pcs.Player;
 
 namespace pcs.Forms
 {
@@ -21,6 +23,12 @@ namespace pcs.Forms
         private void Options_Load(object sender, System.EventArgs e)
         {
             checkAutosave.Checked = SettingVals.AutoSave;
+        }
+
+        private void btnChangeLanguage_Click(object sender, System.EventArgs e)
+        {
+            File.Delete(PCS.Path + "lang.pcs");
+            PCS.Restart(true);
         }
     }
 }

@@ -96,6 +96,7 @@ namespace pcs
             Share.instance.Text = PCS.Loc.GetString("title.share");
 
             Options.instance.checkAutosave.Text = PCS.Loc.GetString("options.autosave");
+            Options.instance.btnChangeLanguage.Text = PCS.Loc.GetString("options.changeLanguage");
 
             Modlist.instance.listViewMods.Columns.Add(PCS.Loc.GetString("modlist.name"), 131);
             Modlist.instance.listViewMods.Columns.Add(PCS.Loc.GetString("modlist.author"), 131);

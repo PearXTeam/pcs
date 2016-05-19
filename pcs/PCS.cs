@@ -17,7 +17,7 @@ namespace pcs
         public static string PathLangs = Path + "lang/";
         public static string PathSaves = Path + "saves/";
         public static string PathSounds = Path + "sounds/";
-        public const string Version = "0.0.0";
+        public const string Version = "0.0.1";
 
         public static Logging l = new Logging(Path + "logs/" + PXL.GetDateTimeNow() + ".log");
         public static Localization Loc;
@@ -26,9 +26,9 @@ namespace pcs
         public static Point PreviousLocation = new Point((Screen.PrimaryScreen.WorkingArea.Width - 768)/2,
             (Screen.PrimaryScreen.WorkingArea.Height - 512)/2);
 
-        public static void Restart()
+        public static void Restart(bool save)
         {
-            Game.instance.DontSave = true;
+            Game.instance.DontSave = !save;
             Process.Start("pcs.exe");
             Game.instance.Close();
         }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.checkAutosave = new pcs.Components.PCSCheckbox();
+            this.btnChangeLanguage = new pcs.Components.PCSButton();
             this.SuspendLayout();
             // 
             // checkAutosave
@@ -43,9 +44,21 @@
             this.checkAutosave.Text = "pcsCheckbox1";
             this.checkAutosave.CheckedChanged += new PearXLib.Engine.XCheckboxBase.CheckboxHandler(this.checkAutosave_CheckedChanged);
             // 
+            // btnChangeLanguage
+            // 
+            this.btnChangeLanguage.Border = 0;
+            this.btnChangeLanguage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChangeLanguage.Location = new System.Drawing.Point(12, 333);
+            this.btnChangeLanguage.Name = "btnChangeLanguage";
+            this.btnChangeLanguage.Size = new System.Drawing.Size(262, 41);
+            this.btnChangeLanguage.TabIndex = 1;
+            this.btnChangeLanguage.Text = "pcsButton1";
+            this.btnChangeLanguage.Click += new System.EventHandler(this.btnChangeLanguage_Click);
+            // 
             // Options
             // 
             this.ClientSize = new System.Drawing.Size(286, 386);
+            this.Controls.Add(this.btnChangeLanguage);
             this.Controls.Add(this.checkAutosave);
             this.Name = "Options";
             this.Text = "Settings";
@@ -57,5 +70,6 @@
         #endregion
 
         public Components.PCSCheckbox checkAutosave;
+        public Components.PCSButton btnChangeLanguage;
     }
 }

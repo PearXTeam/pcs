@@ -17,5 +17,6 @@ namespace pcs
         public static Image Share = Resources.Share;
         public static Image Twitter = Resources.Twitter;
         public static Image Check = Resources.Check;
+        public static Image BrokenFloppy = Resources.BrokenFloppy;
     }
 }
