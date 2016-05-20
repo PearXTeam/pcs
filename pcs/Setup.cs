@@ -30,6 +30,7 @@ namespace pcs
 
             PlayerVals.Money = 500;
             PlayerVals.XP = 50;
+            PlayerVals.Time = new DateTime(1970, 5, 27, 1, 0, 0);
         }
 
         public static void Register()
@@ -83,6 +84,9 @@ namespace pcs
             Registry.RegisteredSaves.Add(new SaveElement("PCS_XP",
                 (name, value) => { PlayerVals.XP = BigInteger.Parse(value); },
                 (string name, out string value) => { value = PlayerVals.XP.ToString(); }));
+            Registry.RegisteredSaves.Add(new SaveElement("PCS_Time",
+                (name, value) => { PlayerVals.Time = DateTime.FromBinary(Convert.ToInt64(value)); }, 
+                (string name, out string value) => { value = PlayerVals.Time.ToBinary().ToString(); }));
         }
 
         public static void SetupTitles()
@@ -153,10 +157,25 @@ namespace pcs
                 Modlist.instance.listViewMods.Items.Add(new ListViewItem(new string[] { m.Name(), m.Author(), m.Version(), m.ModID()}));
             }
 
+            Game.instance.timerFood.Tick += (o, args) => Stats.Food--;
+            Game.instance.timerMood.Tick += (o, args) => Stats.Mood--;
+            Game.instance.timerSleep.Tick += (o, args) => Stats.Sleep--;
+            Game.instance.timerAutosave.Tick += (o, args) =>
+            {
+                if (SettingVals.AutoSave)
+                {
+                    SL.Save("autosave");
+                }
+            };
+            Game.instance.timerTime.Tick += (o, args) => PlayerVals.Time += new TimeSpan(0, 1, 0);
+
             Game.instance.timerFood.Interval = 3600;
             Game.instance.timerMood.Interval = 22000;
             Game.instance.timerSleep.Interval = 3300;
             Game.instance.timerAutosave.Interval = 50000;
+            Game.instance.timerTime.Interval = 7;
+
+            
         }
 
         public static void InitAchievements()

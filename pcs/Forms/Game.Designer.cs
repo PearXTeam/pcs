@@ -35,6 +35,7 @@
             this.barSleep = new pcs.Components.PCSBar();
             this.barMood = new pcs.Components.PCSBar();
             this.barFood = new pcs.Components.PCSBar();
+            this.lblTime = new pcs.Components.PCSLabel();
             this.SuspendLayout();
             // 
             // panelToolIcons
@@ -109,9 +110,20 @@
             this.barFood.Size = new System.Drawing.Size(180, 34);
             this.barFood.TabIndex = 0;
             // 
+            // lblTime
+            // 
+            this.lblTime.Location = new System.Drawing.Point(620, 472);
+            this.lblTime.MaximumSize = new System.Drawing.Size(136, 28);
+            this.lblTime.MinimumSize = new System.Drawing.Size(136, 28);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(136, 28);
+            this.lblTime.TabIndex = 7;
+            this.lblTime.Text = "00:00, 27.05.2004";
+            // 
             // Game
             // 
             this.ClientSize = new System.Drawing.Size(768, 512);
+            this.Controls.Add(this.lblTime);
             this.Controls.Add(this.panelToolIcons);
             this.Controls.Add(this.lblXP);
             this.Controls.Add(this.lblMoney);
@@ -138,5 +150,6 @@
         public Components.PCSLabel lblMoney;
         public Components.PCSLabel lblXP;
         public System.Windows.Forms.Panel panelToolIcons;
+        public Components.PCSLabel lblTime;
     }
 }

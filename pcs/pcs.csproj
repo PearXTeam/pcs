@@ -194,6 +194,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EmbLangs.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

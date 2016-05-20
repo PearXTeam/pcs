@@ -13,6 +13,7 @@ namespace pcs.Forms
         public Timer timerSleep = new Timer();
         public Timer timerMood = new Timer();
         public Timer timerAutosave = new Timer();
+        public Timer timerTime = new Timer();
 
         public bool DontSave = false;
 
@@ -27,16 +28,7 @@ namespace pcs.Forms
             timerSleep.Start();
             timerMood.Start();
             timerAutosave.Start();
-            timerFood.Tick += (o, args) => Stats.Food--;
-            timerMood.Tick += (o, args) => Stats.Mood--;
-            timerSleep.Tick += (o, args) => Stats.Sleep--;
-            timerAutosave.Tick += (o, args) =>
-            {
-                if (SettingVals.AutoSave)
-                {
-                    SL.Save("autosave");
-                }
-            };
+            timerTime.Start();
         }
 
         private void Game_FormClosing(object sender, FormClosingEventArgs e)

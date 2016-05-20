@@ -1,12 +1,14 @@
-﻿using pcs.Forms;
+﻿using System;
+using pcs.Forms;
 using System.Numerics;
 
 namespace pcs.Player
 {
     public class PlayerVals
     {
-        private static BigInteger money = new BigInteger();
-        private static BigInteger xp = new BigInteger();
+        private static BigInteger money;
+        private static BigInteger xp;
+        private static DateTime time;
 
         public static BigInteger Money
         {
@@ -31,6 +33,16 @@ namespace pcs.Player
             {
                 xp = value;
                 Game.instance.lblXP.Text = PCS.Loc.GetString("lbl.xp") + value + PCS.Loc.GetString("other.xp");
+            }
+        }
+
+        public static DateTime Time
+        {
+            get { return time; }
+            set
+            {
+                time = value;
+                Game.instance.lblTime.Text = value.ToString("dd.MM.yyyy, HH:mm");
             }
         }
 
