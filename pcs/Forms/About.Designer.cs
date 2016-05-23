@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblMsg = new pcs.Components.PCSLabel();
-            this.btnGithub = new pcs.Components.PCSButton();
-            this.btnWebsite = new pcs.Components.PCSButton();
-            this.btnDiscord = new pcs.Components.PCSButton();
+            this.lblMsg = new pcs.Components.Controls.PCSLabel();
+            this.btnGithub = new pcs.Components.Controls.PCSButton();
+            this.btnWebsite = new pcs.Components.Controls.PCSButton();
+            this.btnDiscord = new pcs.Components.Controls.PCSButton();
             this.SuspendLayout();
             // 
             // lblMsg
@@ -107,9 +107,9 @@
 
         #endregion
 
-        public Components.PCSLabel lblMsg;
-        public pcs.Components.PCSButton btnDiscord;
-        public pcs.Components.PCSButton btnWebsite;
-        public pcs.Components.PCSButton btnGithub;
+        public Components.Controls.PCSLabel lblMsg;
+        public pcs.Components.Controls.PCSButton btnDiscord;
+        public pcs.Components.Controls.PCSButton btnWebsite;
+        public pcs.Components.Controls.PCSButton btnGithub;
     }
 }

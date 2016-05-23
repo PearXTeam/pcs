@@ -30,7 +30,7 @@
         private void InitializeComponent()
         {
             this.tbIn = new System.Windows.Forms.TextBox();
-            this.buttonOK = new pcs.Components.PCSButton();
+            this.buttonOK = new pcs.Components.Controls.PCSButton();
             this.SuspendLayout();
             // 
             // tbIn
@@ -68,6 +68,6 @@
         #endregion
 
         private System.Windows.Forms.TextBox tbIn;
-        private pcs.Components.PCSButton buttonOK;
+        private pcs.Components.Controls.PCSButton buttonOK;
     }
 }

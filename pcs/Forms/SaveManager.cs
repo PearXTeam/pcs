@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.IO;
 using pcs.Components;
+using pcs.Components.Controls;
 using pcs.Player;
 
 namespace pcs.Forms

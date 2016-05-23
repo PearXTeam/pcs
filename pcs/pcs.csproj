@@ -57,25 +57,28 @@
     <Compile Include="Commands\CommandHelp.cs" />
     <Compile Include="Commands\CommandRestore.cs" />
     <Compile Include="Commands\CommandSet.cs" />
-    <Compile Include="Commands\PCSCommands.cs" />
+    <Compile Include="Commands\CommandTime.cs" />
+    <Compile Include="Components\Item.cs" />
+    <Compile Include="Components\ObjectData.cs" />
+    <Compile Include="Init\PCSCommands.cs" />
     <Compile Include="Components\Achievement.cs" />
-    <Compile Include="Components\AchievementListElement.cs">
+    <Compile Include="Components\Controls\AchievementListElement.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\Command.cs" />
-    <Compile Include="Components\PCSBar.cs">
+    <Compile Include="Components\Controls\PCSBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Components\PCSButton.cs">
+    <Compile Include="Components\Controls\PCSButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Components\PCSCheckbox.cs">
+    <Compile Include="Components\Controls\PCSCheckbox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Components\PCSInvItem.cs">
+    <Compile Include="Components\Controls\PCSInvItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Components\PCSLabel.cs">
+    <Compile Include="Components\Controls\PCSLabel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\SaveElement.cs" />
@@ -194,9 +197,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EmbLangs.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Game.resx">
-      <DependentUpon>Game.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -277,6 +277,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BrokenFloppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConsoleDetective.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ErrorApple.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

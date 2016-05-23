@@ -10,6 +10,7 @@ using System.IO;
 using System.Numerics;
 using System.Windows.Forms;
 using pcs.Commands;
+using pcs.Components.Controls;
 using pcs.Init;
 using pcs.Properties;
 
@@ -44,11 +45,13 @@ namespace pcs
 
 
             Registry.RegisteredAchievements.Add(PCSAchievements.Coder);
+            Registry.RegisteredAchievements.Add(PCSAchievements.ConsoleDetective);
 
 
             Registry.RegisteredCommands.Add(PCSCommands.Restore);
             Registry.RegisteredCommands.Add(PCSCommands.Help);
             Registry.RegisteredCommands.Add(PCSCommands.Set);
+            Registry.RegisteredCommands.Add(PCSCommands.Time);
 
 
             Registry.RegisteredSaves.Add(new SaveElement("PCS_MaxFood", 
@@ -167,13 +170,13 @@ namespace pcs
                     SL.Save("autosave");
                 }
             };
-            Game.instance.timerTime.Tick += (o, args) => PlayerVals.Time += new TimeSpan(0, 1, 0);
+            Game.instance.timerTime.Tick += (o, args) => PlayerVals.Time += new TimeSpan(1, 0, 0);
 
             Game.instance.timerFood.Interval = 3600;
             Game.instance.timerMood.Interval = 22000;
             Game.instance.timerSleep.Interval = 3300;
             Game.instance.timerAutosave.Interval = 50000;
-            Game.instance.timerTime.Interval = 7;
+            Game.instance.timerTime.Interval = 420;
 
             
         }
@@ -197,6 +200,7 @@ namespace pcs
                     (name, value) => { ach.Unlocked = Convert.ToBoolean(value); },
                     (string name, out string value) => { value = ach.Unlocked.ToString(); }
                     ));
+                i++;
             }
         }
 

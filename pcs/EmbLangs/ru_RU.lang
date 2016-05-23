@@ -69,10 +69,19 @@ command.set.incorrectusage=Использование команды: /set <mone
 command.set.nan=Аргумент 2 не является допустимым числом.
 command.set.successfully=Переменная успешно установлена в 
 
+command.time.incorrectusage=Использование команды: /time <час> или /time <дата> <месяц> <год> <час>
+command.time.successfully=Дата успешно установлена!
+command.time.incorrectargs=Все значения должны быть числом!
+command.time.cannotConvertToDateTime=Невозможно преобразовать одно из значений в дату.
+
 #Achievements
 achievement.unlocked=Достижение разблокировано!
+
 achievement.coder=Кодер?
 achievement.coder.desc=Вы - кодер?
+
+achievement.consoleDetective=Консольный детектив
+achievement.consoleDetective.desc=Найдите великую и ужасную Консоль.
 
 #Social Sharer
 share.vk=ВКонтакте

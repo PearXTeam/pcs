@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panelToolIcons = new System.Windows.Forms.Panel();
-            this.lblXP = new pcs.Components.PCSLabel();
-            this.lblMoney = new pcs.Components.PCSLabel();
-            this.barHealth = new pcs.Components.PCSBar();
-            this.barSleep = new pcs.Components.PCSBar();
-            this.barMood = new pcs.Components.PCSBar();
-            this.barFood = new pcs.Components.PCSBar();
-            this.lblTime = new pcs.Components.PCSLabel();
+            this.lblXP = new pcs.Components.Controls.PCSLabel();
+            this.lblMoney = new pcs.Components.Controls.PCSLabel();
+            this.barHealth = new pcs.Components.Controls.PCSBar();
+            this.barSleep = new pcs.Components.Controls.PCSBar();
+            this.barMood = new pcs.Components.Controls.PCSBar();
+            this.barFood = new pcs.Components.Controls.PCSBar();
+            this.lblTime = new pcs.Components.Controls.PCSLabel();
             this.SuspendLayout();
             // 
             // panelToolIcons
@@ -143,13 +143,13 @@
 
         #endregion
 
-        public Components.PCSBar barFood;
-        public Components.PCSBar barHealth;
-        public Components.PCSBar barSleep;
-        public Components.PCSBar barMood;
-        public Components.PCSLabel lblMoney;
-        public Components.PCSLabel lblXP;
+        public Components.Controls.PCSBar barFood;
+        public Components.Controls.PCSBar barHealth;
+        public Components.Controls.PCSBar barSleep;
+        public Components.Controls.PCSBar barMood;
+        public Components.Controls.PCSLabel lblMoney;
+        public Components.Controls.PCSLabel lblXP;
         public System.Windows.Forms.Panel panelToolIcons;
-        public Components.PCSLabel lblTime;
+        public Components.Controls.PCSLabel lblTime;
     }
 }

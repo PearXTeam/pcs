@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnShareVK = new pcs.Components.PCSButton();
-            this.btnShareTwitter = new pcs.Components.PCSButton();
+            this.btnShareVK = new pcs.Components.Controls.PCSButton();
+            this.btnShareTwitter = new pcs.Components.Controls.PCSButton();
             this.SuspendLayout();
             // 
             // btnShareVK
@@ -73,7 +73,7 @@
 
         #endregion
 
-        public Components.PCSButton btnShareVK;
-        public Components.PCSButton btnShareTwitter;
+        public Components.Controls.PCSButton btnShareVK;
+        public Components.Controls.PCSButton btnShareTwitter;
     }
 }

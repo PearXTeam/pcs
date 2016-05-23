@@ -18,8 +18,9 @@ namespace pcs.Forms
 
         private void ConsoleForm_Shown(object sender, EventArgs e)
         {
-            Rectangle rect = Screen.PrimaryScreen.Bounds;
-            Location = new Point(rect.Width - Width, rect.Height - Height);
+            Size s = Background.instance.Size;
+            Location = new Point(s.Width - Width, s.Height - Height);
+            Achievement.Unlock("PCS_ConsoleDetective");
         }
 
         protected override void OnClosing(CancelEventArgs e)

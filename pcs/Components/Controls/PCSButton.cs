@@ -2,7 +2,7 @@
 using System.Drawing;
 using PearXLib.Engine.Flat;
 
-namespace pcs.Components
+namespace pcs.Components.Controls
 {
     public class PCSButton : FlatButton
     {

@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkAutosave = new pcs.Components.PCSCheckbox();
-            this.btnChangeLanguage = new pcs.Components.PCSButton();
+            this.checkAutosave = new pcs.Components.Controls.PCSCheckbox();
+            this.btnChangeLanguage = new pcs.Components.Controls.PCSButton();
             this.SuspendLayout();
             // 
             // checkAutosave
@@ -69,7 +69,7 @@
 
         #endregion
 
-        public Components.PCSCheckbox checkAutosave;
-        public Components.PCSButton btnChangeLanguage;
+        public Components.Controls.PCSCheckbox checkAutosave;
+        public Components.Controls.PCSButton btnChangeLanguage;
     }
 }

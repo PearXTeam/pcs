@@ -4,12 +4,14 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using NAudio.Wave;
+using pcs.Components;
 using pcs.Forms;
 
 namespace pcs
 {
     public class PCS
     {
+
         public static Random Rand = new Random();
         public static string Path = d.pxDir + "/PCS/";
         public static string PathCrashes = Path + "crash-reports/";
@@ -17,7 +19,7 @@ namespace pcs
         public static string PathLangs = Path + "lang/";
         public static string PathSaves = Path + "saves/";
         public static string PathSounds = Path + "sounds/";
-        public const string Version = "0.0.1";
+        public const string Version = "0.0.2";
 
         public static Logging l = new Logging(Path + "logs/" + PXL.GetDateTimeNow() + ".log");
         public static Localization Loc;

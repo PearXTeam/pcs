@@ -30,8 +30,8 @@
         private void InitializeComponent()
         {
             this.panelSaves = new System.Windows.Forms.Panel();
-            this.buttonSave = new pcs.Components.PCSButton();
-            this.buttonReset = new pcs.Components.PCSButton();
+            this.buttonSave = new pcs.Components.Controls.PCSButton();
+            this.buttonReset = new pcs.Components.Controls.PCSButton();
             this.SuspendLayout();
             // 
             // panelSaves
@@ -84,7 +84,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panelSaves;
-        public pcs.Components.PCSButton buttonSave;
-        public pcs.Components.PCSButton buttonReset;
+        public pcs.Components.Controls.PCSButton buttonSave;
+        public pcs.Components.Controls.PCSButton buttonReset;
     }
 }

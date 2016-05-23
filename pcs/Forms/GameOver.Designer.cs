@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblKilledby = new pcs.Components.PCSLabel();
-            this.lblGameover = new pcs.Components.PCSLabel();
-            this.btnOK = new pcs.Components.PCSButton();
+            this.lblKilledby = new pcs.Components.Controls.PCSLabel();
+            this.lblGameover = new pcs.Components.Controls.PCSLabel();
+            this.btnOK = new pcs.Components.Controls.PCSButton();
             this.SuspendLayout();
             // 
             // lblKilledby
@@ -80,8 +80,8 @@
 
         #endregion
 
-        private Components.PCSLabel lblKilledby;
-        public Components.PCSLabel lblGameover;
-        private pcs.Components.PCSButton btnOK;
+        private Components.Controls.PCSLabel lblKilledby;
+        public Components.Controls.PCSLabel lblGameover;
+        private pcs.Components.Controls.PCSButton btnOK;
     }
 }

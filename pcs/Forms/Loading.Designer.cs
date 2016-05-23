@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.logo = new System.Windows.Forms.PictureBox();
-            this.lbl2 = new pcs.Components.PCSLabel();
-            this.lbl1 = new pcs.Components.PCSLabel();
+            this.lbl2 = new pcs.Components.Controls.PCSLabel();
+            this.lbl1 = new pcs.Components.Controls.PCSLabel();
             this.bar1 = new PearXLib.Engine.Flat.FlatBar();
             this.bar2 = new PearXLib.Engine.Flat.FlatBar();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
@@ -109,8 +109,8 @@
 
         private PearXLib.Engine.Flat.FlatBar bar2;
         private PearXLib.Engine.Flat.FlatBar bar1;
-        private Components.PCSLabel lbl1;
-        private Components.PCSLabel lbl2;
+        private Components.Controls.PCSLabel lbl1;
+        private Components.Controls.PCSLabel lbl2;
         private System.Windows.Forms.PictureBox logo;
     }
 }

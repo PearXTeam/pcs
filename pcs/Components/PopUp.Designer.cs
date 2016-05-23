@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.Image = new System.Windows.Forms.PictureBox();
-            this.lblMsg = new pcs.Components.PCSLabel();
+            this.lblMsg = new pcs.Components.Controls.PCSLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Image)).BeginInit();
             this.SuspendLayout();
             // 
@@ -38,6 +38,7 @@
             this.Image.Location = new System.Drawing.Point(12, 60);
             this.Image.Name = "Image";
             this.Image.Size = new System.Drawing.Size(64, 64);
+            this.Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Image.TabIndex = 1;
             this.Image.TabStop = false;
             // 
@@ -66,7 +67,7 @@
 
         #endregion
 
-        private Components.PCSLabel lblMsg;
+        private Components.Controls.PCSLabel lblMsg;
         private System.Windows.Forms.PictureBox Image;
     }
 }

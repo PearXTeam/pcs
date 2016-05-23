@@ -2,7 +2,7 @@
 using System.Drawing;
 using PearXLib.Engine;
 
-namespace pcs.Components
+namespace pcs.Components.Controls
 {
     public class PCSLabel : XLabel
     {

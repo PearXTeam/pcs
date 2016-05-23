@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.ComponentModel;
 
-namespace pcs.Components
+namespace pcs.Components.Controls
 {
     public class PCSBar : FlatBar
     {
