@@ -88,3 +88,7 @@ share.vk=ВКонтакте
 share.vk.text=PCSimulator - игра-симулятор, где можно все. Она не требовательна к ресурсам компьютера, и имеет поддержку моддинга.
 share.twitter=Twitter
 share.twitter.text=Отличная игра-симулятор с поддержкой моддинга! Скачать: http://pcs.pearx.ru/
+
+#Shop
+shop.buy.notEnoughMoney.title=Недостаточно денег
+shop.buy.notEnoughMoney=У Вас недостаточно денег, чтобы купить это.

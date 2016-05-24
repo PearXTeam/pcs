@@ -63,7 +63,7 @@ namespace pcs.Components
                 {
                     if (!ach.Unlocked)
                     {
-                        new PopUp().Display(PCS.Loc.GetString("achievement.unlocked"), ach.Name() + " - " + ach.Desc(), 5000, ach.Icon());
+                        new PopUp().Display(PCS.Loc.GetString("achievement.unlocked"), ach.Name() + " - " + ach.Desc(), ach.Icon());
                         ach.Unlocked = true;
                         ach.OnUnlock();
                         PlayerVals.XP += ach.GiveXP();

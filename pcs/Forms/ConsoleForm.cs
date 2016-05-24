@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 using pcs.Components;
+using pcs.Init;
 using PearXLib;
 
 namespace pcs.Forms
@@ -20,7 +21,7 @@ namespace pcs.Forms
         {
             Size s = Background.instance.Size;
             Location = new Point(s.Width - Width, s.Height - Height);
-            Achievement.Unlock("PCS_ConsoleDetective");
+            Achievement.Unlock(PCSAchievements.ConsoleDetective.ID());
         }
 
         protected override void OnClosing(CancelEventArgs e)

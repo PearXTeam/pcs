@@ -66,7 +66,7 @@ namespace pcs.Player
             }
             else
             {
-                new PopUp().Display(PCS.Loc.GetString("savemanager.saveError"), PCS.Loc.GetString("savemanager.saveError.message").Replace("{filename}", filename), 5000, PCSImages.BrokenFloppy);
+                new PopUp().Display(PCS.Loc.GetString("savemanager.saveError"), PCS.Loc.GetString("savemanager.saveError.message").Replace("{filename}", filename), PCSImages.BrokenFloppy);
             }
         }
 

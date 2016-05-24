@@ -19,7 +19,7 @@ namespace pcs.Components
         /// <param name="autoClose">Auto close delay in ms</param>
         /// <param name="img">Message icon</param>
         /// <param name="backColor">Background color</param>
-        public void Display(string title, string text, int autoClose = 5000, Image img = null, Color? backColor = null)
+        public void Display(string title, string text, Image img = null, int autoClose = 5000, Color? backColor = null)
         {
             if (backColor == null)
                 backColor = FlatColors.NotQuiteBlack;

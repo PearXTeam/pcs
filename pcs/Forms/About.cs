@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using pcs.Components;
+using pcs.Init;
 
 namespace pcs.Forms
 {
@@ -15,7 +16,7 @@ namespace pcs.Forms
 
         private void btnGithub_Click(object sender, EventArgs e)
         {
-            Achievement.Unlock("PCS_Coder");
+            Achievement.Unlock(PCSAchievements.Coder.ID());
             Process.Start("https://github.com/mrAppleXZ/pcs");
         }
 

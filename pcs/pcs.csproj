@@ -58,6 +58,7 @@
     <Compile Include="Commands\CommandRestore.cs" />
     <Compile Include="Commands\CommandSet.cs" />
     <Compile Include="Commands\CommandTime.cs" />
+    <Compile Include="Components\Inventory.cs" />
     <Compile Include="Components\Item.cs" />
     <Compile Include="Components\ObjectData.cs" />
     <Compile Include="Init\PCSCommands.cs" />
@@ -178,6 +179,7 @@
     <Compile Include="Modding\PCSMod.cs" />
     <Compile Include="PCS.cs" />
     <Compile Include="PCSImages.cs" />
+    <Compile Include="Player\PlayerInventory.cs" />
     <Compile Include="Player\PlayerVals.cs" />
     <Compile Include="Player\SettingVals.cs" />
     <Compile Include="Player\SL.cs" />
