@@ -58,8 +58,9 @@
     <Compile Include="Commands\CommandRestore.cs" />
     <Compile Include="Commands\CommandSet.cs" />
     <Compile Include="Commands\CommandTime.cs" />
-    <Compile Include="Components\Inventory.cs" />
-    <Compile Include="Components\Item.cs" />
+    <Compile Include="Components\IAI\Inventory.cs" />
+    <Compile Include="Components\IAI\Item.cs" />
+    <Compile Include="Components\IAI\ItemStack.cs" />
     <Compile Include="Components\ObjectData.cs" />
     <Compile Include="Init\PCSCommands.cs" />
     <Compile Include="Components\Achievement.cs" />
@@ -286,6 +287,7 @@
   <ItemGroup>
     <None Include="Resources\ErrorApple.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

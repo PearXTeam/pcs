@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using pcs.Components;
+using pcs.Components.IAI;
 
 namespace pcs.Player
 {

@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace pcs.Components
+namespace pcs.Components.IAI
 {
-    public class Inventory : List<Item>
+    public class Inventory : List<ItemStack>
     {
-        public new void Add(Item itm)
+        public new void Add(ItemStack itm)
         {
             base.Add(itm);
         }
