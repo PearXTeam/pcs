@@ -170,7 +170,6 @@ namespace pcs
                     SL.Save("autosave");
                 }
             };
-            Game.instance.timerTime.Tick += (o, args) => PlayerVals.Time += new TimeSpan(1, 0, 0);
 
             Game.instance.timerFood.Interval = 3600;
             Game.instance.timerMood.Interval = 22000;
@@ -216,6 +215,18 @@ namespace pcs
             {
                 File.WriteAllBytes(PCS.PathSounds + "PopUp.mp3", Resources.PopUp);
             }
+        }
+
+        public static void PostInit()
+        {
+            Game.instance.timerTime.Tick += (o, args) =>
+            {
+                PlayerVals.Time += new TimeSpan(1, 0, 0);
+                foreach (var evnt in Registry.RegisteredTimeUpdateEvents)
+                {
+                    evnt.OnTimeUpdate();
+                }
+            };
         }
     }
 }

@@ -101,10 +101,5 @@ namespace pcs.Components.IAI
         {
             
         }
-
-        public virtual void OnTick()
-        {
-            
-        }
     }
 }

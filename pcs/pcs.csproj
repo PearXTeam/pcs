@@ -61,7 +61,9 @@
     <Compile Include="Components\IAI\Inventory.cs" />
     <Compile Include="Components\IAI\Item.cs" />
     <Compile Include="Components\IAI\ItemStack.cs" />
+    <Compile Include="Components\Interfaces\ITickable.cs" />
     <Compile Include="Components\ObjectData.cs" />
+    <Compile Include="Events\TimeUpdateEvent.cs" />
     <Compile Include="Init\PCSCommands.cs" />
     <Compile Include="Components\Achievement.cs" />
     <Compile Include="Components\Controls\AchievementListElement.cs">
@@ -199,6 +201,9 @@
     <EmbeddedResource Include="EmbLangs\EmbLangs.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EmbLangs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
