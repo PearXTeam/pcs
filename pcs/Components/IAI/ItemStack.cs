@@ -4,10 +4,10 @@
     {
         protected ObjectData _Data = new ObjectData();
         protected Item _Item = new Item();
-        protected long _StackCount = 1;
+        protected int _StackCount = 1;
         protected string _SubID = "";
 
-        public ItemStack(Item itm, int count, string subID)
+        public ItemStack(Item itm, int count = 1, string subID = "")
         {
             Item = itm;
             StackCount = count;
@@ -35,7 +35,7 @@
         /// <summary>
         /// Items in stack
         /// </summary>
-        public virtual long StackCount
+        public virtual int StackCount
         {
             get { return _StackCount; }
             set { _StackCount = value; }

@@ -7,7 +7,7 @@ namespace pcs
 {
     public class Registry
     {
-        public static List<SToolIcon> RegisteredIcons = new List<SToolIcon>();
+        public static List<SToolIcon> RegisteredToolIcons = new List<SToolIcon>();
 
         public static List<Achievement> RegisteredAchievements = new List<Achievement>();
 

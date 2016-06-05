@@ -13,6 +13,7 @@ using pcs.Commands;
 using pcs.Components.Controls;
 using pcs.Init;
 using pcs.Properties;
+using PearXLib;
 
 namespace pcs
 {
@@ -36,12 +37,12 @@ namespace pcs
 
         public static void Register()
         {
-            Registry.RegisteredIcons.Add(TISettings.ins);
-            Registry.RegisteredIcons.Add(TIModlist.ins);
-            Registry.RegisteredIcons.Add(TISaveManager.ins);
-            Registry.RegisteredIcons.Add(TIAbout.ins);
-            Registry.RegisteredIcons.Add(TIAchievements.ins);
-            Registry.RegisteredIcons.Add(TIShare.ins);
+            Registry.RegisteredToolIcons.Add(TISettings.ins);
+            Registry.RegisteredToolIcons.Add(TIModlist.ins);
+            Registry.RegisteredToolIcons.Add(TISaveManager.ins);
+            Registry.RegisteredToolIcons.Add(TIAbout.ins);
+            Registry.RegisteredToolIcons.Add(TIAchievements.ins);
+            Registry.RegisteredToolIcons.Add(TIShare.ins);
 
 
             Registry.RegisteredAchievements.Add(PCSAchievements.Coder);
@@ -127,20 +128,15 @@ namespace pcs
             Share.instance.btnShareTwitter.Text = PCS.Loc.GetString("share.twitter");
         }
 
-        public static void InitIcons()
+        public static void InitToolIcons()
         {
             int count = 0;
-            foreach(SToolIcon sti in Registry.RegisteredIcons)
+            foreach(SToolIcon sti in Registry.RegisteredToolIcons)
             {
-                XIcon xi = new XIcon();
-                xi.Expand = 4;
-                xi.Size = new Size(48, 48);
+                PCSToolIcon xi = new PCSToolIcon();
                 xi.Click += sti.OnClick;
                 xi.Icon = sti.GetIcon();
-                int shift = 0;
-                if (count == 0)
-                    shift = 4;
-                xi.Location = new Point(0, (48 * count) + shift);
+                xi.Location = new Point(0, 48 * count);
 
                 ToolTip tip = new ToolTip();
                 tip.SetToolTip(xi, sti.Desc());
@@ -151,9 +147,12 @@ namespace pcs
             }
         }
 
+        
+
         public static void Init()
         {
             Game.instance.panelToolIcons.Size = new Size(48 + SystemInformation.VerticalScrollBarWidth, 344);
+            Game.instance.panelIcons.Size = new Size(Game.instance.panelIcons.Width + SystemInformation.VerticalScrollBarWidth, Game.instance.panelIcons.Height);
 
             foreach(PCSMod m in ModRegistry.Mods)
             {
@@ -227,6 +226,36 @@ namespace pcs
                     evnt.OnTimeUpdate();
                 }
             };
+        }
+
+        public static void InitLang(Form form)
+        {
+            string langPath = PCS.Path + "lang.pcs";
+            bool notExists = false;
+
+            if (File.Exists(langPath))
+            {
+                string s = File.ReadAllText(langPath);
+                if (File.Exists(PCS.PathLangs + s + ".lang") && File.Exists(PCS.PathLangs + s + ".langinfo"))
+                {
+                    PCS.SelectedLang = s;
+                    PCS.Loc = new Localization(PCS.PathLangs, PCS.SelectedLang, "ru_RU");
+                }
+                else
+                    notExists = true;
+            }
+            else
+                notExists = true;
+
+            if (notExists)
+            {
+                form.Invoke(new MethodInvoker(() =>
+                {
+                    SelectLang sl = new SelectLang();
+                    sl.ShowDialog(form);
+                }));
+                File.WriteAllText(PCS.Path + "lang.pcs", PCS.SelectedLang);
+            }
         }
     }
 }

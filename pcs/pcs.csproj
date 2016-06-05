@@ -58,12 +58,25 @@
     <Compile Include="Commands\CommandRestore.cs" />
     <Compile Include="Commands\CommandSet.cs" />
     <Compile Include="Commands\CommandTime.cs" />
+    <Compile Include="Components\Controls\PCSIcon.cs" />
+    <Compile Include="Components\Controls\PCSInvItemC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\Controls\PCSToolIcon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Components\IAI\Inventory.cs" />
     <Compile Include="Components\IAI\Item.cs" />
     <Compile Include="Components\IAI\ItemStack.cs" />
     <Compile Include="Components\Interfaces\ITickable.cs" />
     <Compile Include="Components\ObjectData.cs" />
     <Compile Include="Events\TimeUpdateEvent.cs" />
+    <Compile Include="Forms\InventoryGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InventoryGUI.Designer.cs">
+      <DependentUpon>InventoryGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Init\PCSCommands.cs" />
     <Compile Include="Components\Achievement.cs" />
     <Compile Include="Components\Controls\AchievementListElement.cs">
@@ -204,6 +217,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InventoryGUI.resx">
+      <DependentUpon>InventoryGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

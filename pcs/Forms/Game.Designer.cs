@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelIcons = new System.Windows.Forms.Panel();
+            this.lblTime = new pcs.Components.Controls.PCSLabel();
             this.panelToolIcons = new System.Windows.Forms.Panel();
             this.lblXP = new pcs.Components.Controls.PCSLabel();
             this.lblMoney = new pcs.Components.Controls.PCSLabel();
@@ -35,8 +37,24 @@
             this.barSleep = new pcs.Components.Controls.PCSBar();
             this.barMood = new pcs.Components.Controls.PCSBar();
             this.barFood = new pcs.Components.Controls.PCSBar();
-            this.lblTime = new pcs.Components.Controls.PCSLabel();
             this.SuspendLayout();
+            // 
+            // panelIcons
+            // 
+            this.panelIcons.Location = new System.Drawing.Point(12, 41);
+            this.panelIcons.Name = "panelIcons";
+            this.panelIcons.Size = new System.Drawing.Size(640, 344);
+            this.panelIcons.TabIndex = 8;
+            // 
+            // lblTime
+            // 
+            this.lblTime.Location = new System.Drawing.Point(620, 472);
+            this.lblTime.MaximumSize = new System.Drawing.Size(136, 28);
+            this.lblTime.MinimumSize = new System.Drawing.Size(136, 28);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(136, 28);
+            this.lblTime.TabIndex = 7;
+            this.lblTime.Text = "00:00, 27.05.2004";
             // 
             // panelToolIcons
             // 
@@ -110,19 +128,10 @@
             this.barFood.Size = new System.Drawing.Size(180, 34);
             this.barFood.TabIndex = 0;
             // 
-            // lblTime
-            // 
-            this.lblTime.Location = new System.Drawing.Point(620, 472);
-            this.lblTime.MaximumSize = new System.Drawing.Size(136, 28);
-            this.lblTime.MinimumSize = new System.Drawing.Size(136, 28);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(136, 28);
-            this.lblTime.TabIndex = 7;
-            this.lblTime.Text = "00:00, 27.05.2004";
-            // 
             // Game
             // 
             this.ClientSize = new System.Drawing.Size(768, 512);
+            this.Controls.Add(this.panelIcons);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.panelToolIcons);
             this.Controls.Add(this.lblXP);
@@ -151,5 +160,6 @@
         public Components.Controls.PCSLabel lblXP;
         public System.Windows.Forms.Panel panelToolIcons;
         public Components.Controls.PCSLabel lblTime;
+        public System.Windows.Forms.Panel panelIcons;
     }
 }

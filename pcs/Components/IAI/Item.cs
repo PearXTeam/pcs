@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 using pcs.Player;
 
@@ -100,6 +101,15 @@ namespace pcs.Components.IAI
         public virtual void OnUse(MouseButtons b, ref ItemStack stack)
         {
             
+        }
+
+        /// <summary>
+        /// Returns all available SubIDs.
+        /// </summary>
+        /// <returns></returns>
+        public virtual List<string> GetSubIDs()
+        {
+            return new List<string>();
         }
     }
 }

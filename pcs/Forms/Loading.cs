@@ -80,30 +80,7 @@ namespace pcs.Forms
 
                 SetVal(2, 1);
                 SetText(2, "Selecting lang...");
-                string langpath = PCS.Path + "lang.pcs";
-                bool notex = false;
-                if (File.Exists(langpath))
-                {
-                    string s = File.ReadAllText(langpath);
-                    if (File.Exists(PCS.PathLangs + s + ".lang") && File.Exists(PCS.PathLangs + s + ".langinfo"))
-                    {
-                        PCS.SelectedLang = s;
-                        PCS.Loc = new Localization(PCS.PathLangs, PCS.SelectedLang, "ru_RU");
-                    }
-                    else
-                        notex = true;
-                }
-                else
-                    notex = true;
-                if(notex)
-                {
-                    Invoke(new MethodInvoker(() =>
-                    {
-                        SelectLang sl = new SelectLang();
-                        sl.ShowDialog(this);
-                    }));
-                    File.WriteAllText(PCS.Path + "lang.pcs", PCS.SelectedLang);
-                }
+                Setup.InitLang(this);
 
                 SetVal(2, 2);
                 SetText(2, "Initing random stuff...");
@@ -151,7 +128,7 @@ namespace pcs.Forms
 
                 SetVal(2, 0);
                 SetText(2, "Initing icons...");
-                Setup.InitIcons();
+                Setup.InitToolIcons();
 
                 SetVal(2, 1);
                 SetText(2, "Initing achievements...");
