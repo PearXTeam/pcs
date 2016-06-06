@@ -147,6 +147,28 @@ namespace pcs
             }
         }
 
+        public static void InitIcons()
+        {
+            int x = 0;
+            int y = 0;
+            foreach (SIcon i in Registry.RegisteredIcons)
+            {
+                PCSIcon icn = new PCSIcon();
+                icn.Click += i.OnClick;
+                icn.Icon = i.GetIcon();
+                icn.Title = i.GetName();
+                if (x == 5)
+                {
+                    x = 0;
+                    y++;
+                }
+                icn.Location = new Point(x * icn.Size.Width, y * icn.Size.Height);
+
+                Game.instance.panelIcons.Controls.Add(icn);
+                x++;
+            }
+        }
+
         
 
         public static void Init()

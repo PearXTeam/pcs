@@ -19,6 +19,7 @@ namespace pcs
         public static Image Check = Resources.Check;
         public static Image BrokenFloppy = Resources.BrokenFloppy;
         public static Image ConsoleDetective = Resources.ConsoleDetective;
-        public static Image MissingIcon = Resources.ErrorApple;
+        public static Image ErrorApple = Resources.ErrorApple;
+        public static Image UndefinedIcon = Resources.UndefinedIcon;
     }
 }

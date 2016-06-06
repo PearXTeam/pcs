@@ -2,6 +2,8 @@
 using pcs.Modding;
 using System;
 using System.Globalization;
+using pcs.Components;
+using pcs.Components.Controls;
 
 namespace SimplePCSMod
 {
@@ -36,11 +38,20 @@ namespace SimplePCSMod
         public void PreInit()
         {
             PCS.l.Add("I'm PreInited Example Mod ;)", "EXAMPLE");
+            for (int i = 0; i < 11; i++)
+            {
+                Registry.RegisteredIcons.Add(new Test());
+            }
         }
 
         public string Version()
         {
             return "1.0.0.0";
         }
+    }
+
+    public class Test : SIcon
+    {
+        
     }
 }

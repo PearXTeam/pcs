@@ -70,6 +70,7 @@
     <Compile Include="Components\IAI\ItemStack.cs" />
     <Compile Include="Components\Interfaces\ITickable.cs" />
     <Compile Include="Components\ObjectData.cs" />
+    <Compile Include="Components\SIcon.cs" />
     <Compile Include="Events\TimeUpdateEvent.cs" />
     <Compile Include="Forms\InventoryGUI.cs">
       <SubType>Form</SubType>
@@ -215,15 +216,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EmbLangs.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Game.resx">
-      <DependentUpon>Game.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\InventoryGUI.resx">
-      <DependentUpon>InventoryGUI.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Loading.resx">
-      <DependentUpon>Loading.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -311,7 +303,9 @@
   <ItemGroup>
     <None Include="Resources\ErrorApple.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\UndefinedIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

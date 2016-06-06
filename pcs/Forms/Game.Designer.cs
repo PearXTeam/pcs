@@ -41,6 +41,7 @@
             // 
             // panelIcons
             // 
+            this.panelIcons.AutoScroll = true;
             this.panelIcons.Location = new System.Drawing.Point(12, 41);
             this.panelIcons.Name = "panelIcons";
             this.panelIcons.Size = new System.Drawing.Size(640, 344);

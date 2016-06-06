@@ -28,7 +28,7 @@ namespace pcs.Components.IAI
         /// </summary>
         public virtual Image Icon(ItemStack stack)
         {
-            return PCSImages.MissingIcon;
+            return PCSImages.ErrorApple;
         }
 
         /// <summary>

@@ -10,22 +10,17 @@ namespace pcs.Components
     {
         public virtual Image GetIcon()
         {
-            return PCSImages.UndefinedToolIcon;
+            return PCSImages.UndefinedIcon;
         }
 
         public virtual void OnClick(object sender, EventArgs e)
         {
-
+            
         }
 
-        public virtual string Desc()
+        public virtual string GetName()
         {
-            return "I'm a ToolIcon ;)";
-        }
-
-        public virtual string Name()
-        {
-            return "Sample Name";
+            return "Undefined Icon";
         }
     }
 }

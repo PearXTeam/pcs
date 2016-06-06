@@ -233,6 +233,16 @@ namespace pcs.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap UndefinedIcon {
+            get {
+                object obj = ResourceManager.GetObject("UndefinedIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap UndefinedToolIcon {
             get {
                 object obj = ResourceManager.GetObject("UndefinedToolIcon", resourceCulture);

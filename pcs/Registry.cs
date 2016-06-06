@@ -9,6 +9,8 @@ namespace pcs
     {
         public static List<SToolIcon> RegisteredToolIcons = new List<SToolIcon>();
 
+        public static List<SIcon> RegisteredIcons = new List<SIcon>();
+
         public static List<Achievement> RegisteredAchievements = new List<Achievement>();
 
         public static List<SaveElement> RegisteredSaves = new List<SaveElement>();
@@ -17,6 +19,6 @@ namespace pcs
 
         public static List<Item> RegisteredItems = new List<Item>(); 
 
-        public static List<TimeUpdateEvent> RegisteredTimeUpdateEvents = new List<TimeUpdateEvent>(); 
+        public static List<TimeUpdateEvent> RegisteredTimeUpdateEvents = new List<TimeUpdateEvent>();
     }
 }
