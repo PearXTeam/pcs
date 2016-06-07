@@ -73,6 +73,16 @@ namespace pcs.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Backpack {
+            get {
+                object obj = ResourceManager.GetObject("Backpack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap BrokenFloppy {
             get {
                 object obj = ResourceManager.GetObject("BrokenFloppy", resourceCulture);
@@ -176,6 +186,16 @@ namespace pcs.Properties {
         public static System.Drawing.Bitmap Puzzle {
             get {
                 object obj = ResourceManager.GetObject("Puzzle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Sand {
+            get {
+                object obj = ResourceManager.GetObject("Sand", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

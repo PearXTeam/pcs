@@ -6,6 +6,7 @@ title.gameover=Игра окончена
 title.about=Об игре
 title.achievements=Достижения
 title.share=Поделиться
+title.inventory=Инвентарь
 
 #Bar texts:
 bar.food=Еда: 
@@ -74,6 +75,9 @@ command.time.successfully=Дата успешно установлена!
 command.time.incorrectargs=Все значения должны быть числом!
 command.time.cannotConvertToDateTime=Невозможно преобразовать одно из значений в дату.
 
+command.give.incorrectUsage=Использование команды: /give <ID предмета>
+command.give.notFound=Предмет не найден!
+
 #Achievements
 achievement.unlocked=Достижение разблокировано!
 
@@ -92,3 +96,6 @@ share.twitter.text=Отличная игра-симулятор с поддер�
 #Shop
 shop.buy.notEnoughMoney.title=Недостаточно денег
 shop.buy.notEnoughMoney=У Вас недостаточно денег, чтобы купить это.
+
+#Items
+item.sand=Песок

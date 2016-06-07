@@ -54,6 +54,7 @@
     <Compile Include="Background.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Commands\CommandGive.cs" />
     <Compile Include="Commands\CommandHelp.cs" />
     <Compile Include="Commands\CommandRestore.cs" />
     <Compile Include="Commands\CommandSet.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Forms\InventoryGUI.Designer.cs">
       <DependentUpon>InventoryGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Icons\IconInventory.cs" />
     <Compile Include="Init\PCSCommands.cs" />
     <Compile Include="Components\Achievement.cs" />
     <Compile Include="Components\Controls\AchievementListElement.cs">
@@ -191,6 +193,8 @@
       <DependentUpon>Share.cs</DependentUpon>
     </Compile>
     <Compile Include="Init\PCSAchievements.cs" />
+    <Compile Include="Init\PCSIcons.cs" />
+    <Compile Include="Init\PCSItems.cs" />
     <Compile Include="Modding\ModRegistry.cs" />
     <Compile Include="Modding\PCSEvents.cs" />
     <Compile Include="Modding\PCSMod.cs" />
@@ -305,6 +309,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\UndefinedIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Backpack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sand.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

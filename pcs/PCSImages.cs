@@ -21,5 +21,8 @@ namespace pcs
         public static Image ConsoleDetective = Resources.ConsoleDetective;
         public static Image ErrorApple = Resources.ErrorApple;
         public static Image UndefinedIcon = Resources.UndefinedIcon;
+        public static Image Backpack = Resources.Backpack;
+
+        public static Image Sand = Resources.Sand;
     }
 }

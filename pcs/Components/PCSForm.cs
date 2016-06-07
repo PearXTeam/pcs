@@ -49,6 +49,11 @@ namespace pcs.Components
                 if (!CloseMe)
                     Environment.Exit(0);
             }
+            else
+            {
+                e.Cancel = true;
+                Hide();
+            }
         }
 
         protected override void OnShown(EventArgs e)

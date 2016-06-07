@@ -7,12 +7,27 @@ namespace pcs.Components.IAI
 {
     public class Item
     {
+        private string _Name;
+        private string _ID;
+        private Image _Icon;
+        private long _ShopPrice;
+        private bool _AvailableInShop;
+
+        public Item() { }
+        public Item(string name, string id, Image icon, long shopPrice = 100, bool availableInShop = true)
+        {
+            _Name = name;
+            _ID = id;
+            _Icon = icon;
+            _ShopPrice = shopPrice;
+            _AvailableInShop = availableInShop;
+        }
         /// <summary>
         /// A name of the Item
         /// </summary>
         public virtual string Name(ItemStack stack)
         {
-            return "Undefined Item";
+            return _Name;
         }
 
         /// <summary>
@@ -20,7 +35,7 @@ namespace pcs.Components.IAI
         /// </summary>
         public virtual string ID()
         {
-            return "PCS_UndefinedItem";
+            return _ID;
         }
 
         /// <summary>
@@ -28,7 +43,7 @@ namespace pcs.Components.IAI
         /// </summary>
         public virtual Image Icon(ItemStack stack)
         {
-            return PCSImages.ErrorApple;
+            return _Icon;
         }
 
         /// <summary>
@@ -51,12 +66,16 @@ namespace pcs.Components.IAI
 
         //SHOP \/
 
+        public virtual bool AvailableInShop()
+        {
+            return _AvailableInShop;
+        }
         /// <summary>
         /// An Item's price in the Shop
         /// </summary>
         public virtual long ShopPrice(ItemStack stack)
         {
-            return 100;
+            return _ShopPrice;
         }
 
         /// <summary>

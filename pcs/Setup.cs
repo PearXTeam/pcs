@@ -4,7 +4,6 @@ using pcs.Forms;
 using pcs.Modding;
 using pcs.Player;
 using pcs.ToolIcons;
-using PearXLib.Engine;
 using System.Drawing;
 using System.IO;
 using System.Numerics;
@@ -37,6 +36,7 @@ namespace pcs
 
         public static void Register()
         {
+            //Tool Icons
             Registry.RegisteredToolIcons.Add(TISettings.ins);
             Registry.RegisteredToolIcons.Add(TIModlist.ins);
             Registry.RegisteredToolIcons.Add(TISaveManager.ins);
@@ -44,17 +44,24 @@ namespace pcs
             Registry.RegisteredToolIcons.Add(TIAchievements.ins);
             Registry.RegisteredToolIcons.Add(TIShare.ins);
 
-
+            //Achievements
             Registry.RegisteredAchievements.Add(PCSAchievements.Coder);
             Registry.RegisteredAchievements.Add(PCSAchievements.ConsoleDetective);
 
-
+            //Commands
             Registry.RegisteredCommands.Add(PCSCommands.Restore);
             Registry.RegisteredCommands.Add(PCSCommands.Help);
             Registry.RegisteredCommands.Add(PCSCommands.Set);
             Registry.RegisteredCommands.Add(PCSCommands.Time);
+            Registry.RegisteredCommands.Add(PCSCommands.Give);
 
+            //Icons
+            Registry.RegisteredIcons.Add(PCSIcons.Inventory);
 
+            //Items
+            Registry.RegisteredItems.Add(PCSItems.Sand);
+
+            //Saves
             Registry.RegisteredSaves.Add(new SaveElement("PCS_MaxFood", 
                 (name, value) => { Stats.MaxFood = Convert.ToInt32(value); }, 
                 (string name, out string value) => { value = Stats.MaxFood.ToString(); }));
@@ -126,6 +133,8 @@ namespace pcs
 
             Share.instance.btnShareVK.Text = PCS.Loc.GetString("share.vk");
             Share.instance.btnShareTwitter.Text = PCS.Loc.GetString("share.twitter");
+
+            InventoryGUI.Instance.Text = PCS.Loc.GetString("title.inventory");
         }
 
         public static void InitToolIcons()

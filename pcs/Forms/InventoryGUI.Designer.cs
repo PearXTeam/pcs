@@ -35,14 +35,14 @@
             // 
             this.panelInv.Location = new System.Drawing.Point(12, 37);
             this.panelInv.Name = "panelInv";
-            this.panelInv.Size = new System.Drawing.Size(488, 381);
+            this.panelInv.Size = new System.Drawing.Size(512, 381);
             this.panelInv.TabIndex = 0;
             // 
             // InventoryGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 430);
+            this.ClientSize = new System.Drawing.Size(534, 430);
             this.Controls.Add(this.panelInv);
             this.Name = "InventoryGUI";
             this.Text = "InventoryGUI";

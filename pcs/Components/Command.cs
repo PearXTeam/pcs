@@ -1,5 +1,4 @@
-﻿using System.Drawing;
-using pcs.Forms;
+﻿using pcs.Forms;
 using PearXLib;
 
 namespace pcs.Components

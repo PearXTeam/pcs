@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 using NAudio.Wave;
-using pcs.Components;
 using pcs.Forms;
 
 namespace pcs

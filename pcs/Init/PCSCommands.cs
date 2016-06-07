@@ -8,5 +8,6 @@ namespace pcs.Commands
         public static Command Help = new CommandHelp();
         public static Command Set = new CommandSet();
         public static Command Time = new CommandTime();
+        public static Command Give = new CommandGive();
     }
 }
