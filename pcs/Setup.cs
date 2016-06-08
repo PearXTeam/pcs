@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using pcs.Components;
 using pcs.Forms;
 using pcs.Modding;
@@ -8,8 +9,10 @@ using System.Drawing;
 using System.IO;
 using System.Numerics;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 using pcs.Commands;
 using pcs.Components.Controls;
+using pcs.Components.IAI;
 using pcs.Init;
 using pcs.Properties;
 using PearXLib;
@@ -62,8 +65,8 @@ namespace pcs
             Registry.RegisteredItems.Add(PCSItems.Sand);
 
             //Saves
-            Registry.RegisteredSaves.Add(new SaveElement("PCS_MaxFood", 
-                (name, value) => { Stats.MaxFood = Convert.ToInt32(value); }, 
+            Registry.RegisteredSaves.Add(new SaveElement("PCS_MaxFood",
+                (name, value) => { Stats.MaxFood = Convert.ToInt32(value); },
                 (string name, out string value) => { value = Stats.MaxFood.ToString(); }));
             Registry.RegisteredSaves.Add(new SaveElement("PCS_MaxHealth",
                 (name, value) => { Stats.MaxHealth = Convert.ToInt32(value); },
@@ -96,8 +99,31 @@ namespace pcs
                 (name, value) => { PlayerVals.XP = BigInteger.Parse(value); },
                 (string name, out string value) => { value = PlayerVals.XP.ToString(); }));
             Registry.RegisteredSaves.Add(new SaveElement("PCS_Time",
-                (name, value) => { PlayerVals.Time = DateTime.FromBinary(Convert.ToInt64(value)); }, 
+                (name, value) => { PlayerVals.Time = DateTime.FromBinary(Convert.ToInt64(value)); },
                 (string name, out string value) => { value = PlayerVals.Time.ToBinary().ToString(); }));
+
+            //Inventory start
+            Registry.RegisteredSaves.Add(new SaveElement("PCS_Inventory", (name, value) =>
+            {
+                List<string[]> l = JsonConvert.DeserializeObject<List<string[]>>(value);
+                foreach (string[] s in l)
+                {
+                    ItemStack stack = new ItemStack(Item.FromID(s[0]), Convert.ToInt32(s[1]), s[2]);
+                    stack.Data = ObjectData.FromString(s[3]);
+                    PlayerInventory.Inventory.Add(stack, false);
+                }
+
+            }, (string name, out string value) =>
+
+            {
+                List<string[]> l = new List<string[]>();
+                foreach (ItemStack s in PlayerInventory.Inventory)
+                {
+                    l.Add(new string[] {s.Item.ID(), s.StackCount.ToString(), s.SubID, s.Data.ToString()});
+                }
+                value = JsonConvert.SerializeObject(l);
+            }));
+            //Inventory end
         }
 
         public static void SetupTitles()

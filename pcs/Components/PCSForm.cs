@@ -52,7 +52,9 @@ namespace pcs.Components
             else
             {
                 e.Cancel = true;
+                Owner.Focus();
                 Hide();
+                //Owner.Focus();
             }
         }
 

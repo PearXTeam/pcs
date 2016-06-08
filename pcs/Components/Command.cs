@@ -10,7 +10,7 @@ namespace pcs.Components
             return "testingcommand";
         }
 
-        public virtual void OnPerform(string[] args)
+        public virtual void OnPerform(string[] args, string allArgs)
         {
             PCS.l.Add("I'm a testing command =P.");
         }

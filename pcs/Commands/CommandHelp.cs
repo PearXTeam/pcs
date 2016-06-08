@@ -10,7 +10,7 @@ namespace pcs.Commands
             return "help";
         }
 
-        public override void OnPerform(string[] args)
+        public override void OnPerform(string[] args, string allArgs)
         {
             StringBuilder sb = new StringBuilder();
             sb.Append(PCS.Loc.GetString("command.help.avaible"));

@@ -10,7 +10,7 @@ namespace pcs.Commands
             return "restore";
         }
 
-        public override void OnPerform(string[] args)
+        public override void OnPerform(string[] args, string allArgs)
         {
             Stats.Food = Stats.MaxFood;
             Stats.Mood = Stats.MaxMood;

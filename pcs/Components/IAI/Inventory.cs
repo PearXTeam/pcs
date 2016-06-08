@@ -6,6 +6,15 @@ namespace pcs.Components.IAI
 {
     public class Inventory : ObservableCollection<ItemStack>
     {
+        private bool notUpdate;
+
+        public void Add(ItemStack stack, bool update)
+        {
+            if (update == false)
+                notUpdate = true;
+            base.Add(stack);
+        }
+
         public new void Add(ItemStack itm)
         {
             base.Add(itm);
@@ -14,7 +23,9 @@ namespace pcs.Components.IAI
         protected override void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
         {
             base.OnCollectionChanged(e);
-            InventoryGUI.Instance.UpdateInventory();
+            if(!notUpdate)
+                InventoryGUI.Instance.UpdateInventory();
+            notUpdate = false;
         }
     }
 }

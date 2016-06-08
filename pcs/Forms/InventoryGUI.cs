@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 using pcs.Components;
@@ -35,7 +36,7 @@ namespace pcs.Forms
                     item.ItemName = v.Item.Name(v);
                     item.ItemDesc = v.Item.Description(v);
                     item.ItemAmount = v.StackCount;
-                    item.Location = new Point(x * item.Width, y * item.Height);
+                    item.Location = new Point(x * (item.Width + 4), y * item.Height);
                     item.MouseClick += (sender, args) =>
                     {
                         int index = PlayerInventory.Inventory.IndexOf(v);
@@ -44,9 +45,9 @@ namespace pcs.Forms
                         if(s != v)
                             PlayerInventory.Inventory[index] = s;
                     };
-                    if (x == 7)
+                    if (x == 6)
                     {
-                        x = 0;
+                        x = -1;
                         y++;
                     }
                     if(IsHandleCreated)
@@ -56,6 +57,11 @@ namespace pcs.Forms
                     x++;
                 }
             }).Start();
+        }
+
+        protected override void OnShown(EventArgs e)
+        {
+            UpdateInventory();
         }
     }
 }

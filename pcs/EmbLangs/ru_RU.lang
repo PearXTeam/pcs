@@ -77,6 +77,8 @@ command.time.cannotConvertToDateTime=Невозможно преобразова
 
 command.give.incorrectUsage=Использование команды: /give <ID предмета>
 command.give.notFound=Предмет не найден!
+command.give.successfully=Предмет "%s" успешно выдан!
+command.give.size.nan=Количество предмета не является числом!
 
 #Achievements
 achievement.unlocked=Достижение разблокировано!

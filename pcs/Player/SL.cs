@@ -60,7 +60,7 @@ namespace pcs.Player
                     str.Name = se.Name;
                     l.Add(str);
                 }
-                File.WriteAllText(PCS.PathSaves + filename + ".pcs", JsonConvert.SerializeObject(l));
+                File.WriteAllText(PCS.PathSaves + filename + ".pcs", JsonConvert.SerializeObject(l, Formatting.Indented));
 
                 PCS.l.Add("Done saving savefile.", LogType.Info);
             }

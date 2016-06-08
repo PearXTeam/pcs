@@ -12,13 +12,13 @@ namespace pcs.Commands
             return "time";
         }
 
-        public override void OnPerform(string[] args)
+        public override void OnPerform(string[] args, string allArgs)
         {
             switch (args.Length)
             {
-                case 2:
+                case 1:
                     int newHours;
-                    if (int.TryParse(args[1], out newHours))
+                    if (int.TryParse(args[0], out newHours))
                     {
                         try
                         {
@@ -33,9 +33,9 @@ namespace pcs.Commands
                         AddToConsole(PCS.Loc.GetString("command.time.incorrectargs"));
                     }
                     break;
-                case 5:
+                case 4:
                     int newYear, newMonth, newDay, newHrs;
-                    if (int.TryParse(args[1], out newDay) && int.TryParse(args[2], out newMonth) && int.TryParse(args[3], out newYear) && int.TryParse(args[4], out newHrs))
+                    if (int.TryParse(args[0], out newDay) && int.TryParse(args[1], out newMonth) && int.TryParse(args[2], out newYear) && int.TryParse(args[3], out newHrs))
                     {
                         try
                         {

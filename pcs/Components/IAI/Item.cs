@@ -130,5 +130,15 @@ namespace pcs.Components.IAI
         {
             return new List<string>();
         }
+
+        public static Item FromID(string id)
+        {
+            foreach (Item itm in Registry.RegisteredItems)
+            {
+                if (itm.ID() == id)
+                    return itm;
+            }
+            return null;
+        }
     }
 }

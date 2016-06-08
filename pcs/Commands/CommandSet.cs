@@ -11,56 +11,59 @@ namespace pcs.Commands
             return "set";
         }
 
-        public override void OnPerform(string[] args)
+        public override void OnPerform(string[] args, string allArgs)
         {
-            if (args.Length == 3)
+            switch (args.Length)
             {
-                int i;
-                if (int.TryParse(args[2], out i))
-                {
-                    switch (args[1])
+                case 2:
+                    int i;
+                    if (int.TryParse(args[1], out i))
                     {
-                        case "money":
-                            PlayerVals.Money = i;
-                            break;
-                        case "xp":
-                            PlayerVals.XP = i;
-                            break;
-                        case "food":
-                            Stats.Food = i;
-                            break;
-                        case "sleep":
-                            Stats.Sleep = i;
-                            break;
-                        case "health":
-                            Stats.Health = i;
-                            break;
-                        case "mood":
-                            Stats.Mood = i;
-                            break;
-                        case "mfood":
-                            Stats.MaxFood = i;
-                            break;
-                        case "msleep":
-                            Stats.MaxSleep = i;
-                            break;
-                        case "mhealth":
-                            Stats.MaxHealth = i;
-                            break;
-                        case "mmood":
-                            Stats.MaxMood = i;
-                            break;
-                        default:
-                            AddToConsole(PCS.Loc.GetString("command.set.incorrectusage"), LogType.Warning);
-                            break;
+                        switch (args[1])
+                        {
+                            case "money":
+                                PlayerVals.Money = i;
+                                break;
+                            case "xp":
+                                PlayerVals.XP = i;
+                                break;
+                            case "food":
+                                Stats.Food = i;
+                                break;
+                            case "sleep":
+                                Stats.Sleep = i;
+                                break;
+                            case "health":
+                                Stats.Health = i;
+                                break;
+                            case "mood":
+                                Stats.Mood = i;
+                                break;
+                            case "mfood":
+                                Stats.MaxFood = i;
+                                break;
+                            case "msleep":
+                                Stats.MaxSleep = i;
+                                break;
+                            case "mhealth":
+                                Stats.MaxHealth = i;
+                                break;
+                            case "mmood":
+                                Stats.MaxMood = i;
+                                break;
+                            default:
+                                AddToConsole(PCS.Loc.GetString("command.set.incorrectusage"), LogType.Warning);
+                                break;
+                        }
+                        AddToConsole(PCS.Loc.GetString("command.set.successfully") + i);
                     }
-                    AddToConsole(PCS.Loc.GetString("command.set.successfully") + i);
-                }
-                else
-                    AddToConsole(PCS.Loc.GetString("command.set.nan"), LogType.Warning);
+                    else
+                        AddToConsole(PCS.Loc.GetString("command.set.nan"), LogType.Warning);
+                    break;
+                default:
+                    AddToConsole(PCS.Loc.GetString("command.set.incorrectusage"), LogType.Warning);
+                    break;
             }
-            else
-                AddToConsole(PCS.Loc.GetString("command.set.incorrectusage"), LogType.Warning);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using pcs.Components;
 using pcs.Init;
@@ -45,7 +46,8 @@ namespace pcs.Forms
                     {
                         if (c.Name() == s.Split(' ')[0])
                         {
-                            c.OnPerform(s.Split(' '));
+                            string[] args = s.Split(' ').Skip(1).ToArray();
+                            c.OnPerform(args, string.Join(" ", args));
                             return;
                         }
                     }
