@@ -14,6 +14,9 @@ namespace pcs.Forms
         public Timer timerMood = new Timer();
         public Timer timerAutosave = new Timer();
         public Timer timerTime = new Timer();
+        public Timer timerTick = new Timer();
+
+        public byte TickNumber = 0;
 
         public bool DontSave = false;
 
@@ -29,6 +32,7 @@ namespace pcs.Forms
             timerMood.Start();
             timerAutosave.Start();
             timerTime.Start();
+            timerTick.Start();
         }
 
         private void Game_FormClosing(object sender, FormClosingEventArgs e)

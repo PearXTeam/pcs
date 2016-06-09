@@ -140,5 +140,15 @@ namespace pcs.Components.IAI
             }
             return null;
         }
+
+        //
+        //
+        //
+
+        protected void SetID(string s) { _ID = s; }
+        protected void SetName(string s) { _Name = s; }
+        protected void SetIcon(Image s) { _Icon = s; }
+        protected void SetShopPrice(long s) { _ShopPrice = s; }
+        protected void SetAvailableInShop(bool s) { _AvailableInShop = s; }
     }
 }

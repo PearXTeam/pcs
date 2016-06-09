@@ -25,10 +25,10 @@ namespace pcs.Forms
         {
             new Thread(() =>
             {
-                Thread.Sleep(300);
                 SetMax(1, 7);
                 //
                 //
+                PCS.l.Add(":================LOADING STARTED================:");
                 SetVal(1, 0);
                 SetText(1, "Loading mods...");
                 PCS.l.Add("Loading mods...", LogType.Info);
@@ -188,6 +188,7 @@ namespace pcs.Forms
                 SetText(1, "Done");
                 //
                 //
+                PCS.l.Add(":================LOADING FINISHED================:");
                 Invoke(new MethodInvoker(() =>
                 {
                     ShowNew(Game.instance);

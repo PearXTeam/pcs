@@ -8,11 +8,13 @@ using pcs.ToolIcons;
 using System.Drawing;
 using System.IO;
 using System.Numerics;
+using System.Threading;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using pcs.Commands;
 using pcs.Components.Controls;
 using pcs.Components.IAI;
+using pcs.Components.Interfaces;
 using pcs.Init;
 using pcs.Properties;
 using PearXLib;
@@ -63,6 +65,7 @@ namespace pcs
 
             //Items
             Registry.RegisteredItems.Add(PCSItems.Sand);
+            Registry.RegisteredItems.Add(PCSItems.BedTalisman);
 
             //Saves
             Registry.RegisteredSaves.Add(new SaveElement("PCS_MaxFood",
@@ -108,11 +111,16 @@ namespace pcs
                 List<string[]> l = JsonConvert.DeserializeObject<List<string[]>>(value);
                 foreach (string[] s in l)
                 {
-                    ItemStack stack = new ItemStack(Item.FromID(s[0]), Convert.ToInt32(s[1]), s[2]);
-                    stack.Data = ObjectData.FromString(s[3]);
-                    PlayerInventory.Inventory.Add(stack, false);
+                    Item itm = Item.FromID(s[0]);
+                    if (itm != null)
+                    {
+                        ItemStack stack = new ItemStack(itm, Convert.ToInt32(s[1]), s[2]);
+                        stack.Data = ObjectData.FromString(s[3]);
+                        PlayerInventory.Inventory.Add(stack, false);
+                    }
+                    else
+                        PCS.l.Add("Item \"" + s[0] + "\" not exists!", LogType.Error);
                 }
-
             }, (string name, out string value) =>
 
             {
@@ -226,14 +234,33 @@ namespace pcs
                     SL.Save("autosave");
                 }
             };
+            Game.instance.timerTick.Tick += (sender, args) =>
+            {
+                if (Game.instance.TickNumber == 11)
+                    Game.instance.TickNumber = 0;
+                foreach (ItemStack s in PlayerInventory.Inventory)
+                {
+                    ITickable t = s.Item as ITickable;
+                    if (t != null)
+                    {
+                        if (t.IsAsync())
+                        {
+                            new Thread(() => t.OnTick(s, Game.instance.TickNumber));
+                        }
+                        else
+                            t.OnTick(s, Game.instance.TickNumber);
+                    }
+                }
+                Game.instance.TickNumber++;
+            };
 
             Game.instance.timerFood.Interval = 3600;
             Game.instance.timerMood.Interval = 22000;
             Game.instance.timerSleep.Interval = 3300;
             Game.instance.timerAutosave.Interval = 50000;
             Game.instance.timerTime.Interval = 420;
+            Game.instance.timerTick.Interval = 100;
 
-            
         }
 
         public static void InitAchievements()

@@ -195,6 +195,7 @@
     <Compile Include="Init\PCSAchievements.cs" />
     <Compile Include="Init\PCSIcons.cs" />
     <Compile Include="Init\PCSItems.cs" />
+    <Compile Include="Items\ItemBedTalisman.cs" />
     <Compile Include="Modding\ModRegistry.cs" />
     <Compile Include="Modding\PCSEvents.cs" />
     <Compile Include="Modding\PCSMod.cs" />

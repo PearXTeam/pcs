@@ -22,12 +22,18 @@ namespace pcs.Commands
                 case 1:
                     break;
                 case 2:
-                    if(!int.TryParse(args[1], out size))
-                        AddToConsole("command.give.size.nan");
+                    if (!int.TryParse(args[1], out size))
+                    {
+                        AddToConsole(PCS.Loc.GetString("command.give.size.nan"));
+                        return;
+                    }
                     break;
                 case 3:
                     if (!int.TryParse(args[1], out size))
-                        AddToConsole("command.give.size.nan");
+                    {
+                        AddToConsole(PCS.Loc.GetString("command.give.size.nan"));
+                        return;
+                    }
                     subID = args[2];
                     break;
                 default:
@@ -43,10 +49,10 @@ namespace pcs.Commands
                     ItemStack stack = new ItemStack(itm, size, subID);
                     AddToConsole(PCS.Loc.GetString("command.give.successfully").Replace("%s", itm.Name(stack)));
                     PlayerInventory.Inventory.Add(stack);
-                    break;
+                    return;
                 }
-                AddToConsole(PCS.Loc.GetString("command.give.notFound"));
             }
+            AddToConsole(PCS.Loc.GetString("command.give.notFound"));
         }
     }
 }
