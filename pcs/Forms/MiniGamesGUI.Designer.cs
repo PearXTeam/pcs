@@ -33,6 +33,7 @@
             // 
             // panelMg
             // 
+            this.panelMg.AutoScroll = true;
             this.panelMg.Location = new System.Drawing.Point(12, 40);
             this.panelMg.Name = "panelMg";
             this.panelMg.Size = new System.Drawing.Size(384, 471);
@@ -44,6 +45,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(427, 522);
             this.Controls.Add(this.panelMg);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "MiniGamesGUI";
             this.Text = "MiniGamesGUI";
             this.ResumeLayout(false);

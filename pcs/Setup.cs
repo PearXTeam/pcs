@@ -8,6 +8,7 @@ using pcs.ToolIcons;
 using System.Drawing;
 using System.IO;
 using System.Numerics;
+using System.Security.AccessControl;
 using System.Threading;
 using System.Windows.Forms;
 using Newtonsoft.Json;
@@ -224,7 +225,7 @@ namespace pcs
                 icn.Click += i.OnClick;
                 icn.Icon = i.GetIcon();
                 icn.Title = i.GetName();
-                if (x == 2)
+                if (x == 3)
                 {
                     x = 0;
                     y++;
