@@ -17,7 +17,7 @@ namespace pcs.Items
 
         public void OnTick(ItemStack stack, byte tickNumber)
         {
-            if (tickNumber == 5)
+            if (tickNumber <= 5)
             {
                 Stats.Sleep++;
             }
@@ -25,7 +25,6 @@ namespace pcs.Items
 
         public override void OnUse(MouseButtons b, ref ItemStack stack)
         {
-            new PopUp().Display("test", "test");
             PlayerInventory.Inventory.Remove(stack);
         }
 

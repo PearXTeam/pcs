@@ -19,7 +19,7 @@ namespace pcs.Commands
                     int i;
                     if (int.TryParse(args[1], out i))
                     {
-                        switch (args[1])
+                        switch (args[0])
                         {
                             case "money":
                                 PlayerVals.Money = i;
