@@ -79,7 +79,14 @@
     <Compile Include="Forms\InventoryGUI.Designer.cs">
       <DependentUpon>InventoryGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MiniGamesGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MiniGamesGUI.Designer.cs">
+      <DependentUpon>MiniGamesGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Icons\IconInventory.cs" />
+    <Compile Include="Icons\IconMiniGames.cs" />
     <Compile Include="Init\PCSCommands.cs" />
     <Compile Include="Components\Achievement.cs" />
     <Compile Include="Components\Controls\AchievementListElement.cs">
@@ -221,6 +228,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EmbLangs.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MiniGamesGUI.resx">
+      <DependentUpon>MiniGamesGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -316,6 +329,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dice.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

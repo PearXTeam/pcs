@@ -52,21 +52,26 @@ namespace pcs.Components
             else
             {
                 e.Cancel = true;
-                Owner.Focus();
                 Hide();
-                //Owner.Focus();
             }
         }
 
-        protected override void OnShown(EventArgs e)
+        protected override void OnVisibleChanged(EventArgs e)
         {
-            if (this is IMain)
+            if(!Visible && Owner != null)
+                Owner.Focus();
+            if (Visible)
             {
-                Location = PCS.PreviousLocation;
+                if (this is IMain)
+                {
+                    Location = PCS.PreviousLocation;
+                }
+                PCS.l.Add("Opened " + GetType().FullName + " form.", LogType.Info);
+                Cursor = Cursors.Default;
             }
-            PCS.l.Add("Opened " + GetType().FullName + " form.", LogType.Info);
-            base.OnShown(e);
         }
+
+        
 
         protected void ShowNew(Form newForm)
         {

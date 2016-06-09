@@ -124,7 +124,7 @@ namespace pcs.Forms
                 //
                 SetVal(1, 4);
                 SetText(1, "PostIniting game...");
-                SetMax(2, 5);
+                SetMax(2, 7);
 
                 SetVal(2, 0);
                 SetText(2, "Initing tool icons...");
@@ -143,10 +143,14 @@ namespace pcs.Forms
                 Setup.PostInit();
 
                 SetVal(2, 5);
-                SetText(2, "Initing icons..");
+                SetText(2, "Initing icons...");
                 Setup.InitIcons();
 
-                SetVal(2, 5);
+                SetVal(2, 6);
+                SetText(2, "Initing Mini-Games...");
+                Setup.InitMiniGames();
+
+                SetVal(2, 7);
                 SetVal(2, 0);
                 SetText(2, "");
                 //

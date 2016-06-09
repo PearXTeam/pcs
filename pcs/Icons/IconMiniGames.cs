@@ -5,24 +5,21 @@ using pcs.Forms;
 
 namespace pcs.Icons
 {
-    public class IconInventory : SIcon
+    public class IconMiniGames : SIcon
     {
         public override Image GetIcon()
         {
-            return PCSImages.Backpack;
+            return PCSImages.Dice;
         }
 
         public override void OnClick(object sender, EventArgs e)
         {
-            if (!InventoryGUI.Instance.Visible)
-            {
-                InventoryGUI.Instance.Show(Game.instance);
-            }
+            MiniGamesGUI.Instance.ShowDialog(Game.instance);
         }
 
         public override string GetName()
         {
-            return PCS.Loc.GetString("title.inventory");
+            return PCS.Loc.GetString("title.minigames");
         }
     }
 }

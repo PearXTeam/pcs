@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pcs", "pcs\pcs.csproj", "{2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PearXLib", "..\PearXLib\PearXLib\PearXLib.csproj", "{327BE810-0846-4D27-8F56-B90FEA81E842}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePCSMod", "SimplePCSMod\SimplePCSMod.csproj", "{E33A9E36-1DC3-4189-9D56-1517C9CF8892}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

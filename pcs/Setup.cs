@@ -62,6 +62,7 @@ namespace pcs
 
             //Icons
             Registry.RegisteredIcons.Add(PCSIcons.Inventory);
+            Registry.RegisteredIcons.Add(PCSIcons.MiniGames);
 
             //Items
             Registry.RegisteredItems.Add(PCSItems.Sand);
@@ -143,6 +144,7 @@ namespace pcs
             SaveManager.instance.Text = PCS.Loc.GetString("title.savemanager");
             GameOver.instance.Text = PCS.Loc.GetString("title.gameover");
             Share.instance.Text = PCS.Loc.GetString("title.share");
+            InventoryGUI.Instance.Text = PCS.Loc.GetString("title.minigames");
 
             Options.instance.checkAutosave.Text = PCS.Loc.GetString("options.autosave");
             Options.instance.btnChangeLanguage.Text = PCS.Loc.GetString("options.changeLanguage");
@@ -212,12 +214,35 @@ namespace pcs
             }
         }
 
-        
+        public static void InitMiniGames()
+        {
+            int x = 0;
+            int y = 0;
+            foreach (SIcon i in Registry.RegisteredMiniGames)
+            {
+                PCSIcon icn = new PCSIcon();
+                icn.Click += i.OnClick;
+                icn.Icon = i.GetIcon();
+                icn.Title = i.GetName();
+                if (x == 2)
+                {
+                    x = 0;
+                    y++;
+                }
+                icn.Location = new Point(x * icn.Size.Width, y * icn.Size.Height);
+
+                MiniGamesGUI.Instance.panelMg.Controls.Add(icn);
+                x++;
+            }
+        }
+
+
 
         public static void Init()
         {
             Game.instance.panelToolIcons.Size = new Size(48 + SystemInformation.VerticalScrollBarWidth, 344);
             Game.instance.panelIcons.Size = new Size(Game.instance.panelIcons.Width + SystemInformation.VerticalScrollBarWidth, Game.instance.panelIcons.Height);
+            MiniGamesGUI.Instance.panelMg.Size = new Size(MiniGamesGUI.Instance.panelMg.Size.Width + SystemInformation.VerticalScrollBarWidth, MiniGamesGUI.Instance.panelMg.Size.Width);
 
             foreach(PCSMod m in ModRegistry.Mods)
             {

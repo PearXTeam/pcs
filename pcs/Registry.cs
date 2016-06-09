@@ -20,5 +20,7 @@ namespace pcs
         public static List<Item> RegisteredItems = new List<Item>(); 
 
         public static List<TimeUpdateEvent> RegisteredTimeUpdateEvents = new List<TimeUpdateEvent>();
+
+        public static List<SIcon> RegisteredMiniGames = new List<SIcon>(); 
     }
 }

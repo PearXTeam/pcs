@@ -19,10 +19,13 @@ namespace pcs
         public static Image Check = Resources.Check;
         public static Image BrokenFloppy = Resources.BrokenFloppy;
         public static Image ConsoleDetective = Resources.ConsoleDetective;
-        public static Image ErrorApple = Resources.ErrorApple;
+
         public static Image UndefinedIcon = Resources.UndefinedIcon;
         public static Image Backpack = Resources.Backpack;
 
+        public static Image Dice = Resources.Dice;
+
         public static Image Sand = Resources.Sand;
+        public static Image ErrorApple = Resources.ErrorApple;
     }
 }

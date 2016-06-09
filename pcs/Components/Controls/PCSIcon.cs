@@ -7,7 +7,7 @@ namespace pcs.Components.Controls
     {
         public PCSIcon()
         {
-            Size = new Size(128, 144);
+            Size = new Size(128, 157);
             Expand = 5;
         }
     }
