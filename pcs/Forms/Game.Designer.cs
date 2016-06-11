@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panelIcons = new System.Windows.Forms.Panel();
-            this.lblTime = new pcs.Components.Controls.PCSLabel();
             this.panelToolIcons = new System.Windows.Forms.Panel();
+            this.lblTime = new pcs.Components.Controls.PCSLabel();
             this.lblXP = new pcs.Components.Controls.PCSLabel();
             this.lblMoney = new pcs.Components.Controls.PCSLabel();
             this.barHealth = new pcs.Components.Controls.PCSBar();
@@ -47,6 +47,14 @@
             this.panelIcons.Size = new System.Drawing.Size(640, 344);
             this.panelIcons.TabIndex = 8;
             // 
+            // panelToolIcons
+            // 
+            this.panelToolIcons.AutoScroll = true;
+            this.panelToolIcons.Location = new System.Drawing.Point(697, 41);
+            this.panelToolIcons.Name = "panelToolIcons";
+            this.panelToolIcons.Size = new System.Drawing.Size(66, 344);
+            this.panelToolIcons.TabIndex = 6;
+            // 
             // lblTime
             // 
             this.lblTime.Location = new System.Drawing.Point(620, 472);
@@ -56,14 +64,6 @@
             this.lblTime.Size = new System.Drawing.Size(136, 28);
             this.lblTime.TabIndex = 7;
             this.lblTime.Text = "00:00, 27.05.2004";
-            // 
-            // panelToolIcons
-            // 
-            this.panelToolIcons.AutoScroll = true;
-            this.panelToolIcons.Location = new System.Drawing.Point(697, 41);
-            this.panelToolIcons.Name = "panelToolIcons";
-            this.panelToolIcons.Size = new System.Drawing.Size(66, 344);
-            this.panelToolIcons.TabIndex = 6;
             // 
             // lblXP
             // 
@@ -141,6 +141,7 @@
             this.Controls.Add(this.barSleep);
             this.Controls.Add(this.barMood);
             this.Controls.Add(this.barFood);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.KeyPreview = true;
             this.Name = "Game";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);

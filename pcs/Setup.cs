@@ -287,6 +287,14 @@ namespace pcs
             Game.instance.timerTime.Interval = 420;
             Game.instance.timerTick.Interval = 100;
 
+            Game.instance.barFood.GradientColor1 = FlatColors.Pumpkin;
+            Game.instance.barFood.GradientColor2 = FlatColors.Pumpkin;
+            Game.instance.barHealth.GradientColor1 = FlatColors.Pomegranate;
+            Game.instance.barHealth.GradientColor2 = FlatColors.Pomegranate;
+            Game.instance.barMood.GradientColor1 = FlatColors.Amethyst;
+            Game.instance.barMood.GradientColor2 = FlatColors.Amethyst;
+            Game.instance.barSleep.GradientColor1 = FlatColors.WetAsphalt;
+            Game.instance.barSleep.GradientColor2 = FlatColors.WetAsphalt;
         }
 
         public static void InitAchievements()

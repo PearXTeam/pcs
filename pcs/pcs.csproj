@@ -59,7 +59,9 @@
     <Compile Include="Commands\CommandRestore.cs" />
     <Compile Include="Commands\CommandSet.cs" />
     <Compile Include="Commands\CommandTime.cs" />
-    <Compile Include="Components\Controls\PCSIcon.cs" />
+    <Compile Include="Components\Controls\PCSIcon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Components\Controls\PCSInvItemC.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -203,6 +205,15 @@
     <Compile Include="Init\PCSIcons.cs" />
     <Compile Include="Init\PCSItems.cs" />
     <Compile Include="Items\ItemBedTalisman.cs" />
+    <Compile Include="MiniGames\MGHangman.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MiniGames\MGHangman.Designer.cs">
+      <DependentUpon>MGHangman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MiniGames\MiniGameScreen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Modding\ModRegistry.cs" />
     <Compile Include="Modding\PCSEvents.cs" />
     <Compile Include="Modding\PCSMod.cs" />
@@ -227,6 +238,12 @@
     <EmbeddedResource Include="EmbLangs\EmbLangs.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EmbLangs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Game.resx">
+      <DependentUpon>Game.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MiniGames\MGHangman.resx">
+      <DependentUpon>MGHangman.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
