@@ -18,7 +18,7 @@ namespace pcs
         public static string PathLangs = Path + "lang/";
         public static string PathSaves = Path + "saves/";
         public static string PathSounds = Path + "sounds/";
-        public const string Version = "0.1.0";
+        public const string Version = "0.2.0";
 
         public static Logging l = new Logging(Path + "logs/" + PXL.GetDateTimeNow() + ".log");
         public static Localization Loc;

@@ -7,5 +7,7 @@ namespace pcs.Init
     {
         public static SIcon Inventory = new IconInventory();
         public static SIcon MiniGames = new IconMiniGames();
+
+        public static SIcon MGHangman = new IconMGHangman();
     }
 }

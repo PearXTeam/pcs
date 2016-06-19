@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using PearXLib.Engine;
 
@@ -8,6 +9,7 @@ namespace pcs.MiniGames
     {
         public Image Overlay { get; set; }
 
+        //TODO: create this
         public MiniGameScreen()
         {
             Size = new Size(512, 384);

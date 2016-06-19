@@ -88,6 +88,7 @@
       <DependentUpon>MiniGamesGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="Icons\IconInventory.cs" />
+    <Compile Include="Icons\IconMGHangman.cs" />
     <Compile Include="Icons\IconMiniGames.cs" />
     <Compile Include="Init\PCSCommands.cs" />
     <Compile Include="Components\Achievement.cs" />
@@ -205,12 +206,6 @@
     <Compile Include="Init\PCSIcons.cs" />
     <Compile Include="Init\PCSItems.cs" />
     <Compile Include="Items\ItemBedTalisman.cs" />
-    <Compile Include="MiniGames\MGHangman.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="MiniGames\MGHangman.Designer.cs">
-      <DependentUpon>MGHangman.cs</DependentUpon>
-    </Compile>
     <Compile Include="MiniGames\MiniGameScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>

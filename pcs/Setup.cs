@@ -64,6 +64,8 @@ namespace pcs
             //Icons
             Registry.RegisteredIcons.Add(PCSIcons.Inventory);
             Registry.RegisteredIcons.Add(PCSIcons.MiniGames);
+            
+            Registry.RegisteredMiniGames.Add(PCSIcons.MGHangman);
 
             //Items
             Registry.RegisteredItems.Add(PCSItems.Sand);
