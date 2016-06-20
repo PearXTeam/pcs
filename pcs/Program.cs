@@ -1,7 +1,9 @@
 ﻿using PearXLib;
 using System;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
+using pcs.Core;
 
 namespace pcs
 {
@@ -21,16 +23,17 @@ namespace pcs
             Application.EnableVisualStyles();
 
             //Pre-initing...
-            AppDomain.CurrentDomain.UnhandledException += Crash.OnCrash;
+            AppDomain.CurrentDomain.UnhandledException += (sender, args) => { Crash.OnCrash(sender, (Exception)args.ExceptionObject); };
+            Application.ThreadException += (sender, args) => {Crash.OnCrash(sender, args.Exception);};
 
             PCS.l.Add("Starting application...", LogType.Info);
 
             PCS.l.Add("Creating directories...", LogType.Info);
-            Directory.CreateDirectory(PCS.PathCrashes);
-            Directory.CreateDirectory(PCS.PathMods);
-            Directory.CreateDirectory(PCS.PathLangs);
-            Directory.CreateDirectory(PCS.PathSaves);
-            Directory.CreateDirectory(PCS.PathSounds);
+            Directory.CreateDirectory(Dirs.PathCrashes);
+            Directory.CreateDirectory(Dirs.PathMods);
+            Directory.CreateDirectory(Dirs.PathLangs);
+            Directory.CreateDirectory(Dirs.PathSaves);
+            Directory.CreateDirectory(Dirs.PathSounds);
 
             Application.Run(Background.instance);
         }

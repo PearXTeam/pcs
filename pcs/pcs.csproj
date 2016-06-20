@@ -51,7 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Background.cs">
+    <Compile Include="Core\Background.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Commands\CommandGive.cs" />
@@ -74,6 +74,7 @@
     <Compile Include="Components\Interfaces\ITickable.cs" />
     <Compile Include="Components\ObjectData.cs" />
     <Compile Include="Components\SIcon.cs" />
+    <Compile Include="Core\Dirs.cs" />
     <Compile Include="Events\TimeUpdateEvent.cs" />
     <Compile Include="Forms\InventoryGUI.cs">
       <SubType>Form</SubType>
@@ -114,7 +115,7 @@
     <Compile Include="Components\SaveElement.cs" />
     <Compile Include="Components\SaveElementStruct.cs" />
     <Compile Include="Components\SToolIcon.cs" />
-    <Compile Include="Crash.cs" />
+    <Compile Include="Core\Crash.cs" />
     <Compile Include="EmbLangs\EmbLangs.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -205,24 +206,24 @@
     <Compile Include="Init\PCSAchievements.cs" />
     <Compile Include="Init\PCSIcons.cs" />
     <Compile Include="Init\PCSItems.cs" />
-    <Compile Include="Items\ItemBedTalisman.cs" />
+    <Compile Include="Items\ItemCrasher.cs" />
     <Compile Include="MiniGames\MiniGameScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Modding\ModRegistry.cs" />
     <Compile Include="Modding\PCSEvents.cs" />
     <Compile Include="Modding\PCSMod.cs" />
-    <Compile Include="PCS.cs" />
-    <Compile Include="PCSImages.cs" />
+    <Compile Include="Core\PCS.cs" />
+    <Compile Include="Init\PCSImages.cs" />
     <Compile Include="Player\PlayerInventory.cs" />
     <Compile Include="Player\PlayerVals.cs" />
     <Compile Include="Player\SettingVals.cs" />
     <Compile Include="Player\SL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registry.cs" />
-    <Compile Include="Setup.cs" />
-    <Compile Include="Splashes.cs" />
+    <Compile Include="Core\Registry.cs" />
+    <Compile Include="Init\Setup.cs" />
+    <Compile Include="Core\Splashes.cs" />
     <Compile Include="Player\Stats.cs" />
     <Compile Include="ToolIcons\TIAbout.cs" />
     <Compile Include="ToolIcons\TIAchievements.cs" />
@@ -332,6 +333,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Dice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crasher.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

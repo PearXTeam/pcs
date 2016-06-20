@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using pcs.Components;
+using pcs.Core;
 using pcs.Player;
 
 namespace pcs.Forms
@@ -27,7 +28,8 @@ namespace pcs.Forms
 
         private void btnChangeLanguage_Click(object sender, System.EventArgs e)
         {
-            File.Delete(PCS.Path + "lang.pcs");
+            //TODO: Show dialog
+            File.Delete(Dirs.Path + "lang.pcs");
             PCS.Restart(true);
         }
     }

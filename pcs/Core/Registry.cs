@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using pcs.Components.IAI;
 using pcs.Events;
 
-namespace pcs
+namespace pcs.Core
 {
     public class Registry
     {

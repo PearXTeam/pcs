@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using pcs.Properties;
 
-namespace pcs
+namespace pcs.Init
 {
     public class PCSImages
     {
@@ -26,6 +26,7 @@ namespace pcs
         public static Image Dice = Resources.Dice;
 
         public static Image Sand = Resources.Sand;
+        public static Image Crasher = Resources.Crasher;
         public static Image ErrorApple = Resources.ErrorApple;
     }
 }

@@ -1,4 +1,5 @@
-﻿using pcs.Forms;
+﻿using pcs.Core;
+using pcs.Forms;
 
 namespace pcs.Player
 {

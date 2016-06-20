@@ -8,6 +8,8 @@ using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
 using pcs.Components;
+using pcs.Core;
+using pcs.Init;
 
 namespace pcs.Forms
 {
@@ -76,7 +78,7 @@ namespace pcs.Forms
                 SetVal(1, 0);
                 SetText(1, "Loading mods...");
                 PCS.l.Add("Loading mods...", LogType.Info);
-                foreach (string s in Directory.GetFiles(PCS.PathMods))
+                foreach (string s in Directory.GetFiles(Dirs.PathMods))
                 {
                     Assembly asm = null;
                     try { asm = Assembly.LoadFrom(s); } catch { }
@@ -117,10 +119,10 @@ namespace pcs.Forms
 
                 SetVal(2, 0);
                 SetText(2, "Unpacking default langs...");
-                File.WriteAllBytes(PCS.PathLangs + "ru_RU.lang", EmbLangs.EmbLangs.ru_RU);
-                File.WriteAllBytes(PCS.PathLangs + "ru_RU.langinfo", EmbLangs.EmbLangs.ru_RU_inf);
-                File.WriteAllBytes(PCS.PathLangs + "en_US.lang", EmbLangs.EmbLangs.en_US);
-                File.WriteAllBytes(PCS.PathLangs + "en_US.langinfo", EmbLangs.EmbLangs.en_US_inf);
+                File.WriteAllBytes(Dirs.PathLangs + "ru_RU.lang", EmbLangs.EmbLangs.ru_RU);
+                File.WriteAllBytes(Dirs.PathLangs + "ru_RU.langinfo", EmbLangs.EmbLangs.ru_RU_inf);
+                File.WriteAllBytes(Dirs.PathLangs + "en_US.lang", EmbLangs.EmbLangs.en_US);
+                File.WriteAllBytes(Dirs.PathLangs + "en_US.langinfo", EmbLangs.EmbLangs.en_US_inf);
 
                 SetVal(2, 1);
                 SetText(2, "Selecting lang...");

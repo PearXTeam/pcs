@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using pcs.Components;
+using pcs.Core;
+using pcs.Init;
 
 namespace pcs.Player
 {
@@ -15,7 +17,7 @@ namespace pcs.Player
 
             try
             {
-                string s = File.ReadAllText(PCS.PathSaves + filename + ".pcs");
+                string s = File.ReadAllText(Dirs.PathSaves + filename + ".pcs");
                 List<SaveElementStruct> l = JsonConvert.DeserializeObject<List<SaveElementStruct>>(s);
                 foreach (SaveElementStruct ses in l)
                 {
@@ -39,7 +41,7 @@ namespace pcs.Player
             PCS.l.Add("Loading settings...", LogType.Info);
             try
             {
-                string[] s = File.ReadAllLines(PCS.Path + "settings.pcs");
+                string[] s = File.ReadAllLines(Dirs.Path + "settings.pcs");
                 SettingVals.AutoSave = Convert.ToBoolean(s[0]);
             } catch { }
             PCS.l.Add("Done loading settings...", LogType.Info);
@@ -60,7 +62,7 @@ namespace pcs.Player
                     str.Name = se.Name;
                     l.Add(str);
                 }
-                File.WriteAllText(PCS.PathSaves + filename + ".pcs", JsonConvert.SerializeObject(l, Formatting.Indented));
+                File.WriteAllText(Dirs.PathSaves + filename + ".pcs", JsonConvert.SerializeObject(l, Formatting.Indented));
 
                 PCS.l.Add("Done saving savefile.", LogType.Info);
             }
@@ -73,11 +75,13 @@ namespace pcs.Player
         public static void SaveSettings()
         {
             PCS.l.Add("Saving settings...", LogType.Info);
-            File.WriteAllLines(PCS.Path + "settings.pcs", new string[]
+            File.WriteAllLines(Dirs.Path + "settings.pcs", new string[]
             {
                 SettingVals.AutoSave.ToString()
             });
             PCS.l.Add("Done saving settings.", LogType.Info);
         }
+
+        //_____
     }
 }

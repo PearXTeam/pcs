@@ -1,5 +1,7 @@
 ﻿
 using System.Drawing;
+using pcs.Core;
+using pcs.Init;
 using pcs.Player;
 
 namespace pcs.Components

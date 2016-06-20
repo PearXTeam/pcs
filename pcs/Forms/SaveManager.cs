@@ -3,6 +3,7 @@ using System.Drawing;
 using System.IO;
 using pcs.Components;
 using pcs.Components.Controls;
+using pcs.Core;
 using pcs.Player;
 
 namespace pcs.Forms
@@ -24,7 +25,7 @@ namespace pcs.Forms
         {
             panelSaves.Controls.Clear();
             int i = 0;
-            foreach (string s in Directory.GetFiles(PCS.PathSaves))
+            foreach (string s in Directory.GetFiles(Dirs.PathSaves))
             {
                 string we = Path.GetFileNameWithoutExtension(s);
                 PCSButton b = new PCSButton();
@@ -63,7 +64,7 @@ namespace pcs.Forms
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            File.Delete(PCS.PathSaves + "autosave.pcs");
+            File.Delete(Dirs.PathSaves + "autosave.pcs");
             PCS.Restart(false);
         }
     }

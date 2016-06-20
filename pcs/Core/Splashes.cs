@@ -1,4 +1,4 @@
-﻿namespace pcs
+﻿namespace pcs.Core
 {
     class Splashes
     {
@@ -19,7 +19,7 @@
                 case 5:
                     return "Bugs! They're everywhere!";
                 case 6:
-                    return "I'm crashtastic. Sorry...";
+                    return "Crashes! Om-nom-nom...";
                 default:
                     return ".";
             }

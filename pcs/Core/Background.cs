@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace pcs
+namespace pcs.Core
 {
     public class Background : Form
     {

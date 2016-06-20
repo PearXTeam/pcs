@@ -16,11 +16,12 @@ using pcs.Commands;
 using pcs.Components.Controls;
 using pcs.Components.IAI;
 using pcs.Components.Interfaces;
+using pcs.Core;
 using pcs.Init;
 using pcs.Properties;
 using PearXLib;
 
-namespace pcs
+namespace pcs.Init
 {
     class Setup
     {
@@ -69,7 +70,7 @@ namespace pcs
 
             //Items
             Registry.RegisteredItems.Add(PCSItems.Sand);
-            Registry.RegisteredItems.Add(PCSItems.BedTalisman);
+            Registry.RegisteredItems.Add(PCSItems.Crasher);
 
             //Saves
             Registry.RegisteredSaves.Add(new SaveElement("PCS_MaxFood",
@@ -330,9 +331,9 @@ namespace pcs
 
         public static void UnpackSounds()
         {
-            if (!File.Exists(PCS.PathSounds + "PopUp.mp3"))
+            if (!File.Exists(Dirs.PathSounds + "PopUp.mp3"))
             {
-                File.WriteAllBytes(PCS.PathSounds + "PopUp.mp3", Resources.PopUp);
+                File.WriteAllBytes(Dirs.PathSounds + "PopUp.mp3", Resources.PopUp);
             }
         }
 
@@ -350,16 +351,16 @@ namespace pcs
 
         public static void InitLang(Form form)
         {
-            string langPath = PCS.Path + "lang.pcs";
+            string langPath = Dirs.Path + "lang.pcs";
             bool notExists = false;
 
             if (File.Exists(langPath))
             {
                 string s = File.ReadAllText(langPath);
-                if (File.Exists(PCS.PathLangs + s + ".lang") && File.Exists(PCS.PathLangs + s + ".langinfo"))
+                if (File.Exists(Dirs.PathLangs + s + ".lang") && File.Exists(Dirs.PathLangs + s + ".langinfo"))
                 {
                     PCS.SelectedLang = s;
-                    PCS.Loc = new Localization(PCS.PathLangs, PCS.SelectedLang, "ru_RU");
+                    PCS.Loc = new Localization(Dirs.PathLangs, PCS.SelectedLang, "ru_RU");
                 }
                 else
                     notExists = true;
@@ -374,7 +375,7 @@ namespace pcs
                     SelectLang sl = new SelectLang();
                     sl.ShowDialog(form);
                 }));
-                File.WriteAllText(PCS.Path + "lang.pcs", PCS.SelectedLang);
+                File.WriteAllText(Dirs.Path + "lang.pcs", PCS.SelectedLang);
             }
         }
     }

@@ -6,12 +6,13 @@ using System.Globalization;
 using System.IO;
 using System.Text;
 using System.Threading;
+using pcs.Player;
 
-namespace pcs
+namespace pcs.Core
 {
     public class Crash
     {
-        public delegate void CrashHandler(object sender, UnhandledExceptionEventArgs e, ref List<string> toReturn);
+        public delegate void CrashHandler(object sender, Exception e, ref List<string> toReturn);
         public static event CrashHandler GetAnotherCrashInfo;
 
         public static void PerformCrash(string msg)
@@ -19,9 +20,9 @@ namespace pcs
             throw new Exception(msg);
         }
 
-        public static void OnCrash(object sender, UnhandledExceptionEventArgs e)
+        public static void OnCrash(object sender, Exception e)
         {
-            PCS.l.Add(e.ExceptionObject.ToString(), LogType.Error);
+            PCS.l.Add(e.ToString(), LogType.Error);
 
             StringBuilder sb = new StringBuilder();
 
@@ -32,7 +33,7 @@ namespace pcs
             sb.AppendLine("//" + Splashes.GenCrashSplash());
             sb.AppendLine("Crash date and time: " + DateTime.Now);
             sb.AppendLine("________________________");
-            sb.AppendLine(e.ExceptionObject.ToString());
+            sb.AppendLine(e.ToString());
             sb.AppendLine("________________________");
             sb.AppendLine("=====System Detalis=====");
             sb.AppendLine("OS Version: " + Environment.OSVersion);
@@ -42,7 +43,7 @@ namespace pcs
             sb.AppendLine("Used RAM: " + GC.GetTotalMemory(true) + " B (" + GC.GetTotalMemory(true) / 1024 + " KB)");
             string s = Environment.Is64BitOperatingSystem ? "64-bit" : "32-bit";
             sb.AppendLine("OS Caption: " + PXL.GetFromPC("Caption") + " (" + s + ")");
-            sb.AppendLine("Game Path: " + PCS.Path);
+            sb.AppendLine("Game Path: " + Dirs.Path);
             sb.AppendLine("OS Language: " + CultureInfo.InstalledUICulture.EnglishName);
             sb.AppendLine("_______________________");
             List<string> l = new List<string>();
@@ -54,7 +55,11 @@ namespace pcs
                     sb.AppendLine(str);
                 }
             } catch { }
-            File.WriteAllText(PCS.PathCrashes + "crash_" + PXL.GetDateTimeNow() + ".txt", sb.ToString());
+            File.WriteAllText(Dirs.PathCrashes + "crash_" + PXL.GetDateTimeNow() + ".txt", sb.ToString());
+
+            SL.SaveSettings();
+            SL.Save("autosave");
+
             Environment.Exit(0);
         }
     }
