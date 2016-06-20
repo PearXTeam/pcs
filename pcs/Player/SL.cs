@@ -13,7 +13,7 @@ namespace pcs.Player
     {
         public static void Load(string filename)
         {
-            PCS.l.Add("Loading savefile \"" + filename +"\"...", LogType.Info);
+            PCS.l.Add("Loading save \"" + filename +"\"...", LogType.Info);
 
             try
             {
@@ -31,9 +31,9 @@ namespace pcs.Player
                         }
                     }
                 }
-                PCS.l.Add("Done loading savefile.", LogType.Info);
+                PCS.l.Add("Done loading save.", LogType.Info);
             }
-            catch(FileNotFoundException e) { PCS.l.Add("Can't load \"" + filename + "\" savefile.", LogType.Error); }
+            catch(FileNotFoundException) { PCS.l.Add("Can't load \"" + filename + "\" save.", LogType.Error); }
         }
 
         public static void LoadSettings()
@@ -51,20 +51,22 @@ namespace pcs.Player
         {
             if (FileUtils.CanCreate(filename))
             {
-                PCS.l.Add("Saving savefile \"" + filename + "\"...", LogType.Info);
+                PCS.l.Add("Saving save \"" + filename + "\"...", LogType.Info);
 
                 List<SaveElementStruct> l = new List<SaveElementStruct>();
                 foreach (SaveElement se in Registry.RegisteredSaves)
                 {
                     se.OnSave(se.Name, out se.Value);
-                    SaveElementStruct str = new SaveElementStruct();
-                    str.Value = se.Value;
-                    str.Name = se.Name;
+                    SaveElementStruct str = new SaveElementStruct
+                    {
+                        Value = se.Value,
+                        Name = se.Name
+                    };
                     l.Add(str);
                 }
                 File.WriteAllText(Dirs.PathSaves + filename + ".pcs", JsonConvert.SerializeObject(l, Formatting.Indented));
 
-                PCS.l.Add("Done saving savefile.", LogType.Info);
+                PCS.l.Add("Done saving save.", LogType.Info);
             }
             else
             {

@@ -11,7 +11,7 @@ namespace pcs.Components
 {
     public class PCSForm : FlatForm
     {
-        public bool CloseMe = false;
+        public bool CloseMe; //false
 
         public PCSForm()
         {
@@ -26,20 +26,7 @@ namespace pcs.Components
             }
         }
 
-        private Font f = new Font("Yanone Kaffeesatz", 16F);
-
-        public override Font Font
-        {
-            get
-            {
-                return f;
-            }
-
-            set
-            {
-                f = value;
-            }
-        }
+        public override Font Font { get; set; } = new Font("Yanone Kaffeesatz", 16F);
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {

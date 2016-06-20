@@ -42,7 +42,7 @@ namespace pcs.Forms
                     string s = boxCommand.Text.Remove(0, 1);
                     boxCommand.Text = "";
 
-                    PCS.l.Add("Sended \"" + s + "\" command.", LogType.Info);
+                    PCS.l.Add("Sent \"" + s + "\" command.", LogType.Info);
                     foreach (Command c in Registry.RegisteredCommands)
                     {
                         if (c.Name() == s.Split(' ')[0])

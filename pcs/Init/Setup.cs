@@ -8,7 +8,6 @@ using pcs.ToolIcons;
 using System.Drawing;
 using System.IO;
 using System.Numerics;
-using System.Security.AccessControl;
 using System.Threading;
 using System.Windows.Forms;
 using Newtonsoft.Json;
@@ -17,7 +16,6 @@ using pcs.Components.Controls;
 using pcs.Components.IAI;
 using pcs.Components.Interfaces;
 using pcs.Core;
-using pcs.Init;
 using pcs.Properties;
 using PearXLib;
 
@@ -274,7 +272,7 @@ namespace pcs.Init
                     {
                         if (t.IsAsync())
                         {
-                            new Thread(() => t.OnTick(s, Game.instance.TickNumber));
+                            new Thread(() => t.OnTick(s, Game.instance.TickNumber)).Start();
                         }
                         else
                             t.OnTick(s, Game.instance.TickNumber);
@@ -306,12 +304,14 @@ namespace pcs.Init
             foreach (Achievement ach in Registry.RegisteredAchievements)
             {
                 //Control reg:
-                AchievementListElement itm = new AchievementListElement();
-                itm.Location = new Point(0, 137 * i);
-                itm.ItemImage = ach.Icon();
-                itm.ItemName = ach.Name();
-                itm.ItemDesc = ach.Desc();
-                itm.AssociatedAchievement = ach.ID();
+                AchievementListElement itm = new AchievementListElement
+                {
+                    Location = new Point(0, 137*i),
+                    ItemImage = ach.Icon(),
+                    ItemName = ach.Name(),
+                    ItemDesc = ach.Desc(),
+                    AssociatedAchievement = ach.ID()
+                };
                 AchievementList.instance.panelAchievements.Controls.Add(itm);
 
                 //Saves reg:

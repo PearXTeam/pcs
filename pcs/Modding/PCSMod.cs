@@ -11,12 +11,12 @@
         /// <returns>Mod name</returns>
         string Name();
         /// <summary>
-        /// Mod author (ex. "SuperModCreator228").
+        /// Mod author (ex. "SuperModCreator").
         /// </summary>
         /// <returns>Mod author</returns>
         string Author();
         /// <summary>
-        /// Mod ID. Use only English language symbols, numbers and _ (ex. "simplepcsmod").
+        /// Mod ID. Please use only Latin symbols, numbers and "_" (ex. "simplepcsmod").
         /// </summary>
         /// <returns>Mod ID</returns>
         string ModID();
@@ -26,15 +26,15 @@
         /// <returns>Mod version</returns>
         string Version();
         /// <summary>
-        /// Mod init event.
+        /// Mod initialization event.
         /// </summary>
         void Init();
         /// <summary>
-        /// Pre init :b.
+        /// Pre-Initialization.
         /// </summary>
         void PreInit();
         /// <summary>
-        /// Post init :b.
+        /// Post-Initialization.
         /// </summary>
         void PostInit();
     }

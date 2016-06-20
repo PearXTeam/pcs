@@ -12,7 +12,7 @@ namespace pcs.Components.Interfaces
         void OnTick(ItemStack stack, byte tickNumber);
 
         /// <summary>
-        /// Can this object tick async?
+        /// Can this object tick asynchronously?
         /// </summary>
         /// <returns></returns>
         bool IsAsync();

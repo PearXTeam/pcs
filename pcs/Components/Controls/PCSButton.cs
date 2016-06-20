@@ -6,13 +6,10 @@ namespace pcs.Components.Controls
 {
     public class PCSButton : FlatButton
     {
-        private bool shadow = true;
-        private Color c = Color.White;
-
         [DefaultValue(true)]
-        public override bool Shadow { get { return shadow; } set { shadow = value; } }
+        public override bool Shadow { get; set; } = true;
 
         [DefaultValue(typeof(Color), "White")]
-        public override Color ForeColor { get { return c; } set { c = value; } }
+        public override Color ForeColor { get; set; } = Color.White;
     }
 }

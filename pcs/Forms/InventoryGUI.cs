@@ -31,25 +31,32 @@ namespace pcs.Forms
                 int y = 0;
                 foreach (var v in PlayerInventory.Inventory)
                 {
-                    PCSInvItemC item = new PCSInvItemC();
-                    item.ItemImage = v.Item.Icon(v);
-                    item.ItemName = v.Item.Name(v);
-                    item.ItemDesc = v.Item.Description(v);
-                    item.ItemAmount = v.StackCount;
+                    PCSInvItemC item = new PCSInvItemC
+                    {
+                        ItemImage = v.Item.Icon(v),
+                        ItemName = v.Item.Name(v),
+                        ItemDesc = v.Item.Description(v),
+                        ItemAmount = v.StackCount
+                    };
+
                     item.Location = new Point(x * (item.Width + 4), y * item.Height);
                     item.MouseClick += (sender, args) =>
                     {
                         int index = PlayerInventory.Inventory.IndexOf(v);
                         ItemStack s = PlayerInventory.Inventory[index];
                         v.Item.OnUse(args.Button, ref s);
-                        if(s != v)
+                        if (s != v)
+                        {
                             PlayerInventory.Inventory[index] = s;
+                            UpdateInventory();
+                        }
                     };
                     if (x == 6)
                     {
                         x = -1;
                         y++;
                     }
+
                     if(IsHandleCreated)
                         Invoke(new MethodInvoker(() => panelInv.Controls.Add(item)));
                     else

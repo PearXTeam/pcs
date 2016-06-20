@@ -29,8 +29,7 @@ namespace pcs.Components
         {
             if (Contains(key))
                 return Raw[key];
-            else
-                return null;
+            return null;
         }
 
         public override string ToString()

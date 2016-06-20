@@ -1,4 +1,5 @@
-﻿using pcs.Core;
+﻿using System;
+using pcs.Core;
 using pcs.Forms;
 using PearXLib;
 
@@ -8,12 +9,12 @@ namespace pcs.Components
     {
         public virtual string Name()
         {
-            return "testingcommand";
+            throw new NotImplementedException();
         }
 
         public virtual void OnPerform(string[] args, string allArgs)
         {
-            PCS.l.Add("I'm a testing command =P.");
+            throw new NotImplementedException();
         }
 
         public static void AddToConsole(string msg)

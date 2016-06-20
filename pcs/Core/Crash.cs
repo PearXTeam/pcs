@@ -29,16 +29,16 @@ namespace pcs.Core
             //Splash generation:
             Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
             Thread.CurrentThread.CurrentUICulture = CultureInfo.InvariantCulture;
-            sb.AppendLine("==A PCSim crash-report==");
+            sb.AppendLine("==A PCS crash-report==");
             sb.AppendLine("//" + Splashes.GenCrashSplash());
             sb.AppendLine("Crash date and time: " + DateTime.Now);
             sb.AppendLine("________________________");
             sb.AppendLine(e.ToString());
             sb.AppendLine("________________________");
-            sb.AppendLine("=====System Detalis=====");
+            sb.AppendLine("=====System Details=====");
             sb.AppendLine("OS Version: " + Environment.OSVersion);
             sb.AppendLine(".NET Version: " + Environment.Version);
-            sb.AppendLine("Avaible RAM: " + PXL.GetFromPC("FreePhysicalMemory") + " KB (" + Convert.ToInt64(PXL.GetFromPC("FreePhysicalMemory")) / 1024 + " MB)");
+            sb.AppendLine("Available RAM: " + PXL.GetFromPC("FreePhysicalMemory") + " KB (" + Convert.ToInt64(PXL.GetFromPC("FreePhysicalMemory")) / 1024 + " MB)");
             sb.AppendLine("Total RAM: " + PXL.GetFromPC("TotalVisibleMemorySize") + " KB (" + Convert.ToInt64(PXL.GetFromPC("TotalVisibleMemorySize")) / 1024 + " MB)");
             sb.AppendLine("Used RAM: " + GC.GetTotalMemory(true) + " B (" + GC.GetTotalMemory(true) / 1024 + " KB)");
             string s = Environment.Is64BitOperatingSystem ? "64-bit" : "32-bit";
