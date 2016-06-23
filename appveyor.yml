@@ -4,3 +4,6 @@ install:
 before_build:
 - IF EXIST "..\PearXLib" ( rd /s /q "..\PearXLib" )
 - git clone https://github.com/mrAppleXZ/PearXLib.git ../PearXLib
+artifacts:
+- path: pcs/bin
+  name: binaries
