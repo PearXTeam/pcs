@@ -2,6 +2,7 @@
 using PearXLib;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Text;
@@ -38,11 +39,11 @@ namespace pcs.Core
             sb.AppendLine("=====System Details=====");
             sb.AppendLine("OS Version: " + Environment.OSVersion);
             sb.AppendLine(".NET Version: " + Environment.Version);
-            sb.AppendLine("Available RAM: " + PXL.GetFromPC("FreePhysicalMemory") + " KB (" + Convert.ToInt64(PXL.GetFromPC("FreePhysicalMemory")) / 1024 + " MB)");
-            sb.AppendLine("Total RAM: " + PXL.GetFromPC("TotalVisibleMemorySize") + " KB (" + Convert.ToInt64(PXL.GetFromPC("TotalVisibleMemorySize")) / 1024 + " MB)");
+            sb.AppendLine("Available RAM: " + PCUtils.GetFromPC("FreePhysicalMemory") + " KB (" + Convert.ToInt64(PCUtils.GetFromPC("FreePhysicalMemory")) / 1024 + " MB)");
+            sb.AppendLine("Total RAM: " + PCUtils.GetFromPC("TotalVisibleMemorySize") + " KB (" + Convert.ToInt64(PCUtils.GetFromPC("TotalVisibleMemorySize")) / 1024 + " MB)");
             sb.AppendLine("Used RAM: " + GC.GetTotalMemory(true) + " B (" + GC.GetTotalMemory(true) / 1024 + " KB)");
             string s = Environment.Is64BitOperatingSystem ? "64-bit" : "32-bit";
-            sb.AppendLine("OS Caption: " + PXL.GetFromPC("Caption") + " (" + s + ")");
+            sb.AppendLine("OS Caption: " + PCUtils.GetFromPC("Caption") + " (" + s + ")");
             sb.AppendLine("Game Path: " + Dirs.Path);
             sb.AppendLine("OS Language: " + CultureInfo.InstalledUICulture.EnglishName);
             sb.AppendLine("_______________________");
