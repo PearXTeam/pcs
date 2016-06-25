@@ -1,6 +1,6 @@
 ﻿using pcs.Components;
 using System.Collections.Generic;
-using pcs.Components.IAI;
+using pcs.IAI;
 using pcs.Events;
 
 namespace pcs.Core

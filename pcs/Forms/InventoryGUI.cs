@@ -4,69 +4,74 @@ using System.Threading;
 using System.Windows.Forms;
 using pcs.Components;
 using pcs.Components.Controls;
-using pcs.Components.IAI;
+using pcs.IAI;
 using pcs.Player;
 
 namespace pcs.Forms
 {
-    public partial class InventoryGUI : PCSForm
+    public partial class InventoryGUI : PCSForm, IInventory
     {
         public static InventoryGUI Instance = new InventoryGUI();
 
         public InventoryGUI()
         {
             InitializeComponent();
+            
         }
 
-        public void UpdateInventory()
+        public static void UpdateInventory()
         {
             new Thread(() =>
             {
-                if(IsHandleCreated)
-                    Invoke(new MethodInvoker(() => panelInv.Controls.Clear()));
-                else
-                    panelInv.Controls.Clear();
-
-                int x = 0;
-                int y = 0;
-                foreach (var v in PlayerInventory.Inventory)
+                foreach (var c in InventoryUtils.GetInventories())
                 {
-                    PCSInvItemC item = new PCSInvItemC
+                    if (c.Type == InventoryType.Player)
                     {
-                        ItemImage = v.Item.Icon(v),
-                        ItemName = v.Item.Name(v),
-                        ItemDesc = v.Item.Description(v),
-                        ItemAmount = v.StackCount
-                    };
+                        if (c.IsHandleCreated)
+                            c.Invoke(new MethodInvoker(() => c.Controls.Clear()));
+                        else
+                            c.Controls.Clear();
 
-                    item.Location = new Point(x * (item.Width + 4), y * item.Height);
-                    item.MouseClick += (sender, args) =>
-                    {
-                        int index = PlayerInventory.Inventory.IndexOf(v);
-                        ItemStack s = PlayerInventory.Inventory[index];
-                        v.Item.OnUse(args.Button, ref s);
-                        if (s != v)
+                        int x = 0;
+                        int y = 0;
+                        foreach (var v in PlayerInventory.Inventory)
                         {
-                            PlayerInventory.Inventory[index] = s;
-                            UpdateInventory();
-                        }
-                    };
-                    if (x == 6)
-                    {
-                        x = -1;
-                        y++;
-                    }
+                            if (x == c.ItemsInRow)
+                            {
+                                x = 0;
+                                y++;
+                            }
+                            PCSInvItemC item = new PCSInvItemC
+                            {
+                                ItemImage = v.Item.Icon(v),
+                                ItemName = v.Item.Name(v),
+                                ItemDesc = v.Item.Description(v),
+                                ItemAmount = v.StackCount
+                            };
 
-                    if(IsHandleCreated)
-                        Invoke(new MethodInvoker(() => panelInv.Controls.Add(item)));
-                    else
-                        panelInv.Controls.Add(item);
-                    x++;
+                            int distance = x == c.ItemsInRow ? 0 : c.ItemsDistance;
+                            item.Location = new Point(x * (item.Width + distance), y * item.Height);
+
+                            item.MouseClick += (sender, args) =>
+                            {
+                                int index = PlayerInventory.Inventory.IndexOf(v);
+                                ItemStack s = PlayerInventory.Inventory[index];
+                                v.Item.OnUse(args.Button, ref s);
+                            };
+                            
+
+                            if (c.IsHandleCreated)
+                                c.Invoke(new MethodInvoker(() => c.Controls.Add(item)));
+                            else
+                                c.Controls.Add(item);
+                            x++;
+                        }
+                    }
                 }
             }).Start();
         }
 
-        protected override void OnShown(EventArgs e)
+        protected override void OnVisibleChanged(EventArgs e)
         {
             UpdateInventory();
         }

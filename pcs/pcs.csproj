@@ -68,9 +68,15 @@
     <Compile Include="Components\Controls\PCSToolIcon.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Components\IAI\Inventory.cs" />
-    <Compile Include="Components\IAI\Item.cs" />
-    <Compile Include="Components\IAI\ItemStack.cs" />
+    <Compile Include="IAI\IInventory.cs" />
+    <Compile Include="IAI\Inventory.cs" />
+    <Compile Include="IAI\InventoryGUIContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IAI\InventoryType.cs" />
+    <Compile Include="IAI\InventoryUtils.cs" />
+    <Compile Include="IAI\Item.cs" />
+    <Compile Include="IAI\ItemStack.cs" />
     <Compile Include="Components\Interfaces\ITickable.cs" />
     <Compile Include="Components\ObjectData.cs" />
     <Compile Include="Components\SIcon.cs" />
@@ -213,6 +219,7 @@
     <Compile Include="Init\PCSIcons.cs" />
     <Compile Include="Init\PCSItems.cs" />
     <Compile Include="Items\ItemCrasher.cs" />
+    <Compile Include="Items\ItemDebug.cs" />
     <Compile Include="MiniGames\MiniGameScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -335,6 +342,14 @@
     <None Include="Resources\Crasher.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

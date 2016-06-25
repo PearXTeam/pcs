@@ -1,6 +1,6 @@
 ﻿using System;
 using pcs.Components;
-using pcs.Components.IAI;
+using pcs.IAI;
 using pcs.Core;
 using pcs.Player;
 

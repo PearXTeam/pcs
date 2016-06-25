@@ -2,7 +2,7 @@
 using System.Collections.Specialized;
 using pcs.Forms;
 
-namespace pcs.Components.IAI
+namespace pcs.IAI
 {
     public class Inventory : ObservableCollection<ItemStack>
     {
@@ -12,6 +12,7 @@ namespace pcs.Components.IAI
         {
             if (update == false)
                 notUpdate = true;
+            
             base.Add(stack);
         }
 
@@ -24,7 +25,7 @@ namespace pcs.Components.IAI
         {
             base.OnCollectionChanged(e);
             if(!notUpdate)
-                InventoryGUI.Instance.UpdateInventory();
+                //InventoryGUI.UpdateInventory();
             notUpdate = false;
         }
     }

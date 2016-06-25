@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using pcs.Components;
 using pcs.Core;
 using pcs.Player;
 
-namespace pcs.Components.IAI
+namespace pcs.IAI
 {
     public class Item
     {

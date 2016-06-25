@@ -13,7 +13,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using pcs.Commands;
 using pcs.Components.Controls;
-using pcs.Components.IAI;
+using pcs.IAI;
 using pcs.Components.Interfaces;
 using pcs.Core;
 using pcs.Properties;
@@ -69,6 +69,7 @@ namespace pcs.Init
             //Items
             Registry.RegisteredItems.Add(PCSItems.Sand);
             Registry.RegisteredItems.Add(PCSItems.Crasher);
+            Registry.RegisteredItems.Add(PCSItems.Debug);
 
             //Saves
             Registry.RegisteredSaves.Add(new SaveElement("PCS_MaxFood",

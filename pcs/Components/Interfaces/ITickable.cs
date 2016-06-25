@@ -1,4 +1,4 @@
-﻿using pcs.Components.IAI;
+﻿using pcs.IAI;
 
 namespace pcs.Components.Interfaces
 {

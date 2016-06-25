@@ -20,7 +20,6 @@ namespace pcs
         static void Main()
         {
             Application.EnableVisualStyles();
-
             //Pre-initing...
             AppDomain.CurrentDomain.UnhandledException += (sender, args) => { Crash.OnCrash(sender, (Exception)args.ExceptionObject); };
             Application.ThreadException += (sender, args) => {Crash.OnCrash(sender, args.Exception);};
