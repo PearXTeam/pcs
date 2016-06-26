@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 
 namespace pcs.Components
@@ -42,6 +43,16 @@ namespace pcs.Components
             ObjectData od = new ObjectData();
             od.Raw = JsonConvert.DeserializeObject<Dictionary<string, object>>(raw);
             return od;
+        }
+
+        public static bool operator ==(ObjectData one, ObjectData two)
+        {
+            return one.Raw.Count == two.Raw.Count && !one.Raw.Except(two.Raw).Any();
+        }
+
+        public static bool operator !=(ObjectData one, ObjectData two)
+        {
+            return !(one.Raw.Count == two.Raw.Count && !one.Raw.Except(two.Raw).Any());
         }
     }
 }

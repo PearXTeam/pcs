@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Threading;
 using System.Windows.Forms;
+using pcs.Forms;
 using pcs.IAI;
 
 namespace pcs.Items
@@ -18,7 +16,12 @@ namespace pcs.Items
 
         public override void OnUse(MouseButtons b, ref ItemStack stack)
         {
-            stack.StackCount--;
+            if (b == MouseButtons.Left)
+            {
+                Game.instance.Invoke(new MethodInvoker(() => { Thread.Sleep(1000); }));
+            }
+            else if(b == MouseButtons.Right)
+                Game.instance.Invoke(new MethodInvoker(() => { Thread.Sleep(15000); }));
         }
     }
 }

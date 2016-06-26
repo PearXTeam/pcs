@@ -120,7 +120,7 @@ namespace pcs.Init
                     {
                         ItemStack stack = new ItemStack(itm, Convert.ToInt32(s[1]), s[2]);
                         stack.Data = ObjectData.FromString(s[3]);
-                        PlayerInventory.Inventory.Add(stack, false);
+                        PlayerInventory.Inventory.Add(stack);
                     }
                     else
                         PCS.l.Add("Item \"" + s[0] + "\" not exists!", LogType.Error);

@@ -6,27 +6,27 @@ namespace pcs.IAI
 {
     public class Inventory : ObservableCollection<ItemStack>
     {
-        private bool notUpdate;
-
-        public void Add(ItemStack stack, bool update)
-        {
-            if (update == false)
-                notUpdate = true;
-            
-            base.Add(stack);
-        }
 
         public new void Add(ItemStack itm)
         {
+            foreach (ItemStack stack in this)
+            {
+                if (ItemStack.Equals(stack, itm, ItemStackCompareOptions.ByData))
+                {
+                    if (itm.StackCount + stack.StackCount <= stack.Item.MaxStackSize(stack))
+                    {
+                        stack.StackCount += itm.StackCount;
+                        return;
+                    }
+                }
+            }
             base.Add(itm);
         }
 
         protected override void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
         {
             base.OnCollectionChanged(e);
-            if(!notUpdate)
-                //InventoryGUI.UpdateInventory();
-            notUpdate = false;
+            InventoryGUI.UpdateInventory();
         }
     }
 }

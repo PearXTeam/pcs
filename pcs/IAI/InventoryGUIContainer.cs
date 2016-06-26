@@ -17,5 +17,6 @@ namespace pcs.IAI
 
         [DefaultValue(4)]
         public int ItemsDistance { get; set; } = 4;
+        
     }
 }
