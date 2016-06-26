@@ -76,7 +76,7 @@ namespace pcs.Components
             base.OnKeyUp(e);
             if (e.KeyCode == Keys.F12)
             {
-                PCS.TakeScreenshot(this);
+                PCS.TakeScreenshot(this, !e.Shift);
             }
         }
     }

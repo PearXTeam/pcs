@@ -14,7 +14,7 @@ namespace pcs.Core
     {
 
         public static Random Rand = new Random();
-        public const string Version = "0.2.0";
+        public const string Version = "0.3.0";
         public static Logging l = new Logging(Dirs.Path + "logs/" + PXL.GetDateTimeNow() + ".log");
         public static Localization Loc;
         public static string SelectedLang;
@@ -38,16 +38,27 @@ namespace pcs.Core
             wo.Play();
         }
 
-        public static void TakeScreenshot(Control primary)
+        public static void TakeScreenshot(Control primary, bool full)
         {
-            Screen s = Screen.FromControl(primary);
-            using (Bitmap screen = new Bitmap(s.Bounds.Width, s.Bounds.Height))
+            if (full)
             {
-                using (Graphics g = Graphics.FromImage(screen))
+                Screen screen = Screen.FromControl(primary);
+                using (Bitmap bmp = new Bitmap(screen.Bounds.Width, screen.Bounds.Height))
                 {
-                    g.CopyFromScreen(s.Bounds.X, s.Bounds.Y, 0, 0, s.Bounds.Size, CopyPixelOperation.SourceCopy);
+                    using (Graphics g = Graphics.FromImage(bmp))
+                    {
+                        g.CopyFromScreen(screen.Bounds.X, screen.Bounds.Y, 0, 0, screen.Bounds.Size, CopyPixelOperation.SourceCopy);
+                    }
+                    bmp.Save(Dirs.PathScreenshots + PXL.GetDateTimeNow() + ".png", ImageFormat.Png);
                 }
-                screen.Save(Dirs.PathScreenshots + PXL.GetDateTimeNow() + ".png", ImageFormat.Png);
+            }
+            else
+            {
+                using (Bitmap bmp = new Bitmap(primary.Width, primary.Height))
+                {
+                    primary.DrawToBitmap(bmp, new Rectangle(0, 0, primary.Width, primary.Height));
+                    bmp.Save(Dirs.PathScreenshots + PXL.GetDateTimeNow() + ".png", ImageFormat.Png);
+                }
             }
         }
     }
