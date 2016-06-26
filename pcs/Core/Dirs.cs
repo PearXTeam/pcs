@@ -11,5 +11,6 @@ namespace pcs.Core
         public static string PathSaves = Path + "saves/";
         public static string PathSounds = Path + "sounds/";
         public static string PathBGMusic = Path + "bgmusic/";
+        public static string PathScreenshots = Path + "screenshots/";
     }
 }

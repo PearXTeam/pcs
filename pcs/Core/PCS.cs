@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Threading;
 using System.Windows.Forms;
 using NAudio.Wave;
@@ -35,6 +36,19 @@ namespace pcs.Core
             WaveOut wo = new WaveOut();
             wo.Init(reader);
             wo.Play();
+        }
+
+        public static void TakeScreenshot(Control primary)
+        {
+            Screen s = Screen.FromControl(primary);
+            using (Bitmap screen = new Bitmap(s.Bounds.Width, s.Bounds.Height))
+            {
+                using (Graphics g = Graphics.FromImage(screen))
+                {
+                    g.CopyFromScreen(s.Bounds.X, s.Bounds.Y, 0, 0, s.Bounds.Size, CopyPixelOperation.SourceCopy);
+                }
+                screen.Save(Dirs.PathScreenshots + PXL.GetDateTimeNow() + ".png", ImageFormat.Png);
+            }
         }
     }
 }

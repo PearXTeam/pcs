@@ -24,6 +24,7 @@ namespace pcs.Components
             {
                 ShowInTaskbar = false;
             }
+            KeyPreview = true;
         }
 
         public override Font Font { get; set; } = new Font("Yanone Kaffeesatz", 16F);
@@ -69,5 +70,14 @@ namespace pcs.Components
             Close();
         }
 
+
+        protected override void OnKeyUp(KeyEventArgs e)
+        {
+            base.OnKeyUp(e);
+            if (e.KeyCode == Keys.F12)
+            {
+                PCS.TakeScreenshot(this);
+            }
+        }
     }
 }

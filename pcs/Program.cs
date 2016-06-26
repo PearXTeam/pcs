@@ -32,6 +32,8 @@ namespace pcs
             Directory.CreateDirectory(Dirs.PathLangs);
             Directory.CreateDirectory(Dirs.PathSaves);
             Directory.CreateDirectory(Dirs.PathSounds);
+            Directory.CreateDirectory(Dirs.PathBGMusic);
+            Directory.CreateDirectory(Dirs.PathScreenshots);
 
             Application.Run(Background.instance);
         }
