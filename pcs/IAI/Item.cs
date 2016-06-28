@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using pcs.Components;
 using pcs.Core;
@@ -13,7 +14,7 @@ namespace pcs.IAI
         private string _ID;
         private Image _Icon;
         private long _ShopPrice;
-        private bool _AvailableInShop;
+        private bool _IsAvailableInShop;
 
         public Item() { }
         public Item(string name, string id, Image icon, long shopPrice = 100, bool availableInShop = true)
@@ -22,7 +23,7 @@ namespace pcs.IAI
             _ID = id;
             _Icon = icon;
             _ShopPrice = shopPrice;
-            _AvailableInShop = availableInShop;
+            _IsAvailableInShop = availableInShop;
         }
         /// <summary>
         /// A name of the Item
@@ -65,15 +66,27 @@ namespace pcs.IAI
             return 128;
         }
 
+        /// <summary>
+        /// Returns all available SubIDs.
+        /// </summary>
+        /// <returns>All available SubIDs</returns>
+        public virtual List<string> GetSubIDs()
+        {
+            return new List<string>();
+        }
 
         //SHOP \/
 
-        public virtual bool AvailableInShop()
-        {
-            return _AvailableInShop;
-        }
         /// <summary>
-        /// An Item's price in the Shop
+        /// Is this Item available in the Shop?
+        /// </summary>
+        public virtual bool IsAvailableInShop()
+        {
+            return _IsAvailableInShop;
+        }
+
+        /// <summary>
+        /// An Item's price in the Shop.
         /// </summary>
         public virtual long ShopPrice(ItemStack stack)
         {
@@ -97,60 +110,69 @@ namespace pcs.IAI
         }
 
         /// <summary>
-        /// Performs on Item.Buy();
+        /// Returns an Item by it's ID.
         /// </summary>
-        /// <param name="stack"></param>
-        public virtual void OnBuy(ref ItemStack stack) { }
-
-        /// <summary>
-        /// Buy this Item
-        /// </summary>
-        /// <param name="stack">Bought ItemStack</param>
-        public static void Buy(ref ItemStack stack)
-        {
-            stack.Item.OnBuy(ref stack);
-            PlayerVals.Money -= stack.Item.ShopPrice(stack);
-            PlayerInventory.Inventory.Add(stack);
-        }
-
-        //Events:
-        /// <summary>
-        /// Performs on player clicked this item in his inventory.
-        /// </summary>
-        /// <param name="b">Mouse Button</param>
-        /// <param name="stack">Clicked ItemStack</param>
-        public virtual void OnUse(MouseButtons b, ref ItemStack stack)
-        {
-            
-        }
-
-        /// <summary>
-        /// Returns all available SubIDs.
-        /// </summary>
-        /// <returns></returns>
-        public virtual List<string> GetSubIDs()
-        {
-            return new List<string>();
-        }
-
+        /// <param name="id">The Item's ID.</param>
+        /// <returns>An Item</returns>
         public static Item FromID(string id)
         {
-            foreach (Item itm in Registry.RegisteredItems)
-            {
-                if (itm.ID() == id)
-                    return itm;
-            }
-            return null;
+            return Registry.RegisteredItems.FirstOrDefault(itm => itm.ID() == id);
         }
 
-        //
-        //
-        //
+        /// <summary>
+        /// Buy Item
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="stack">ItemStack to buy.</param>
+        public static void Buy(object sender, ref ItemStack stack)
+        {
+            if (stack.Item.CanBuy(stack))
+            {
+                stack.Item.BuyEvent?.Invoke(sender, ref stack);
+                PlayerVals.Money -= stack.Item.ShopPrice(stack);
+                PlayerInventory.Inventory.Add(stack);
+            }
+        }
+
+        /// <summary>
+        /// Occurs when player buys this Item.
+        /// </summary>
+        public event ItemBuyHandler BuyEvent;
+
+        public virtual void OnBuy(object sender, ref ItemStack stack)
+        {
+            BuyEvent?.Invoke(sender, ref stack);
+        }
+
+        /// <summary>
+        /// Occurs when player clicks this Item in his inventory.
+        /// </summary>
+        public event ItemUseHandler UseEvent;
+
+        public virtual void OnUse(object sender, MouseButtons b, ref ItemStack stack)
+        {
+            UseEvent?.Invoke(sender, b, ref stack);
+        }
 
         protected void SetID(string s) { _ID = s; }
         protected void SetName(string s) { _Name = s; }
         protected void SetIcon(Image s) { _Icon = s; }
         protected void SetShopPrice(long s) { _ShopPrice = s; }
-        protected void SetAvailableInShop(bool s) { _AvailableInShop = s; }
+        protected void SetAvailableInShop(bool s) { _IsAvailableInShop = s; }
     }
+
+    /// <summary>
+    /// Item Buy handler.
+    /// </summary>
+    /// <param name="sender">The sender.</param>
+    /// <param name="stack">ItemStack to buy.</param>
+    public delegate void ItemBuyHandler(object sender, ref ItemStack stack);
+
+    /// <summary>
+    /// Item Use handler.
+    /// </summary>
+    /// <param name="sender">The sender.</param>
+    /// <param name="b">Mouse Button</param>
+    /// <param name="stack">Clicked ItemStack</param>
+    public delegate void ItemUseHandler(object sender, MouseButtons b, ref ItemStack stack);
 }

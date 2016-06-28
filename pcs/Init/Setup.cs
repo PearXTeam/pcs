@@ -120,7 +120,7 @@ namespace pcs.Init
                     {
                         ItemStack stack = new ItemStack(itm, Convert.ToInt32(s[1]), s[2]);
                         stack.Data = ObjectData.FromString(s[3]);
-                        PlayerInventory.Inventory.Add(stack);
+                        PlayerInventory.Inventory.Add(stack, false);
                     }
                     else
                         PCS.l.Add("Item \"" + s[0] + "\" not exists!", LogType.Error);
@@ -147,7 +147,7 @@ namespace pcs.Init
             SaveManager.instance.Text = PCS.Loc.GetString("title.savemanager");
             GameOver.instance.Text = PCS.Loc.GetString("title.gameover");
             Share.instance.Text = PCS.Loc.GetString("title.share");
-            InventoryGUI.Instance.Text = PCS.Loc.GetString("title.minigames");
+            PlayerInventoryGUI.Instance.Text = PCS.Loc.GetString("title.minigames");
 
             Options.instance.checkAutosave.Text = PCS.Loc.GetString("options.autosave");
             Options.instance.btnChangeLanguage.Text = PCS.Loc.GetString("options.changeLanguage");
@@ -173,7 +173,7 @@ namespace pcs.Init
             Share.instance.btnShareVK.Text = PCS.Loc.GetString("share.vk");
             Share.instance.btnShareTwitter.Text = PCS.Loc.GetString("share.twitter");
 
-            InventoryGUI.Instance.Text = PCS.Loc.GetString("title.inventory");
+            PlayerInventoryGUI.Instance.Text = PCS.Loc.GetString("title.inventory");
         }
 
         public static void InitToolIcons()

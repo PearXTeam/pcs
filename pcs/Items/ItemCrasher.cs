@@ -15,9 +15,10 @@ namespace pcs.Items
             SetIcon(PCSImages.Crasher);
         }
 
-        public override void OnUse(MouseButtons b, ref ItemStack stack)
+        public override void OnUse(object sender, MouseButtons b, ref ItemStack stack)
         {
-            Crash.PerformCrash("Crashed by crasher! MUAHAHA!");
+            base.OnUse(sender, b, ref stack);
+            Crash.PerformCrash("Crashed by Crasher! MUAHAHAHA!!");
         }
     }
 }

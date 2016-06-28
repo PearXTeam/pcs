@@ -16,9 +16,9 @@ namespace pcs.Icons
 
         public override void OnClick(object sender, EventArgs e)
         {
-            if (!InventoryGUI.Instance.Visible)
+            if (!PlayerInventoryGUI.Instance.Visible)
             {
-                InventoryGUI.Instance.Show(Game.instance);
+                PlayerInventoryGUI.Instance.Show(Game.instance);
             }
         }
 

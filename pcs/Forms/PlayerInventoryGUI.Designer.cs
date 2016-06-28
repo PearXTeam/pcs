@@ -1,6 +1,6 @@
 ﻿namespace pcs.Forms
 {
-    partial class InventoryGUI
+    partial class PlayerInventoryGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.playerInventory = new pcs.IAI.InventoryGUIContainer();
+            this.playerInventory = new pcs.IAI.InventoryGUI();
             this.SuspendLayout();
             // 
             // playerInventory
@@ -53,6 +53,6 @@
 
         #endregion
 
-        private IAI.InventoryGUIContainer playerInventory;
+        private IAI.InventoryGUI playerInventory;
     }
 }

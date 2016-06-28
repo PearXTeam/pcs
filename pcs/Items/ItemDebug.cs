@@ -14,8 +14,9 @@ namespace pcs.Items
             SetID("PCS:Debug");
         }
 
-        public override void OnUse(MouseButtons b, ref ItemStack stack)
+        public override void OnUse(object sender, MouseButtons b, ref ItemStack stack)
         {
+            base.OnUse(sender, b, ref stack);
             if (b == MouseButtons.Left)
             {
                 Game.instance.Invoke(new MethodInvoker(() => { Thread.Sleep(1000); }));

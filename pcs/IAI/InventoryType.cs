@@ -2,8 +2,7 @@
 {
     public enum InventoryType
     {
-        Player = 0,
-        Container = 1,
+        Container = 0,
         Slot = 2
     }
 }
