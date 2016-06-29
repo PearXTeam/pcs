@@ -14,7 +14,7 @@ namespace pcs.Commands
         public override void OnPerform(string[] args, string allArgs)
         {
             StringBuilder sb = new StringBuilder();
-            sb.Append(PCS.Loc.GetString("command.help.avaible"));
+            sb.Append(PCS.Loc.GetString("command.help.available"));
             foreach (var v in Registry.RegisteredCommands)
             {
                 sb.Append(v.Name() + ", ");

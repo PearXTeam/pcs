@@ -11,7 +11,6 @@ using System.Numerics;
 using System.Threading;
 using System.Windows.Forms;
 using Newtonsoft.Json;
-using pcs.Commands;
 using pcs.Components.Controls;
 using pcs.IAI;
 using pcs.Components.Interfaces;
@@ -59,6 +58,8 @@ namespace pcs.Init
             Registry.RegisteredCommands.Add(PCSCommands.Set);
             Registry.RegisteredCommands.Add(PCSCommands.Time);
             Registry.RegisteredCommands.Add(PCSCommands.Give);
+            Registry.RegisteredCommands.Add(PCSCommands.Items);
+            Registry.RegisteredCommands.Add(PCSCommands.Stats);
 
             //Icons
             Registry.RegisteredIcons.Add(PCSIcons.Inventory);

@@ -1,6 +1,7 @@
-﻿using pcs.Components;
+﻿using pcs.Commands;
+using pcs.Components;
 
-namespace pcs.Commands
+namespace pcs.Init
 {
     public class PCSCommands
     {
@@ -9,5 +10,7 @@ namespace pcs.Commands
         public static Command Set = new CommandSet();
         public static Command Time = new CommandTime();
         public static Command Give = new CommandGive();
+        public static Command Items = new CommandItems();
+        public static Command Stats = new CommandStats();
     }
 }

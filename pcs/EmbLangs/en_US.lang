@@ -63,7 +63,7 @@ command.notfound=Command not found! /help - command list.
 
 command.restore.all=All stats are successfully restored!
 
-command.help.avaible=Available next commands: 
+command.help.available=Available next commands: 
 
 command.set.incorrectusage=Command usage: /set <money|xp|food|sleep|health|mood|mfood|msleep|mhealth|mmood> <value>
 command.set.nan=Argument 2 is not a valid number.

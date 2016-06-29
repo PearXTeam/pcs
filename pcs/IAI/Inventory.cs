@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 using pcs.Components.Controls;
-using pcs.Forms;
 using pcs.Player;
 
 namespace pcs.IAI
@@ -50,7 +49,7 @@ namespace pcs.IAI
 
         private void ItemPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            UpdateGUIs();
+            OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Replace));
         }
 
         public void UpdateGUIs()

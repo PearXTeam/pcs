@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Drawing;
-using System.Threading;
-using System.Windows.Forms;
 using pcs.Components;
-using pcs.Components.Controls;
-using pcs.IAI;
 using pcs.Player;
 
 namespace pcs.Forms
