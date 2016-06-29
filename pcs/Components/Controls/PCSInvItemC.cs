@@ -8,8 +8,6 @@ namespace pcs.Components.Controls
         public PCSInvItemC()
         {
             Shadow = true;
-            Tooltip.NameLabel.Font = Font;
-            Tooltip.TooltipLabel.Font = new Font(Font.FontFamily, Font.Size - 3F);
         }
     }
 }

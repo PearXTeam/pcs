@@ -49,6 +49,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\CommandInvRemove.cs" />
     <Compile Include="Commands\CommandStats.cs" />
     <Compile Include="Commands\CommandItems.cs" />
     <Compile Include="Core\Background.cs">

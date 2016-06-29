@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 using pcs.Components.Controls;
+using pcs.Forms;
 using pcs.Player;
 
 namespace pcs.IAI
@@ -38,9 +39,13 @@ namespace pcs.IAI
 
         protected override void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
         {
+            InitUpdate();
+        }
+
+        private void InitUpdate()
+        {
             if (!DoNotUpdate)
             {
-                base.OnCollectionChanged(e);
                 UpdateGUIs();
             }
             else
@@ -49,7 +54,7 @@ namespace pcs.IAI
 
         private void ItemPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            OnCollectionChanged(new NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction.Replace));
+            InitUpdate();
         }
 
         public void UpdateGUIs()
@@ -76,9 +81,11 @@ namespace pcs.IAI
                         {
                             ItemImage = v.Item.Icon(v),
                             ItemName = v.Item.Name(v),
-                            ItemDesc = v.Item.Description(v),
-                            ItemAmount = v.StackCount
+                            ItemDesc = v.Item.Tooltip(v),
+                            ItemAmount = v.StackCount,
                         };
+                        item.Tooltip.NameFont = Game.instance.Font;
+                        item.Tooltip.TooltipFont = new Font(Game.instance.Font.FontFamily, Game.instance.Font.Size - 3F);
 
                         int distance = x == gui.ItemsInRow ? 0 : gui.ItemsDistance;
                         item.Location = new Point(x*(item.Width + distance), y*item.Height);

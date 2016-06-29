@@ -15,15 +15,17 @@ namespace pcs.IAI
         private Image _Icon;
         private long _ShopPrice;
         private bool _IsAvailableInShop;
+        private string _Tooltip;
 
         public Item() { }
-        public Item(string name, string id, Image icon, long shopPrice = 100, bool availableInShop = true)
+        public Item(string name, string id, Image icon, long shopPrice = 100, string tooltip = "", bool availableInShop = true)
         {
             _Name = name;
             _ID = id;
             _Icon = icon;
             _ShopPrice = shopPrice;
             _IsAvailableInShop = availableInShop;
+            _Tooltip = tooltip;
         }
         /// <summary>
         /// A name of the Item
@@ -53,9 +55,9 @@ namespace pcs.IAI
         /// The description of the item.
         /// </summary>
         /// <returns></returns>
-        public virtual string Description(ItemStack stack)
+        public virtual string Tooltip(ItemStack stack)
         {
-            return "";
+            return _Tooltip;
         }
 
         /// <summary>
@@ -154,11 +156,12 @@ namespace pcs.IAI
             UseEvent?.Invoke(sender, b, ref stack);
         }
 
-        protected void SetID(string s) { _ID = s; }
-        protected void SetName(string s) { _Name = s; }
-        protected void SetIcon(Image s) { _Icon = s; }
-        protected void SetShopPrice(long s) { _ShopPrice = s; }
-        protected void SetAvailableInShop(bool s) { _IsAvailableInShop = s; }
+        public void SetID(string s) { _ID = s; }
+        public void SetName(string s) { _Name = s; }
+        public void SetIcon(Image s) { _Icon = s; }
+        public void SetShopPrice(long s) { _ShopPrice = s; }
+        public void SetAvailableInShop(bool s) { _IsAvailableInShop = s; }
+        public void SetTooltip(string s) { _Tooltip = s; }
     }
 
     /// <summary>

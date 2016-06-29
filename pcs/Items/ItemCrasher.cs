@@ -13,6 +13,7 @@ namespace pcs.Items
             SetName(PCS.Loc.GetString("item.crasher"));
             SetAvailableInShop(false);
             SetIcon(PCSImages.Crasher);
+            SetTooltip(PCS.Loc.GetString("item.crasher.tip"));
         }
 
         public override void OnUse(object sender, MouseButtons b, ref ItemStack stack)

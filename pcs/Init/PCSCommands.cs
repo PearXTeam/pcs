@@ -12,5 +12,6 @@ namespace pcs.Init
         public static Command Give = new CommandGive();
         public static Command Items = new CommandItems();
         public static Command Stats = new CommandStats();
+        public static Command InvRemove = new CommandInvRemove();
     }
 }

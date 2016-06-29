@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using pcs.Components;
+﻿using pcs.Components;
 using pcs.Core;
 using pcs.Forms;
 

@@ -85,6 +85,9 @@ command.stats.incorrectUsage=Использование команды: /stats <
 command.stats.off=Все статы выключены!
 command.stats.on=Все статы включены!
 
+command.invRemove.incorrectUsage=Использование команды: /inv_remove <<индекс>|all>
+command.invRemove.successfully=Предмет(ы) успешно удален(ы).
+
 #Achievements
 achievement.unlocked=Достижение разблокировано!
 
@@ -106,5 +109,6 @@ shop.buy.notEnoughMoney=У Вас недостаточно денег, чтоб�
 
 #Items
 item.sand=Песок
-item.bedTalisman=Талисман кровати
+item.sand.tip=Рассыпчатый материал.
 item.crasher=Крашер
+item.crasher.tip=Просто крашит игру. Для отладки.
