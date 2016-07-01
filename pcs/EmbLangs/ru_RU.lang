@@ -88,6 +88,8 @@ command.stats.on=Все статы включены!
 command.invRemove.incorrectUsage=Использование команды: /inv_remove <<индекс>|all>
 command.invRemove.successfully=Предмет(ы) успешно удален(ы).
 
+command.console.incorrectUsage=Использование команды: /console clear
+
 #Achievements
 achievement.unlocked=Достижение разблокировано!
 

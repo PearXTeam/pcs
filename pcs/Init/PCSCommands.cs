@@ -13,5 +13,6 @@ namespace pcs.Init
         public static Command Items = new CommandItems();
         public static Command Stats = new CommandStats();
         public static Command InvRemove = new CommandInvRemove();
+        public static Command Console = new CommandConsole();
     }
 }

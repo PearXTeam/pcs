@@ -61,6 +61,7 @@ namespace pcs.Init
             Registry.RegisteredCommands.Add(PCSCommands.Items);
             Registry.RegisteredCommands.Add(PCSCommands.Stats);
             Registry.RegisteredCommands.Add(PCSCommands.InvRemove);
+            Registry.RegisteredCommands.Add(PCSCommands.Console);
 
             //Icons
             Registry.RegisteredIcons.Add(PCSIcons.Inventory);
