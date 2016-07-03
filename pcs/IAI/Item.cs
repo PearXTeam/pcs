@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using pcs.Args;
 using pcs.Components;
 using pcs.Core;
 using pcs.Player;
@@ -18,14 +19,19 @@ namespace pcs.IAI
         private string _Tooltip;
 
         public Item() { }
-        public Item(string name, string id, Image icon, long shopPrice = 100, string tooltip = "", bool availableInShop = true)
+        public Item(ItemArgs args)
         {
-            _Name = name;
-            _ID = id;
-            _Icon = icon;
-            _ShopPrice = shopPrice;
-            _IsAvailableInShop = availableInShop;
-            _Tooltip = tooltip;
+            Prepare(args);
+        }
+
+        protected void Prepare(ItemArgs args)
+        {
+            SetName(args.Name);
+            SetID(args.ID);
+            SetIcon(args.Icon);
+            SetShopPrice(args.ShopPrice);
+            SetTooltip(args.Tooltip);
+            SetAvailableInShop(args.AvailableInShop);
         }
         /// <summary>
         /// A name of the Item
@@ -156,12 +162,12 @@ namespace pcs.IAI
             UseEvent?.Invoke(sender, b, ref stack);
         }
 
-        public void SetID(string s) { _ID = s; }
-        public void SetName(string s) { _Name = s; }
-        public void SetIcon(Image s) { _Icon = s; }
-        public void SetShopPrice(long s) { _ShopPrice = s; }
-        public void SetAvailableInShop(bool s) { _IsAvailableInShop = s; }
-        public void SetTooltip(string s) { _Tooltip = s; }
+        public virtual void SetID(string s) { _ID = s; }
+        public virtual void SetName(string s) { _Name = s; }
+        public virtual void SetIcon(Image s) { _Icon = s; }
+        public virtual void SetShopPrice(long s) { _ShopPrice = s; }
+        public virtual void SetAvailableInShop(bool s) { _IsAvailableInShop = s; }
+        public virtual void SetTooltip(string s) { _Tooltip = s; }
     }
 
     /// <summary>

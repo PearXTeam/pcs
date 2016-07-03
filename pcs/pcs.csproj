@@ -49,6 +49,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Args\FoodItemArgs.cs" />
     <Compile Include="Commands\CommandConsole.cs" />
     <Compile Include="Commands\CommandInvRemove.cs" />
     <Compile Include="Commands\CommandStats.cs" />
@@ -78,6 +79,7 @@
     </Compile>
     <Compile Include="IAI\InventoryType.cs" />
     <Compile Include="IAI\Item.cs" />
+    <Compile Include="Args\ItemArgs.cs" />
     <Compile Include="IAI\ItemStack.cs" />
     <Compile Include="Components\Interfaces\ITickable.cs" />
     <Compile Include="Components\ObjectData.cs" />
@@ -223,6 +225,7 @@
     <Compile Include="Init\PCSItems.cs" />
     <Compile Include="Items\ItemCrasher.cs" />
     <Compile Include="Items\ItemDebug.cs" />
+    <Compile Include="Items\ItemFood.cs" />
     <Compile Include="MiniGames\MiniGameScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
