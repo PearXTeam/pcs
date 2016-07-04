@@ -45,7 +45,7 @@
             // lblMsg
             // 
             this.lblMsg.DrawInRectangle = true;
-            this.lblMsg.Font = new System.Drawing.Font("Yanone Kaffeesatz", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblMsg.Font = new System.Drawing.Font("Yanone Kaffeesatz F", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblMsg.Location = new System.Drawing.Point(91, 38);
             this.lblMsg.Name = "lblMsg";
             this.lblMsg.Size = new System.Drawing.Size(258, 118);

@@ -7,7 +7,7 @@ namespace pcs.Components.Controls
     {
         public PCSInvItem()
         {
-            Font = new Font("Yanone Kaffeesatz", 20F);
+            Font = new Font("Yanone Kaffeesatz F", 20F);
             Size = new Size(411, 137);
             ShowAmount = false;
             ColorDesc = Color.FromArgb(52, 152, 219);

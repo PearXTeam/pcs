@@ -34,7 +34,7 @@
             // listViewMods
             // 
             this.listViewMods.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(38)))), ((int)(((byte)(41)))));
-            this.listViewMods.Font = new System.Drawing.Font("Yanone Kaffeesatz", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listViewMods.Font = new System.Drawing.Font("Yanone Kaffeesatz F", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listViewMods.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.listViewMods.Location = new System.Drawing.Point(12, 41);
             this.listViewMods.Name = "listViewMods";

@@ -22,8 +22,7 @@ namespace pcs
             Application.EnableVisualStyles();
             //Pre-initing...
             AppDomain.CurrentDomain.UnhandledException += (sender, args) => { Crash.OnCrash(sender, (Exception)args.ExceptionObject); };
-            Application.ThreadException += (sender, args) => {Crash.OnCrash(sender, args.Exception);};
-
+            Application.ThreadException += (sender, args) => { Crash.OnCrash(sender, args.Exception); };
             PCS.l.Add("Starting application...", LogType.Info);
 
             PCS.l.Add("Creating directories...", LogType.Info);
@@ -34,6 +33,7 @@ namespace pcs
             Directory.CreateDirectory(Dirs.PathSounds);
             Directory.CreateDirectory(Dirs.PathBGMusic);
             Directory.CreateDirectory(Dirs.PathScreenshots);
+            
 
             Application.Run(Background.instance);
         }

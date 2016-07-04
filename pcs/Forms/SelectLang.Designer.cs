@@ -34,7 +34,7 @@
             // lbSelectLang
             // 
             this.lbSelectLang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(47)))), ((int)(((byte)(51)))));
-            this.lbSelectLang.Font = new System.Drawing.Font("Yanone Kaffeesatz", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lbSelectLang.Font = new System.Drawing.Font("Yanone Kaffeesatz F", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lbSelectLang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.lbSelectLang.FormattingEnabled = true;
             this.lbSelectLang.ItemHeight = 32;

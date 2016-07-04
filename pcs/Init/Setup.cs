@@ -73,6 +73,7 @@ namespace pcs.Init
             Registry.RegisteredItems.Add(PCSItems.Sand);
             Registry.RegisteredItems.Add(PCSItems.Crasher);
             Registry.RegisteredItems.Add(PCSItems.Debug);
+            Registry.RegisteredItems.Add(PCSItems.Apple);
 
             //Saves
             Registry.RegisteredSaves.Add(new SaveElement("PCS_MaxFood",

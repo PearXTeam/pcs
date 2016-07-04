@@ -35,7 +35,7 @@
             // 
             // tbIn
             // 
-            this.tbIn.Font = new System.Drawing.Font("Yanone Kaffeesatz", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tbIn.Font = new System.Drawing.Font("Yanone Kaffeesatz F", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tbIn.Location = new System.Drawing.Point(12, 41);
             this.tbIn.Name = "tbIn";
             this.tbIn.Size = new System.Drawing.Size(362, 46);

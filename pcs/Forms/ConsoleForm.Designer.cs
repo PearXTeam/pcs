@@ -45,7 +45,7 @@
             // 
             // boxCommand
             // 
-            this.boxCommand.Font = new System.Drawing.Font("Yanone Kaffeesatz", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.boxCommand.Font = new System.Drawing.Font("Yanone Kaffeesatz F", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.boxCommand.Location = new System.Drawing.Point(5, 206);
             this.boxCommand.Name = "boxCommand";
             this.boxCommand.Size = new System.Drawing.Size(423, 33);
@@ -56,7 +56,7 @@
             // 
             this.lblText.AutoSize = true;
             this.lblText.DrawInRectangle = true;
-            this.lblText.Font = new System.Drawing.Font("Yanone Kaffeesatz", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblText.Font = new System.Drawing.Font("Yanone Kaffeesatz F", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblText.Location = new System.Drawing.Point(3, 3);
             this.lblText.Name = "lblText";
             this.lblText.Size = new System.Drawing.Size(420, 158);

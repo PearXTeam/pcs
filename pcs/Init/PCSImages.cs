@@ -28,5 +28,6 @@ namespace pcs.Init
         public static Image Sand = Resources.Sand;
         public static Image Crasher = Resources.Crasher;
         public static Image ErrorApple = Resources.ErrorApple;
+        public static Image Apple = Resources.Apple;
     }
 }

@@ -36,7 +36,7 @@
             // lblKilledby
             // 
             this.lblKilledby.AutoSize = true;
-            this.lblKilledby.Font = new System.Drawing.Font("Yanone Kaffeesatz", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblKilledby.Font = new System.Drawing.Font("Yanone Kaffeesatz F", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblKilledby.Location = new System.Drawing.Point(12, 114);
             this.lblKilledby.Name = "lblKilledby";
             this.lblKilledby.Size = new System.Drawing.Size(107, 42);
@@ -46,7 +46,7 @@
             // lblGameover
             // 
             this.lblGameover.AutoSize = true;
-            this.lblGameover.Font = new System.Drawing.Font("Yanone Kaffeesatz", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGameover.Font = new System.Drawing.Font("Yanone Kaffeesatz F", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblGameover.Location = new System.Drawing.Point(103, 37);
             this.lblGameover.Name = "lblGameover";
             this.lblGameover.Size = new System.Drawing.Size(245, 77);

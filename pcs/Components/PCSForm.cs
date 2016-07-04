@@ -27,7 +27,7 @@ namespace pcs.Components
             KeyPreview = true;
         }
 
-        public override Font Font { get; set; } = new Font("Yanone Kaffeesatz", 16F);
+        public override Font Font { get; set; } = new Font("Yanone Kaffeesatz F", 16F);
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {

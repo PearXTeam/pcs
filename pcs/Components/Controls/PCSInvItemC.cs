@@ -1,5 +1,4 @@
-﻿using System.Drawing;
-using PearXLib.Engine;
+﻿using PearXLib.Engine;
 
 namespace pcs.Components.Controls
 {

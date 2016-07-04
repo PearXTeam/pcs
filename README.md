@@ -2,7 +2,7 @@
 [<img src="https://ci.appveyor.com/api/projects/status/github/mrAppleXZ/pcs">](https://ci.appveyor.com/project/mrAppleXZ/pcs)
 
 # How to Run
-1. Install [this](http://files.pearx.ru/open/mirror/YanoneKaffeesatz-Regular.ttf) font.
+1. Install [this](http://files.pearx.ru/open/mirror/YanoneKaffeesatzF-Regular.ttf) font.
 2. [Download](https://ci.appveyor.com/project/mrAppleXZ/pcs/build/artifacts) latest alpha build.
 3. Unzip archive.
 4. Run "pcs.exe" file.

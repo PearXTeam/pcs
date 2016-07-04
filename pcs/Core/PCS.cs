@@ -14,7 +14,7 @@ namespace pcs.Core
     {
 
         public static Random Rand = new Random();
-        public const string Version = "0.3.0";
+        public const string Version = "0.4.0";
         public static Logging l = new Logging(Dirs.Path + "logs/" + PXL.GetDateTimeNow() + ".log");
         public static Localization Loc;
         public static string SelectedLang;

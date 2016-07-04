@@ -68,7 +68,7 @@
             // lblXP
             // 
             this.lblXP.AutoSize = true;
-            this.lblXP.Font = new System.Drawing.Font("Yanone Kaffeesatz", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblXP.Font = new System.Drawing.Font("Yanone Kaffeesatz F", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblXP.Location = new System.Drawing.Point(384, 428);
             this.lblXP.MaximumSize = new System.Drawing.Size(83, 31);
             this.lblXP.MinimumSize = new System.Drawing.Size(83, 31);
@@ -80,7 +80,7 @@
             // lblMoney
             // 
             this.lblMoney.AutoSize = true;
-            this.lblMoney.Font = new System.Drawing.Font("Yanone Kaffeesatz", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblMoney.Font = new System.Drawing.Font("Yanone Kaffeesatz F", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblMoney.Location = new System.Drawing.Point(12, 428);
             this.lblMoney.MaximumSize = new System.Drawing.Size(83, 31);
             this.lblMoney.MinimumSize = new System.Drawing.Size(83, 31);

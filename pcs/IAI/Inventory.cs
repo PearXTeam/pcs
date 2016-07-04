@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Windows.Forms;
 using pcs.Components.Controls;
 using pcs.Forms;
 using pcs.Player;
+using PearXLib;
 
 namespace pcs.IAI
 {
@@ -26,8 +28,6 @@ namespace pcs.IAI
                 stack.StackCount += itm.StackCount;
                 return;
             }
-
-            itm.PropertyChanged += ItemPropertyChanged;
             base.Add(itm);
         }
 
@@ -37,8 +37,21 @@ namespace pcs.IAI
             Add(stack);
         }
 
+        public void ExecuteCollectionChanged(NotifyCollectionChangedEventArgs e)
+        {
+            OnCollectionChanged(e);
+        }
+
         protected override void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
         {
+            if (e.NewItems != null)
+            {
+                foreach (var v in e.NewItems)
+                {
+                    ItemStack stack = v as ItemStack;
+                    stack.Inventory = this;
+                }
+            }
             InitUpdate();
         }
 
@@ -52,76 +65,77 @@ namespace pcs.IAI
                 DoNotUpdate = false;
         }
 
-        private void ItemPropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            InitUpdate();
-        }
-
         public void UpdateGUIs()
         {
-            foreach (InventoryGUI gui in GUIs)
+            try
             {
-                new Thread(() =>
+                foreach (InventoryGUI gui in GUIs)
                 {
-                    if (gui.IsHandleCreated)
-                        gui.Invoke(new MethodInvoker(() => gui.Controls.Clear()));
-                    else
-                        gui.Controls.Clear();
-
-                    int x = 0;
-                    int y = 0;
-                    foreach (var v in this)
+                    new Thread(() =>
                     {
-                        if (x == gui.ItemsInRow)
-                        {
-                            x = 0;
-                            y++;
-                        }
-                        PCSInvItemC item = new PCSInvItemC
-                        {
-                            ItemImage = v.Item.Icon(v),
-                            ItemName = v.Item.Name(v),
-                            ItemDesc = v.Item.Tooltip(v),
-                            ItemAmount = v.StackCount,
-                        };
-                        item.Tooltip.NameFont = Game.instance.Font;
-                        item.Tooltip.TooltipFont = new Font(Game.instance.Font.FontFamily, Game.instance.Font.Size - 3F);
-
-                        int distance = x == gui.ItemsInRow ? 0 : gui.ItemsDistance;
-                        item.Location = new Point(x*(item.Width + distance), y*item.Height);
-
-                        item.MouseClick += (sender, args) =>
-                        {
-                            int index = PlayerInventory.Inventory.IndexOf(v);
-                            ItemStack stack = PlayerInventory.Inventory[index];
-                            switch (gui.ItemClickAction)
-                            {
-                                case ItemUseAction.Default:
-                                    v.Item.OnUse(this, args.Button, ref stack);
-                                    break;
-                                case ItemUseAction.DefaultThenCustom:
-                                    v.Item.OnUse(this, args.Button, ref stack);
-                                    gui.OnCustomUseEvent(this, args.Button, ref stack);
-                                    break;
-                                case ItemUseAction.CustomThenDefault:
-                                    gui.OnCustomUseEvent(this, args.Button, ref stack);
-                                    v.Item.OnUse(this, args.Button, ref stack);
-                                    break;
-                                case ItemUseAction.Custom:
-                                    gui.OnCustomUseEvent(this, args.Button, ref stack);
-                                    break;
-                            }
-                        };
-
-
                         if (gui.IsHandleCreated)
-                            gui.Invoke(new MethodInvoker(() => gui.Controls.Add(item)));
+                            gui.Invoke(new MethodInvoker(() => gui.Controls.ClearAndDispose()));
                         else
-                            gui.Controls.Add(item);
-                        x++;
-                    }
-                }).Start();
+                        {
+                            gui.Controls.ClearAndDispose();
+                        }
+
+                        int x = 0;
+                        int y = 0;
+                        foreach (var v in this)
+                        {
+                            if (x == gui.ItemsInRow)
+                            {
+                                x = 0;
+                                y++;
+                            }
+                            PCSInvItemC item = new PCSInvItemC
+                            {
+                                ItemImage = v.Item.Icon(v),
+                                ItemName = v.Item.Name(v),
+                                ItemDesc = v.Item.Tooltip(v),
+                                ItemAmount = v.StackCount,
+                            };
+                            item.Tooltip.NameFont = Game.instance.Font;
+                            item.Tooltip.TooltipFont = new Font(Game.instance.Font.FontFamily, Game.instance.Font.Size - 3F);
+
+                            int distance = x == gui.ItemsInRow ? 0 : gui.ItemsDistance;
+                            item.Location = new Point(x*(item.Width + distance), y*item.Height);
+
+                            item.MouseClick += (sender, args) =>
+                            {
+                                int index = PlayerInventory.Inventory.IndexOf(v);
+                                ItemStack stack = PlayerInventory.Inventory[index];
+                                switch (gui.ItemClickAction)
+                                {
+                                    case ItemUseAction.Default:
+                                        v.Item.OnUse(this, args.Button, ref stack);
+                                        break;
+                                    case ItemUseAction.DefaultThenCustom:
+                                        v.Item.OnUse(this, args.Button, ref stack);
+                                        gui.OnCustomUseEvent(this, args.Button, ref stack);
+                                        break;
+                                    case ItemUseAction.CustomThenDefault:
+                                        gui.OnCustomUseEvent(this, args.Button, ref stack);
+                                        v.Item.OnUse(this, args.Button, ref stack);
+                                        break;
+                                    case ItemUseAction.Custom:
+                                        gui.OnCustomUseEvent(this, args.Button, ref stack);
+                                        break;
+                                }
+                            };
+
+
+                            if (gui.IsHandleCreated)
+                                gui.Invoke(new MethodInvoker(() => gui.Controls.Add(item)));
+                            else
+                                gui.Controls.Add(item);
+                            x++;
+                        }
+                    }).Start();
+                }
             }
+            catch (InvalidOperationException) { }
         }
     }
 }

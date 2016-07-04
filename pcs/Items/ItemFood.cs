@@ -1,5 +1,4 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Text;
 using System.Windows.Forms;
 using pcs.Args;
 using pcs.IAI;
@@ -31,11 +30,46 @@ namespace pcs.Items
             Stats.Mood += RestoreMood(stack);
             Stats.Sleep += RestoreSleep(stack);
             Stats.Health += RestoreHealth(stack);
+            stack.StackCount--;
         }
 
         public override string Tooltip(ItemStack stack)
         {
-            return "" + "\n" + base.Tooltip(stack);
+            StringBuilder sb = new StringBuilder();
+
+            int rfood = RestoreFood(stack);
+            int rmood = RestoreMood(stack);
+            int rsleep = RestoreSleep(stack);
+            int rhealth = RestoreHealth(stack);
+
+            string s = base.Tooltip(stack);
+            if (!string.IsNullOrEmpty(s))
+                sb.AppendLine(s);
+
+            if (rfood != 0)
+            {
+                string pm = rfood > 0 ? "+" : "-";
+                sb.AppendLine(pm + rfood + "🍗");
+            }
+
+            if (rmood != 0)
+            {
+                string pm = rmood > 0 ? "+" : "-";
+                sb.AppendLine(pm + rmood + "☺");
+            }
+
+            if (rsleep != 0)
+            {
+                string pm = rsleep > 0 ? "+" : "-";
+                sb.AppendLine(pm + rsleep + "💤");
+            }
+
+            if (rhealth != 0)
+            {
+                string pm = rhealth > 0 ? "+" : "-";
+                sb.AppendLine(pm + rhealth + "➕");
+            }
+            return sb.ToString();
         }
 
         public int RestoreFood(ItemStack stack)
