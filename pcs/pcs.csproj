@@ -350,6 +350,9 @@
   <ItemGroup>
     <None Include="Resources\Apple.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Coffee.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>

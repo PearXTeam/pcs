@@ -44,13 +44,9 @@ namespace pcs.IAI
 
         protected override void OnCollectionChanged(NotifyCollectionChangedEventArgs e)
         {
-            if (e.NewItems != null)
+            foreach (var v in this)
             {
-                foreach (var v in e.NewItems)
-                {
-                    ItemStack stack = v as ItemStack;
-                    stack.Inventory = this;
-                }
+                v.Inventory = this;
             }
             InitUpdate();
         }
@@ -67,8 +63,8 @@ namespace pcs.IAI
 
         public void UpdateGUIs()
         {
-            try
-            {
+            //try
+            //{
                 foreach (InventoryGUI gui in GUIs)
                 {
                     new Thread(() =>
@@ -134,8 +130,8 @@ namespace pcs.IAI
                         }
                     }).Start();
                 }
-            }
-            catch (InvalidOperationException) { }
+            //}
+            //catch (InvalidOperationException) { }
         }
     }
 }
