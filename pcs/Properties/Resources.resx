@@ -148,6 +148,9 @@
   <data name="Dice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Eating" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eating.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="ErrorApple" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ErrorApple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

@@ -1,7 +1,9 @@
 ﻿using System.Text;
 using System.Windows.Forms;
 using pcs.Args;
+using pcs.Core;
 using pcs.IAI;
+using pcs.Init;
 using pcs.Player;
 
 namespace pcs.Items
@@ -30,6 +32,7 @@ namespace pcs.Items
             Stats.Mood += RestoreMood(stack);
             Stats.Sleep += RestoreSleep(stack);
             Stats.Health += RestoreHealth(stack);
+            PCS.PlaySound(PCSSounds.Eating);
             stack.StackCount--;
         }
 
