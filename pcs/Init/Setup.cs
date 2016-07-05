@@ -15,7 +15,6 @@ using pcs.Components.Controls;
 using pcs.IAI;
 using pcs.Components.Interfaces;
 using pcs.Core;
-using pcs.Properties;
 using PearXLib;
 
 namespace pcs.Init
@@ -75,6 +74,7 @@ namespace pcs.Init
             Registry.RegisteredItems.Add(PCSItems.Debug);
             Registry.RegisteredItems.Add(PCSItems.Apple);
             Registry.RegisteredItems.Add(PCSItems.Coffee);
+            Registry.RegisteredItems.Add(PCSItems.Porridge);
 
             //Saves
             Registry.RegisteredSaves.Add(new SaveElement("PCS_MaxFood",
@@ -113,6 +113,10 @@ namespace pcs.Init
             Registry.RegisteredSaves.Add(new SaveElement("PCS_Time",
                 (name, value) => { PlayerVals.Time = DateTime.FromBinary(Convert.ToInt64(value)); },
                 (string name, out string value) => { value = PlayerVals.Time.ToBinary().ToString(); }));
+
+            Registry.RegisteredSaves.Add(new SaveElement("PCS_Autosave",
+                (name, value) => { SettingVals.AutoSave = Convert.ToBoolean(value); },
+                (string name, out string value) => { value = SettingVals.AutoSave.ToString(); }));
 
             //Inventory start
             Registry.RegisteredSaves.Add(new SaveElement("PCS_Inventory", (name, value) =>
@@ -333,14 +337,6 @@ namespace pcs.Init
         {
             Share.instance.btnShareVK.Image = PCSImages.VK;
             Share.instance.btnShareTwitter.Image = PCSImages.Twitter;
-        }
-
-        public static void UnpackSounds()
-        {
-            if (!File.Exists(Dirs.PathSounds + "PopUp.mp3"))
-            {
-                File.WriteAllBytes(Dirs.PathSounds + "PopUp.mp3", Resources.PopUp);
-            }
         }
 
         public static void PostInit()

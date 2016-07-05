@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 using pcs.Core;
+using pcs.Init;
 using PearXLib;
 
 namespace pcs.Components
@@ -38,7 +39,7 @@ namespace pcs.Components
             t.Start();
             
             Show(Background.instance);
-            PCS.PlaySound("PopUp");
+            PCS.PlaySound(PCSSounds.PopUp);
             Location = new Point(Background.instance.Width - Width, 0);
         }
     }

@@ -32,7 +32,10 @@ namespace pcs.Forms
                 b.Text = we;
                 b.Location = new Point(5, 64 * i + 3 * i);
                 b.Size = new Size(256, 64);
-                b.Click += (o, args) => { SL.Load(we); };
+                b.Click += (o, args) =>
+                {
+                    SL.Load(we);
+                };
                 panelSaves.Controls.Add(b);
 
                 PCSButton bdel = new PCSButton();

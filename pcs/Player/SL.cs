@@ -4,13 +4,18 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using pcs.Components;
+using pcs.Components.Controls;
 using pcs.Core;
+using pcs.Forms;
 using pcs.Init;
+using PearXLib.Engine.Flat;
+using System.Windows.Forms;
 
 namespace pcs.Player
 {
     public class SL
     {
+
         public static void Load(string filename)
         {
             PCS.l.Add("Loading save \"" + filename +"\"...", LogType.Info);
@@ -19,6 +24,8 @@ namespace pcs.Player
             {
                 string s = File.ReadAllText(Dirs.PathSaves + filename + ".pcs");
                 List<SaveElementStruct> l = JsonConvert.DeserializeObject<List<SaveElementStruct>>(s);
+
+                int i = 0;
                 foreach (SaveElementStruct ses in l)
                 {
                     foreach (SaveElement se in Registry.RegisteredSaves)
@@ -30,21 +37,12 @@ namespace pcs.Player
                             break;
                         }
                     }
+
+                    i++;
                 }
                 PCS.l.Add("Done loading save.", LogType.Info);
             }
             catch(FileNotFoundException) { PCS.l.Add("Can't load \"" + filename + "\" save.", LogType.Error); }
-        }
-
-        public static void LoadSettings()
-        {
-            PCS.l.Add("Loading settings...", LogType.Info);
-            try
-            {
-                string[] s = File.ReadAllLines(Dirs.Path + "settings.pcs");
-                SettingVals.AutoSave = Convert.ToBoolean(s[0]);
-            } catch { }
-            PCS.l.Add("Done loading settings...", LogType.Info);
         }
 
         public static void Save(string filename)
@@ -73,17 +71,5 @@ namespace pcs.Player
                 new PopUp().Display(PCS.Loc.GetString("savemanager.saveError"), PCS.Loc.GetString("savemanager.saveError.message").Replace("{filename}", filename), PCSImages.BrokenFloppy);
             }
         }
-
-        public static void SaveSettings()
-        {
-            PCS.l.Add("Saving settings...", LogType.Info);
-            File.WriteAllLines(Dirs.Path + "settings.pcs", new string[]
-            {
-                SettingVals.AutoSave.ToString()
-            });
-            PCS.l.Add("Done saving settings.", LogType.Info);
-        }
-
-        //_____
     }
 }

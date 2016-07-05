@@ -37,7 +37,6 @@ namespace pcs.Forms
 
         private void Game_FormClosing(object sender, FormClosingEventArgs e)
         {
-            SL.SaveSettings();
             if(!DontSave)
             {
                 SL.Save("autosave");

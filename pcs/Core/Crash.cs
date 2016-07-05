@@ -57,7 +57,6 @@ namespace pcs.Core
             } catch { }
             File.WriteAllText(Dirs.PathCrashes + "crash_" + PXL.GetDateTimeNow() + ".txt", sb.ToString());
 
-            SL.SaveSettings();
             SL.Save("autosave");
 
             Environment.Exit(0);

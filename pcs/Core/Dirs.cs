@@ -9,7 +9,6 @@ namespace pcs.Core
         public static string PathMods = Path + "mods/";
         public static string PathLangs = Path + "lang/";
         public static string PathSaves = Path + "saves/";
-        public static string PathSounds = Path + "sounds/";
         public static string PathBGMusic = Path + "bgmusic/";
         public static string PathScreenshots = Path + "screenshots/";
     }

@@ -31,8 +31,8 @@
             this.logo = new System.Windows.Forms.PictureBox();
             this.lbl2 = new pcs.Components.Controls.PCSLabel();
             this.lbl1 = new pcs.Components.Controls.PCSLabel();
-            this.bar1 = new PearXLib.Engine.Flat.FlatBar();
-            this.bar2 = new PearXLib.Engine.Flat.FlatBar();
+            this.bar1 = new pcs.Components.Controls.PCSBar();
+            this.bar2 = new pcs.Components.Controls.PCSBar();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,6 +96,7 @@
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.bar1);
             this.Controls.Add(this.bar2);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "Loading";
             this.Text = "Loading";
             this.Shown += new System.EventHandler(this.Loading_Shown);
@@ -107,8 +108,8 @@
 
         #endregion
 
-        private PearXLib.Engine.Flat.FlatBar bar2;
-        private PearXLib.Engine.Flat.FlatBar bar1;
+        private pcs.Components.Controls.PCSBar bar2;
+        private pcs.Components.Controls.PCSBar bar1;
         private Components.Controls.PCSLabel lbl1;
         private Components.Controls.PCSLabel lbl2;
         private System.Windows.Forms.PictureBox logo;

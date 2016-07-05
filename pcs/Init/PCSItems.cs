@@ -14,5 +14,6 @@ namespace pcs.Init
         //Food \/
         public static Item Apple = new ItemFood(new FoodItemArgs {Name = PCS.Loc.GetString("item.apple"), ID = "PCS:Apple", Icon = PCSImages.Apple, ShopPrice = 35, RestoreFood = 7});
         public static Item Coffee = new ItemFood(new FoodItemArgs {Name = PCS.Loc.GetString("item.coffee"), ID = "PCS:Coffee", Icon = PCSImages.Coffee, ShopPrice = 50, RestoreSleep = 8});
+        public static Item Porridge = new ItemFood(new FoodItemArgs {Name = PCS.Loc.GetString("item.porridge"), ID = "PCS:Porridge", Icon = PCSImages.Porridge, ShopPrice = 150, RestoreFood = 30});
     }
 }
