@@ -42,7 +42,7 @@
             this.checkAutosave.Size = new System.Drawing.Size(160, 32);
             this.checkAutosave.TabIndex = 0;
             this.checkAutosave.Text = "pcsCheckbox1";
-            this.checkAutosave.CheckedChanged += new PearXLib.Engine.XCheckboxBase.CheckboxHandler(this.checkAutosave_CheckedChanged);
+            this.checkAutosave.CheckedChanged += new PearXLib.Engine.Bases.CheckboxHandler(this.checkAutosave_CheckedChanged);
             // 
             // btnChangeLanguage
             // 

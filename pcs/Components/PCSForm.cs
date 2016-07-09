@@ -16,8 +16,8 @@ namespace pcs.Components
         public PCSForm()
         {
             Icon = Resources.PCSIcon;
-            MaximizeBox = false;
-            ToTrayBox = false;
+            Boxes.MaximizeBox.Enabled = false;
+            Boxes.ToTrayBox.Enabled = false;
             Size = new Size(768, 512);
             StartPosition = FormStartPosition.CenterParent;
             if(!(this is IMain))

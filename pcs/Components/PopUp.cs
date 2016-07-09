@@ -32,7 +32,7 @@ namespace pcs.Components
             Rim = false;
             TopMost = true;
             BackColor = backColor.Value;
-            PanelBG = BackColor;
+            PanelColor = BackColor;
             Timer t = new Timer();
             t.Interval = autoClose;
             t.Tick += (sender, args) => { Close(); t.Stop(); };

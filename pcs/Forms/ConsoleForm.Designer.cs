@@ -70,7 +70,7 @@
             this.Controls.Add(this.panel);
             this.Controls.Add(this.boxCommand);
             this.Name = "ConsoleForm";
-            this.PanelBG = System.Drawing.Color.Transparent;
+            this.PanelColor = System.Drawing.Color.Transparent;
             this.Shown += new System.EventHandler(this.ConsoleForm_Shown);
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();

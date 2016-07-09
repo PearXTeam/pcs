@@ -33,7 +33,7 @@ namespace pcs.Player
                     Food = value;
                 }
                 Game.instance.barFood.Maximum = value;
-                Game.instance.barFood.ProgressText = PCS.Loc.GetString("bar.food") + Food + "/" + value;
+                Game.instance.barFood.Text = PCS.Loc.GetString("bar.food") + Food + "/" + value;
             }
         }
 
@@ -55,7 +55,7 @@ namespace pcs.Player
                     Health = value;
                 }
                 Game.instance.barHealth.Maximum = value;
-                Game.instance.barHealth.ProgressText = PCS.Loc.GetString("bar.health") + Health + "/" + value;
+                Game.instance.barHealth.Text = PCS.Loc.GetString("bar.health") + Health + "/" + value;
             }
         }
 
@@ -77,7 +77,7 @@ namespace pcs.Player
                     Mood = value;
                 }
                 Game.instance.barMood.Maximum = value;
-                Game.instance.barMood.ProgressText = PCS.Loc.GetString("bar.mood") + Mood + "/" + value;
+                Game.instance.barMood.Text = PCS.Loc.GetString("bar.mood") + Mood + "/" + value;
             }
         }
 
@@ -99,7 +99,7 @@ namespace pcs.Player
                     Sleep = value;
                 }
                 Game.instance.barSleep.Maximum = value;
-                Game.instance.barSleep.ProgressText = PCS.Loc.GetString("bar.sleep") + Sleep + "/" + value;
+                Game.instance.barSleep.Text = PCS.Loc.GetString("bar.sleep") + Sleep + "/" + value;
             }
         }
 
@@ -121,7 +121,7 @@ namespace pcs.Player
                 }
                 food = value;
                 Game.instance.barFood.Value = value;
-                Game.instance.barFood.ProgressText = PCS.Loc.GetString("bar.food") + value + "/" + MaxFood;
+                Game.instance.barFood.Text = PCS.Loc.GetString("bar.food") + value + "/" + MaxFood;
             }
         }
 
@@ -143,7 +143,7 @@ namespace pcs.Player
                 }
                 health = value;
                 Game.instance.barHealth.Value = value;
-                Game.instance.barHealth.ProgressText = PCS.Loc.GetString("bar.health") + value + "/" + MaxHealth;
+                Game.instance.barHealth.Text = PCS.Loc.GetString("bar.health") + value + "/" + MaxHealth;
             }
         }
 
@@ -165,7 +165,7 @@ namespace pcs.Player
                 }
                 mood = value;
                 Game.instance.barMood.Value = value;
-                Game.instance.barMood.ProgressText = PCS.Loc.GetString("bar.mood") + value + "/" + MaxMood;
+                Game.instance.barMood.Text = PCS.Loc.GetString("bar.mood") + value + "/" + MaxMood;
             }
         }
 
@@ -187,7 +187,7 @@ namespace pcs.Player
                 }
                 sleep = value;
                 Game.instance.barSleep.Value = value;
-                Game.instance.barSleep.ProgressText = PCS.Loc.GetString("bar.sleep") + value + "/" + MaxSleep;
+                Game.instance.barSleep.Text = PCS.Loc.GetString("bar.sleep") + value + "/" + MaxSleep;
             }
         }
     }
