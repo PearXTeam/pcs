@@ -39,7 +39,7 @@ namespace pcs.Components
             t.Start();
             
             Show(Background.instance);
-            PCS.PlaySound(PCSSounds.PopUp);
+            SoundUtils.PlaySound(PCSSounds.PopUp);
             Location = new Point(Background.instance.Width - Width, 0);
         }
     }

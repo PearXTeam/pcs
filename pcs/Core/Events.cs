@@ -6,22 +6,22 @@ namespace pcs.Core
     public class Events
     {
         public static event TimeUpdateEvent TimeUpdate;
-        public static event BarEventHandler SoundVolumeChanged;
-        public static event BarEventHandler MusicVolumeChanged;
+        public static event VolumeEventHandler SoundVolumeChanged;
+        public static event VolumeEventHandler MusicVolumeChanged;
 
         public static void OnTimeUpdate(object sender, DateTime dt)
         {
             TimeUpdate?.Invoke(sender, dt);
         }
 
-        public static void OnSoundVolumeChanged(object sender, BarEventArgs e)
+        public static void OnSoundVolumeChanged(VolumeEventArgs e)
         {
-            SoundVolumeChanged?.Invoke(sender, e);
+            SoundVolumeChanged?.Invoke(e);
         }
 
-        public static void OnMusicVolumeChanged(object sender, BarEventArgs e)
+        public static void OnMusicVolumeChanged(VolumeEventArgs e)
         {
-            MusicVolumeChanged?.Invoke(sender, e);
+            MusicVolumeChanged?.Invoke(e);
         }
     }
 

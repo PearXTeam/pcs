@@ -6,6 +6,7 @@ using pcs.Modding;
 using pcs.Player;
 using pcs.ToolIcons;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Numerics;
 using System.Threading;
@@ -117,6 +118,12 @@ namespace pcs.Init
             Registry.RegisteredSaves.Add(new SaveElement("PCS_Autosave",
                 (name, value) => { SettingVals.AutoSave = Convert.ToBoolean(value); },
                 (string name, out string value) => { value = SettingVals.AutoSave.ToString(); }));
+            Registry.RegisteredSaves.Add(new SaveElement("PCS_SoundVolume",
+                (name, value) => { SettingVals.SoundVolume = Convert.ToSingle(value); },
+                (string name, out string value) => { value = SettingVals.SoundVolume.ToString(CultureInfo.InvariantCulture); }));
+            Registry.RegisteredSaves.Add(new SaveElement("PCS_MusicVolume",
+                (name, value) => { SettingVals.MusicVolume = Convert.ToSingle(value); },
+                (string name, out string value) => { value = SettingVals.MusicVolume.ToString(CultureInfo.InvariantCulture); }));
 
             //Inventory start
             Registry.RegisteredSaves.Add(new SaveElement("PCS_Inventory", (name, value) =>

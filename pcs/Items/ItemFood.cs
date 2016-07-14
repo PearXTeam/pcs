@@ -32,7 +32,7 @@ namespace pcs.Items
             Stats.Mood += RestoreMood(stack);
             Stats.Sleep += RestoreSleep(stack);
             Stats.Health += RestoreHealth(stack);
-            PCS.PlaySound(PCSSounds.Eating);
+            SoundUtils.PlaySound(PCSSounds.Eating);
             stack.StackCount--;
         }
 

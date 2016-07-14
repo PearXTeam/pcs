@@ -32,21 +32,6 @@ namespace pcs.Core
             Game.instance.Close();
         }
 
-        public static void PlaySound(Sound snd)
-        {
-            MemoryStream stream = new MemoryStream(snd.Data);
-            Mp3FileReader reader = new Mp3FileReader(stream);
-            WaveOut wo = new WaveOut();
-            wo.Init(reader);
-            wo.PlaybackStopped += (sender, args) =>
-            {
-                reader.Dispose();
-                wo.Dispose();
-                stream.Dispose();
-            };
-            wo.Play();
-        }
-
         public static void TakeScreenshot(Control primary, bool full)
         {
             if (full)

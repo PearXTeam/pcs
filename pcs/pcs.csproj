@@ -57,6 +57,9 @@
     <Compile Include="Commands\CommandInvRemove.cs" />
     <Compile Include="Commands\CommandStats.cs" />
     <Compile Include="Commands\CommandItems.cs" />
+    <Compile Include="Components\Controls\PCSTrackbar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Components\Sound.cs" />
     <Compile Include="Core\Background.cs">
       <SubType>Form</SubType>
@@ -77,6 +80,7 @@
     </Compile>
     <Compile Include="Core\Events.cs" />
     <Compile Include="Core\PauseUtils.cs" />
+    <Compile Include="Core\SoundUtils.cs" />
     <Compile Include="IAI\IInventory.cs" />
     <Compile Include="IAI\Inventory.cs" />
     <Compile Include="IAI\InventoryGUI.cs">
@@ -258,6 +262,9 @@
     <EmbeddedResource Include="EmbLangs\EmbLangs.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EmbLangs.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
