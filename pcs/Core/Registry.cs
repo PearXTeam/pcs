@@ -1,8 +1,6 @@
 ﻿using pcs.Components;
 using System.Collections.Generic;
 using pcs.IAI;
-using pcs.Events;
-
 namespace pcs.Core
 {
     public class Registry
@@ -18,8 +16,6 @@ namespace pcs.Core
         public static List<Command> RegisteredCommands = new List<Command>(); 
 
         public static List<Item> RegisteredItems = new List<Item>(); 
-
-        public static List<TimeUpdateEvent> RegisteredTimeUpdateEvents = new List<TimeUpdateEvent>();
 
         public static List<SIcon> RegisteredMiniGames = new List<SIcon>(); 
     }

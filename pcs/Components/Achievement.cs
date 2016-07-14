@@ -1,5 +1,6 @@
 ﻿
 using System.Drawing;
+using System.Linq;
 using pcs.Core;
 using pcs.Init;
 using pcs.Player;
@@ -54,7 +55,7 @@ namespace pcs.Components
 
         public virtual void OnUnlock()
         {
-            PCS.l.Add("Unlocked" + ID() + "achievement!");
+            PCS.l.Add("Unlocked " + ID() + " achievement!");
         }
 
         public static void Unlock(string id)
@@ -77,15 +78,7 @@ namespace pcs.Components
 
         public static Achievement GetAchievement(string id)
         {
-            foreach (Achievement ach in Registry.RegisteredAchievements)
-            {
-                if (ach.ID() == id)
-                {
-                    return ach;
-                }
-            }
-            return null;
+            return Registry.RegisteredAchievements.FirstOrDefault(ach => ach.ID() == id);
         }
-
     }
 }

@@ -344,10 +344,7 @@ namespace pcs.Init
             Game.instance.timerTime.Tick += (o, args) =>
             {
                 PlayerVals.Time += new TimeSpan(1, 0, 0);
-                foreach (var evnt in Registry.RegisteredTimeUpdateEvents)
-                {
-                    evnt.OnTimeUpdate();
-                }
+                Events.OnTimeUpdate(Game.instance.timerTime, PlayerVals.Time);
             };
         }
 

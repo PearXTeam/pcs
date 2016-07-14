@@ -75,6 +75,7 @@
     <Compile Include="Components\Controls\PCSToolIcon.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Core\Events.cs" />
     <Compile Include="Core\PauseUtils.cs" />
     <Compile Include="IAI\IInventory.cs" />
     <Compile Include="IAI\Inventory.cs" />
@@ -89,7 +90,6 @@
     <Compile Include="Components\ObjectData.cs" />
     <Compile Include="Components\SIcon.cs" />
     <Compile Include="Core\Dirs.cs" />
-    <Compile Include="Events\TimeUpdateEvent.cs" />
     <Compile Include="Forms\PlayerInventoryGUI.cs">
       <SubType>Form</SubType>
     </Compile>

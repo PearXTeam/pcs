@@ -14,8 +14,6 @@ namespace pcs.Forms
             InitializeComponent();
         }
 
-
-
         private void checkAutosave_CheckedChanged(object sender, bool isChecked)
         {
             SettingVals.AutoSave = isChecked;
