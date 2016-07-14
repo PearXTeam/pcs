@@ -167,6 +167,8 @@ namespace pcs.Init
 
             Options.instance.checkAutosave.Text = PCS.Loc.GetString("options.autosave");
             Options.instance.btnChangeLanguage.Text = PCS.Loc.GetString("options.changeLanguage");
+            Options.instance.lblSound.Text = PCS.Loc.GetString("options.sound");
+            Options.instance.lblMusic.Text = PCS.Loc.GetString("options.music");
 
             Modlist.instance.listViewMods.Columns.Add(PCS.Loc.GetString("modlist.name"), 131);
             Modlist.instance.listViewMods.Columns.Add(PCS.Loc.GetString("modlist.author"), 131);

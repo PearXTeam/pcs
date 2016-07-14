@@ -38,6 +38,8 @@ modlist.modid=ID
 #Options
 options.autosave=Автосохранение
 options.changeLanguage=Сменить язык
+options.sound=Звук: 
+options.music=Музыка: 
 
 #Save Manager
 savemanager.add=Новое сохранение

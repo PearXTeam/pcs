@@ -32,6 +32,8 @@
             this.checkAutosave = new pcs.Components.Controls.PCSCheckbox();
             this.tbSound = new pcs.Components.Controls.PCSTrackbar();
             this.tbMusic = new pcs.Components.Controls.PCSTrackbar();
+            this.lblSound = new pcs.Components.Controls.PCSLabel();
+            this.lblMusic = new pcs.Components.Controls.PCSLabel();
             this.SuspendLayout();
             // 
             // btnChangeLanguage
@@ -58,7 +60,7 @@
             // 
             // tbSound
             // 
-            this.tbSound.Location = new System.Drawing.Point(12, 76);
+            this.tbSound.Location = new System.Drawing.Point(85, 72);
             this.tbSound.Name = "tbSound";
             this.tbSound.PointerSize = ((short)(15));
             this.tbSound.Size = new System.Drawing.Size(262, 29);
@@ -67,16 +69,38 @@
             // 
             // tbMusic
             // 
-            this.tbMusic.Location = new System.Drawing.Point(12, 111);
+            this.tbMusic.Location = new System.Drawing.Point(85, 107);
             this.tbMusic.Name = "tbMusic";
             this.tbMusic.PointerSize = ((short)(15));
             this.tbMusic.Size = new System.Drawing.Size(262, 29);
             this.tbMusic.TabIndex = 3;
             this.tbMusic.ValueChanged += new PearXLib.Engine.BarEventHandler(this.tbMusic_ValueChanged);
             // 
+            // lblSound
+            // 
+            this.lblSound.Location = new System.Drawing.Point(6, 73);
+            this.lblSound.MaximumSize = new System.Drawing.Size(73, 28);
+            this.lblSound.MinimumSize = new System.Drawing.Size(73, 28);
+            this.lblSound.Name = "lblSound";
+            this.lblSound.Size = new System.Drawing.Size(73, 28);
+            this.lblSound.TabIndex = 4;
+            this.lblSound.Text = "pcsLabel1";
+            // 
+            // lblMusic
+            // 
+            this.lblMusic.Location = new System.Drawing.Point(6, 106);
+            this.lblMusic.MaximumSize = new System.Drawing.Size(73, 28);
+            this.lblMusic.MinimumSize = new System.Drawing.Size(73, 28);
+            this.lblMusic.Name = "lblMusic";
+            this.lblMusic.Size = new System.Drawing.Size(73, 28);
+            this.lblMusic.TabIndex = 5;
+            this.lblMusic.Text = "pcsLabel2";
+            // 
             // Options
             // 
-            this.ClientSize = new System.Drawing.Size(286, 386);
+            this.ClientSize = new System.Drawing.Size(359, 386);
+            this.Controls.Add(this.lblMusic);
+            this.Controls.Add(this.lblSound);
             this.Controls.Add(this.tbMusic);
             this.Controls.Add(this.tbSound);
             this.Controls.Add(this.btnChangeLanguage);
@@ -95,5 +119,7 @@
         public Components.Controls.PCSButton btnChangeLanguage;
         private Components.Controls.PCSTrackbar tbSound;
         private Components.Controls.PCSTrackbar tbMusic;
+        public Components.Controls.PCSLabel lblSound;
+        public Components.Controls.PCSLabel lblMusic;
     }
 }
